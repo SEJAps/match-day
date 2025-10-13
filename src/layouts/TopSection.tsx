@@ -3,7 +3,7 @@ import portatilsvg from "../assets/images/svg/portatil.svg";
 import ARTWORK from "../assets/images/png/ARTWORK.png";
 const TopSection = () => {
   return (
-    <section className="relative flex flex-col w-full h-[980px]">
+    <section className="relative flex flex-col w-full h-[964px]">
       <MainHeader />
       <picture className="absolute top-0 z-99 w-full h-full">
         <img
@@ -23,7 +23,7 @@ const TopSection = () => {
       </picture>
       <aside className="z-100 bg-transparent w-full h-full">
         <article className="flex flex-col items-center justify-center py-20">
-          <h1 className="text-white text-7xl w-full max-w-4xl text-center">
+          <h1 className="text-white text-6xl w-full max-w-6xl text-center">
             Donde se gana el día de partido
           </h1>
           <p className="text-white text-[19.88px] w-full max-w-2xl text-center mt-8 px-4">
