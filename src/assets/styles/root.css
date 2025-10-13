@@ -1,0 +1,35 @@
+@import url("./fonts.css");
+@import "tailwindcss";
+
+:root {
+  --first-color: #333;
+  --second-color: #ececec;
+  --third-color: #f9ffda;
+}
+
+:root {
+  font-family: "Inter 18pt", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: var(--first-color);
+  background-color: var(--second-color);
+  font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--first-color);
+    background-color: var(--second-color);
+  }
+}
