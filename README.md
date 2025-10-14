@@ -71,3 +71,36 @@ export default defineConfig([
   },
 ]);
 ```
+
+## Rutas actuales (App)
+
+```
+/
+├── (index)              -> MatchDay
+├── players              -> PlayersPage
+├── teams                -> TeamsPage
+├── clubs                -> ClubsPage
+├── services             -> ServicesPage
+├── blog                 -> BlogPage
+├── help-center          -> HelpCenterPage
+├── caracteristiques     -> FeaturesPage (alias legacy)
+├── features             -> FeaturesPage (canonical)
+├── prices               -> PricesPage
+├── contact              -> ContactPage
+├── privacy-policy       -> PrivacyPolicyPage
+├── terms-of-service     -> TermsOfServicePage
+├── logo-showcase        -> LogoBrandShowcasePage (alias rápido)
+└── atomic-design/
+  ├── (index)          -> AtomicDesignPage
+  ├── toast            -> ToastShowcasePage
+  ├── buttons          -> ButtonShowcasePage
+  └── logo-showcase    -> LogoBrandShowcasePage
+
+* Catch-all 404 dentro del layout -> NotFoundPage
+```
+
+Notas:
+
+1. Se mantienen ambas rutas `/caracteristiques` y `/features` hasta eliminar la primera.
+2. `logo-showcase` existe en raíz y bajo `atomic-design` por discoverability.
+3. Las páginas estáticas son placeholders listos para contenido real.

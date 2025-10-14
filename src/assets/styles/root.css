@@ -9,7 +9,8 @@
 }
 
 :root {
-  font-family: "Inter 18pt", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family:
+    "Inter 18pt", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   line-height: 1.5;
 
   color-scheme: light dark;
@@ -26,6 +27,7 @@ body {
   display: grid;
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: light) {

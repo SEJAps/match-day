@@ -1,11 +1,3 @@
-
-
-const THEME_LOGO = {
-  dark: "#333",
-  ligth: "var(--blue-color)",
-  customColor: "var(--pink)",
-};
-
 export type TCard = {
   title: string;
   text: string;
@@ -14,7 +6,7 @@ export type TCard = {
   bgBtn?: string;
   textBtn: string;
   customColor?: string;
-}
+};
 
 const CARD_DESCRIPTIONS: TCard[] = [
   {
@@ -61,7 +53,4 @@ const CARD_DESCRIPTIONS: TCard[] = [
   },
 ];
 
-export {
-  THEME_LOGO,
-  CARD_DESCRIPTIONS,
-}
+export { CARD_DESCRIPTIONS };

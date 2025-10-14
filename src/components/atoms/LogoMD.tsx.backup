@@ -1,6 +1,14 @@
 import { NavLink } from "react-router";
+import type { FC } from "react";
 
-const LogoMD = () => {
+/**
+ * LogoMD Component - Atomic Design Level: Atom
+ *
+ * Logotipo con navegación integrada. Es un átomo que combina el SVG del logo
+ * con funcionalidad de navegación hacia la página principal.
+ */
+
+const LogoMD: FC = () => {
   return (
     <i className="inline-flex items-center justify-center">
       <NavLink to="/">

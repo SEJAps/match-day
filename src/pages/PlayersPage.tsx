@@ -1,12 +1,8 @@
 import type { FC } from "react";
-import MainFooter from "../layouts/MainFooter";
-import TopSection from "../layouts/TopSection";
 
 const PlayersPage: FC = () => {
   return (
     <>
-      {/* Top Section */}
-      <TopSection />
       <section className="players-page py-20">
         <article>
           <header>
@@ -2427,7 +2423,6 @@ const PlayersPage: FC = () => {
           </section>
         </article>
       </section>
-      <MainFooter />
     </>
   );
 };

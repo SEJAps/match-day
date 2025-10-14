@@ -1,12 +1,8 @@
 import type { FC } from "react";
-import MainFooter from "../layouts/MainFooter";
-import TopSection from "../layouts/TopSection";
 
 const ContactPage: FC = () => {
   return (
     <>
-      {/* Top Section */}
-      <TopSection />
       <section className="contact-page h-full">
         <article>
           <header>
@@ -32,7 +28,6 @@ const ContactPage: FC = () => {
           </section>
         </article>
       </section>
-      <MainFooter />
     </>
   );
 };

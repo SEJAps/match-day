@@ -11,6 +11,30 @@
   display: inherit;
 }
 
+/* Shimmer keyframes global (para skeleton) */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Fade in utilidad para contenido cargado */
+.fade-in-loaded {
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* img {
   width: 100%;
   height: 100%;
