@@ -30,8 +30,8 @@ const MatchDay: FC = () => {
         />
       </picture>
       <aside className="z-100 bg-transparent w-full h-full">
-        <article className="flex flex-col items-center justify-center py-20">
-          <h1 className="text-white text-6xl w-full max-w-6xl text-center">
+        <article className="flex flex-col items-center justify-center sm:py-20">
+          <h1 className="text-white text-4xl sm:text-6xl w-full max-w-6xl text-center">
             Donde se gana el día de partido
           </h1>
           <p className="text-white text-[19.88px] w-full max-w-2xl text-center mt-8 px-4">
@@ -46,7 +46,7 @@ const MatchDay: FC = () => {
               Ver Demo
             </button>
           </footer>
-          <picture className="relative top-22 w-[366.02px] h-[216.68px] scale-150">
+          <picture className="relative sm:top-22 w-[366.02px] h-[216.68px] scale-75 sm:w-[366.02px] sm:h-[216.68px] sm:scale-150">
             <img
               className="absolute z-2 w-full h-full bottom-2 scale-x-75 left-1 scale-y-74"
               src={ARTWORK}
