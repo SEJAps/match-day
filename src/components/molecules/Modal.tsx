@@ -9,7 +9,13 @@ export interface ModalProps {
   children: ReactNode;
   className?: string;
   backdropClassName?: string;
+  containerClassName?: string;
   ariaLabel?: string;
+  ariaLabelledby?: string;
+  ariaDescribedby?: string;
+  closeOnBackdropClick?: boolean;
+  portalId?: string;
+  portalRoot?: HTMLElement | null;
 }
 
 /**
@@ -22,12 +28,19 @@ const Modal: FC<ModalProps> = ({
   children,
   className,
   backdropClassName,
+  containerClassName,
   ariaLabel = "Diálogo modal",
+  ariaLabelledby,
+  ariaDescribedby,
+  closeOnBackdropClick = true,
+  portalId = "modal-root",
+  portalRoot,
 }) => {
   const panelRef = useRef<HTMLDivElement>(null);
 
   // Cerrar al hacer click fuera del panel
   const onBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!closeOnBackdropClick) return;
     if (e.target === e.currentTarget) onClose();
   };
 
@@ -37,7 +50,11 @@ const Modal: FC<ModalProps> = ({
   }, [open]);
 
   // Crear/obtener contenedor para portal
-  const portalTarget = usePortal({ id: "modal-root" });
+  const portalTarget = usePortal({
+    id: portalId,
+    root:
+      portalRoot ?? (typeof document !== "undefined" ? document.body : null),
+  });
 
   if (!open || !portalTarget) return null;
 
@@ -46,12 +63,15 @@ const Modal: FC<ModalProps> = ({
       className={cn(
         "fixed inset-0 z-50 flex items-start justify-end sm:justify-center",
         "bg-black/50 backdrop-blur-sm",
-        backdropClassName
+        backdropClassName,
+        containerClassName
       )}
       onMouseDown={onBackdropClick}
       aria-label={ariaLabel}
       role="dialog"
       aria-modal="true"
+      aria-labelledby={ariaLabelledby}
+      aria-describedby={ariaDescribedby}
     >
       <div
         ref={panelRef}
