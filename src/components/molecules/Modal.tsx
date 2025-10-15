@@ -1,5 +1,7 @@
 import { type FC, type ReactNode, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { cn } from "../../utils/cn";
+import { usePortal } from "../../hooks/usePortal";
 
 export interface ModalProps {
   open: boolean;
@@ -34,9 +36,12 @@ const Modal: FC<ModalProps> = ({
     if (open) panelRef.current?.focus();
   }, [open]);
 
-  if (!open) return null;
+  // Crear/obtener contenedor para portal
+  const portalTarget = usePortal({ id: "modal-root" });
 
-  return (
+  if (!open || !portalTarget) return null;
+
+  return createPortal(
     <div
       className={cn(
         "fixed inset-0 z-50 flex items-start justify-end sm:justify-center",
@@ -68,7 +73,8 @@ const Modal: FC<ModalProps> = ({
       >
         {children}
       </div>
-    </div>
+    </div>,
+    portalTarget
   );
 };
 
