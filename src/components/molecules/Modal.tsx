@@ -136,7 +136,7 @@ const Modal: FC<ModalProps> = ({
   return createPortal(
     <div
       className={cn(
-        "fixed inset-0 z-50 flex",
+        "fixed inset-0 z-[1000]",
         containerPlacement,
         "bg-black/50 backdrop-blur-sm",
         backdropClassName,

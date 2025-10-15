@@ -11,7 +11,7 @@ interface UsePortalOptions {
  * Útil para modales, tooltips y overlays que deben salir del flujo normal del layout.
  */
 export function usePortal(options: UsePortalOptions = {}) {
-  const { id = "modal-root", className = "", root = typeof document !== "undefined" ? document.body : null } = options;
+  const { id = "modal-root", className = "z-[1000]", root = typeof document !== "undefined" ? document.body : null } = options;
   const elRef = useRef<HTMLElement | null>(null);
   const [mounted, setMounted] = useState(false);
 
