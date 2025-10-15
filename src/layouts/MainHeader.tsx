@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router";
 import { Button } from "../components/atoms";
 import logosm from "../assets/images/svg/logo-sm.svg";
@@ -6,6 +7,18 @@ import { useModal } from "../hooks/useModal";
 
 const MainHeader = () => {
   const { isOpen, open, close } = useModal(false);
+  // Cerrar automáticamente el menú móvil cuando el viewport sea >= lg (1024px)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mql = window.matchMedia("(min-width: 1024px)");
+    const handler = (e: MediaQueryListEvent) => {
+      if (e.matches) close();
+    };
+    // Si ya estamos en lg o superior al montar, asegurar cerrado
+    if (mql.matches) close();
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, [close]);
   return (
     <header className="flex bg-black/30">
       <section className="container flex items-start justify-between mx-auto z-100 w-full">
