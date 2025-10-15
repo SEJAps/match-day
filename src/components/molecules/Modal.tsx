@@ -1,4 +1,4 @@
-import { type FC, type ReactNode, useEffect, useRef } from "react";
+import { type FC, type ReactNode, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "../../utils/cn";
 import { usePortal } from "../../hooks/usePortal";
@@ -42,6 +42,7 @@ const Modal: FC<ModalProps> = ({
 }) => {
   const panelRef = useRef<HTMLDivElement>(null);
   const lastFocusedRef = useRef<HTMLElement | null>(null);
+  const [isClosing, setIsClosing] = useState(false);
 
   // Cerrar al hacer click fuera del panel
   const onBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -107,7 +108,19 @@ const Modal: FC<ModalProps> = ({
       portalRoot ?? (typeof document !== "undefined" ? document.body : null),
   });
 
-  if (!open || !portalTarget) return null;
+  // Gestionar animación de salida antes de desmontar
+  useEffect(() => {
+    if (open) {
+      setIsClosing(false);
+      return;
+    }
+    // Si se cierra, mantener montado brevemente para jugar animación
+    setIsClosing(true);
+    const t = setTimeout(() => setIsClosing(false), 180);
+    return () => clearTimeout(t);
+  }, [open]);
+
+  if ((!open && !isClosing) || !portalTarget) return null;
 
   const containerPlacement =
     placement === "center"
@@ -138,7 +151,8 @@ const Modal: FC<ModalProps> = ({
   return createPortal(
     <div
       className={cn(
-        "fixed inset-0 z-[1000] modal-backdrop-animate",
+        "fixed inset-0 z-[1000]",
+        isClosing ? "modal-backdrop-animate-out" : "modal-backdrop-animate",
         containerPlacement,
         "bg-black/50 backdrop-blur-sm",
         backdropClassName,
@@ -161,8 +175,12 @@ const Modal: FC<ModalProps> = ({
           "bg-[var(--primary-color,#111)] text-white",
           "shadow-xl",
           placement === "right"
-            ? "modal-panel-animate-right"
-            : "modal-panel-animate-center",
+            ? isClosing
+              ? "modal-panel-animate-right-out"
+              : "modal-panel-animate-right"
+            : isClosing
+              ? "modal-panel-animate-center-out"
+              : "modal-panel-animate-center",
           "p-6",
           className
         )}
