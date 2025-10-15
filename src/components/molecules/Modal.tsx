@@ -121,22 +121,24 @@ const Modal: FC<ModalProps> = ({
       case "lg":
         return "w-[90%] max-w-lg";
       case "full":
-        return "w-[95%] max-w-none";
+        return "w-screen max-w-none";
       case "md":
       default:
         return "w-[85%] max-w-md";
     }
   })();
 
-  const panelLayout =
-    placement === "center"
+  const panelLayout = (() => {
+    if (size === "full") return "h-dvh";
+    return placement === "center"
       ? "h-auto max-h-[90dvh] overflow-auto rounded-md"
       : "h-dvh sm:h-auto";
+  })();
 
   return createPortal(
     <div
       className={cn(
-        "fixed inset-0 z-[1000]",
+        "fixed inset-0 z-[1000] modal-backdrop-animate",
         containerPlacement,
         "bg-black/50 backdrop-blur-sm",
         backdropClassName,
@@ -159,9 +161,8 @@ const Modal: FC<ModalProps> = ({
           "bg-[var(--primary-color,#111)] text-white",
           "shadow-xl",
           placement === "right"
-            ? "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-right-4"
-            : "data-[state=open]:animate-in data-[state=open]:fade-in-0",
-          "data-[state=closed]:animate-out data-[state=closed]:fade-out-0",
+            ? "modal-panel-animate-right"
+            : "modal-panel-animate-center",
           "p-6",
           className
         )}
