@@ -3,8 +3,6 @@ import platformFeatures from "../assets/images/jpg/platform-features.jpg";
 import { Card } from "../components/molecules";
 import { CARD_DESCRIPTIONS, type TCard } from "../config";
 import { Logo } from "../components/atoms";
-
-import portatilsvg from "../assets/images/svg/portatil.svg";
 import ARTWORK from "../assets/images/png/ARTWORK.png";
 
 const MatchDay: FC = () => {
@@ -46,36 +44,33 @@ const MatchDay: FC = () => {
               Ver Demo
             </button>
           </footer>
-          <picture className="relative sm:top-22 w-[366.02px] h-[216.68px] scale-75 sm:w-[366.02px] sm:h-[216.68px] sm:scale-150">
+          <picture className="max-h-72  w-9/12 mt-10">
             <img
-              className="absolute z-2 w-full h-full bottom-2 scale-x-75 left-1 scale-y-74"
+              className="w-full h-full aspect-auto rounded-lg shadow-sm shadow-white/20"
+              width={256}
+              height={256}
               src={ARTWORK}
-              alt=""
-            />
-            <img
-              className="absolute z-1 w-full h-full scale-x-175 left-24 scale-y-150"
-              src={portatilsvg}
-              alt=""
+              alt="Fondo porteros"
             />
           </picture>
         </article>
       </aside>
 
-      <section className="matchday-page flex flex-col mt-28">
+      <section className="matchday-page flex flex-col sm:mt-28">
         <article className="flex flex-col w-full max-w-7xl mx-auto mt-20">
           <aside className="flex flex-col gap-8">
-            <h2 className="text-5xl font-semibold text-center my-4">
+            <h2 className="text-3xl sm:text-5xl font-semibold text-center my-4 px-8">
               Plataforma todo en uno para jugadores, equipos y clubes
             </h2>
-            <p className="text-center text-2xl px-18">
+            <p className="text-center text-xl sm:text-2xl px-8 sm:px-18">
               Desde las estadísticas del partido hasta el próximo fichaje, Match
               Day es tu control total para analizar, entrenar y gestionar tu
               equipo o tu carrera.
             </p>
           </aside>
-          <aside className="flex gap-20">
-            <section className="flex-1 flex flex-col justify-center gap-6">
-              <h2 className="text-2xl font-semibold my-4 pl-20">
+          <aside className="flex flex-col sm:felx-row gap-20 ">
+            <section className="flex-1 flex flex-col justify-center gap-6 order-2">
+              <h2 className="text-center text-xl sm:text-2xl font-semibold my-4 sm:pl-20 px-8">
                 Todo lo que necesitas, antes, durante y después del día de
                 partido
               </h2>
@@ -94,8 +89,8 @@ const MatchDay: FC = () => {
                 </li>
               </ul>
             </section>
-            <section className="flex-1 pr-20 py-10">
-              <article>
+            <section className="flex-1 pr-20 py-10 order-1 ">
+              <article className="">
                 <img
                   src={platformFeatures}
                   alt="Foondo"
@@ -116,7 +111,7 @@ const MatchDay: FC = () => {
               Herramientas especializadas para jugadores, equipos y clubes
             </p>
           </section>
-          <section className="grid grid-cols-3 gap-8">
+          <section className="grid sm:grid-cols-3 gap-8">
             {cardDescriptions &&
               cardDescriptions.map((desc, index) => (
                 <Card
