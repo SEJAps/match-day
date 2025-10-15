@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import { Button } from "../components/atoms";
+import logosm from "../assets/images/svg/logo-sm.svg";
 import { LogoBrand, Modal } from "../components/molecules";
 import { useModal } from "../hooks/useModal";
 
@@ -12,10 +13,12 @@ const MainHeader = () => {
           <LogoBrand />
         </section>
         <section className="flex sm:hidden items-start my-8 mx-8">
-          <LogoBrand
-            logoProps={{
-              size: { x: 120, y: 96 },
-            }}
+          <img
+            src={logosm}
+            alt="Logo"
+            width={169}
+            height={40}
+            className="w-42 h-10 aspect-square"
           />
         </section>
         {/* Menú de escritorio (solo pantallas grandes) */}
@@ -79,7 +82,14 @@ const MainHeader = () => {
       </section>
 
       {/* Modal menú para móvil y tablet */}
-      <Modal open={isOpen} onClose={close} ariaLabel="Menú de navegación">
+      <Modal
+        open={isOpen}
+        onClose={close}
+        ariaLabel="Menú de navegación"
+        className="bg-white text-black"
+        placement="right"
+        size="md"
+      >
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-lg font-semibold">Menú</span>
@@ -87,7 +97,7 @@ const MainHeader = () => {
               aria-label="Cerrar menú"
               variant="ghost"
               size="sm"
-              className="text-white"
+              className="text-black"
               onClick={close}
             >
               <svg
@@ -111,35 +121,35 @@ const MainHeader = () => {
               <NavLink
                 to="/"
                 onClick={close}
-                className="text-[#10B981] text-lg"
+                className="text-emerald-600 text-lg"
               >
                 Home
               </NavLink>
               <NavLink
                 to="/players"
                 onClick={close}
-                className="text-[var(--second-color)] text-lg"
+                className="text-neutral-700 text-lg"
               >
                 Jugadores
               </NavLink>
               <NavLink
                 to="/teams"
                 onClick={close}
-                className="text-[var(--second-color)] text-lg"
+                className="text-neutral-700 text-lg"
               >
                 Equipos
               </NavLink>
               <NavLink
                 to="/clubs"
                 onClick={close}
-                className="text-[var(--second-color)] text-lg"
+                className="text-neutral-700 text-lg"
               >
                 Clubs
               </NavLink>
               <NavLink
                 to="/contact"
                 onClick={close}
-                className="text-[var(--second-color)] text-lg"
+                className="text-neutral-700 text-lg"
               >
                 Contacto
               </NavLink>

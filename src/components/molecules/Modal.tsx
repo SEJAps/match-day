@@ -16,6 +16,8 @@ export interface ModalProps {
   closeOnBackdropClick?: boolean;
   portalId?: string;
   portalRoot?: HTMLElement | null;
+  placement?: "right" | "center";
+  size?: "sm" | "md" | "lg" | "full";
 }
 
 /**
@@ -35,8 +37,11 @@ const Modal: FC<ModalProps> = ({
   closeOnBackdropClick = true,
   portalId = "modal-root",
   portalRoot,
+  placement = "right",
+  size = "md",
 }) => {
   const panelRef = useRef<HTMLDivElement>(null);
+  const lastFocusedRef = useRef<HTMLElement | null>(null);
 
   // Cerrar al hacer click fuera del panel
   const onBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -44,9 +49,55 @@ const Modal: FC<ModalProps> = ({
     if (e.target === e.currentTarget) onClose();
   };
 
-  // Enfocar el panel al abrir (accesibilidad básica)
+  // Enfocar el panel al abrir y restaurar foco al cerrar
   useEffect(() => {
-    if (open) panelRef.current?.focus();
+    if (open) {
+      lastFocusedRef.current = (document.activeElement as HTMLElement) ?? null;
+      panelRef.current?.focus();
+    } else {
+      lastFocusedRef.current?.focus?.();
+    }
+  }, [open]);
+
+  // Focus trap dentro del panel
+  useEffect(() => {
+    if (!open) return;
+    const panel = panelRef.current;
+    if (!panel) return;
+
+    const focusableSelectors = [
+      "a[href]",
+      "button:not([disabled])",
+      "textarea:not([disabled])",
+      "input:not([disabled])",
+      "select:not([disabled])",
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(",");
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      const focusables = Array.from(
+        panel.querySelectorAll<HTMLElement>(focusableSelectors)
+      ).filter((el) => !el.hasAttribute("disabled") && el.tabIndex !== -1);
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (e.shiftKey) {
+        if (active === first || !panel.contains(active)) {
+          last.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (active === last || !panel.contains(active)) {
+          first.focus();
+          e.preventDefault();
+        }
+      }
+    };
+
+    panel.addEventListener("keydown", handleKeyDown);
+    return () => panel.removeEventListener("keydown", handleKeyDown);
   }, [open]);
 
   // Crear/obtener contenedor para portal
@@ -58,10 +109,35 @@ const Modal: FC<ModalProps> = ({
 
   if (!open || !portalTarget) return null;
 
+  const containerPlacement =
+    placement === "center"
+      ? "items-center justify-center"
+      : "items-start justify-end sm:justify-center";
+
+  const sizeClasses = (() => {
+    switch (size) {
+      case "sm":
+        return "w-[85%] max-w-sm";
+      case "lg":
+        return "w-[90%] max-w-lg";
+      case "full":
+        return "w-[95%] max-w-none";
+      case "md":
+      default:
+        return "w-[85%] max-w-md";
+    }
+  })();
+
+  const panelLayout =
+    placement === "center"
+      ? "h-auto max-h-[90dvh] overflow-auto rounded-md"
+      : "h-dvh sm:h-auto";
+
   return createPortal(
     <div
       className={cn(
-        "fixed inset-0 z-50 flex items-start justify-end sm:justify-center",
+        "fixed inset-0 z-50 flex",
+        containerPlacement,
         "bg-black/50 backdrop-blur-sm",
         backdropClassName,
         containerClassName
@@ -77,14 +153,14 @@ const Modal: FC<ModalProps> = ({
         ref={panelRef}
         tabIndex={-1}
         className={cn(
-          // Panel base
           "outline-none",
-          // Para menú: deslizar desde la derecha en móvil, centrado en sm+
-          "w-[85%] max-w-sm h-dvh sm:h-auto sm:max-w-md",
+          sizeClasses,
+          panelLayout,
           "bg-[var(--primary-color,#111)] text-white",
           "shadow-xl",
-          // Animaciones
-          "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-right-4",
+          placement === "right"
+            ? "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:slide-in-from-right-4"
+            : "data-[state=open]:animate-in data-[state=open]:fade-in-0",
           "data-[state=closed]:animate-out data-[state=closed]:fade-out-0",
           "p-6",
           className
