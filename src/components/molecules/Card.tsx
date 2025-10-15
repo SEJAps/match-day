@@ -34,14 +34,14 @@ const Card: FC<CardProps> = ({
         background: bg || "white",
       }}
     >
-      <header className="flex flex-col items-center gap-4 mb-2 pt-14">
-        {icon}
+      <header className="flex flex-col gap-4 mb-2 pt-14">
+        <div className="flex items-center ml-8">{icon}</div>
         <Heading as="h4" level="h4" weight="bold" className="w-full pl-8">
           {title}
         </Heading>
       </header>
 
-      <Text size="base" className=" mb-4">
+      <Text size="base" className="ml-8 mb-4">
         {text}
       </Text>
 
