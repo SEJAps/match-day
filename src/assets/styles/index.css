@@ -40,3 +40,96 @@
   height: 100%;
   object-fit: cover;
 } */
+
+/* Modal animations */
+@keyframes modal-backdrop-in {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes modal-panel-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes modal-panel-in-center {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-backdrop-animate {
+  animation: modal-backdrop-in 140ms ease-out;
+}
+
+.modal-panel-animate-right {
+  animation: modal-panel-in-right 180ms ease-out;
+}
+
+.modal-panel-animate-center {
+  animation: modal-panel-in-center 160ms ease-out;
+}
+
+@keyframes modal-backdrop-out {
+  from {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes modal-panel-out-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+}
+
+@keyframes modal-panel-out-center {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+.modal-backdrop-animate-out {
+  animation: modal-backdrop-out 140ms ease-in;
+}
+
+.modal-panel-animate-right-out {
+  animation: modal-panel-out-right 160ms ease-in;
+}
+
+.modal-panel-animate-center-out {
+  animation: modal-panel-out-center 140ms ease-in;
+}

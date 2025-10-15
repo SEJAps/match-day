@@ -11,6 +11,10 @@ export { default as Card } from "./Card";
 // Brand Components
 export { default as LogoBrand } from "./LogoBrand";
 
+// Overlay Components
+export { default as Modal } from "./Modal";
+
 // Types
 export type { CardProps } from "./Card";
 export type { LogoBrandProps, ColorScheme } from "./LogoBrand";
+export type { ModalProps } from "./Modal";
