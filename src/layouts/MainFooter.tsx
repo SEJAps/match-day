@@ -10,24 +10,26 @@ const MainFooter: FC = () => {
   return (
     <footer className="w-full bg-[#0E1423] text-white mt-auto">
       <div className="container mx-auto px-4 py-10">
-        {/* Marca y descripción */}
-        <div className="flex items-center gap-3">
-          <img
-            src={logoSm}
-            alt="Match Day"
-            width={170}
-            height={41}
-            className="h-10 w-auto"
-          />
-          <span className="sr-only">MATCH DAY</span>
-        </div>
-        <p className="mt-3 text-sm text-neutral-300 max-w-md">
-          La plataforma definitiva para el fútbol moderno. Estadísticas, gestión
-          y mercado de fichajes en un solo lugar.
-        </p>
+        <div className="grid gap-8 md:grid-cols-4">
+          {/* Columna 1: Marca y descripción */}
+          <div>
+            <div className="flex items-center gap-3">
+              <img
+                src={logoSm}
+                alt="Match Day"
+                width={170}
+                height={41}
+                className="h-10 w-auto"
+              />
+              <span className="sr-only">MATCH DAY</span>
+            </div>
+            <p className="mt-3 text-sm text-neutral-300 max-w-md">
+              La plataforma definitiva para el fútbol moderno. Estadísticas,
+              gestión y mercado de fichajes en un solo lugar.
+            </p>
+          </div>
 
-        {/* Enlaces */}
-        <div className="mt-8 flex flex-col gap-6">
+          {/* Columna 2: Enlaces */}
           <section>
             <h4 className="text-sm font-semibold">Enlaces Rápidos</h4>
             <ul className="mt-3 space-y-2 text-neutral-300">
@@ -66,6 +68,7 @@ const MainFooter: FC = () => {
             </ul>
           </section>
 
+          {/* Columna 3: Soporte */}
           <section>
             <h4 className="text-sm font-semibold">Soporte</h4>
             <ul className="mt-3 space-y-2 text-neutral-300">
@@ -104,44 +107,45 @@ const MainFooter: FC = () => {
             </ul>
           </section>
 
+          {/* Columna 4: Redes sociales */}
           <section>
             <h4 className="text-sm font-semibold">Síguenos</h4>
-            <div className="mt-3 grid grid-cols-4 gap-3">
+            <div className="mt-3 grid grid-cols-4 gap-3 max-w-[200px]">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
+                className="grid h-11 w-11 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
-                <img src={iconFacebook} alt="Facebook" className="h-10 w-10" />
+                <img src={iconFacebook} alt="Facebook" className="h-5 w-5" />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter/X"
+                className="grid h-11 w-11 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
-                <img src={iconTwitter} alt="Twitter/X" className="h-10 w-10" />
+                <img src={iconTwitter} alt="Twitter/X" className="h-5 w-5" />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
+                className="grid h-11 w-11 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
-                <img
-                  src={iconInstagram}
-                  alt="Instagram"
-                  className="h-10 w-10"
-                />
+                <img src={iconInstagram} alt="Instagram" className="h-5 w-5" />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
+                className="grid h-11 w-11 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
-                <img src={iconLinkedIn} alt="LinkedIn" className="h-10 w-10" />
+                <img src={iconLinkedIn} alt="LinkedIn" className="h-5 w-5" />
               </a>
             </div>
           </section>
