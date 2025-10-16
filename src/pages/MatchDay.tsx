@@ -29,14 +29,14 @@ const MatchDay: FC = () => {
           width={"1400px"}
           height={"680px"}
           alt="Fondo de pantalla principal"
-          className="absolute aspect-video  w-full h-full"
+          className="absolute object-cover w-full h-full"
         />
         <img
           src="/home.png"
           width={"1400px"}
           height={"680px"}
           alt="Fondo de pantalla principal 2"
-          className="absolute aspect-video  w-full h-full"
+          className="absolute object-cover w-full h-full"
         />
       </picture>
       <aside className="z-100 bg-transparent w-full h-full">
