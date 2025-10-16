@@ -1,4 +1,11 @@
-import type { FC, ButtonHTMLAttributes, ReactNode } from "react";
+import type {
+  FC,
+  ButtonHTMLAttributes,
+  ReactNode,
+  ReactElement,
+  MouseEvent,
+} from "react";
+import { isValidElement, cloneElement } from "react";
 import type { VariantProps } from "class-variance-authority";
 import { cn } from "../../../utils/cn";
 import { buttonVariants } from "./button.variants";
@@ -29,22 +36,69 @@ const Button: FC<ButtonProps> = ({
   loading = false,
   leftIcon,
   rightIcon,
+  asChild,
   ...props
 }) => {
   const isDisabled = disabled || loading;
 
+  const renderContent = (label: ReactNode) => (
+    <>
+      {loading && (
+        <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+      )}
+      {!loading && leftIcon && <span className="mr-2">{leftIcon}</span>}
+      {label}
+      {!loading && rightIcon && <span className="ml-2">{rightIcon}</span>}
+    </>
+  );
+
+  // Modo polimórfico: si asChild es true y children es un elemento válido,
+  // clonamos el hijo para heredar estilos y comportamiento.
+  if (asChild && isValidElement(children)) {
+    type ChildKnownProps = {
+      className?: string;
+      onClick?: (e: MouseEvent) => void;
+      tabIndex?: number;
+      [key: string]: unknown;
+    };
+
+    const child = children as ReactElement<unknown>;
+    const childExistingClass = (child.props as { className?: string })
+      ?.className;
+    const baseClassName = cn(
+      buttonVariants({ variant, size, className }),
+      childExistingClass
+    );
+    const childProps: ChildKnownProps = {
+      className: baseClassName,
+    };
+
+    // Manejo de disabled para elementos no button (e.g., <a>, <Link>)
+    if (isDisabled) {
+      (childProps as Record<string, unknown>)["aria-disabled"] = true;
+      childProps.tabIndex = -1;
+      childProps.className = cn(
+        childProps.className,
+        "pointer-events-none opacity-60"
+      );
+      // Opcional: prevenir navegación si es anchor
+      if (child.type === "a") {
+        childProps.onClick = (e: MouseEvent) => e.preventDefault();
+      }
+    }
+
+    const childLabel = (child.props as { children?: ReactNode })?.children;
+    return cloneElement(child, childProps, renderContent(childLabel));
+  }
+
+  // Fallback: renderizar como botón nativo
   return (
     <button
       className={cn(buttonVariants({ variant, size, className }))}
       disabled={isDisabled}
       {...props}
     >
-      {loading && (
-        <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-      )}
-      {!loading && leftIcon && <span className="mr-2">{leftIcon}</span>}
-      {children}
-      {!loading && rightIcon && <span className="ml-2">{rightIcon}</span>}
+      {renderContent(children)}
     </button>
   );
 };
