@@ -8,3 +8,4 @@
 export { default as ToastExample } from "./ToastExample";
 export { default as ButtonShowcase } from "./ButtonShowcase";
 export { default as LogoBrandShowcase } from "./LogoBrandShowcase";
+export { default as ServicesSection } from "./ServicesSection";

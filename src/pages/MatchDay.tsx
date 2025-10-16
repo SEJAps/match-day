@@ -5,7 +5,7 @@ import {
   SERVICES_FOR_EVERY_NEED,
   type ServiceCardForEveryNeed,
 } from "@/config/services-for-every-need";
-import { Card, Heading } from "@/components";
+import { Card, Heading, ServicesSection } from "@/components";
 
 const MatchDay: FC = () => {
   const [servicesForEveryNeed, setServicesForEveryNeed] = useState<
@@ -154,11 +154,8 @@ const MatchDay: FC = () => {
           </section>
         </article>
 
-        <article className="bg-[#064C40] py-20">
-          <header>
-            <h2>¿Que ofremos?</h2>
-            <p>Características diseñadas para el mundo del fútbol moderno</p>
-          </header>
+        <article className="bg-[#064C40]">
+          <ServicesSection sectionClassName="py-20" />
         </article>
       </section>
     </section>
