@@ -25,7 +25,7 @@ const PlayersPage: FC = () => {
       </picture>
       <aside className="z-100  w-full max-h-[85dvh] py-8">
         <article className="flex flex-col items-center justify-center">
-          <Heading as="h1" level="h1" className="text-white">
+          <Heading as="h1" level="h1" className="text-white px-8">
             {YOU_WANT_TO_SEE.title}
           </Heading>
 
