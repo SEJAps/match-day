@@ -55,7 +55,7 @@ const ContactSection: FC<ContactSectionProps> = ({
               onSubmit={async (e) => {
                 e.preventDefault();
                 const formData = new FormData(
-                  e.currentTarget as HTMLFormElement
+                  e.currentTarget as HTMLFormElement,
                 );
                 const payload = {
                   name: String(formData.get("name") || ""),

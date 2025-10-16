@@ -1,3 +1,5 @@
+import { Heading } from "@/components";
+import { YOU_WANT_TO_SEE } from "@/config/hero-sections";
 import type { FC } from "react";
 
 const PlayersPage: FC = () => {
@@ -23,22 +25,34 @@ const PlayersPage: FC = () => {
       </picture>
       <aside className="z-100 bg-transparent w-full h-full">
         <article className="flex flex-col items-center justify-center sm:py-20">
-          <h1 className="text-white text-4xl px-6 sm:text-6xl w-full max-w-6xl text-center">
-            ¿Quieres que te vean?
-          </h1>
+          <Heading
+            as="h1"
+            level="h1"
+            className="text-white px-6 sm:text-6xl w-full max-w-6xl text-center"
+          >
+            {YOU_WANT_TO_SEE.title}
+          </Heading>
+
           <p className="text-white text-[19.88px] w-full max-w-2xl text-center mt-8 px-4">
-            Haz que cada partido cuente.
+            {YOU_WANT_TO_SEE.description}
           </p>
-          <section className="max-h-72  w-9/12 mt-10 sm:max-h-auto sm:max-w-96 bg-red-500">
-            <p>Haz que cada partido cuente.</p>
-            <article className="grid grid-cols-2">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
+          <section className=" w-9/12 mt-10 sm:max-h-auto sm:max-w-96 text-white bg-[#1C4020] rounded-2xl mb-6">
+            <Heading as="h2" level="h3" className="px-4 py-4 font-light">
+              {YOU_WANT_TO_SEE.list?.title}
+            </Heading>
+
+            <article className="flex flex-col px-6 py-4">
+              <ul>
+                {YOU_WANT_TO_SEE.list?.items.map((item) => (
+                  <li key={item.text} className="flex items-center gap-4 my-4">
+                    <img src={item.icon} alt={item.text} />
+                    <span className="text-sm">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
             </article>
           </section>
-          <footer className="flex items-center gap-4 mt-12">
+          <footer className="flex items-center gap-4">
             <button className="text-white bg-[#10B981] font-bold px-6 py-3 rounded-sm border-2 border-[#10B981]  hover:bg-[#10B981]/80 transition">
               Reagistrate
             </button>

@@ -67,7 +67,7 @@ const Button: FC<ButtonProps> = ({
       ?.className;
     const baseClassName = cn(
       buttonVariants({ variant, size, className }),
-      childExistingClass
+      childExistingClass,
     );
     const childProps: ChildKnownProps = {
       className: baseClassName,
@@ -79,7 +79,7 @@ const Button: FC<ButtonProps> = ({
       childProps.tabIndex = -1;
       childProps.className = cn(
         childProps.className,
-        "pointer-events-none opacity-60"
+        "pointer-events-none opacity-60",
       );
       // Opcional: prevenir navegación si es anchor
       if (child.type === "a") {

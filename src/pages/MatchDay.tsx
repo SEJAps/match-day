@@ -1,12 +1,12 @@
 import { useEffect, useState, type FC } from "react";
 import platform from "../assets/images/png/platform.png";
-import ARTWORK from "../assets/images/png/ARTWORK.png";
 import {
   SERVICES_FOR_EVERY_NEED,
   type ServiceCardForEveryNeed,
 } from "@/config/services-for-every-need";
 import { Card, Heading, ServicesSection, ContactSection } from "@/components";
 import { CONTACT_SECTION_CONFIG } from "@/config";
+import { WHERE_YOU_WIN_ON_GAME_DAY } from "@/config/hero-sections";
 
 const MatchDay: FC = () => {
   const [servicesForEveryNeed, setServicesForEveryNeed] = useState<
@@ -42,11 +42,10 @@ const MatchDay: FC = () => {
       <aside className="z-100 bg-transparent w-full h-full">
         <article className="flex flex-col items-center justify-center sm:py-20">
           <h1 className="text-white text-4xl px-6 sm:text-6xl w-full max-w-6xl text-center">
-            Donde se gana el día de partido
+            {WHERE_YOU_WIN_ON_GAME_DAY.title}
           </h1>
           <p className="text-white text-[19.88px] w-full max-w-2xl text-center mt-8 px-4">
-            La plataforma completa para estadísticas, gestión de equipos y
-            mercado de fichajes en el fútbol
+            {WHERE_YOU_WIN_ON_GAME_DAY.description}
           </p>
           <footer className="flex items-center gap-4 mt-12">
             <button className="text-white bg-[#10B981] font-bold px-6 py-3 rounded-sm border-2 border-[#10B981]  hover:bg-[#10B981]/80 transition">
@@ -59,10 +58,10 @@ const MatchDay: FC = () => {
           <picture className="max-h-72  w-9/12 mt-10 sm:max-h-auto sm:max-w-96">
             <img
               className="w-full h-full sm:max-w-96 sm:h-auto aspect-auto rounded-lg shadow-sm shadow-white/20"
-              width={256}
-              height={256}
-              src={ARTWORK}
-              alt="Fondo porteros"
+              width={WHERE_YOU_WIN_ON_GAME_DAY.image?.width}
+              height={WHERE_YOU_WIN_ON_GAME_DAY.image?.height}
+              src={WHERE_YOU_WIN_ON_GAME_DAY.image?.src}
+              alt={WHERE_YOU_WIN_ON_GAME_DAY.image?.alt}
             />
           </picture>
         </article>
