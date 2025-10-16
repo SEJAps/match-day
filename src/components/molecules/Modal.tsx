@@ -77,7 +77,7 @@ const Modal: FC<ModalProps> = ({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key !== "Tab") return;
       const focusables = Array.from(
-        panel.querySelectorAll<HTMLElement>(focusableSelectors)
+        panel.querySelectorAll<HTMLElement>(focusableSelectors),
       ).filter((el) => !el.hasAttribute("disabled") && el.tabIndex !== -1);
       if (focusables.length === 0) return;
       const first = focusables[0];
@@ -142,7 +142,7 @@ const Modal: FC<ModalProps> = ({
         containerPlacement,
         "bg-black/50 backdrop-blur-sm",
         backdropClassName,
-        containerClassName
+        containerClassName,
       )}
       onMouseDown={onBackdropClick}
       aria-label={ariaLabel}
@@ -164,14 +164,14 @@ const Modal: FC<ModalProps> = ({
             ? "modal-panel-animate-right"
             : "modal-panel-animate-center",
           "p-6",
-          className
+          className,
         )}
         data-state={open ? "open" : "closed"}
       >
         {children}
       </div>
     </div>,
-    portalTarget
+    portalTarget,
   );
 };
 

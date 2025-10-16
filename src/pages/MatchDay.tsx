@@ -5,7 +5,7 @@ import {
   SERVICES_FOR_EVERY_NEED,
   type ServiceCardForEveryNeed,
 } from "@/config/services-for-every-need";
-import { Card } from "@/components";
+import { Card, Heading } from "@/components";
 
 const MatchDay: FC = () => {
   const [servicesForEveryNeed, setServicesForEveryNeed] = useState<
@@ -112,17 +112,23 @@ const MatchDay: FC = () => {
           </aside>
         </article>
         <article className="flex flex-col w-full max-w-7xl mx-auto my-20">
-          <section className="text-center mb-12 py-10">
-            <h3 className="text-3xl font-bold mb-4">
+          <section className="sm:mb-12 py-8">
+            <Heading
+              as="h2"
+              level="h2"
+              align={"center"}
+              className="text-4xl mb-4 mx-8"
+            >
               Servicios para cada necesidad
-            </h3>
-            <p className="text-xl">
+            </Heading>
+
+            <p className="text-xl text-center">
               Herramientas especializadas para jugadores, equipos y clubes
             </p>
           </section>
           <section className="grid sm:grid-cols-3 gap-8 px-8">
             {servicesForEveryNeed &&
-              servicesForEveryNeed.map((service) => (
+              servicesForEveryNeed.map((service, i) => (
                 <Card
                   key={service.title}
                   bg={service.bg}
@@ -130,11 +136,16 @@ const MatchDay: FC = () => {
                   title={service.title}
                   text={service.text}
                   items={service.items}
+                  index={i}
+                  mobileFullWidth={
+                    servicesForEveryNeed.length % 2 === 1 &&
+                    i === servicesForEveryNeed.length - 1
+                  }
                   icon={
                     <img
                       src={service.icon}
                       alt={service.title}
-                      className="w-16 h-16"
+                      className="w-24 h-24 sm:w-16 sm:h-16"
                     />
                   }
                   label={service.textBtn}

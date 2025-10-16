@@ -14,7 +14,6 @@ type ServiceCardForEveryNeed = {
 };
 
 const SERVICES_FOR_EVERY_NEED: ServiceCardForEveryNeed[] = [
-
   {
     title: "Jugadores",
     text: "Accede a tus estadísticas individuales, crea un perfil profesional y entra en el radar de otros equipos a través del marketplace. La herramienta ideal para destacar y encontrar nuevas oportunidades.",
@@ -67,5 +66,5 @@ export {
   type ServiceCardForEveryNeed,
   iconPlayers,
   iconeTeams,
-  iconClubs
-}
+  iconClubs,
+};
