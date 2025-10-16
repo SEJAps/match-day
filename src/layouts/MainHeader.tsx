@@ -88,7 +88,7 @@ const MainHeader = () => {
 
         {/* Acceso solo en escritorio, en móvil va dentro del modal */}
         <aside className="hidden lg:flex items-center px-4 mt-8">
-          <Button variant="primary" size="default" className="mx-4">
+          <Button variant="success" size="default" className="mx-4">
             Acceder
           </Button>
         </aside>
