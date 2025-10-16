@@ -6,6 +6,7 @@ import {
   type ServiceCardForEveryNeed,
 } from "@/config/services-for-every-need";
 import { Card, Heading, ServicesSection, ContactSection } from "@/components";
+import { CONTACT_SECTION_CONFIG } from "@/config";
 
 const MatchDay: FC = () => {
   const [servicesForEveryNeed, setServicesForEveryNeed] = useState<
@@ -158,7 +159,13 @@ const MatchDay: FC = () => {
           <ServicesSection sectionClassName="py-20" />
         </article>
         <article>
-          <ContactSection className="py-20" />
+          <ContactSection
+            className="py-20"
+            title={CONTACT_SECTION_CONFIG.title}
+            subtitle={CONTACT_SECTION_CONFIG.subtitle}
+            info={CONTACT_SECTION_CONFIG.info}
+            mapImageUrl={CONTACT_SECTION_CONFIG.mapImageUrl}
+          />
         </article>
       </section>
     </section>

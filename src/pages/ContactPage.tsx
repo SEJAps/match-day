@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import useNotifications from "@/hooks/useNotifications";
 import ContactSection from "@/components/organisms/ContactSection";
+import { CONTACT_SECTION_CONFIG } from "@/config";
 
 // Página del contenedor: delega el contenido al organismo ContactSection
 
@@ -10,8 +11,10 @@ const ContactPage: FC = () => {
 
   return (
     <ContactSection
-      title="Contacta con nosotros"
-      subtitle="¿Listo para revolucionar tu experiencia futbolística?"
+      title={CONTACT_SECTION_CONFIG.title}
+      subtitle={CONTACT_SECTION_CONFIG.subtitle}
+      info={CONTACT_SECTION_CONFIG.info}
+      mapImageUrl={CONTACT_SECTION_CONFIG.mapImageUrl}
       onSubmit={async () => {
         try {
           await new Promise((res) => setTimeout(res, 1000));
