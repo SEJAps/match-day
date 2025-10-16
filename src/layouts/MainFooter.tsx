@@ -9,7 +9,7 @@ import iconTwitter from "../assets/images/svg/social/twitter-o-x.svg";
 const MainFooter: FC = () => {
   return (
     <footer className="w-full bg-[#0E1423] text-white mt-auto">
-      <div className="container mx-auto px-4 py-10">
+      <div className="container mx-auto px-8 py-10">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Columna 1: Marca y descripción */}
           <div>
@@ -110,53 +110,65 @@ const MainFooter: FC = () => {
           {/* Columna 4: Redes sociales */}
           <section>
             <h4 className="text-sm font-semibold">Síguenos</h4>
-            <div className="mt-3 grid grid-cols-4 gap-3 max-w-[200px]">
+            <div className="mt-3 grid grid-cols-4 gap-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="grid h-11 w-11 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
-                <img src={iconFacebook} alt="Facebook" className="h-5 w-5" />
+                <img
+                  src={iconFacebook}
+                  alt="Facebook"
+                  className="h-[41px] w-[41px]"
+                />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter/X"
-                className="grid h-11 w-11 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
-                <img src={iconTwitter} alt="Twitter/X" className="h-5 w-5" />
+                <img
+                  src={iconTwitter}
+                  alt="Twitter/X"
+                  className="h-[41px] w-[41px]"
+                />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="grid h-11 w-11 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
-                <img src={iconInstagram} alt="Instagram" className="h-5 w-5" />
+                <img
+                  src={iconInstagram}
+                  alt="Instagram"
+                  className="h-[41px] w-[41px]"
+                />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="grid h-11 w-11 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
-                <img src={iconLinkedIn} alt="LinkedIn" className="h-5 w-5" />
+                <img
+                  src={iconLinkedIn}
+                  alt="LinkedIn"
+                  className="h-[41px] w-[41px]"
+                />
               </a>
             </div>
           </section>
         </div>
 
         {/* Separador y legal */}
-        <div className="mt-10 border-t border-white/10 pt-4">
-          <p className="text-center text-sm text-neutral-400">
+        <div className="mt-10 border-t border-white/10 pt-4 md:flex md:items-center md:justify-between">
+          <p className="text-center md:text-left text-sm text-neutral-400">
             © 2024 Match Day. Todos los derechos reservados.
           </p>
-          <div className="mt-3 flex items-center justify-center gap-6 text-sm text-neutral-400">
+          <div className="mt-3 md:mt-0 flex items-center justify-center md:justify-end gap-8 text-sm text-neutral-400">
             <Link
               to="/privacy-policy"
               className="hover:text-emerald-400 transition-colors"
