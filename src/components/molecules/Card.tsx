@@ -41,7 +41,7 @@ const Card: FC<CardProps> = ({
         </Heading>
       </header>
 
-      <Text size="base" className="ml-8 mb-4">
+      <Text size="base" className="mx-8 mr-4">
         {text}
       </Text>
 

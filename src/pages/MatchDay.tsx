@@ -1,12 +1,23 @@
-import { useState, type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import platform from "../assets/images/png/platform.png";
-import { Card } from "../components/molecules";
-import { CARD_DESCRIPTIONS, type TCard } from "../config";
-import jugadoresCamiseta from "@/assets/images/svg/jugadores-camiseta.svg";
 import ARTWORK from "../assets/images/png/ARTWORK.png";
+import {
+  SERVICES_FOR_EVERY_NEED,
+  type ServiceCardForEveryNeed,
+} from "@/config/services-for-every-need";
+import { Card } from "@/components";
 
 const MatchDay: FC = () => {
-  const [cardDescriptions] = useState<TCard[]>([...CARD_DESCRIPTIONS]);
+  const [servicesForEveryNeed, setServicesForEveryNeed] = useState<
+    ServiceCardForEveryNeed[]
+  >([]);
+
+  useEffect(() => {
+    setServicesForEveryNeed(() => SERVICES_FOR_EVERY_NEED);
+
+    return () => setServicesForEveryNeed([]);
+  }, []);
+
   return (
     <section className="flex flex-col bg-white text-black">
       {/* Top Section */}
@@ -110,23 +121,23 @@ const MatchDay: FC = () => {
             </p>
           </section>
           <section className="grid sm:grid-cols-3 gap-8 px-8">
-            {cardDescriptions &&
-              cardDescriptions.map((desc, index) => (
+            {servicesForEveryNeed &&
+              servicesForEveryNeed.map((service) => (
                 <Card
-                  key={index}
-                  bg={desc.bg}
-                  bgBtn={desc.bgBtn}
-                  title={desc.title}
-                  text={desc.text}
-                  items={desc.items}
+                  key={service.title}
+                  bg={service.bg}
+                  bgBtn={service.bgBtn}
+                  title={service.title}
+                  text={service.text}
+                  items={service.items}
                   icon={
                     <img
-                      src={desc.srcIcon}
-                      alt={desc.title}
+                      src={service.icon}
+                      alt={service.title}
                       className="w-16 h-16"
                     />
                   }
-                  label={desc.textBtn}
+                  label={service.textBtn}
                 />
               ))}
           </section>
