@@ -1,34 +1,31 @@
 import type { FC } from "react";
+import useNotifications from "@/hooks/useNotifications";
+import ContactSection from "@/components/organisms/ContactSection";
+import { CONTACT_SECTION_CONFIG } from "@/config";
+
+// Página del contenedor: delega el contenido al organismo ContactSection
 
 const ContactPage: FC = () => {
+  const { showSuccess, showError } = useNotifications();
+  // Estado local opcional (si en el futuro se quiere reflejar un spinner global)
+
   return (
-    <>
-      <section className="contact-page h-full">
-        <article>
-          <header>
-            <h1>Contact</h1>
-          </header>
-          <section>
-            <h2>Contact Us</h2>
-            <form>
-              <div>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div>
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div>
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </section>
-        </article>
-      </section>
-    </>
+    <ContactSection
+      title={CONTACT_SECTION_CONFIG.title}
+      subtitle={CONTACT_SECTION_CONFIG.subtitle}
+      info={CONTACT_SECTION_CONFIG.info}
+      mapImageUrl={CONTACT_SECTION_CONFIG.mapImageUrl}
+      onSubmit={async () => {
+        try {
+          await new Promise((res) => setTimeout(res, 1000));
+          showSuccess("Mensaje enviado. Te responderemos pronto ✉️");
+        } catch {
+          showError("No se pudo enviar el mensaje. Inténtalo más tarde");
+        } finally {
+          // noop
+        }
+      }}
+    />
   );
 };
 

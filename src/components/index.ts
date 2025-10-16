@@ -23,4 +23,4 @@ export * from "./organisms";
 // Re-exports for convenience
 export { Button, Heading, Text, List, ListItem, Logo } from "./atoms";
 export { Card, LogoBrand, ServiceCard } from "./molecules";
-export { ToastExample, ButtonShowcase, LogoBrandShowcase, ServicesSection } from "./organisms";
+export { ToastExample, ButtonShowcase, LogoBrandShowcase, ServicesSection, ContactSection } from "./organisms";
