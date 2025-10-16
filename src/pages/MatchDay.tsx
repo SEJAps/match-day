@@ -121,7 +121,7 @@ const MatchDay: FC = () => {
                   items={desc.items}
                   icon={
                     <img
-                      src={jugadoresCamiseta}
+                      src={desc.srcIcon}
                       alt={desc.title}
                       className="w-16 h-16"
                     />

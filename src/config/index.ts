@@ -1,3 +1,7 @@
+import jugadores from "@/assets/images/svg/jugadores-camiseta.svg";
+import equipos from "@/assets/images/svg/equipos.svg";
+import clubes from "@/assets/images/svg/clubes.svg";
+
 export type TCard = {
   title: string;
   text: string;
@@ -6,6 +10,7 @@ export type TCard = {
   bgBtn?: string;
   textBtn: string;
   customColor?: string;
+  srcIcon: string;
 };
 
 const CARD_DESCRIPTIONS: TCard[] = [
@@ -22,6 +27,7 @@ const CARD_DESCRIPTIONS: TCard[] = [
     bgBtn: "#10B981",
     textBtn: "Para Jugadores",
     customColor: "#009900",
+    srcIcon: jugadores,
   },
   {
     title: "Equipos",
@@ -36,6 +42,7 @@ const CARD_DESCRIPTIONS: TCard[] = [
     bgBtn: "#3B82F6",
     textBtn: "Para Equipos",
     customColor: "#000099",
+    srcIcon: equipos,
   },
   {
     title: "Clubs",
@@ -50,6 +57,7 @@ const CARD_DESCRIPTIONS: TCard[] = [
     bgBtn: "#A855F7",
     textBtn: "Para Clubes",
     customColor: "#990000",
+    srcIcon: clubes,
   },
 ];
 
