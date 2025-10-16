@@ -40,7 +40,7 @@ const MatchDay: FC = () => {
         />
       </picture>
       <aside className="z-100 bg-transparent w-full h-full">
-        <article className="flex flex-col items-center justify-center sm:py-20">
+        <article className="flex flex-col items-center justify-center py-10">
           <h1 className="text-white text-4xl px-6 sm:text-6xl w-full max-w-6xl text-center">
             {WHERE_YOU_WIN_ON_GAME_DAY.title}
           </h1>
