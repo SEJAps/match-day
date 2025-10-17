@@ -10,6 +10,7 @@ El contenido está centralizado en archivos de configuración dentro de `src/con
 - `src/config/pages/static/` → Contenido de páginas estáticas (Blog, Features, Help Center, Pricing, Privacy Policy, Terms of Service, Cookies, etc.)
 
 Además:
+
 - `src/config/services-page.ts` → Tarjetas de la página de Servicios.
 
 ## ¿Qué puedo editar con seguridad?
@@ -21,6 +22,7 @@ Además:
 - Fechas: valores `updatedAt` (formato `YYYY-MM-DD`).
 
 No edites:
+
 - Nombres de tipos o estructuras (por ejemplo, no elimines campos obligatorios como `title` en objetos que lo requieran).
 - Rutas de importación (líneas que empiezan por `import ... from "..."`).
 
@@ -42,9 +44,11 @@ Cada archivo exporta una constante con el contenido, por ejemplo `PRICES_STATIC_
 ## Páginas principales (con hero)
 
 En `src/config/pages/` hay archivos como:
+
 - `matchday.ts`, `players.ts`, `teams.ts`, `clubs.ts`, `contact.ts`.
 
 Dentro puedes editar:
+
 - `hero.title` y `hero.description` (texto del encabezado de la página).
 - `heroCtas` (botones principales: etiqueta y estilo). Nota: las acciones al pulsar (onClick) se controlan en el código de la página, no aquí.
 - `heroBgImages` (imágenes de fondo del hero): normalmente no necesitas tocarlas a menos que quieras cambiar el arte del fondo.

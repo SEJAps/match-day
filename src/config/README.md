@@ -20,4 +20,4 @@ Estructura organizada para todo el contenido estático.
 
 Si no te dedicas a programar y solo quieres cambiar textos, listas o datos visibles, consulta la guía:
 
-- `docs/content-editing.md` – Explica qué archivos tocar, qué campos editar y cómo ver los cambios sin entrar en código.
+- `src/config/content-editing.md` – Explica qué archivos tocar, qué campos editar y cómo ver los cambios sin entrar en código.
