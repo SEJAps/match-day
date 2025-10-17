@@ -6,6 +6,7 @@ import iconFacebook from "../assets/images/svg/social/facebook.svg";
 import iconInstagram from "../assets/images/svg/social/instagram.svg";
 import iconLinkedIn from "../assets/images/svg/social/linkedin.svg";
 import iconTwitter from "../assets/images/svg/social/twitter-o-x.svg";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const MainFooter: FC = () => {
   const { t } = useTranslation();
@@ -200,6 +201,9 @@ const MainFooter: FC = () => {
               {t("footer.cookies", { defaultValue: "Cookies" })}
             </Link>
           </div>
+          <section className="mt-4 flex items-center justify-center">
+            <LanguageSwitcher />
+          </section>
         </div>
       </div>
     </footer>
