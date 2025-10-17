@@ -3,9 +3,12 @@ import { Heading, Text } from "@/components";
 import { Button } from "@/components/atoms";
 
 export interface ContactSectionProps {
+  id?: string;
   className?: string;
   title?: string;
   subtitle?: string;
+  description?: string;
+  highlights?: string[];
   info?: {
     address?: string;
     phone?: string;
@@ -22,9 +25,12 @@ export interface ContactSectionProps {
 }
 
 const ContactSection: FC<ContactSectionProps> = ({
+  id,
   className = "",
   title = "Contacta con nosotros",
   subtitle = "¿Listo para revolucionar tu experiencia futbolística?",
+  description,
+  highlights,
   info = {
     address: "Calle Ejemplo 123, Madrid, España",
     phone: "+34 123 456 789",
@@ -35,9 +41,12 @@ const ContactSection: FC<ContactSectionProps> = ({
   actionsSlot,
 }) => {
   return (
-    <section className={`w-full bg-neutral-50 text-neutral-900 ${className}`}>
-      <div className="container mx-auto px-6 py-12 max-w-6xl">
-        <header className="mb-10 text-center">
+    <section
+      id={id}
+      className={`w-full bg-neutral-50 text-neutral-900 ${className}`}
+    >
+      <div className="container mx-auto px-6 py-16 max-w-5xl">
+        <header className="mb-8 text-center">
           <Heading as="h2" level="h2" align="center" className="text-4xl">
             {title}
           </Heading>
@@ -46,11 +55,29 @@ const ContactSection: FC<ContactSectionProps> = ({
               {subtitle}
             </Text>
           )}
+          {description && (
+            <Text
+              align="center"
+              className="text-neutral-700 mt-4 max-w-3xl mx-auto"
+            >
+              {description}
+            </Text>
+          )}
+          {highlights && highlights.length > 0 && (
+            <ul className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-600">
+              {highlights.map((h, i) => (
+                <li key={i} className="flex items-center gap-2">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-600" />
+                  {h}
+                </li>
+              ))}
+            </ul>
+          )}
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Columna izquierda: formulario */}
-          <article className="order-1 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <article className="order-1 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
             <form
               onSubmit={async (e) => {
                 e.preventDefault();
@@ -119,7 +146,7 @@ const ContactSection: FC<ContactSectionProps> = ({
                 />
               </div>
 
-              <div className="flex items-start gap-2">
+              <div className="flex items-start gap-3">
                 <input
                   id="consent"
                   name="consent"

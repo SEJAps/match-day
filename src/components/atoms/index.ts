@@ -20,3 +20,6 @@ export * from "./ListItem/index";
 
 // Logos (archivos individuales sin subcarpetas)
 export { default as Logo } from "./Logo";
+
+// Media
+export * from "./Image";

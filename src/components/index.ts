@@ -18,7 +18,7 @@ export * from "./molecules";
 export * from "./organisms";
 
 // Templates (cuando sean creados)
-// export * from './templates';
+export * from "./templates";
 
 // Re-exports for convenience
 export { Button, Heading, Text, List, ListItem, Logo } from "./atoms";
@@ -29,4 +29,6 @@ export {
   LogoBrandShowcase,
   ServicesSection,
   ContactSection,
+  Picture,
+  FeatureList,
 } from "./organisms";
