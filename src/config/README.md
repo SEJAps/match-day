@@ -28,3 +28,4 @@ Hemos preparado un plan de i18n sin modificar el runtime. Consulta:
 
 - `src/config/i18n/README.md` – RFC con estructura de locales y pasos sugeridos.
 - `src/config/i18n/locales/{es,en}/common.json` – Ejemplos de claves de UI.
+ - `src/config/i18n/translation-editing.md` – Guía rápida para editar traducciones (no técnica).
