@@ -185,7 +185,7 @@ const MainHeader = () => {
             <Button
               variant="primary"
               size="default"
-              className="w-full"
+              className="w-full bg-[#9BB5B0]"
               onClick={close}
             >
               {t("common.signIn", { defaultValue: "Acceder" })}
