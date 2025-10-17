@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "players": "Jugadores",
+    "teams": "Equipos",
+    "clubs": "Clubes",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "features": "Características",
+    "helpCenter": "Ayuda",
+    "pricing": "Precios"
+  },
+  "footer": {
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies",
+    "backToTop": "Volver arriba"
+  },
+  "common": {
+    "learnMore": "Saber más",
+    "comingSoon": "Próximamente",
+    "loading": "Cargando..."
+  },
+  "components": {
+    "backToTop": {
+      "label": "Volver arriba"
+    },
+    "notFound": {
+      "title": "Página no encontrada",
+      "cta": "Ir al inicio"
+    }
+  }
+}
