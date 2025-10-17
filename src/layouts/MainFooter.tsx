@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import logoSm from "../assets/images/svg/logo-sm.svg";
 import iconFacebook from "../assets/images/svg/social/facebook.svg";
 import iconInstagram from "../assets/images/svg/social/instagram.svg";
@@ -174,13 +175,13 @@ const MainFooter: FC = () => {
         </div>
 
         {/* Separador y legal */}
-        <div className="mt-10 border-t border-white/10 pt-4 md:flex md:items-center md:justify-between">
+        <div className="mt-10 border-t border-white/10 pt-4 md:flex md:items-center md:justify-between gap-4">
           <p className="text-center md:text-left text-sm text-neutral-400">
             {t("footer.copyright", {
               defaultValue: "© 2024 Match Day. Todos los derechos reservados.",
             })}
           </p>
-          <div className="mt-3 md:mt-0 flex items-center justify-center md:justify-end gap-8 text-sm text-neutral-400">
+          <div className="mt-3 md:mt-0 flex items-center justify-center md:justify-end gap-4 text-sm text-neutral-400">
             <Link
               to="/privacy-policy"
               className="hover:text-emerald-400 transition-colors"
@@ -199,6 +200,7 @@ const MainFooter: FC = () => {
             >
               {t("footer.cookies", { defaultValue: "Cookies" })}
             </Link>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
