@@ -2,6 +2,7 @@ import type { FC } from "react";
 import { Heading, ServiceCard } from "@/components";
 import { SERVICES_PAGE_CARDS } from "@/config";
 import { cn } from "@/utils/cn";
+import { useTranslation } from "react-i18next";
 
 export interface ServicesSectionProps {
   title?: string;
@@ -11,11 +12,23 @@ export interface ServicesSectionProps {
 }
 
 const ServicesSection: FC<ServicesSectionProps> = ({
-  title = "¿Qué ofrecemos?",
-  subtitle = "Características diseñadas para el mundo del fútbol moderno",
+  title,
+  subtitle,
   sectionClassName,
   bg = "bg-[#0F6E5D]",
 }) => {
+  const { t } = useTranslation();
+  const titleText =
+    title ??
+    t("pages.services.intro.title", {
+      defaultValue: "¿Qué ofrecemos?",
+    });
+  const subtitleText =
+    subtitle ??
+    t("pages.services.intro.description", {
+      defaultValue:
+        "Características diseñadas para el mundo del fútbol moderno",
+    });
   return (
     <section className={cn(" px-6 py-12", sectionClassName, bg)}>
       <article className="container mx-auto">
@@ -25,20 +38,26 @@ const ServicesSection: FC<ServicesSectionProps> = ({
             level="h1"
             className="text-white text-5xl mb-4 sm:mb-6 text-center"
           >
-            {title}
+            {titleText}
           </Heading>
           <p className="text-neutral-200 max-w-3xl mx-auto text-center">
-            {subtitle}
+            {subtitleText}
           </p>
         </article>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {SERVICES_PAGE_CARDS.map((c) => (
+          {SERVICES_PAGE_CARDS.map((c, idx) => (
             <ServiceCard
               key={c.title}
-              title={c.title}
-              text={c.text}
+              title={t(`pages.services.cards.${idx}.title`, {
+                defaultValue: c.title,
+              })}
+              text={t(`pages.services.cards.${idx}.text`, {
+                defaultValue: c.text,
+              })}
               icon={c.icon}
-              ctaLabel={c.ctaLabel}
+              ctaLabel={t(`pages.services.cards.${idx}.ctaLabel`, {
+                defaultValue: c.ctaLabel ?? "",
+              })}
               ctaHref={c.ctaHref}
               variant={c.variant}
             />

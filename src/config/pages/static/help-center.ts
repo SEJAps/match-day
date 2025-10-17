@@ -24,11 +24,13 @@ export const HELP_CENTER_STATIC_PAGE: HelpCenterConfig = {
   faqs: [
     {
       question: "¿Puedo usar MatchDay sin conexión?",
-      answer: "Puedes registrar eventos offline y sincronizar cuando recuperes conexión.",
+      answer:
+        "Puedes registrar eventos offline y sincronizar cuando recuperes conexión.",
     },
     {
       question: "¿Cómo comparto un informe?",
-      answer: "Desde la sección de informes, pulsa 'Compartir' y elige el canal preferido.",
+      answer:
+        "Desde la sección de informes, pulsa 'Compartir' y elige el canal preferido.",
     },
   ],
 };

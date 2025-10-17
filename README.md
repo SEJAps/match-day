@@ -74,7 +74,7 @@ export default defineConfig([
 
 ## Rutas actuales (App)
 
-```
+```text
 /
 ├── (index)              -> MatchDay
 ├── players              -> PlayersPage
@@ -104,3 +104,30 @@ Notas:
 1. Se mantienen ambas rutas `/caracteristiques` y `/features` hasta eliminar la primera.
 2. `logo-showcase` existe en raíz y bajo `atomic-design` por discoverability.
 3. Las páginas estáticas son placeholders listos para contenido real.
+
+## i18n rápido (para editores)
+
+Dónde editar traducciones (JSON):
+
+- ES: `src/config/i18n/locales/es/common.json`
+- EN: `src/config/i18n/locales/en/common.json`
+- CA: `src/config/i18n/locales/ca/common.json`
+
+Claves nuevas relevantes:
+
+- `pages.matchday.*` (hero, intro, features, contact)
+- `pages.players.*` (hero, heroCtas, sections)
+- `pages.teams.*` (hero, heroCtas, title/description/features)
+- `pages.clubs.*` (hero, heroCtas, title/description/features)
+- `pages.contact.*` (hero, heroCtas, contact, toast)
+- `common.servicesForEveryNeed.*` (bloque común reutilizable)
+
+Servicios (sección reusable):
+
+- `ServicesSection` ya usa `pages.services.intro.*` y `pages.services.cards.*`
+
+Cómo probar:
+
+- Usa el selector de idioma (Header/Footer) o añade `?lng=es|en|ca` a la URL.
+
+Guía completa para no técnicos: `src/config/i18n/translation-editing.md`

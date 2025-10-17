@@ -5,9 +5,7 @@ export const PRIVACY_POLICY_STATIC_PAGE: LegalPageConfig = {
   sections: [
     {
       heading: "Introducción",
-      content: [
-        "Esta política describe cómo tratamos tus datos en MatchDay.",
-      ],
+      content: ["Esta política describe cómo tratamos tus datos en MatchDay."],
     },
     {
       heading: "Datos que recopilamos",
@@ -18,9 +16,7 @@ export const PRIVACY_POLICY_STATIC_PAGE: LegalPageConfig = {
     },
     {
       heading: "Tus derechos",
-      content: [
-        "Acceso, rectificación y supresión de datos conforme a GDPR.",
-      ],
+      content: ["Acceso, rectificación y supresión de datos conforme a GDPR."],
     },
     {
       heading: "Bases legales del tratamiento",
