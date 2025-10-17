@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import logoSm from "../assets/images/svg/logo-sm.svg";
 import iconFacebook from "../assets/images/svg/social/facebook.svg";
 import iconInstagram from "../assets/images/svg/social/instagram.svg";
@@ -200,7 +199,6 @@ const MainFooter: FC = () => {
             >
               {t("footer.cookies", { defaultValue: "Cookies" })}
             </Link>
-            <LanguageSwitcher />
           </div>
         </div>
       </div>
