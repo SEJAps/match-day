@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Home",
+    "players": "Players",
+    "teams": "Teams",
+    "clubs": "Clubs",
+    "services": "Services",
+    "contact": "Contact",
+    "blog": "Blog",
+    "features": "Features",
+    "helpCenter": "Help Center",
+    "pricing": "Pricing"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "backToTop": "Back to top"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "comingSoon": "Coming soon",
+    "loading": "Loading..."
+  },
+  "components": {
+    "backToTop": {
+      "label": "Back to top"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "cta": "Go home"
+    }
+  }
+}
