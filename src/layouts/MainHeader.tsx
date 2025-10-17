@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router";
 import { Button } from "../components/atoms";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import logosm from "../assets/images/svg/logo-sm.svg";
 import { LogoBrand, Modal } from "../components/molecules";
 import { useModal } from "../hooks/useModal";
@@ -87,8 +88,9 @@ const MainHeader = () => {
         </div>
 
         {/* Acceso solo en escritorio, en móvil va dentro del modal */}
-        <aside className="hidden lg:flex items-center px-4 mt-8">
-          <Button variant="success" size="default" className="mx-4">
+        <aside className="hidden lg:flex items-center px-4 mt-8 gap-3">
+          <LanguageSwitcher />
+          <Button variant="success" size="default" className="mx-1">
             Acceder
           </Button>
         </aside>
@@ -168,7 +170,8 @@ const MainHeader = () => {
               </NavLink>
             </ul>
           </nav>
-          <div className="pt-2">
+          <div className="pt-2 flex items-center gap-3">
+            <LanguageSwitcher />
             <Button
               variant="primary"
               size="default"
