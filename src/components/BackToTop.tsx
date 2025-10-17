@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const SCROLL_THRESHOLD = 300; // px
 
 const BackToTop = () => {
+  const { t } = useTranslation();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const BackToTop = () => {
 
   return (
     <button
-      aria-label="Volver arriba"
+      aria-label={t("components.backToTop.label")}
       onClick={handleClick}
       className={`fixed bottom-6 right-6 z-50 rounded-full shadow-lg border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-400/60
       ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none"}
