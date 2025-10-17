@@ -9,3 +9,13 @@ export * from "./pages/players";
 export * from "./pages/teams";
 export * from "./pages/clubs";
 export * from "./pages/contact";
+// Páginas estáticas (contenido sin hero)
+export * from "./pages/static/blog";
+export * from "./pages/static/features";
+export * from "./pages/static/help-center";
+export * from "./pages/static/not-found";
+export * from "./pages/static/prices";
+export * from "./pages/static/privacy-policy";
+export * from "./pages/static/services";
+export * from "./pages/static/terms-of-service";
+export * from "./pages/static/cookies";

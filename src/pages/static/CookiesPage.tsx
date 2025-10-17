@@ -1,20 +1,20 @@
 import type { FC } from "react";
-import { PRIVACY_POLICY_STATIC_PAGE } from "@/config";
+import { COOKIES_POLICY_STATIC_PAGE } from "@/config";
 import LegalPageLayout from "@/layouts/LegalPageLayout";
 
-const PrivacyPolicyPage: FC = () => {
-  const { updatedAt, sections } = PRIVACY_POLICY_STATIC_PAGE;
+const CookiesPage: FC = () => {
+  const { updatedAt, sections } = COOKIES_POLICY_STATIC_PAGE;
   return (
     <LegalPageLayout
-      title="Política de Privacidad"
+      title="Política de Cookies"
       updatedAt={updatedAt}
       sections={sections}
       breadcrumbs={[
         { label: "Inicio", href: "/" },
         { label: "Legal" },
-        { label: "Privacidad" },
+        { label: "Cookies" },
       ]}
     />
   );
 };
-export default PrivacyPolicyPage;
+export default CookiesPage;
