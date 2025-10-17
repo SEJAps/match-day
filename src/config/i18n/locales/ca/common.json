@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "home": "Inici",
+    "players": "Jugadors",
+    "teams": "Equips",
+    "clubs": "Clubs",
+    "services": "Serveis",
+    "contact": "Contacte",
+    "blog": "Blog",
+    "features": "Característiques",
+    "helpCenter": "Ajuda",
+    "pricing": "Preus"
+  },
+  "footer": {
+    "privacy": "Privacitat",
+    "terms": "Termes",
+    "cookies": "Galetes",
+    "backToTop": "Tornar amunt",
+    "quickLinks": "Enllaços ràpids",
+    "support": "Suport",
+    "followUs": "Segueix-nos",
+    "faq": "PMF"
+  },
+  "common": {
+    "learnMore": "Més informació",
+    "comingSoon": "Properament",
+    "loading": "Carregant..."
+  },
+  "components": {
+    "backToTop": {
+      "label": "Tornar amunt"
+    },
+    "notFound": {
+      "title": "Pàgina no trobada",
+      "cta": "Anar a l'inici"
+    }
+  }
+}
