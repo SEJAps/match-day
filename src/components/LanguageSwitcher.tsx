@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 const LANGS = [
   { code: "es", label: "ES" },
   { code: "en", label: "EN" },
+  { code: "ca", label: "CA" },
 ];
 
 const LanguageSwitcher: FC = () => {
