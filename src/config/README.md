@@ -15,3 +15,9 @@ Estructura organizada para todo el contenido estático.
 - Evita usar rutas a `public/` en configs; usa imports desde `src/assets` para paths robustos.
 - Cuando se cree una nueva página con contenido estático, añade un archivo en `pages/` y exporta desde `config/index.ts`.
  - Las páginas bajo `pages/static/` no incluyen hero por ahora. Si más adelante se decide incluirlo, se añadirá a sus tipos específicos.
+
+## Guía para editar contenido (no técnica)
+
+Si no te dedicas a programar y solo quieres cambiar textos, listas o datos visibles, consulta la guía:
+
+- `docs/content-editing.md` – Explica qué archivos tocar, qué campos editar y cómo ver los cambios sin entrar en código.

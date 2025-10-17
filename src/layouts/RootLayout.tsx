@@ -4,6 +4,7 @@ import { PageSkeleton } from "../components/feedback/Skeleton";
 import MainFooter from "./MainFooter";
 import type { FC, ReactNode } from "react";
 import MainHeader from "./MainHeader";
+import BackToTop from "@/components/BackToTop";
 
 interface RootLayoutProps {
   withTopSection?: boolean;
@@ -25,6 +26,7 @@ const RootLayout: FC<RootLayoutProps> = ({
         </Suspense>
       </div>
       <MainFooter />
+      <BackToTop />
       <ScrollRestoration />
     </div>
   );
