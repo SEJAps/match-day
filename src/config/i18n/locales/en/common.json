@@ -229,23 +229,15 @@
     },
     "teams": {
       "hero": {
-        "title": "Manage your team like a pro",
-        "description": "Plan, train and analyze every match from a single platform.",
-        "list": {
-          "title": "What your team needs",
-          "items": {
-            "0": "Training planning",
-            "1": "Performance analysis",
-            "2": "Call-ups and calendar"
-          }
-        }
+        "title": "Train better. Organize more. Perform like a professional team.",
+        "description": "Match Day helps you prepare every detail quickly and efficiently. Optimize your time and unlock your full potential as a coach to get the best performance from your team. Because when match day arrives, nothing can be left to chance."
       },
       "heroCtas": {
         "0": {
-          "label": "Create team"
+          "label": "Register"
         },
         "1": {
-          "label": "See features"
+          "label": "See Plans"
         }
       },
       "title": "Teams",

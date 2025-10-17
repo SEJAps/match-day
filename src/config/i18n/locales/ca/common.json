@@ -229,23 +229,15 @@
     },
     "teams": {
       "hero": {
-        "title": "Gestiona el teu equip com un professional",
-        "description": "Planifica, entrena i analitza cada partit des d'una sola plataforma.",
-        "list": {
-          "title": "L'essencial per al teu equip",
-          "items": {
-            "0": "Planificació d'entrenaments",
-            "1": "Anàlisi de rendiment",
-            "2": "Convocatòries i calendari"
-          }
-        }
+        "title": "Entrena millor. Organitza més. Rindeix com un equip professional.",
+        "description": "Match Day t'ajuda a preparar cada detall de manera ràpida i eficaç. Optimitza el teu temps i treu-te el màxim potencial com a entrenador per aconseguir el millor rendiment del teu equip. Perquè quan arriba el dia de partit, res no pot quedar a l'atzar.."
       },
       "heroCtas": {
         "0": {
-          "label": "Crear equip"
+          "label": "Registrar-se"
         },
         "1": {
-          "label": "Veure funcionalitats"
+          "label": "Veure Plans"
         }
       },
       "title": "Equips",

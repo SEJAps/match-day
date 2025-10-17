@@ -229,23 +229,15 @@
     },
     "teams": {
       "hero": {
-        "title": "Gestiona tu equipo como un profesional",
-        "description": "Planifica, entrena y analiza cada partido desde una sola plataforma.",
-        "list": {
-          "title": "Lo esencial para tu equipo",
-          "items": {
-            "0": "Planificación de entrenamientos",
-            "1": "Análisis de rendimiento",
-            "2": "Convocatorias y calendario"
-          }
-        }
+        "title": "Entrena mejor. Organiza más. Rinde como un equipo profesional.",
+        "description": "Match Day te ayuda a preparar cada detalle de manera rápida y eficaz. Optimiza tu tiempo y sácate el máximo potencial como entrenador para sacar el máximo rendimiento de tu equipo. Porque cuando llega el día de partido, nada puede quedar al azar.."
       },
       "heroCtas": {
         "0": {
-          "label": "Crear equipo"
+          "label": "Regístrate"
         },
         "1": {
-          "label": "Ver funcionalidades"
+          "label": "Ver Planes"
         }
       },
       "title": "Equipos",

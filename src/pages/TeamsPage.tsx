@@ -23,63 +23,6 @@ const TeamsPage: FC = () => {
             defaultValue: c.label,
           }),
         })),
-        heroContent: (
-          <section className="w-9/12 mt-4 py-6 sm:max-h-auto sm:max-w-[512px] text-white bg-[#1C4020] rounded-2xl">
-            <header>
-              <p className="text-sm sm:text-base md:text-lg px-6 text-white text-center">
-                {t("pages.teams.hero.list.title", {
-                  defaultValue: "Lo esencial para tu equipo",
-                })}
-              </p>
-            </header>
-            <article className="flex flex-col py-2">
-              <FeatureList
-                items={[
-                  {
-                    text: (
-                      <span className="text-sm sm:text-base md:text-lg text-white">
-                        {t("pages.teams.hero.list.items.0", {
-                          defaultValue: "Planificación de entrenamientos",
-                        })}
-                      </span>
-                    ),
-                    iconSrc: listItemImage,
-                    iconAlt: "Planificación",
-                  },
-                  {
-                    text: (
-                      <span className="text-sm sm:text-base md:text-lg text-white">
-                        {t("pages.teams.hero.list.items.1", {
-                          defaultValue: "Análisis de rendimiento",
-                        })}
-                      </span>
-                    ),
-                    iconSrc: listItemImage,
-                    iconAlt: "Rendimiento",
-                  },
-                  {
-                    text: (
-                      <span className="text-sm sm:text-base md:text-lg text-white">
-                        {t("pages.teams.hero.list.items.2", {
-                          defaultValue: "Convocatorias y calendario",
-                        })}
-                      </span>
-                    ),
-                    iconSrc: listItemImage,
-                    iconAlt: "Convocatorias",
-                  },
-                ]}
-                listClassName="px-6"
-                spacing="base"
-                padding="base"
-                align="center"
-                iconSize={32}
-                iconClassName="w-8 h-8 sm:w-14 sm:h-14"
-                itemColor="white"
-              />
-            </article>
-          </section>
-        ),
       }}
     >
       {/* Contenido de la página */}

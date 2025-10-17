@@ -10,9 +10,9 @@ export interface TeamsPageConfig {
 
 export const TEAMS_PAGE: TeamsPageConfig = {
   hero: {
-    title: "Gestiona tu equipo como un profesional",
+    title: "Entrena mejor. Organiza más. Rinde como un equipo profesional.",
     description:
-      "Planifica, entrena y analiza cada partido desde una sola plataforma.",
+      "Match Day te ayuda a preparar cada detalle de manera rápida y eficaz. Optimiza tu tiempo y sácate el máximo potencial como entrenador para sacar el máximo rendimiento de tu equipo. Porque cuando llega el día de partido, nada puede quedar al azar..",
   },
   heroBgImages: [
     {
