@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router/dom";
 import { StrictMode } from "react";
 import { Toaster } from "react-hot-toast";
 import { router } from "./router";
+import "./i18n";
 
 const root = document.getElementById("root") as HTMLElement;
 
@@ -36,5 +37,5 @@ macthDayApp.render(
         },
       }}
     />
-  </StrictMode>,
+  </StrictMode>
 );

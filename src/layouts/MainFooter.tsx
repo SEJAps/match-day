@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 import logoSm from "../assets/images/svg/logo-sm.svg";
 import iconFacebook from "../assets/images/svg/social/facebook.svg";
 import iconInstagram from "../assets/images/svg/social/instagram.svg";
@@ -7,6 +8,7 @@ import iconLinkedIn from "../assets/images/svg/social/linkedin.svg";
 import iconTwitter from "../assets/images/svg/social/twitter-o-x.svg";
 
 const MainFooter: FC = () => {
+  const { t } = useTranslation();
   return (
     <footer className="w-full bg-[#0E1423] text-white mt-auto">
       <div className="container mx-auto px-8 py-10">
@@ -24,21 +26,25 @@ const MainFooter: FC = () => {
               <span className="sr-only">MATCH DAY</span>
             </div>
             <p className="mt-3 text-sm text-neutral-300 max-w-md">
-              La plataforma definitiva para el fútbol moderno. Estadísticas,
-              gestión y mercado de fichajes en un solo lugar.
+              {t("footer.tagline", {
+                defaultValue:
+                  "La plataforma definitiva para el fútbol moderno. Estadísticas, gestión y mercado de fichajes en un solo lugar.",
+              })}
             </p>
           </div>
 
           {/* Columna 2: Enlaces */}
           <section>
-            <h4 className="text-sm font-semibold">Enlaces Rápidos</h4>
+            <h4 className="text-sm font-semibold">
+              {t("footer.quickLinks", { defaultValue: "Enlaces Rápidos" })}
+            </h4>
             <ul className="mt-3 space-y-2 text-neutral-300">
               <li>
                 <Link
                   to="/"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Inicio
+                  {t("nav.home", { defaultValue: "Inicio" })}
                 </Link>
               </li>
               <li>
@@ -46,7 +52,7 @@ const MainFooter: FC = () => {
                   to="/services"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Servicios
+                  {t("nav.services", { defaultValue: "Servicios" })}
                 </Link>
               </li>
               <li>
@@ -54,7 +60,7 @@ const MainFooter: FC = () => {
                   to="/features"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Características
+                  {t("nav.features", { defaultValue: "Características" })}
                 </Link>
               </li>
               <li>
@@ -62,7 +68,7 @@ const MainFooter: FC = () => {
                   to="/prices"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Precios
+                  {t("nav.pricing", { defaultValue: "Precios" })}
                 </Link>
               </li>
             </ul>
@@ -70,14 +76,16 @@ const MainFooter: FC = () => {
 
           {/* Columna 3: Soporte */}
           <section>
-            <h4 className="text-sm font-semibold">Soporte</h4>
+            <h4 className="text-sm font-semibold">
+              {t("footer.support", { defaultValue: "Soporte" })}
+            </h4>
             <ul className="mt-3 space-y-2 text-neutral-300">
               <li>
                 <Link
                   to="/help-center"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Centro de Ayuda
+                  {t("nav.helpCenter", { defaultValue: "Centro de Ayuda" })}
                 </Link>
               </li>
               <li>
@@ -85,7 +93,7 @@ const MainFooter: FC = () => {
                   to="/contact"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Contacto
+                  {t("nav.contact", { defaultValue: "Contacto" })}
                 </Link>
               </li>
               <li>
@@ -93,7 +101,7 @@ const MainFooter: FC = () => {
                   to="/help-center#faq"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  FAQ
+                  {t("footer.faq", { defaultValue: "FAQ" })}
                 </Link>
               </li>
               <li>
@@ -101,7 +109,7 @@ const MainFooter: FC = () => {
                   to="/blog"
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  Blog
+                  {t("nav.blog", { defaultValue: "Blog" })}
                 </Link>
               </li>
             </ul>
@@ -109,7 +117,9 @@ const MainFooter: FC = () => {
 
           {/* Columna 4: Redes sociales */}
           <section>
-            <h4 className="text-sm font-semibold">Síguenos</h4>
+            <h4 className="text-sm font-semibold">
+              {t("footer.followUs", { defaultValue: "Síguenos" })}
+            </h4>
             <div className="mt-3 grid grid-cols-4 gap-4">
               <a
                 href="https://facebook.com"
@@ -166,26 +176,28 @@ const MainFooter: FC = () => {
         {/* Separador y legal */}
         <div className="mt-10 border-t border-white/10 pt-4 md:flex md:items-center md:justify-between">
           <p className="text-center md:text-left text-sm text-neutral-400">
-            © 2024 Match Day. Todos los derechos reservados.
+            {t("footer.copyright", {
+              defaultValue: "© 2024 Match Day. Todos los derechos reservados.",
+            })}
           </p>
           <div className="mt-3 md:mt-0 flex items-center justify-center md:justify-end gap-8 text-sm text-neutral-400">
             <Link
               to="/privacy-policy"
               className="hover:text-emerald-400 transition-colors"
             >
-              Privacidad
+              {t("footer.privacy", { defaultValue: "Privacidad" })}
             </Link>
             <Link
               to="/terms-of-service"
               className="hover:text-emerald-400 transition-colors"
             >
-              Términos
+              {t("footer.terms", { defaultValue: "Términos" })}
             </Link>
             <Link
               to="/cookies"
               className="hover:text-emerald-400 transition-colors"
             >
-              Cookies
+              {t("footer.cookies", { defaultValue: "Cookies" })}
             </Link>
           </div>
         </div>
