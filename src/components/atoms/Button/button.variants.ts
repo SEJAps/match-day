@@ -18,7 +18,7 @@ export const buttonVariants = cva(
           "bg-slate-100 text-slate-900 shadow-sm hover:bg-slate-100/80",
         ghost: "hover:bg-slate-100 hover:text-slate-900",
         link: "text-slate-900 underline-offset-4 hover:underline",
-        success: "bg-green-500 text-slate-50 shadow-sm hover:bg-green-500/90",
+        success: "bg-[#10B981] text-slate-50 shadow-sm hover:bg-green-500/90",
         warning: "bg-yellow-500 text-slate-50 shadow-sm hover:bg-yellow-500/90",
         info: "bg-blue-500 text-slate-50 shadow-sm hover:bg-blue-500/90",
         primary: "bg-blue-600 text-white shadow-sm hover:bg-blue-600/90",
