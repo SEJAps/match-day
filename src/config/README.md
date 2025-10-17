@@ -14,7 +14,7 @@ Estructura organizada para todo el contenido estático.
 - Preferimos importar configs desde el barrel `@/config` salvo casos de página específicos (p. ej. `@/config/pages/players`).
 - Evita usar rutas a `public/` en configs; usa imports desde `src/assets` para paths robustos.
 - Cuando se cree una nueva página con contenido estático, añade un archivo en `pages/` y exporta desde `config/index.ts`.
- - Las páginas bajo `pages/static/` no incluyen hero por ahora. Si más adelante se decide incluirlo, se añadirá a sus tipos específicos.
+- Las páginas bajo `pages/static/` no incluyen hero por ahora. Si más adelante se decide incluirlo, se añadirá a sus tipos específicos.
 
 ## Guía para editar contenido (no técnica)
 
@@ -28,4 +28,4 @@ Hemos preparado un plan de i18n sin modificar el runtime. Consulta:
 
 - `src/config/i18n/README.md` – RFC con estructura de locales y pasos sugeridos.
 - `src/config/i18n/locales/{es,en}/common.json` – Ejemplos de claves de UI.
- - `src/config/i18n/translation-editing.md` – Guía rápida para editar traducciones (no técnica).
+- `src/config/i18n/translation-editing.md` – Guía rápida para editar traducciones (no técnica).

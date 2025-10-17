@@ -5,9 +5,7 @@ export const TERMS_OF_SERVICE_STATIC_PAGE: LegalPageConfig = {
   sections: [
     {
       heading: "Uso del servicio",
-      content: [
-        "Acepte los términos para utilizar MatchDay.",
-      ],
+      content: ["Acepte los términos para utilizar MatchDay."],
     },
     {
       heading: "Limitación de responsabilidad",

@@ -37,5 +37,5 @@ macthDayApp.render(
         },
       }}
     />
-  </StrictMode>
+  </StrictMode>,
 );

@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 type LegalSection = { heading: string; content: string[] };
 
@@ -26,9 +27,10 @@ const LegalPageLayout: FC<LegalPageLayoutProps> = ({
   breadcrumbs,
   asideTitle = "Contenido",
 }) => {
+  const { t, i18n } = useTranslation();
   const crumb = breadcrumbs ?? [
-    { label: "Inicio", href: "/" },
-    { label: "Legal" },
+    { label: t("nav.home", { defaultValue: "Inicio" }), href: "/" },
+    { label: t("footer.legal", { defaultValue: "Legal" }) },
     { label: title },
   ];
 
@@ -60,7 +62,8 @@ const LegalPageLayout: FC<LegalPageLayoutProps> = ({
         <h1 className="text-4xl font-extrabold tracking-tight">{title}</h1>
         {updatedAt && (
           <p className="text-neutral-400 mt-2">
-            Última actualización: {new Date(updatedAt).toLocaleDateString()}
+            {t("legal.lastUpdated", { defaultValue: "Última actualización:" })}{" "}
+            {new Date(updatedAt).toLocaleDateString(i18n.language)}
           </p>
         )}
       </header>
@@ -71,7 +74,7 @@ const LegalPageLayout: FC<LegalPageLayoutProps> = ({
         <aside className="hidden lg:block">
           <div className="sticky top-24">
             <h2 className="text-sm font-semibold text-neutral-300 mb-3">
-              {asideTitle}
+              {asideTitle || t("legal.contents", { defaultValue: "Contenido" })}
             </h2>
             <ul className="space-y-1 text-sm">
               {itemsWithId.map((s) => (

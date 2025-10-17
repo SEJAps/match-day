@@ -16,6 +16,7 @@
     "terms": "Termes",
     "cookies": "Galetes",
     "backToTop": "Tornar amunt",
+    "legal": "Legal",
     "quickLinks": "Enllaços ràpids",
     "support": "Suport",
     "followUs": "Segueix-nos",
@@ -24,7 +25,60 @@
   "common": {
     "learnMore": "Més informació",
     "comingSoon": "Properament",
-    "loading": "Carregant..."
+    "loading": "Carregant...",
+    "signIn": "Accedir",
+    "servicesForEveryNeed": {
+      "title": "Serveis per a cada necessitat",
+      "description": "Eines especialitzades per a jugadors, equips i clubs",
+      "cards": {
+        "0": {
+          "title": "Jugadors",
+          "text": "Accedeix a les teves estadístiques individuals, crea un perfil professional i entra al radar d'altres equips a través del marketplace. L'eina ideal per destacar i trobar noves oportunitats.",
+          "items": {
+            "0": "Perfil de jugador complet",
+            "1": "Estadístiques personals",
+            "2": "Accés al mercat de fitxatges",
+            "3": "Seguiment del rendiment"
+          },
+          "textBtn": "Per a Jugadors"
+        },
+        "1": {
+          "title": "Equips",
+          "text": "Organitza entrenaments, crea alineacions, registra estadístiques de partits i gestiona convocatòries amb una sola eina. Tot el que necessita el teu cos tècnic, des de la banqueta fins al mercat de fitxatges.",
+          "items": {
+            "0": "Gestió i estadístiques de plantilla",
+            "1": "Creació i organització d'entrenaments",
+            "2": "Cerca de jugadors al mercat",
+            "3": "Anàlisi de rendiment"
+          },
+          "textBtn": "Per a Equips"
+        },
+        "2": {
+          "title": "Clubs",
+          "text": "Gestiona tots els teus equips des d'un sol panell. Organitza plantilles, analitza el rendiment, potencia l'estructura esportiva i reforça cada categoria amb el mercat de fitxatges.",
+          "items": {
+            "0": "Gestió multi-equip",
+            "1": "Quadre de comandament executiu",
+            "2": "Mercat de fitxatges avançat",
+            "3": "Informes personalitzats"
+          },
+          "textBtn": "Per a Clubs"
+        }
+      }
+    }
+  },
+  "legal": {
+    "lastUpdated": "Darrera actualització:",
+    "contents": "Contingut",
+    "privacy": {
+      "title": "Política de Privacitat"
+    },
+    "terms": {
+      "title": "Termes del servei"
+    },
+    "cookies": {
+      "title": "Política de Galetes"
+    }
   },
   "components": {
     "backToTop": {
@@ -33,6 +87,397 @@
     "notFound": {
       "title": "Pàgina no trobada",
       "cta": "Anar a l'inici"
+    },
+    "header": {
+      "openMenu": "Obrir menú",
+      "closeMenu": "Tancar menú",
+      "menuTitle": "Menú",
+      "menuAriaLabel": "Menú de navegació"
+    }
+  },
+  "pages": {
+    "matchday": {
+      "hero": {
+        "title": "On es guanya el dia de partit",
+        "description": "La plataforma completa per a estadístiques, gestió d'equips i mercat de fitxatges en el futbol.",
+        "imageAlt": "Artwork",
+        "heroCtas": {
+          "0": {
+            "label": "Començar ara"
+          },
+          "1": {
+            "label": "Veure demo"
+          }
+        }
+      },
+      "intro": {
+        "heading": "Plataforma tot en un per a jugadors, equips i clubs",
+        "paragraph": "Des de les estadístiques del partit fins al proper fitxatge, Match Day et dona control total per analitzar, entrenar i gestionar el teu equip o la teva carrera."
+      },
+      "features": {
+        "heading": "Tot el que necessites abans, durant i després del dia de partit",
+        "description": "Fàcil, ràpid i tot des d'una mateixa plataforma.",
+        "items": {
+          "0": {
+            "text": "Estadístiques en temps real"
+          },
+          "1": {
+            "text": "Mercat de fitxatges integrat"
+          },
+          "2": {
+            "text": "Gestió completa d'equips"
+          }
+        },
+        "mediaAlt": "Plataforma"
+      },
+      "servicesForEveryNeed": {
+        "title": "Serveis per a cada necessitat",
+        "description": "Eines especialitzades per a jugadors, equips i clubs",
+        "cards": {
+          "0": {
+            "title": "Jugadors",
+            "text": "Accedeix a les teves estadístiques individuals, crea un perfil professional i entra al radar d'altres equips a través del marketplace. L'eina ideal per destacar i trobar noves oportunitats.",
+            "items": {
+              "0": "Perfil de jugador complet",
+              "1": "Estadístiques personals",
+              "2": "Accés al mercat de fitxatges",
+              "3": "Seguiment del rendiment"
+            },
+            "textBtn": "Per a Jugadors"
+          },
+          "1": {
+            "title": "Equips",
+            "text": "Organitza entrenaments, crea alineacions, registra estadístiques de partits i gestiona convocatòries amb una sola eina. Tot el que necessita el teu cos tècnic, des de la banqueta fins al mercat de fitxatges.",
+            "items": {
+              "0": "Gestió i estadístiques de plantilla",
+              "1": "Creació i organització d'entrenaments",
+              "2": "Cerca de jugadors al mercat",
+              "3": "Anàlisi de rendiment"
+            },
+            "textBtn": "Per a Equips"
+          },
+          "2": {
+            "title": "Clubs",
+            "text": "Gestiona tots els teus equips des d'un sol panell. Organitza plantilles, analitza el rendiment, potencia l'estructura esportiva i reforça cada categoria amb el mercat de fitxatges.",
+            "items": {
+              "0": "Gestió multi-equip",
+              "1": "Quadre de comandament executiu",
+              "2": "Mercat de fitxatges avançat",
+              "3": "Informes personalitzats"
+            },
+            "textBtn": "Per a Clubs"
+          }
+        }
+      },
+      "contact": {
+        "title": "Contacta amb nosaltres",
+        "subtitle": "A punt per revolucionar la teva experiència futbolística?",
+        "description": "Som aquí per ajudar-te. Explica'ns el teu cas i et respondrem en menys de 24 hores.",
+        "highlights": {
+          "0": "Suport en espanyol i anglès",
+          "1": "Resposta mitjana en 24h",
+          "2": "Equip tècnic i comercial"
+        },
+        "info": {
+          "address": "Carrer Exemple 123, Madrid, Espanya",
+          "phone": "+34 123 456 789",
+          "email": "hola@matchday.com"
+        }
+      }
+    },
+    "players": {
+      "hero": {
+        "title": "Vols que et vegin?",
+        "description": "Fes que cada partit compti.",
+        "list": {
+          "title": "Impulsa la teva carrera des d'avui.",
+          "items": {
+            "0": {
+              "text": "Crea el teu perfil gratis"
+            },
+            "1": {
+              "text": "Puja les teves estadístiques"
+            },
+            "2": {
+              "text": "Fes-te visible per a clubs"
+            },
+            "3": {
+              "text": "Comença a destacar avui"
+            }
+          }
+        }
+      },
+      "heroCtas": {
+        "0": {
+          "label": "Registrar-se"
+        },
+        "1": {
+          "label": "Veure plans"
+        }
+      },
+      "sections": {
+        "0": {
+          "title": "Accedeix a les teves estadístiques personals de cada partit."
+        },
+        "1": {
+          "title": "Destaca amb el teu perfil professional incloent dades i vídeos."
+        },
+        "2": {
+          "title": "Connecta amb equips a través del marketplace de fitxatges."
+        }
+      }
+    },
+    "teams": {
+      "hero": {
+        "title": "Gestiona el teu equip com un professional",
+        "description": "Planifica, entrena i analitza cada partit des d'una sola plataforma.",
+        "list": {
+          "title": "L'essencial per al teu equip",
+          "items": {
+            "0": "Planificació d'entrenaments",
+            "1": "Anàlisi de rendiment",
+            "2": "Convocatòries i calendari"
+          }
+        }
+      },
+      "heroCtas": {
+        "0": {
+          "label": "Crear equip"
+        },
+        "1": {
+          "label": "Veure funcionalitats"
+        }
+      },
+      "title": "Equips",
+      "description": "Pàgina d'Equips: informació sobre diferents equips, els seus jugadors, estadístiques i propers partits. Mantén-te al dia amb les últimes novetats dels teus equips preferits.",
+      "features": {
+        "0": "Planificació d'entrenaments",
+        "1": "Anàlisi de rendiment",
+        "2": "Convocatòries i calendari"
+      }
+    },
+    "clubs": {
+      "hero": {
+        "title": "Troba talent i potencia el teu club",
+        "description": "Explora perfils, analitza rendiment i gestiona la teva pedrera.",
+        "list": {
+          "title": "Activa la teva direcció esportiva",
+          "items": {
+            "0": "Publicació de vacants",
+            "1": "Cerca avançada de talent",
+            "2": "Gestió de pedrera"
+          }
+        }
+      },
+      "heroCtas": {
+        "0": {
+          "label": "Publicar vacant"
+        },
+        "1": {
+          "label": "Explorar jugadors"
+        }
+      },
+      "title": "Clubs",
+      "description": "Pàgina de Clubs: gestiona plantilles, explora el mercat i potencia la teva estructura esportiva.",
+      "features": {
+        "0": "Publicació de vacants",
+        "1": "Cerca avançada de talent",
+        "2": "Gestió de pedrera"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Parlem",
+        "description": "Explica'ns en què podem ajudar-te"
+      },
+      "heroCtas": {
+        "0": {
+          "label": "Escriure ara"
+        }
+      },
+      "contact": {
+        "title": "Contacta amb nosaltres",
+        "subtitle": "A punt per revolucionar la teva experiència futbolística?",
+        "description": "Som aquí per ajudar-te. Explica'ns el teu cas i et respondrem en menys de 24 hores.",
+        "highlights": {
+          "0": "Suport en espanyol i anglès",
+          "1": "Resposta mitjana en 24h",
+          "2": "Equip tècnic i comercial"
+        },
+        "info": {
+          "address": "Carrer Exemple 123, Madrid, Espanya",
+          "phone": "+34 123 456 789",
+          "email": "hola@matchday.com"
+        }
+      },
+      "toast": {
+        "success": "Missatge enviat. Et respondrem aviat ✉️",
+        "error": "No s'ha pogut enviar el missatge. Torna-ho a provar més tard"
+      }
+    },
+    "features": {
+      "intro": {
+        "title": "El que ens fa diferents",
+        "description": "Capacitats clau que eleven el rendiment."
+      },
+      "groups": {
+        "0": {
+          "title": "Scouting i anàlisi",
+          "items": {
+            "0": "KPIs personalitzables per rol",
+            "1": "Etiquetatge de jugades i esdeveniments",
+            "2": "Comparatives entre temporades"
+          }
+        },
+        "1": {
+          "title": "Equip i club",
+          "items": {
+            "0": "Gestió de plantilles i lesions",
+            "1": "Integració amb wearables",
+            "2": "Informes per a direcció"
+          }
+        }
+      }
+    },
+    "helpCenter": {
+      "intro": {
+        "title": "Centre d'ajuda",
+        "description": "Troba respostes ràpides i guies pas a pas."
+      },
+      "categories": {
+        "0": {
+          "title": "Primers passos",
+          "articles": {
+            "0": {
+              "title": "Crea el teu primer equip"
+            },
+            "1": {
+              "title": "Convida el teu staff"
+            }
+          }
+        },
+        "1": {
+          "title": "Anàlisi i mètriques",
+          "articles": {
+            "0": {
+              "title": "KPIs essencials"
+            },
+            "1": {
+              "title": "Exportar informes"
+            }
+          }
+        }
+      },
+      "faqs": {
+        "title": "PMF",
+        "items": {
+          "0": {
+            "question": "Puc usar MatchDay sense connexió?",
+            "answer": "Pots registrar esdeveniments offline i sincronitzar quan recuperis la connexió."
+          },
+          "1": {
+            "question": "Com comparteixo un informe?",
+            "answer": "Des de la secció d'informes, prem 'Compartir' i tria el canal preferit."
+          }
+        }
+      }
+    },
+    "blog": {
+      "intro": {
+        "title": "Blog MatchDay",
+        "description": "Històries, novetats i anàlisi del futbol modern.",
+        "paragraphs": {
+          "0": "Benvingut al nostre blog. Aquí compartim idees i aprenentatges sobre com la tecnologia impulsa el joc."
+        }
+      },
+      "featured": {
+        "title": "Destacats",
+        "items": {
+          "/blog/medir-rendimiento-jugador": {
+            "title": "Com mesurar el rendiment real d'un jugador",
+            "excerpt": "Un enfocament pràctic amb KPIs que importen de debò."
+          },
+          "/blog/datos-a-decisiones": {
+            "title": "De les dades a les decisions a la banqueta",
+            "excerpt": "Casos reals d'ús en equips semiprofessionals."
+          },
+          "/blog/videoanalisis-tactico": {
+            "title": "Videoanàlisi: del resum a la tàctica",
+            "excerpt": "Què mirar i com etiquetar per extreure valor."
+          }
+        }
+      },
+      "categories": {
+        "label": "Categories:"
+      }
+    },
+    "services": {
+      "intro": {
+        "title": "Què oferim?",
+        "description": "Característiques dissenyades per al món del futbol modern",
+        "note": "Explora més detalls a la secció de Característiques."
+      },
+      "cards": {
+        "0": {
+          "title": "Estadístiques avançades",
+          "text": "Accedeix a mètriques detallades de jugadors i equips amb anàlisi en temps real i informes personalitzats.",
+          "ctaLabel": "Més informació"
+        },
+        "1": {
+          "title": "Anàlisi de rendiment",
+          "text": "Avalua el rendiment dels jugadors amb dades precises i visualitzacions efectives.",
+          "ctaLabel": "Veure exemples"
+        },
+        "2": {
+          "title": "Informes personalitzats",
+          "text": "Crea informes a mida per a les teves necessitats específiques i pren decisions informades.",
+          "ctaLabel": "Sol·licitar demo"
+        }
+      }
+    },
+    "prices": {
+      "intro": {
+        "title": "Plans i preus",
+        "description": "Tria el pla que millor s'adapta al teu club."
+      },
+      "tiers": {
+        "mostPopular": "Més popular",
+        "0": {
+          "name": "Starter",
+          "description": "Per començar a provar la plataforma",
+          "features": {
+            "0": "1 equip",
+            "1": "Fins a 10 jugadors",
+            "2": "Informes bàsics"
+          },
+          "ctaLabel": "Crear compte"
+        },
+        "1": {
+          "name": "Pro",
+          "description": "Per a clubs en creixement",
+          "features": {
+            "0": "Fins a 5 equips",
+            "1": "Jugadors il·limitats",
+            "2": "Anàlisi avançats"
+          },
+          "ctaLabel": "Provar 14 dies",
+          "mostPopular": true
+        },
+        "2": {
+          "name": "Elite",
+          "description": "Per a organitzacions i acadèmies",
+          "features": {
+            "0": "Equips il·limitats",
+            "1": "Integracions i API",
+            "2": "Suport prioritari"
+          },
+          "ctaLabel": "Contactar vendes"
+        }
+      },
+      "notes": {
+        "0": "Preus en EUR, impostos no inclosos.",
+        "1": "Descomptes anuals disponibles sota consulta."
+      }
     }
   }
 }

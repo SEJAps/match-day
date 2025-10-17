@@ -5,11 +5,13 @@ import {} from "@/config";
 import { LandingPageTemplate, FeatureList } from "@/components";
 import listItemImage from "@/assets/images/svg/list-item-image.svg";
 import { CONTACT_PAGE } from "@/config";
+import { useTranslation } from "react-i18next";
 
 // Página del contenedor: delega el contenido al organismo ContactSection
 
 const ContactPage: FC = () => {
   const { showSuccess, showError } = useNotifications();
+  const { t } = useTranslation();
   // Estado local opcional (si en el futuro se quiere reflejar un spinner global)
 
   return (
@@ -17,11 +19,18 @@ const ContactPage: FC = () => {
       className="flex flex-col bg-white text-black"
       hero={{
         images: CONTACT_PAGE.heroBgImages,
-        title: CONTACT_PAGE.hero.title,
-        description: CONTACT_PAGE.hero.description,
+        title: t("pages.contact.hero.title", {
+          defaultValue: CONTACT_PAGE.hero.title,
+        }),
+        description: t("pages.contact.hero.description", {
+          defaultValue: CONTACT_PAGE.hero.description,
+        }),
         ctas: [
           {
-            label: CONTACT_PAGE.heroCtas?.[0]?.label ?? "Escribir ahora",
+            label: t("pages.contact.heroCtas.0.label", {
+              defaultValue:
+                CONTACT_PAGE.heroCtas?.[0]?.label ?? "Escribir ahora",
+            }),
             variant: CONTACT_PAGE.heroCtas?.[0]?.variant ?? "success",
             onClick: () => {
               const el = document.getElementById("contact-form");
@@ -34,20 +43,26 @@ const ContactPage: FC = () => {
             <article className="flex flex-col py-2">
               {CONTACT_PAGE.contactSection.description && (
                 <p className="text-sm sm:text-base md:text-lg px-6 text-white text-center">
-                  {CONTACT_PAGE.contactSection.description}
+                  {t("pages.contact.contact.description", {
+                    defaultValue: CONTACT_PAGE.contactSection.description,
+                  })}
                 </p>
               )}
               <div className="mt-2">
                 <FeatureList
                   items={
-                    CONTACT_PAGE.contactSection.highlights?.map((text) => ({
+                    CONTACT_PAGE.contactSection.highlights?.map((text, i) => ({
                       text: (
                         <span className="text-sm sm:text-base md:text-lg text-white">
-                          {text}
+                          {t(`pages.contact.contact.highlights.${i}`, {
+                            defaultValue: text,
+                          })}
                         </span>
                       ),
                       iconSrc: listItemImage,
-                      iconAlt: String(text),
+                      iconAlt: t(`pages.contact.contact.highlights.${i}`, {
+                        defaultValue: String(text),
+                      }),
                     })) ?? []
                   }
                   listClassName="px-6"
@@ -66,18 +81,45 @@ const ContactPage: FC = () => {
     >
       <ContactSection
         id="contact-form"
-        title={CONTACT_PAGE.contactSection.title}
-        subtitle={CONTACT_PAGE.contactSection.subtitle}
-        description={CONTACT_PAGE.contactSection.description}
-        highlights={CONTACT_PAGE.contactSection.highlights}
-        info={CONTACT_PAGE.contactSection.info}
+        title={t("pages.contact.contact.title", {
+          defaultValue: CONTACT_PAGE.contactSection.title,
+        })}
+        subtitle={t("pages.contact.contact.subtitle", {
+          defaultValue: CONTACT_PAGE.contactSection.subtitle,
+        })}
+        description={t("pages.contact.contact.description", {
+          defaultValue: CONTACT_PAGE.contactSection.description,
+        })}
+        highlights={CONTACT_PAGE.contactSection.highlights?.map((h, i) =>
+          t(`pages.contact.contact.highlights.${i}`, { defaultValue: h }),
+        )}
+        info={{
+          address: t("pages.contact.contact.info.address", {
+            defaultValue: CONTACT_PAGE.contactSection.info.address,
+          }),
+          phone: t("pages.contact.contact.info.phone", {
+            defaultValue: CONTACT_PAGE.contactSection.info.phone,
+          }),
+          email: t("pages.contact.contact.info.email", {
+            defaultValue: CONTACT_PAGE.contactSection.info.email,
+          }),
+        }}
         mapImageUrl={CONTACT_PAGE.contactSection.mapImageUrl}
         onSubmit={async () => {
           try {
             await new Promise((res) => setTimeout(res, 1000));
-            showSuccess("Mensaje enviado. Te responderemos pronto ✉️");
+            showSuccess(
+              t("pages.contact.toast.success", {
+                defaultValue: "Mensaje enviado. Te responderemos pronto ✉️",
+              }),
+            );
           } catch {
-            showError("No se pudo enviar el mensaje. Inténtalo más tarde");
+            showError(
+              t("pages.contact.toast.error", {
+                defaultValue:
+                  "No se pudo enviar el mensaje. Inténtalo más tarde",
+              }),
+            );
           } finally {
             // noop
           }

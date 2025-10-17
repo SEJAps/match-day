@@ -18,17 +18,17 @@ const HelpCenterPage = lazy(() => import("../pages/static/HelpCenterPage"));
 const FeaturesPage = lazy(() => import("../pages/static/FeaturesPage"));
 const PricesPage = lazy(() => import("../pages/static/PricesPage"));
 const PrivacyPolicyPage = lazy(
-  () => import("../pages/static/PrivacyPolicyPage")
+  () => import("../pages/static/PrivacyPolicyPage"),
 );
 const TermsOfServicePage = lazy(
-  () => import("../pages/static/TermsOfServicePage")
+  () => import("../pages/static/TermsOfServicePage"),
 );
 const CookiesPage = lazy(() => import("../pages/static/CookiesPage"));
 import NotFoundPage from "../pages/static/NotFoundPage";
 
 // Re-export of logo showcase at root (alias) - lazy import from atomic design folder
 const LogoBrandShowcasePage = lazy(
-  () => import("../pages/atomic-design/LogoBrandShowcasePage")
+  () => import("../pages/atomic-design/LogoBrandShowcasePage"),
 );
 
 export const router = createBrowserRouter([

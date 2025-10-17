@@ -5,6 +5,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import logosm from "../assets/images/svg/logo-sm.svg";
 import { LogoBrand, Modal } from "../components/molecules";
 import { useModal } from "../hooks/useModal";
+import { useTranslation } from "react-i18next";
 
 const MainHeader = () => {
   const { isOpen, open, close } = useModal(false);
@@ -20,6 +21,7 @@ const MainHeader = () => {
     mql.addEventListener("change", handler);
     return () => mql.removeEventListener("change", handler);
   }, [close]);
+  const { t } = useTranslation();
   return (
     <header className="flex bg-black/30">
       <section className="container flex items-start justify-between mx-auto z-100 w-full">
@@ -39,32 +41,34 @@ const MainHeader = () => {
         <nav className="hidden flex-1 lg:flex items-center justify-center gap-4 mt-8">
           <ul className="flex gap-8 px-4">
             <NavLink to="/" className="text-[#10B981] text-lg">
-              Home
+              {t("nav.home", { defaultValue: "Home" })}
             </NavLink>
             <NavLink
               to="/players"
               className="text-[var(--second-color)] text-lg"
             >
-              Jugadores
+              {t("nav.players", { defaultValue: "Jugadores" })}
             </NavLink>
             <NavLink to="/teams" className="text-[var(--second-color)] text-lg">
-              Equipos
+              {t("nav.teams", { defaultValue: "Equipos" })}
             </NavLink>
             <NavLink to="/clubs" className="text-[var(--second-color)] text-lg">
-              Clubs
+              {t("nav.clubs", { defaultValue: "Clubs" })}
             </NavLink>
             <NavLink
               to="/contact"
               className="text-[var(--second-color)] text-lg"
             >
-              Contacto
+              {t("nav.contact", { defaultValue: "Contacto" })}
             </NavLink>
           </ul>
         </nav>
         {/* Botón hamburguesa para móvil y tablet */}
         <div className="flex lg:hidden items-center px-4 mt-8">
           <Button
-            aria-label="Abrir menú"
+            aria-label={t("components.header.openMenu", {
+              defaultValue: "Abrir menú",
+            })}
             variant="ghost"
             size="default"
             className="text-white"
@@ -91,7 +95,7 @@ const MainHeader = () => {
         <aside className="hidden lg:flex items-center px-4 mt-8 gap-3">
           <LanguageSwitcher />
           <Button variant="success" size="default" className="mx-1">
-            Acceder
+            {t("common.signIn", { defaultValue: "Acceder" })}
           </Button>
         </aside>
       </section>
@@ -100,16 +104,22 @@ const MainHeader = () => {
       <Modal
         open={isOpen}
         onClose={close}
-        ariaLabel="Menú de navegación"
+        ariaLabel={t("components.header.menuAriaLabel", {
+          defaultValue: "Menú de navegación",
+        })}
         className="bg-white text-black"
         placement="right"
         size="full"
       >
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-lg font-semibold">Menú</span>
+            <span className="text-lg font-semibold">
+              {t("components.header.menuTitle", { defaultValue: "Menú" })}
+            </span>
             <Button
-              aria-label="Cerrar menú"
+              aria-label={t("components.header.closeMenu", {
+                defaultValue: "Cerrar menú",
+              })}
               variant="ghost"
               size="sm"
               className="text-black"
@@ -138,35 +148,35 @@ const MainHeader = () => {
                 onClick={close}
                 className="text-emerald-600 text-lg"
               >
-                Home
+                {t("nav.home", { defaultValue: "Home" })}
               </NavLink>
               <NavLink
                 to="/players"
                 onClick={close}
                 className="text-neutral-700 text-lg"
               >
-                Jugadores
+                {t("nav.players", { defaultValue: "Jugadores" })}
               </NavLink>
               <NavLink
                 to="/teams"
                 onClick={close}
                 className="text-neutral-700 text-lg"
               >
-                Equipos
+                {t("nav.teams", { defaultValue: "Equipos" })}
               </NavLink>
               <NavLink
                 to="/clubs"
                 onClick={close}
                 className="text-neutral-700 text-lg"
               >
-                Clubs
+                {t("nav.clubs", { defaultValue: "Clubs" })}
               </NavLink>
               <NavLink
                 to="/contact"
                 onClick={close}
                 className="text-neutral-700 text-lg"
               >
-                Contacto
+                {t("nav.contact", { defaultValue: "Contacto" })}
               </NavLink>
             </ul>
           </nav>
@@ -178,7 +188,7 @@ const MainHeader = () => {
               className="w-full"
               onClick={close}
             >
-              Acceder
+              {t("common.signIn", { defaultValue: "Acceder" })}
             </Button>
           </div>
         </div>

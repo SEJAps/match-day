@@ -33,12 +33,13 @@ Tienes dos maneras:
   - `https://tusitio.com/features?lng=en`
 
 Si no ves el cambio al instante:
+
 - Cambia a otro idioma y vuelve al tuyo con el selector.
 - O borra el idioma recordado en el navegador (Local Storage → clave `i18nextLng`) y recarga.
 
 ## 4) Normas para editar sin romper nada
 
-- Respeta el formato JSON: 
+- Respeta el formato JSON:
   - Comillas dobles `"` para claves y textos.
   - Comas entre pares clave/valor.
   - No dejes una coma al final del último elemento.
@@ -49,6 +50,7 @@ Si no ves el cambio al instante:
 ## 5) ¿Puedo añadir un idioma nuevo?
 
 Sí, pero requiere un paso técnico mínimo. Tu parte sería:
+
 1. Copiar uno de los `common.json` y traducirlo (por ejemplo a `src/config/i18n/locales/pt/common.json`).
 2. Avisar a desarrollo para que añadan ese idioma a la configuración y al selector.
 
