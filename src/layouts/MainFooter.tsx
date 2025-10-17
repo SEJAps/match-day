@@ -182,7 +182,7 @@ const MainFooter: FC = () => {
               Términos
             </Link>
             <Link
-              to="/privacy-policy#cookies"
+              to="/cookies"
               className="hover:text-emerald-400 transition-colors"
             >
               Cookies

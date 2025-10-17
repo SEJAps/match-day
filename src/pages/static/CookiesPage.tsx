@@ -1,13 +1,13 @@
 import type { FC } from "react";
-import { PRIVACY_POLICY_STATIC_PAGE } from "@/config";
+import { COOKIES_POLICY_STATIC_PAGE } from "@/config";
 
-const PrivacyPolicyPage: FC = () => {
-  const { updatedAt, sections } = PRIVACY_POLICY_STATIC_PAGE;
+const CookiesPage: FC = () => {
+  const { updatedAt, sections } = COOKIES_POLICY_STATIC_PAGE;
   return (
     <section className="container mx-auto px-6 py-12 max-w-5xl">
       <header className="mb-10">
         <h1 className="text-4xl font-extrabold tracking-tight">
-          Política de Privacidad
+          Política de Cookies
         </h1>
         <p className="text-neutral-400 mt-2">
           Última actualización: {new Date(updatedAt).toLocaleDateString()}
@@ -32,4 +32,4 @@ const PrivacyPolicyPage: FC = () => {
     </section>
   );
 };
-export default PrivacyPolicyPage;
+export default CookiesPage;

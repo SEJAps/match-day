@@ -19,11 +19,12 @@ import FeaturesPage from "../pages/static/FeaturesPage";
 import PricesPage from "../pages/static/PricesPage";
 import PrivacyPolicyPage from "../pages/static/PrivacyPolicyPage";
 import TermsOfServicePage from "../pages/static/TermsOfServicePage";
+import CookiesPage from "../pages/static/CookiesPage";
 import NotFoundPage from "../pages/static/NotFoundPage";
 
 // Re-export of logo showcase at root (alias) - lazy import from atomic design folder
 const LogoBrandShowcasePage = lazy(
-  () => import("../pages/atomic-design/LogoBrandShowcasePage"),
+  () => import("../pages/atomic-design/LogoBrandShowcasePage")
 );
 
 export const router = createBrowserRouter([
@@ -45,6 +46,7 @@ export const router = createBrowserRouter([
       { path: "contact", element: <ContactPage /> },
       { path: "privacy-policy", element: <PrivacyPolicyPage /> },
       { path: "terms-of-service", element: <TermsOfServicePage /> },
+      { path: "cookies", element: <CookiesPage /> },
       // Alias route for logo showcase at root level for quick access
       {
         path: "logo-showcase",
