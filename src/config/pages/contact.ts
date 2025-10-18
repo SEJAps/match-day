@@ -1,42 +1,23 @@
-import type { HeroBg, ContactSectionConfig } from "@/config/types";
-import HERO_BG_LAYER_SRC from "@/assets/images/png/hero-bg-layer.png";
-import HERO_BG_MAIN_SRC from "@/assets/images/png/hero-bg-main.png";
+import type { ContactSectionConfig } from "@/config/types";
 
 export interface ContactPageConfig {
   hero: {
     title: string;
+    subtitle?: string;
     description: string;
   };
-  heroBgImages: HeroBg[];
   heroCtas?: { label: string; variant: "success" | "outline" }[];
-  contactSection: ContactSectionConfig;
+  contact: ContactSectionConfig;
 }
 
 export const CONTACT_PAGE: ContactPageConfig = {
   hero: {
     title: "Hablemos",
-    description: "Cuéntanos en qué podemos ayudarte",
+    subtitle: "¿Cuéntanos en qué podemos ayudarte?",
+    description: "",
   },
-  heroBgImages: [
-    {
-      src: HERO_BG_LAYER_SRC,
-      width: 1400,
-      height: 680,
-      alt: "Capa de fondo hero (patrón)",
-      fit: "cover",
-      loading: "eager",
-    },
-    {
-      src: HERO_BG_MAIN_SRC,
-      width: 1400,
-      height: 680,
-      alt: "Fondo principal hero",
-      fit: "cover",
-      loading: "eager",
-    },
-  ],
   heroCtas: [{ label: "Escribir ahora", variant: "success" }],
-  contactSection: {
+  contact: {
     title: "Contacta con nosotros",
     subtitle: "¿Listo para revolucionar tu experiencia futbolística?",
     description:

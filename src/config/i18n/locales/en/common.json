@@ -229,6 +229,7 @@
     },
     "teams": {
       "hero": {
+        "subtitle": "The match starts long before the whistle blows.",
         "title": "Train better. Organize more. Perform like a professional team.",
         "description": "Match Day helps you prepare every detail quickly and efficiently. Optimize your time and unlock your full potential as a coach to get the best performance from your team. Because when match day arrives, nothing can be left to chance."
       },
@@ -251,7 +252,8 @@
     "clubs": {
       "hero": {
         "title": "Find talent and power up your club",
-        "description": "Explore profiles, analyze performance and manage your academy.",
+        "subtitle": "More control. More coordination. More results.",
+        "description": "Centralize the management of teams, coaches, and players with Match Day. Professionalize your sports structure from the grassroots to the first team.",
         "list": {
           "title": "Activate your sporting direction",
           "items": {
@@ -263,10 +265,10 @@
       },
       "heroCtas": {
         "0": {
-          "label": "Post a vacancy"
+          "label": "Register"
         },
         "1": {
-          "label": "Explore players"
+          "label": "See plans"
         }
       },
       "title": "Clubs",
@@ -280,7 +282,8 @@
     "contact": {
       "hero": {
         "title": "Let’s talk",
-        "description": "Tell us how we can help you"
+        "subtitle": "Tell us how we can help you",
+        "description": "We’re here to help. Tell us about your case and we’ll get back to you within 24 hours."
       },
       "heroCtas": {
         "0": {
@@ -382,6 +385,15 @@
           "0": "Welcome to our blog. We share ideas and learnings about how technology drives the game."
         }
       },
+      "categories": {
+        "title": "Categories:",
+        "labels": {
+          "analysis": "Analysis",
+          "data": "Data",
+          "tactics": "Tactics",
+          "news": "News"
+        }
+      },
       "featured": {
         "title": "Featured",
         "items": {
@@ -398,9 +410,6 @@
             "excerpt": "What to look for and how to tag to extract value."
           }
         }
-      },
-      "categories": {
-        "label": "Categories:"
       }
     },
     "services": {
@@ -470,6 +479,10 @@
         "0": "Prices in EUR, taxes not included.",
         "1": "Annual discounts available upon request."
       }
-    }
+    },
+    "analysis": "Analysis",
+    "data": "Data",
+    "tactics": "Tactics",
+    "news": "News"
   }
 }

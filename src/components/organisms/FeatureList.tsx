@@ -39,10 +39,10 @@ interface FeatureListProps {
 
 const FeatureList: FC<FeatureListProps> = ({
   items,
-  variant = "disc",
+  variant = "none",
   spacing = "base",
   padding = "base",
-  listClassName,
+  listClassName = "rounded-lg bg-[#10B981]/10 p-6 sm:p-6 min-h-34",
   itemClassName,
   iconSize = 20,
   align = "start",

@@ -1,78 +1,90 @@
 import type { FC } from "react";
 import { BLOG_STATIC_PAGE } from "@/config";
 import { useTranslation } from "react-i18next";
+import {
+  Heading,
+  IntroSectionTemplate,
+  LeadSectionTemplate,
+  Text,
+} from "@/components";
 
 const BlogPage: FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { intro, featuredPosts, categories } = BLOG_STATIC_PAGE;
   return (
-    <section className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold mb-3">
-        {t("pages.blog.intro.title", { defaultValue: intro.title })}
-      </h1>
-      {intro.description && (
-        <p className="text-neutral-300 max-w-3xl mb-6">
-          {t("pages.blog.intro.description", {
-            defaultValue: intro.description,
-          })}
-        </p>
-      )}
-      {intro.paragraphs?.length ? (
-        <div className="space-y-3 mb-8">
-          {intro.paragraphs.map((p, i) => (
-            <p key={i} className="text-neutral-300 max-w-3xl">
-              {t(`pages.blog.intro.paragraphs.${i}`, { defaultValue: p })}
-            </p>
-          ))}
-        </div>
-      ) : null}
-
-      <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">
-          {t("pages.blog.featured.title", { defaultValue: "Destacados" })}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <>
+      <IntroSectionTemplate
+        title={t("pages.blog.intro.title", { defaultValue: intro.title })}
+        description={t("pages.blog.intro.description", {
+          defaultValue: intro.description,
+        })}
+      />
+      <LeadSectionTemplate
+        title={t("pages.blog.intro.title", { defaultValue: intro.title })}
+        description={t("pages.blog.intro.description", {
+          defaultValue: intro.description,
+        })}
+      >
+        <section className="max-w-6xl mx-auto px-6 flex flex-col gap-8 py-6">
+          <Heading as="h3" level="h3" className="text-2xl mb-4">
+            {t(`pages.blog.featured.title`)}
+          </Heading>
           {featuredPosts.map((post) => (
             <article
-              key={post.href}
-              className="bg-neutral-800/40 rounded px-5 py-4 border border-neutral-700/60"
+              key={post.title}
+              className="flex justify-between gap-4 border p-4 rounded-lg"
             >
-              <h3 className="font-semibold mb-1">
-                {t(`pages.blog.featured.items.${post.href}.title`, {
-                  defaultValue: post.title,
-                })}
-              </h3>
-              <p className="text-neutral-400 text-sm mb-2">
-                {t(`pages.blog.featured.items.${post.href}.excerpt`, {
-                  defaultValue: post.excerpt,
-                })}
-              </p>
-              <div className="text-xs text-neutral-500 flex gap-2">
-                {post.tag && <span className="uppercase">{post.tag}</span>}
-                {post.date && (
-                  <span>
-                    • {new Date(post.date).toLocaleDateString(i18n.language)}
-                  </span>
-                )}
-              </div>
+              <section>
+                <Heading as="h3" level="h6">
+                  {t(`pages.blog.featured.items.${post.href}.title`, {
+                    defaultValue: post.title,
+                  })}
+                </Heading>
+                <Text className="flex items-center justify-between gap-2">
+                  {t(`pages.blog.featured.items.${post.href}.excerpt`, {
+                    defaultValue: post.excerpt,
+                  })}
+                </Text>
+              </section>
+              <section className="flex items-center gap-4">
+                <a href={post.href} className="text-blue-500 hover:underline">
+                  {t("common.learnMore", { defaultValue: "Learn more" })}
+                </a>
+                <br />
+                <small className="text-neutral-600">
+                  {t(`pages.blog.featured.items.${post.href}.date`, {
+                    defaultValue: post.date,
+                  })}
+                </small>
+              </section>
             </article>
           ))}
-        </div>
-      </div>
-
-      {categories?.length ? (
-        <div className="text-sm text-neutral-400">
-          <span className="mr-2">
-            {t("pages.blog.categories.label", { defaultValue: "Categorías:" })}
-          </span>
-          {categories.map((c) => (
-            <span key={c} className="mr-2">
-              #{c}
-            </span>
-          ))}
-        </div>
-      ) : null}
-    </section>
+          {categories && (
+            <div className="mt-12">
+              <Heading as="h3" level="h3" className="text-2xl mb-4">
+                {t("pages.blog.categories.title", {
+                  defaultValue: "Categories",
+                })}
+              </Heading>
+              <ul className="flex flex-wrap gap-4">
+                {categories.labels.map((category) => (
+                  <li
+                    key={category}
+                    className="nth-[1]:bg-blue-100 nth-[2]:bg-orange-100 nth-[3]:bg-yellow-100 nth-[4]:bg-green-100 text-neutral-800 px-2 py-1 rounded-lg shadow-sm shadow-neutral-400/50 hover:shadow-neutral-400/10"
+                  >
+                    <small className="font-semibold text-xs text-neutral-600">
+                      {t(`pages.${category}`, {
+                        defaultValue: category,
+                      })}
+                    </small>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      </LeadSectionTemplate>
+    </>
   );
 };
 export default BlogPage;

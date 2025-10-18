@@ -32,7 +32,7 @@ export const MATCHDAY_PAGE: MatchDayPageConfig = {
     description:
       "La plataforma completa para estadísticas, gestión de equipos y mercado de fichajes en el fútbol.",
     image: {
-      width: 256,
+      width: 1440,
       height: 256,
       src: ARTWORK,
       alt: "Artwork",
@@ -41,8 +41,8 @@ export const MATCHDAY_PAGE: MatchDayPageConfig = {
   heroBgImages: [
     {
       src: HERO_BG_LAYER_SRC,
-      width: 1400,
-      height: 680,
+      width: 512,
+      height: 256,
       alt: "Capa de fondo hero (patrón)",
       fit: "cover",
       loading: "eager",

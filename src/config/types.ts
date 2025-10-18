@@ -9,6 +9,7 @@ export type HeroBg = {
 
 export type HeroSection = {
   title: string;
+  subtitle?: string;
   description: string;
   image?: {
     width?: number;
@@ -107,7 +108,10 @@ export type BlogPostMeta = {
 export type BlogConfig = {
   intro: TextSection;
   featuredPosts: BlogPostMeta[];
-  categories?: string[];
+  categories?: {
+    title: string;
+    labels: string[];
+  };
 };
 
 export type FeaturesConfig = {

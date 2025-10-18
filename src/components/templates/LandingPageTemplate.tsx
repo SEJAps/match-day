@@ -12,7 +12,7 @@ export interface LandingPageTemplateProps {
 const LandingPageTemplate: FC<LandingPageTemplateProps> = ({
   hero,
   children,
-  className,
+  className = "bg-white text-black",
 }) => {
   return (
     <section className={className}>

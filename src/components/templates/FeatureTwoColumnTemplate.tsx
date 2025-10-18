@@ -28,44 +28,30 @@ const FeatureTwoColumnTemplate: FC<FeatureTwoColumnTemplateProps> = ({
   className,
 }) => {
   return (
-    <section className={"w-full " + (className ?? "")}>
-      <aside className="flex flex-col sm:flex-row">
-        <section className="flex-1 flex flex-col justify-center gap-6">
-          <Heading
-            as="h2"
-            level="h3"
-            weight="semibold"
-            className="text-2xl my-4 px-6 sm:pl-20 sm:px-8"
-          >
-            {heading}
-          </Heading>
-          {description && (
-            <p className="px-8 sm:pl-20 text-xl">{description}</p>
-          )}
-          <FeatureList
-            items={features}
-            spacing={featureListProps?.spacing ?? "base"}
-            padding={featureListProps?.padding ?? "base"}
-            align={featureListProps?.align ?? "center"}
-            listClassName={
-              featureListProps?.listClassName ?? "px-8 sm:pl-20 text-lg"
-            }
-            iconSize={featureListProps?.iconSize ?? 24}
-            iconClassName={featureListProps?.iconClassName}
-          />
-        </section>
-        <section className="flex-1 flex justify-center items-center mt-10">
-          <picture>
-            <Image
-              src={media.src}
-              alt={media.alt}
-              className={media.className ?? "aspect-auto h-full w-full"}
-              fit="contain"
-            />
-          </picture>
-        </section>
-      </aside>
-    </section>
+    <aside className={`flex flex-col md:flex-row  ${className}`}>
+      <section className="flex-1 flex flex-col gap-6 p-6 ">
+        <Heading as="h2" level="h3" weight="semibold">
+          {heading}
+        </Heading>
+        {description && <p className="text-xl">{description}</p>}
+        <FeatureList
+          items={features}
+          spacing={featureListProps?.spacing ?? "base"}
+          padding={featureListProps?.padding ?? "none"}
+          align={featureListProps?.align ?? "center"}
+          listClassName={
+            featureListProps?.listClassName ?? "px-8 sm:pl-20 text-lg"
+          }
+          iconSize={featureListProps?.iconSize ?? 24}
+          iconClassName={featureListProps?.iconClassName}
+        />
+      </section>
+      <section className="flex-1 flex flex-col justify-center items-center p-6 ">
+        <picture>
+          <Image src={media.src} alt={media.alt} fit="contain" />
+        </picture>
+      </section>
+    </aside>
   );
 };
 

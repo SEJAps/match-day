@@ -40,31 +40,39 @@ const ContactSection: FC<ContactSectionProps> = ({
   onSubmit,
   actionsSlot,
 }) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!onSubmit) return;
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") || ""),
+      email: String(formData.get("email") || ""),
+      message: String(formData.get("message") || ""),
+      consent: formData.get("consent") === "on",
+    };
+    await onSubmit(payload);
+  };
   return (
-    <section
-      id={id}
-      className={`w-full bg-neutral-50 text-neutral-900 ${className}`}
-    >
-      <div className="container mx-auto px-6 py-16 max-w-5xl">
-        <header className="mb-8 text-center">
-          <Heading as="h2" level="h2" align="center" className="text-4xl">
+    <section id={id} className={`bg-white text-neutral-800 ${className}`}>
+      <div className="max-w-6xl mx-auto flex flex-col">
+        <header className="flex flex-col items-center gap-8 p-6">
+          <Heading as="h2" level="h1" align="center">
             {title}
           </Heading>
           {subtitle && (
-            <Text align="center" className="text-neutral-600 mt-3">
+            <Text align="center" className="text-neutral-600">
               {subtitle}
             </Text>
           )}
           {description && (
-            <Text
-              align="center"
-              className="text-neutral-700 mt-4 max-w-3xl mx-auto"
-            >
+            <Text align="center" className="text-neutral-700 mt-4">
               {description}
             </Text>
           )}
           {highlights && highlights.length > 0 && (
-            <ul className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-600">
+            <ul className="max-w-96">
               {highlights.map((h, i) => (
                 <li key={i} className="flex items-center gap-2">
                   <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-600" />
@@ -75,26 +83,10 @@ const ContactSection: FC<ContactSectionProps> = ({
           )}
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6">
           {/* Columna izquierda: formulario */}
           <article className="order-1 rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
-            <form
-              onSubmit={async (e) => {
-                e.preventDefault();
-                const formData = new FormData(
-                  e.currentTarget as HTMLFormElement,
-                );
-                const payload = {
-                  name: String(formData.get("name") || ""),
-                  email: String(formData.get("email") || ""),
-                  message: String(formData.get("message") || ""),
-                  consent: Boolean(formData.get("consent")),
-                };
-                await onSubmit?.(payload);
-              }}
-              noValidate
-              className="space-y-5"
-            >
+            <form onSubmit={handleSubmit} noValidate className="space-y-5">
               <div>
                 <label
                   htmlFor="name"
@@ -163,7 +155,7 @@ const ContactSection: FC<ContactSectionProps> = ({
               <div className="pt-1">
                 <Button
                   type="submit"
-                  variant="primary"
+                  variant="success"
                   size="default"
                   className="w-full"
                 >

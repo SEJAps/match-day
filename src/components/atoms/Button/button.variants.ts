@@ -22,6 +22,7 @@ export const buttonVariants = cva(
         warning: "bg-yellow-500 text-slate-50 shadow-sm hover:bg-yellow-500/90",
         info: "bg-blue-500 text-slate-50 shadow-sm hover:bg-blue-500/90",
         primary: "bg-blue-600 text-white shadow-sm hover:bg-blue-600/90",
+        view: "bg-white/10  border border-[#02B94950] hover:border-[#02B949] hover:bg-[#02B94950]/50 hover:text-white",
       },
       size: {
         default: "h-9 px-4 py-2",

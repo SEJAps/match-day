@@ -23,12 +23,12 @@ const MainHeader = () => {
   }, [close]);
   const { t } = useTranslation();
   return (
-    <header className="flex bg-black/30">
+    <header className="flex">
       <section className="container flex items-start justify-between mx-auto z-100 w-full">
         <section className="hidden sm:flex items-center my-8">
           <LogoBrand />
         </section>
-        <section className="flex sm:hidden items-start my-8 mx-8">
+        <section className="flex sm:hidden items-start my-8 pl-4">
           <img
             src={logosm}
             alt="Logo"
@@ -39,32 +39,51 @@ const MainHeader = () => {
         </section>
         {/* Menú de escritorio (solo pantallas grandes) */}
         <nav className="hidden flex-1 lg:flex items-center justify-center gap-4 mt-8">
-          <ul className="flex gap-8 px-4">
-            <NavLink to="/" className="text-[#10B981] text-lg">
+          <ul className="flex gap-8 ">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                !isActive ? "text-[#01B748] text-lg" : "text-[#01B748] text-lg"
+              }
+            >
               {t("nav.home", { defaultValue: "Home" })}
             </NavLink>
             <NavLink
               to="/players"
-              className="text-[var(--second-color)] text-lg"
+              className={({ isActive }) =>
+                !isActive ? "text-lg" : "text-[#10B989] text-lg"
+              }
             >
               {t("nav.players", { defaultValue: "Jugadores" })}
             </NavLink>
-            <NavLink to="/teams" className="text-[var(--second-color)] text-lg">
+            <NavLink
+              to="/teams"
+              className={({ isActive }) =>
+                !isActive ? "text-lg" : "text-[#10B989] text-lg"
+              }
+            >
               {t("nav.teams", { defaultValue: "Equipos" })}
             </NavLink>
-            <NavLink to="/clubs" className="text-[var(--second-color)] text-lg">
+            <NavLink
+              to="/clubs"
+              className={({ isActive }) =>
+                !isActive ? "text-lg" : "text-[#10B989] text-lg"
+              }
+            >
               {t("nav.clubs", { defaultValue: "Clubs" })}
             </NavLink>
             <NavLink
               to="/contact"
-              className="text-[var(--second-color)] text-lg"
+              className={({ isActive }) =>
+                !isActive ? "text-lg" : "text-[#10B989] text-lg"
+              }
             >
               {t("nav.contact", { defaultValue: "Contacto" })}
             </NavLink>
           </ul>
         </nav>
         {/* Botón hamburguesa para móvil y tablet */}
-        <div className="flex lg:hidden items-center px-4 mt-8">
+        <div className="flex lg:hidden items-center mt-8">
           <Button
             aria-label={t("components.header.openMenu", {
               defaultValue: "Abrir menú",
@@ -92,7 +111,7 @@ const MainHeader = () => {
         </div>
 
         {/* Acceso solo en escritorio, en móvil va dentro del modal */}
-        <aside className="hidden lg:flex items-center px-4 mt-8 gap-3">
+        <aside className="hidden lg:flex items-center py-4 gap-3">
           <LanguageSwitcher />
           <Button variant="success" size="default" className="mx-1">
             {t("common.signIn", { defaultValue: "Acceder" })}

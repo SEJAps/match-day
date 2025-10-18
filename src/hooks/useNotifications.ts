@@ -1,30 +1,31 @@
+import type { ReactNode } from "react";
 import toast, { type ToastOptions } from "react-hot-toast";
 
 export const useNotifications = () => {
-  const showSuccess = (message: string, options?: ToastOptions) => {
-    return toast.success(message, {
+  const showSuccess = (message: string | ReactNode, options?: ToastOptions) => {
+    return toast.success(message as string, {
       duration: 3000,
       ...options,
     });
   };
 
-  const showError = (message: string, options?: ToastOptions) => {
-    return toast.error(message, {
+  const showError = (message: string | ReactNode, options?: ToastOptions) => {
+    return toast.error(message as string, {
       duration: 5000,
       ...options,
     });
   };
 
-  const showInfo = (message: string, options?: ToastOptions) => {
-    return toast(message, {
+  const showInfo = (message: string | ReactNode, options?: ToastOptions) => {
+    return toast(message as string, {
       icon: "ℹ️",
       duration: 4000,
       ...options,
     });
   };
 
-  const showWarning = (message: string, options?: ToastOptions) => {
-    return toast(message, {
+  const showWarning = (message: string | ReactNode, options?: ToastOptions) => {
+    return toast(message as string, {
       icon: "⚠️",
       duration: 4000,
       style: {

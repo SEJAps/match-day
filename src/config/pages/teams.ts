@@ -11,6 +11,7 @@ export interface TeamsPageConfig {
 export const TEAMS_PAGE: TeamsPageConfig = {
   hero: {
     title: "Entrena mejor. Organiza más. Rinde como un equipo profesional.",
+    subtitle: "El partido empieza mucho antes del pitido inicial.",
     description:
       "Match Day te ayuda a preparar cada detalle de manera rápida y eficaz. Optimiza tu tiempo y sácate el máximo potencial como entrenador para sacar el máximo rendimiento de tu equipo. Porque cuando llega el día de partido, nada puede quedar al azar..",
   },

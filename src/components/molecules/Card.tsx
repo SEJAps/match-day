@@ -34,7 +34,6 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({
   bg,
-  bgBtn,
   title,
   text,
   items,
@@ -56,7 +55,12 @@ const Card: FC<CardProps> = ({
   return (
     <>
       {/* Desktop View */}
-      <article className="hidden sm:flex flex-col">
+      <article
+        style={{
+          background: bg || "white",
+        }}
+        className="hidden sm:flex flex-col shadow-xs shadow-black/20  hover:shadow-black/20 rounded-2xl"
+      >
         <header className="flex flex-col items-center sm:items-start gap-4 mb-2 pt-14">
           <div className="flex items-center sm:ml-8">{icon}</div>
           <Heading
@@ -89,15 +93,7 @@ const Card: FC<CardProps> = ({
         )}
 
         <footer className="mb-14 flex-1 flex items-end px-8">
-          <Button
-            variant="primary"
-            size="default"
-            className="px-4 text-xs"
-            style={{
-              background: bgBtn,
-              color: "white",
-            }}
-          >
+          <Button variant="success" size="default">
             {label}
           </Button>
         </footer>
@@ -105,7 +101,7 @@ const Card: FC<CardProps> = ({
       {/* Mobile View */}
       <article
         className={cn(
-          "flex flex-col sm:hidden gap-2 rounded-2xl overflow-visible",
+          "flex flex-col sm:hidden gap-2 shadow-xs shadow-black/30 rounded-2xl overflow-visible",
           // Estilo moderno sutil
           "border border-black/10 shadow-sm hover:shadow-md active:scale-[0.99] transition will-change-transform",
           autoFullMobile && "w-full",
@@ -139,16 +135,8 @@ const Card: FC<CardProps> = ({
 
         {/* Lista oculta en mobile */}
 
-        <footer className="mt-auto px-4 pb-4">
-          <Button
-            variant="primary"
-            size="default"
-            className="w-full sm:w-auto px-4"
-            style={{
-              background: bgBtn,
-              color: "white",
-            }}
-          >
+        <footer className="mt-auto text-center px-4 pb-4">
+          <Button variant="success" size="lg">
             {label}
           </Button>
         </footer>

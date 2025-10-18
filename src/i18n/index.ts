@@ -7,7 +7,7 @@ import esCommon from "@/config/i18n/locales/es/common.json";
 import enCommon from "@/config/i18n/locales/en/common.json";
 import caCommon from "@/config/i18n/locales/ca/common.json";
 
-export const DEFAULT_LOCALE = "es" as const;
+export const DEFAULT_LOCALE = "ca" as const;
 
 void i18n
   .use(LanguageDetector)

@@ -230,6 +230,7 @@
     "teams": {
       "hero": {
         "title": "Entrena mejor. Organiza más. Rinde como un equipo profesional.",
+        "subtitle": "El partido empieza mucho antes del pitido inicial.",
         "description": "Match Day te ayuda a preparar cada detalle de manera rápida y eficaz. Optimiza tu tiempo y sácate el máximo potencial como entrenador para sacar el máximo rendimiento de tu equipo. Porque cuando llega el día de partido, nada puede quedar al azar.."
       },
       "heroCtas": {
@@ -251,7 +252,8 @@
     "clubs": {
       "hero": {
         "title": "Encuentra talento y potencia tu club",
-        "description": "Explora perfiles, analiza rendimiento y gestiona tu cantera.",
+        "subtitle": "Más control. Más coordinación. Más resultados.",
+        "description": "Centraliza la gestión de equipos, entrenadores y jugadores con Match Day. Profesionaliza tu estructura deportiva desde la base hasta el primer equipo.",
         "list": {
           "title": "Activa tu dirección deportiva",
           "items": {
@@ -263,10 +265,10 @@
       },
       "heroCtas": {
         "0": {
-          "label": "Publicar vacante"
+          "label": "Registrarse"
         },
         "1": {
-          "label": "Explorar jugadores"
+          "label": "Ver planes"
         }
       },
       "title": "Clubs",
@@ -280,7 +282,8 @@
     "contact": {
       "hero": {
         "title": "Hablemos",
-        "description": "Cuéntanos en qué podemos ayudarte"
+        "subtitle": "¿Cuéntanos en qué podemos ayudarte?",
+        "description": "Estamos aquí para ayudarte. Cuéntanos tu caso y te responderemos en menos de 24 horas."
       },
       "heroCtas": {
         "0": {
@@ -400,7 +403,7 @@
         }
       },
       "categories": {
-        "label": "Categorías:"
+        "title": "Categorías:"
       }
     },
     "services": {
@@ -469,6 +472,10 @@
         "0": "Precios en EUR, impuestos no incluidos.",
         "1": "Descuentos anuales disponibles bajo consulta."
       }
-    }
+    },
+    "analysis": "Análisis",
+    "data": "Datos",
+    "tactics": "Táctica",
+    "news": "Noticias"
   }
 }

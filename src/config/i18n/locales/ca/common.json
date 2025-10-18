@@ -230,6 +230,7 @@
     "teams": {
       "hero": {
         "title": "Entrena millor. Organitza més. Rindeix com un equip professional.",
+        "subtitle": "El partit comença molt abans del xiulet inicial.",
         "description": "Match Day t'ajuda a preparar cada detall de manera ràpida i eficaç. Optimitza el teu temps i treu-te el màxim potencial com a entrenador per aconseguir el millor rendiment del teu equip. Perquè quan arriba el dia de partit, res no pot quedar a l'atzar.."
       },
       "heroCtas": {
@@ -251,7 +252,8 @@
     "clubs": {
       "hero": {
         "title": "Troba talent i potencia el teu club",
-        "description": "Explora perfils, analitza rendiment i gestiona la teva pedrera.",
+        "subtitle": "Més control. Més coordinació. Més resultats.",
+        "description": "Centralitza la gestió d'equips, entrenadors i jugadors amb Match Day. Professionalitza la teva estructura esportiva des de la base fins al primer equip.",
         "list": {
           "title": "Activa la teva direcció esportiva",
           "items": {
@@ -263,10 +265,10 @@
       },
       "heroCtas": {
         "0": {
-          "label": "Publicar vacant"
+          "label": "Registrar-se"
         },
         "1": {
-          "label": "Explorar jugadors"
+          "label": "Veure Plans"
         }
       },
       "title": "Clubs",
@@ -280,7 +282,8 @@
     "contact": {
       "hero": {
         "title": "Parlem",
-        "description": "Explica'ns en què podem ajudar-te"
+        "subtitle": "Explica'ns en què podem ajudar-te",
+        "description": "Som aquí per ajudar-te. Explica'ns el teu cas i et respondrem en menys de 24 hores."
       },
       "heroCtas": {
         "0": {
@@ -382,6 +385,9 @@
           "0": "Benvingut al nostre blog. Aquí compartim idees i aprenentatges sobre com la tecnologia impulsa el joc."
         }
       },
+      "categories": {
+        "title": "Categories:"
+      },
       "featured": {
         "title": "Destacats",
         "items": {
@@ -398,9 +404,6 @@
             "excerpt": "Què mirar i com etiquetar per extreure valor."
           }
         }
-      },
-      "categories": {
-        "label": "Categories:"
       }
     },
     "services": {
@@ -470,6 +473,10 @@
         "0": "Preus en EUR, impostos no inclosos.",
         "1": "Descomptes anuals disponibles sota consulta."
       }
-    }
+    },
+    "analysis": "Anàlisi",
+    "data": "Dades",
+    "tactics": "Tàctica",
+    "news": "Notícies"
   }
 }

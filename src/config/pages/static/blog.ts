@@ -31,5 +31,8 @@ export const BLOG_STATIC_PAGE: BlogConfig = {
       date: "2025-07-22",
     },
   ],
-  categories: ["Análisis", "Datos", "Táctica", "Noticias"],
+  categories: {
+    title: "Categorías:",
+    labels: ["analysis", "data", "tactics", "news"],
+  },
 };

@@ -3,8 +3,11 @@
 #root {
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 12svh 88svh;
+  grid-auto-rows: auto;
+  position: relative;
 }
 
 [class*="-page"] {

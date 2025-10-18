@@ -41,11 +41,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
         }
       />
       <div className="flex-1">
-        <Heading
-          as="h3"
-          level="h2"
-          className="text-white text-2xl md:text-3xl lg:text-3xl xl:text-4xl mb-3 sm:mb-4"
-        >
+        <Heading as="h3" level="h4" className="text-white mb-3 sm:mb-4">
           {title}
         </Heading>
         <Text className="text-neutral-200 max-w-prose mb-3 sm:mb-4">
@@ -55,7 +51,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
           <div>
             <Button
               asChild
-              variant="primary"
+              variant="view"
               size="default"
               rightIcon={<span aria-hidden>→</span>}
             >
