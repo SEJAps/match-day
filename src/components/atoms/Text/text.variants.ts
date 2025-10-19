@@ -29,13 +29,14 @@ export const textVariants = cva(
       },
       color: {
         default: "text-gray-900",
-        muted: "text-gray-600",
+        muted: "text-gray-400",
         light: "text-gray-400",
         white: "text-white",
         primary: "text-green-600",
         secondary: "text-blue-600",
         danger: "text-red-600",
         warning: "text-yellow-600",
+        success: "text-[#00BC7D]",
       },
       align: {
         left: "text-left",

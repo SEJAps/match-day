@@ -21,7 +21,7 @@ const Text: FC<TextProps> = ({
   weight,
   color,
   align,
-  className = "text-white text-xl px-4",
+  className,
   ...props
 }) => {
   return (

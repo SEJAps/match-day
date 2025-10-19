@@ -13,13 +13,18 @@ const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
   description,
   children,
   bg = "bg-white",
-  color = "text-neutral-800",
+  color = "text-gray-600",
 }) => {
   return (
     <article className={`${bg} ${color} w-full py-12 sm:py-24`}>
       <section className="max-w-6xl mx-auto">
         <aside className="flex flex-col gap-8 px-4 py-6">
-          <Heading as="h2" level="h1" align="center" className="px-4">
+          <Heading
+            as="h2"
+            level="h1"
+            align="center"
+            className="px-4 text-neutral-600"
+          >
             {title}
           </Heading>
           <Text align="center" size="lg">

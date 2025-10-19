@@ -25,7 +25,6 @@ const PricesPage: FC = () => {
 
       <LeadSectionTemplate
         bg="bg-[#0F6E5D]"
-        color="text-neutral-200"
         title={t("pages.prices.intro.title", { defaultValue: intro.title })}
         description={t("pages.prices.intro.description", {
           defaultValue: intro.description,
