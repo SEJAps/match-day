@@ -1,11 +1,17 @@
-import { Heading, Text } from "../atoms";
 import type { FC, ReactNode } from "react";
+import { IntroSection } from "../organisms/IntroSection";
 
 interface IntroSectionTemplateProps {
   title?: string;
   description?: string;
   children?: ReactNode;
   footer?: ReactNode;
+  cols?: boolean;
+  rows?: boolean;
+  alignItems?: "center" | "start" | "end" | "baseline" | "stretch";
+  justifyContent?: "center" | "start" | "end" | "between" | "around" | "evenly";
+  gap?: "4" | "6" | "8" | "12" | "16";
+  size?: "auto" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "container";
 }
 
 const IntroSectionTemplate: FC<IntroSectionTemplateProps> = ({
@@ -13,19 +19,26 @@ const IntroSectionTemplate: FC<IntroSectionTemplateProps> = ({
   description,
   children,
   footer,
+  cols = true,
+  rows = false,
+  gap = "8",
+  alignItems = "center",
+  justifyContent = "center",
+  size,
 }) => {
   return (
-    <article className="flex flex-col items-center justify-center gap-y-6">
-      <section className="max-w-4xl flex flex-col gap-8 mx-auto">
-        <Heading as="h1" level="h1" align="center" className="px-4">
-          {title}
-        </Heading>
-        <Text align="center" size={"xl"} color="white" className="px-4">
-          {description}
-        </Text>
+    <article
+      className={`flex ${cols && "flex-col"} ${rows && "flex-row"} items-${alignItems} justify-${justifyContent} gap-${gap}`}
+    >
+      <IntroSection
+        title={title}
+        description={description}
+        footer={footer}
+        size={size}
+        gap={gap}
+      >
         {children}
-        <footer className="flex gap-4 sm:gap-12">{footer}</footer>
-      </section>
+      </IntroSection>
     </article>
   );
 };

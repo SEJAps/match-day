@@ -14,6 +14,8 @@ const BlogPage: FC = () => {
   return (
     <>
       <IntroSectionTemplate
+        size="4xl"
+        gap="4"
         title={t("pages.blog.intro.title", { defaultValue: intro.title })}
         description={t("pages.blog.intro.description", {
           defaultValue: intro.description,

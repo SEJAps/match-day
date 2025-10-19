@@ -15,6 +15,8 @@ const TeamsPage: FC = () => {
   return (
     <>
       <IntroSectionTemplate
+        size="4xl"
+        gap="12"
         title={t("pages.teams.hero.title", {
           defaultValue: TEAMS_PAGE.hero.title,
         })}

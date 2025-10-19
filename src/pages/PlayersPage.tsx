@@ -15,6 +15,8 @@ const PlayersPage: FC = () => {
   return (
     <>
       <IntroSectionTemplate
+        size="4xl"
+        gap="12"
         title={t("pages.players.hero.title", {
           defaultValue: PLAYERS_PAGE.hero.title,
         })}

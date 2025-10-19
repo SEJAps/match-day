@@ -22,7 +22,7 @@ const Heading: FC<HeadingProps> = ({
   level,
   weight,
   align,
-  className,
+  className = "px-4",
   ...props
 }) => {
   return (

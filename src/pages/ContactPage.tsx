@@ -60,6 +60,7 @@ const ContactPage: FC = () => {
   return (
     <>
       <IntroSectionTemplate
+        size="4xl"
         title={t("pages.contact.hero.title", {
           defaultValue: CONTACT_PAGE.hero.title,
         })}

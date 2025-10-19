@@ -66,7 +66,7 @@ const FeatureList: FC<FeatureListProps> = ({
               "flex gap-3",
               align === "center" ? "items-center" : "items-start",
               itemClassName,
-              item.className
+              item.className,
             )}
             color={itemColor}
           >

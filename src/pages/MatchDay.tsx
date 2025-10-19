@@ -34,6 +34,8 @@ const MatchDay: FC = () => {
     <>
       {/* IntroSection */}
       <IntroSectionTemplate
+        size="4xl"
+        gap="12"
         title={t("pages.matchday.hero.title", {
           defaultValue: MATCHDAY_PAGE.hero.title,
         })}
