@@ -42,7 +42,7 @@ const FeatureList: FC<FeatureListProps> = ({
   variant = "none",
   spacing = "base",
   padding = "base",
-  listClassName = "rounded-lg bg-[#10B981]/10 p-6 sm:p-6 min-h-34",
+  listClassName,
   itemClassName,
   iconSize = 20,
   align = "start",
@@ -57,7 +57,7 @@ const FeatureList: FC<FeatureListProps> = ({
         variant="none"
         spacing={spacing}
         padding={padding}
-        className={listClassName}
+        className={`p-6 sm:p-6 min-h-34 max-w-80 md:min-w-96 mx-auto ${listClassName}`}
       >
         {items.map((item, idx) => (
           <ListItem
@@ -66,7 +66,7 @@ const FeatureList: FC<FeatureListProps> = ({
               "flex gap-3",
               align === "center" ? "items-center" : "items-start",
               itemClassName,
-              item.className,
+              item.className
             )}
             color={itemColor}
           >

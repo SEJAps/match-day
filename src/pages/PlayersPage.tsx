@@ -15,18 +15,22 @@ const PlayersPage: FC = () => {
   return (
     <>
       <IntroSectionTemplate
-        title={PLAYERS_PAGE.hero.title}
-        description={PLAYERS_PAGE.hero.description}
+        title={t("pages.players.hero.title", {
+          defaultValue: PLAYERS_PAGE.hero.title,
+        })}
+        description={t("pages.players.hero.description", {
+          defaultValue: PLAYERS_PAGE.hero.description,
+        })}
         footer={
           <section className="w-full flex items-center justify-center gap-12">
             <Button variant="success">
-              {t("pages.matchday.hero.cta", {
-                defaultValue: "¡Comienza ahora!",
+              {t("pages.players.heroCtas.0.label", {
+                defaultValue: "Regístrate",
               })}
             </Button>
             <Button variant="view">
-              {t("pages.matchday.hero.ctaSecondary", {
-                defaultValue: "Ver demo",
+              {t("pages.players.heroCtas.1.label", {
+                defaultValue: "Ver planes",
               })}
             </Button>
           </section>
@@ -48,12 +52,10 @@ const PlayersPage: FC = () => {
               }),
             })) ?? []
           }
-          listClassName="px-6"
-          spacing="base"
-          padding="base"
+          listClassName="rounded-lg bg-[#10B981]/20 flex flex-col justify-between p-6 sm:p-6 min-h-72"
+          iconClassName="w-12 h-12 sm:w-16 sm:h-16"
           align="center"
           iconSize={32}
-          iconClassName="w-8 h-8 sm:w-14 sm:h-14"
           itemColor="white"
         />
       </IntroSectionTemplate>
