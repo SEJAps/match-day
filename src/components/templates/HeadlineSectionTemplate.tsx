@@ -17,7 +17,7 @@ const HeadlineSectionTemplate: FC<HeadlineSectionTemplateProps> = ({
   return (
     <article className="bg-white py-20 text-neutral-800">
       <section className="max-w-6xl mx-auto sm:mb-12 py-8">
-        <Heading as="h2" level="h1" align="center" className="px-4">
+        <Heading as="h2" level="h1" align="center" color="success">
           {t("common.servicesForEveryNeed.title", {
             defaultValue: title,
           })}

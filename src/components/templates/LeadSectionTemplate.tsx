@@ -1,12 +1,13 @@
 import type { FC, ReactNode } from "react";
-import { Heading, Text } from "../atoms";
-interface LeadSectionTemplateProps {
+import { Heading, headingVariants, Text, textVariants } from "../atoms";
+import type { VariantProps } from "class-variance-authority";
+interface LeadSectionTemplateProps
+  extends VariantProps<typeof headingVariants> {
   title?: string;
   description?: string;
   children: ReactNode;
   bg?: string;
-  color?: string;
-  textColor?: string;
+  textColor?: VariantProps<typeof textVariants>["color"];
 }
 
 const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
@@ -14,22 +15,17 @@ const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
   description,
   children,
   bg = "bg-white",
-  color = "text-neutral-700",
-  textColor = "text-neutral-700",
+  color,
+  textColor = "default",
 }) => {
   return (
-    <article className={`${bg} ${color} w-full py-12 sm:py-24`}>
+    <article className={`${bg} w-full py-12 sm:py-24`}>
       <section className="max-w-6xl mx-auto">
         <aside className="flex flex-col gap-8 px-4 py-6">
-          <Heading
-            as="h2"
-            level="h1"
-            align="center"
-            className="px-4 text-neutral-600"
-          >
+          <Heading as="h2" level="h1" align="center" color={color}>
             {title}
           </Heading>
-          <Text align="center" size="lg" className={textColor}>
+          <Text align="center" size="lg" color={textColor}>
             {description}
           </Text>
         </aside>

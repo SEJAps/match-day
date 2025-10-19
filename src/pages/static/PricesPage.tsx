@@ -29,6 +29,8 @@ const PricesPage: FC = () => {
         description={t("pages.prices.intro.description", {
           defaultValue: intro.description,
         })}
+        color="white"
+        textColor="white"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 px-4">
           {tiers.map((tier, idx) => (

@@ -58,7 +58,7 @@ const ContactSection: FC<ContactSectionProps> = ({
     <section id={id} className={`bg-white text-neutral-800 ${className}`}>
       <div className="max-w-6xl mx-auto flex flex-col">
         <header className="flex flex-col items-center gap-8 p-6">
-          <Heading as="h2" level="h1" align="center">
+          <Heading as="h2" level="h1" align="center" color="success">
             {title}
           </Heading>
           {subtitle && (
@@ -167,15 +167,11 @@ const ContactSection: FC<ContactSectionProps> = ({
 
           {/* Columna derecha: tarjeta de información + mapa */}
           <div className="order-2 flex flex-col gap-6">
-            <article className="rounded-2xl bg-emerald-700 text-white p-6 shadow-sm">
-              <Heading
-                as="h3"
-                level="h3"
-                className="text-xl font-semibold mb-3"
-              >
+            <article className="rounded-2xl bg-[#00BC7D]  p-6 shadow-sm">
+              <Heading as="h3" level="h3" className="p-0 pb-2" color="white">
                 Información de Contacto
               </Heading>
-              <ul className="space-y-4">
+              <ul className="space-y-4 text-stone-50">
                 {info.address && (
                   <li className="flex items-start gap-3">
                     <svg

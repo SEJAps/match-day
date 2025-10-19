@@ -1,5 +1,7 @@
 import type { FC, ReactNode } from "react";
 import { IntroSection } from "../organisms/IntroSection";
+import type { VariantProps } from "class-variance-authority";
+import type { textVariants } from "../atoms";
 
 interface IntroSectionTemplateProps {
   title?: string;
@@ -8,6 +10,7 @@ interface IntroSectionTemplateProps {
   footer?: ReactNode;
   cols?: boolean;
   rows?: boolean;
+  color?: VariantProps<typeof textVariants>["color"];
   alignItems?: "center" | "start" | "end" | "baseline" | "stretch";
   justifyContent?: "center" | "start" | "end" | "between" | "around" | "evenly";
   gap?: "4" | "6" | "8" | "12" | "16";
@@ -24,6 +27,7 @@ const IntroSectionTemplate: FC<IntroSectionTemplateProps> = ({
   gap = "8",
   alignItems = "center",
   justifyContent = "center",
+  color = "white",
   size,
 }) => {
   return (
@@ -36,6 +40,7 @@ const IntroSectionTemplate: FC<IntroSectionTemplateProps> = ({
         footer={footer}
         size={size}
         gap={gap}
+        color={color}
       >
         {children}
       </IntroSection>

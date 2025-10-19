@@ -14,17 +14,57 @@ import {
   ValuePropSectionTemplate,
   ServiceCard,
 } from "@/components";
-import { Button, Image } from "@/components/atoms";
+import { Button, Image, Text } from "@/components/atoms";
 import {} from "@/config";
 import { SERVICES_PAGE_CARDS } from "@/config";
 import { MATCHDAY_PAGE } from "@/config/pages/matchday";
 import { useTranslation } from "react-i18next";
+import useNotifications from "@/hooks/useNotifications";
 const MatchDay: FC = () => {
   const { t } = useTranslation();
   const [servicesForEveryNeed, setServicesForEveryNeed] = useState<
     ServiceCardForEveryNeed[]
   >([]);
+  const { showSuccess, showError } = useNotifications();
+  const handleOnSubmit = (data: {
+    name: string;
+    email: string;
+    message: string;
+    consent: boolean;
+  }) => {
+    if (!data.consent) {
+      showError(
+        <Text size="sm" color="white">
+          {t("pages.contact.notifications.consentRequired", {
+            defaultValue: "Debes aceptar el consentimiento para continuar.",
+          })}
+        </Text>,
+      );
+      return;
+    }
+    if (data.name.length < 3) {
+      showError(
+        <Text size="sm" color="white">
+          {t("pages.contact.notifications.nameTooShort", {
+            defaultValue: "El nombre debe tener al menos 3 caracteres.",
+          })}
+        </Text>,
+      );
+      return;
+    }
 
+    showSuccess(
+      <Text size="sm" color="white">
+        {t("pages.contact.notifications.submissionSuccess", {
+          defaultValue: `¡Gracias por contactarnos, ${data.name}
+          ! Hemos recibido tu mensaje y te responderemos pronto.`,
+        })}
+      </Text>,
+      {
+        duration: 4000,
+      },
+    );
+  };
   useEffect(() => {
     setServicesForEveryNeed(SERVICES_FOR_EVERY_NEED);
     return () => setServicesForEveryNeed([]);
@@ -73,6 +113,7 @@ const MatchDay: FC = () => {
         description={t("pages.matchday.intro.paragraph", {
           defaultValue: MATCHDAY_PAGE.intro.paragraph,
         })}
+        color="success"
       >
         <FeatureTwoColumnTemplate
           heading={t("pages.matchday.features.heading", {
@@ -182,6 +223,7 @@ const MatchDay: FC = () => {
       </ValuePropSectionTemplate>
       {/* ContactSection */}
       <ContactSection
+        onSubmit={handleOnSubmit}
         title={t("pages.matchday.contact.title", {
           defaultValue: MATCHDAY_PAGE.contactSection.title,
         })}

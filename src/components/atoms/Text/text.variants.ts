@@ -1,3 +1,4 @@
+import { COLOR } from "@/config";
 import { cva } from "class-variance-authority";
 
 /**
@@ -27,17 +28,7 @@ export const textVariants = cva(
         semibold: "font-semibold",
         bold: "font-bold",
       },
-      color: {
-        default: "text-gray-900",
-        muted: "text-gray-400",
-        light: "text-gray-400",
-        white: "text-white",
-        primary: "text-green-600",
-        secondary: "text-blue-600",
-        danger: "text-red-600",
-        warning: "text-yellow-600",
-        success: "text-[#00BC7D]",
-      },
+      color: COLOR,
       align: {
         left: "text-left",
         center: "text-center",

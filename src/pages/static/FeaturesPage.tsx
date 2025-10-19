@@ -21,21 +21,22 @@ const FeaturesPage: FC = () => {
         description={t("pages.features.intro.description", {
           defaultValue: intro.description,
         })}
-        color="text-[#00BC7D]"
+        color="success"
+        textColor="dark"
       >
         <section className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {groups.map((g, idx) => (
               <div
                 key={g.title}
-                className="bg-neutral-800 border-2 border-green-500/60 rounded p-6"
+                className="bg-[#00BC0050] border-2 border-gray-500/60 rounded p-6"
               >
-                <h2 className="text-xl font-semibold mb-3">
+                <h2 className="text-xl font-semibold mb-3 text-neutral-900">
                   {t(`pages.features.groups.${idx}.title`, {
                     defaultValue: g.title,
                   })}
                 </h2>
-                <ul className="list-disc list-inside text-neutral-300 space-y-1">
+                <ul className="list-disc list-inside text-neutral-700 space-y-1">
                   {g.items.map((item, i) => (
                     <li key={item}>
                       {t(`pages.features.groups.${idx}.items.${i}`, {

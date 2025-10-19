@@ -1,5 +1,5 @@
+import { ALIGN, COLOR, TITLE_LEVEL, WEIGHT } from "@/config";
 import { cva } from "class-variance-authority";
-
 /**
  * Heading Variants - CVA Configuration
  *
@@ -7,37 +7,26 @@ import { cva } from "class-variance-authority";
  * Niveles semánticos, pesos y alineaciones disponibles.
  */
 
-export const headingVariants = cva(
+const DEFAULT_VARIANTS_HEADINGS = {
+  level: "h1",
+  as: "h1",
+  weight: "bold",
+  align: "left",
+  color: "dark",
+} as const;
+
+const headingVariants = cva(
   // Base classes
-  "font-sans tracking-tight",
+  "tracking-tight",
   {
     variants: {
-      level: {
-        h1: "text-4xl md:text-5xl lg:text-6xl leading-tight",
-        h2: "text-3xl md:text-4xl lg:text-5xl leading-tight",
-        h3: "text-2xl md:text-3xl lg:text-4xl leading-snug",
-        h4: "text-xl md:text-2xl lg:text-3xl leading-snug",
-        h5: "text-lg md:text-xl lg:text-2xl leading-normal",
-        h6: "text-base md:text-lg lg:text-xl leading-normal",
-      },
-      weight: {
-        light: "font-light",
-        normal: "font-normal",
-        medium: "font-medium",
-        semibold: "font-semibold",
-        bold: "font-bold",
-        extrabold: "font-extrabold",
-      },
-      align: {
-        left: "text-left",
-        center: "text-center",
-        right: "text-right",
-      },
+      level: TITLE_LEVEL,
+      color: COLOR,
+      weight: WEIGHT,
+      align: ALIGN,
     },
-    defaultVariants: {
-      level: "h2",
-      weight: "bold",
-      align: "left",
-    },
+    defaultVariants: DEFAULT_VARIANTS_HEADINGS,
   },
 );
+
+export { headingVariants };

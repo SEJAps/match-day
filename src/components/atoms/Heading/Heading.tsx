@@ -1,5 +1,5 @@
 import type { FC, ReactNode, ElementType } from "react";
-import type { VariantProps } from "class-variance-authority";
+import { type VariantProps } from "class-variance-authority";
 import { cn } from "../../../utils/cn";
 import { headingVariants } from "./heading.variants";
 
@@ -7,7 +7,7 @@ import { headingVariants } from "./heading.variants";
  * Heading Component - Atomic Design Level: Atom
  *
  * Componente de encabezado reutilizable con múltiples niveles y estilos.
- * Elemento básico e indivisible para títulos y subtítulos.
+ * Elemento básico e indivisible para títulos e subtítulos.
  */
 
 interface HeadingProps extends VariantProps<typeof headingVariants> {
@@ -22,12 +22,16 @@ const Heading: FC<HeadingProps> = ({
   level,
   weight,
   align,
+  color,
   className = "px-4",
   ...props
 }) => {
   return (
     <Component
-      className={cn(headingVariants({ level, weight, align }), className)}
+      className={cn(
+        headingVariants({ level, color, weight, align }),
+        className,
+      )}
       {...props}
     >
       {children}

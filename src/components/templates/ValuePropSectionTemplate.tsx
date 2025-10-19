@@ -15,7 +15,7 @@ const ValuePropSectionTemplate: FC<ValuePropSectionTemplateProps> = ({
   return (
     <article className="flex flex-col items-center justify-center gap-y-6 py-20">
       <section className="max-w-4xl flex flex-col gap-12 mx-auto">
-        <Heading as="h1" level="h1" align="center" className="px-4">
+        <Heading as="h1" level="h1" align="center" color="white">
           {title}
         </Heading>
         <Text align="center" size="xl" color="white" className="px-4">
