@@ -11,17 +11,17 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-slate-900 text-slate-50 shadow hover:bg-slate-900/90",
-        destructive: "bg-red-500 text-slate-50 shadow-sm hover:bg-red-500/90",
+        destructive: "bg-red-400 text-slate-50 shadow-sm hover:bg-red-400/90",
         outline:
-          "border border-slate-200 bg-white shadow-sm hover:bg-slate-100 hover:text-slate-900",
+          "border border-[#10B981]/50 -200 bg-[#10B981]/10 shadow-sm hover:bg-[#10B981]/10 hover:border-[#10B990] ctext-100 hover:text-white/80",
         secondary:
           "bg-slate-100 text-slate-900 shadow-sm hover:bg-slate-100/80",
         ghost: "hover:bg-slate-100 hover:text-slate-900",
         link: "text-slate-900 underline-offset-4 hover:underline",
-        success: "bg-[#10B981] text-slate-50 shadow-sm hover:bg-green-500/90",
-        warning: "bg-yellow-500 text-slate-50 shadow-sm hover:bg-yellow-500/90",
-        info: "bg-blue-500 text-slate-50 shadow-sm hover:bg-blue-500/90",
-        primary: "bg-blue-600 text-white shadow-sm hover:bg-blue-600/90",
+        success: "bg-[#10B981] text-slate-50 shadow-sm hover:bg-green-400/90",
+        warning: "bg-yellow-400 text-slate-50 shadow-sm hover:bg-yellow-400/90",
+        info: "bg-blue-400 text-slate-50 shadow-sm hover:bg-blue-400/90",
+        primary: "bg-blue-400 text-white shadow-sm hover:bg-blue-400/90",
         view: "bg-white/10  border border-[#02B94950] hover:border-[#02B949] hover:bg-[#02B94950]/50 hover:text-white",
       },
       size: {
