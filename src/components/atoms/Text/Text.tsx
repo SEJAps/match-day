@@ -19,7 +19,7 @@ const Text: FC<TextProps> = ({
   children,
   size,
   weight,
-  color,
+  color = "white",
   align,
   className,
   ...props

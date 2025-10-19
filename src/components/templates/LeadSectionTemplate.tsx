@@ -6,6 +6,7 @@ interface LeadSectionTemplateProps {
   children: ReactNode;
   bg?: string;
   color?: string;
+  textColor?: string;
 }
 
 const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
@@ -13,7 +14,8 @@ const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
   description,
   children,
   bg = "bg-white",
-  color = "text-gray-600",
+  color = "text-neutral-700",
+  textColor = "text-neutral-700",
 }) => {
   return (
     <article className={`${bg} ${color} w-full py-12 sm:py-24`}>
@@ -27,7 +29,7 @@ const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
           >
             {title}
           </Heading>
-          <Text align="center" size="lg">
+          <Text align="center" size="lg" className={textColor}>
             {description}
           </Text>
         </aside>
