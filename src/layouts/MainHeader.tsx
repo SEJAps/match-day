@@ -25,10 +25,10 @@ const MainHeader = () => {
   return (
     <header className="flex">
       <section className="container flex items-start justify-between mx-auto z-100 w-full">
-        <section className="hidden sm:flex items-center my-8">
+        <section className="hidden lg:flex lg:items-center lg:my-8 lg:ml-8">
           <LogoBrand />
         </section>
-        <section className="flex sm:hidden items-start my-8 pl-4">
+        <section className="flex items-start my-8 pl-4 lg:hidden">
           <img
             src={logosm}
             alt="Logo"
@@ -111,9 +111,9 @@ const MainHeader = () => {
         </div>
 
         {/* Acceso solo en escritorio, en móvil va dentro del modal */}
-        <aside className="hidden lg:flex items-center py-4 gap-3">
+        <aside className="hidden lg:flex lg:items-center py-6 md:pr-6 lg:gap-3">
           <LanguageSwitcher />
-          <Button variant="success" size="default" className="mx-1">
+          <Button variant="success" size="default">
             {t("common.signIn", { defaultValue: "Acceder" })}
           </Button>
         </aside>
