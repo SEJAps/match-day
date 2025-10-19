@@ -24,13 +24,13 @@ const TeamsPage: FC = () => {
         footer={
           <section className="w-full flex items-center justify-center gap-12">
             <Button variant="success">
-              {t("pages.matchday.hero.cta", {
-                defaultValue: "¡Comienza ahora!",
+              {t("pages.teams.heroCtas.0.label", {
+                defaultValue: "Regístrate",
               })}
             </Button>
             <Button variant="view">
-              {t("pages.matchday.hero.ctaSecondary", {
-                defaultValue: "Ver demo",
+              {t("pages.teams.heroCtas.1.label", {
+                defaultValue: "Ver planes",
               })}
             </Button>
           </section>
