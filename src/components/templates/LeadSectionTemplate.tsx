@@ -21,19 +21,21 @@ const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
   return (
     <article className={`${bg} w-full py-12`}>
       <section className="max-w-6xl mx-auto">
-        <aside className="flex flex-col gap-8 px-4 py-6">
-          {title && (
-            <Heading as="h2" level="h1" align="center" color={color}>
-              {title}
-            </Heading>
-          )}
+        {title && (
+          <aside className="flex flex-col gap-8 px-4 py-6">
+            {title && (
+              <Heading as="h2" level="h1" align="center" color={color}>
+                {title}
+              </Heading>
+            )}
 
-          {description && (
-            <Text align="center" size="lg" color={textColor}>
-              {description}
-            </Text>
-          )}
-        </aside>
+            {description && (
+              <Text align="center" size="lg" color={textColor}>
+                {description}
+              </Text>
+            )}
+          </aside>
+        )}
         <article className="py-6 sm:py-12">{children}</article>
       </section>
     </article>

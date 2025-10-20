@@ -9,13 +9,17 @@ const CookiesPage: FC = () => {
   const { updatedAt, sections } = COOKIES_POLICY_STATIC_PAGE;
   return (
     <>
-      <IntroSectionTemplate title="Cookies" description="Política de Cookies" />
-      <LeadSectionTemplate
-        color="success"
+      <IntroSectionTemplate
         title={t("legal.cookies.title", {
           defaultValue: "Política de Cookies",
         })}
-      >
+        description={t("legal.cookies.intro", {
+          defaultValue:
+            "Lee nuestra política de cookies para entender cómo utilizamos las cookies y tecnologías similares en nuestra plataforma.",
+        })}
+      />
+
+      <LeadSectionTemplate color="success">
         <LegalPageLayout
           updatedAt={updatedAt}
           sections={sections}

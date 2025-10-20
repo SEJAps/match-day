@@ -2,23 +2,29 @@ import type { FC } from "react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import { NOT_FOUND_STATIC_PAGE } from "@/config";
+import { IntroSectionTemplate } from "@/components";
 
 const NotFoundPage: FC = () => {
   const { t } = useTranslation();
   const { code, message, ctaHref, ctaLabel } = NOT_FOUND_STATIC_PAGE;
   return (
-    <section className="container mx-auto px-6 py-24 text-center">
-      <h1 className="text-5xl font-extrabold mb-6">
-        {t("components.notFound.title", { defaultValue: String(code) })}
-      </h1>
-      <p className="text-neutral-400 mb-8 max-w-xl mx-auto">{message}</p>
-      <Link
-        to={ctaHref}
-        className="inline-block bg-teal-600 hover:bg-teal-500 transition-colors px-6 py-3 rounded font-medium"
+    <>
+      <IntroSectionTemplate
+        title={t("components.notFound.title", { defaultValue: String(code) })}
+        description={t("components.notFound.description", {
+          defaultValue: message,
+        })}
       >
-        {t("components.notFound.cta", { defaultValue: ctaLabel })}
-      </Link>
-    </section>
+        <section className="container mx-auto px-6 text-center">
+          <Link
+            to={ctaHref}
+            className="inline-block bg-teal-600 hover:bg-teal-500 transition-colors px-6 py-3 rounded font-medium"
+          >
+            {t("components.notFound.cta", { defaultValue: ctaLabel })}
+          </Link>
+        </section>
+      </IntroSectionTemplate>
+    </>
   );
 };
 export default NotFoundPage;
