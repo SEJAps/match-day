@@ -143,7 +143,7 @@ const LogoBrand: FC<LogoBrandProps> = ({
   const LogoComponent = (
     <Logo
       {...logoProps}
-      size={logoProps?.size || { x: 169, y: 159 }}
+      size={logoProps?.size || { x: 120, y: 96 }}
       colors={resolvedColors}
     />
   );

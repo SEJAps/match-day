@@ -5,35 +5,25 @@ import MainFooter from "./MainFooter";
 import type { FC, ReactNode } from "react";
 import MainHeader from "./MainHeader";
 import BackToTop from "@/components/BackToTop";
-import heroBgMain from "@/assets/images/png/hero-bg-main.png";
-import heroBgLayer from "@/assets/images/png/hero-bg-layer.png";
+import HeroLayer from "@/components/molecules/HeroLayer";
 interface RootLayoutProps {
   withTopSection?: boolean;
+  viewHeroLayer?: boolean;
   children?: ReactNode; // opcional si se quiere inyectar algo adicional encima del outlet
 }
 
 const RootLayout: FC<RootLayoutProps> = ({
   withTopSection = true,
+  viewHeroLayer = true,
   children,
 }) => {
   return (
     <>
-      {withTopSection && <MainHeader />}
+      {withTopSection && <MainHeader viewHeroLayer={viewHeroLayer} />}
       {children}
 
       <Suspense fallback={<PageSkeleton lines={6} />}>
-        <article className="absolute inset-0 -z-1 w-screen h-dvh overflow-clip">
-          <img
-            src={heroBgLayer}
-            className="absolute w-full h-full object-cover"
-            alt="Imagen de prueba"
-          />
-          <img
-            src={heroBgMain}
-            className="absolute w-full h-full object-cover"
-            alt="Imagen de prueba"
-          />
-        </article>
+        {viewHeroLayer && <HeroLayer />}
         <Outlet />
       </Suspense>
       <MainFooter />

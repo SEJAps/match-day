@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, type FC } from "react";
 import { NavLink } from "react-router";
 import { Button } from "../components/atoms";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -7,7 +7,9 @@ import { LogoBrand, Modal } from "../components/molecules";
 import { useModal } from "../hooks/useModal";
 import { useTranslation } from "react-i18next";
 
-const MainHeader = () => {
+const MainHeader: FC<{
+  viewHeroLayer?: boolean;
+}> = ({ viewHeroLayer = true }) => {
   const { isOpen, open, close } = useModal(false);
   // Cerrar automáticamente el menú móvil cuando el viewport sea >= lg (1024px)
   useEffect(() => {
@@ -23,12 +25,14 @@ const MainHeader = () => {
   }, [close]);
   const { t } = useTranslation();
   return (
-    <header className="flex">
+    <header
+      className={`${!viewHeroLayer ? "bg-neutral-800 md:h-[15svh]" : ""}`}
+    >
       <section className="container flex items-start justify-between mx-auto z-100 w-full">
-        <section className="hidden lg:flex lg:items-center lg:my-8 lg:ml-8">
+        <section className="hidden sm:hidden md:hidden lg:hidden xl:flex xl:items-center xl:my-6 xl:ml-8 ">
           <LogoBrand />
         </section>
-        <section className="flex items-start my-8 pl-4 lg:hidden">
+        <section className="flex items-start my-8 pl-4 xl:hidden">
           <img
             src={logosm}
             alt="Logo"
