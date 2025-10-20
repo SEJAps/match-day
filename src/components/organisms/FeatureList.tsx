@@ -57,36 +57,39 @@ const FeatureList: FC<FeatureListProps> = ({
         variant="none"
         spacing={spacing}
         padding={padding}
-        className={`p-6 sm:p-6 min-h-34 max-w-80 md:min-w-96 mx-auto ${listClassName}`}
+        className={`flex flex-col max-w-80 mx-auto p-6 md:p-6 md:min-w-[648px] min-h-34 ${listClassName}`}
       >
-        {items.map((item, idx) => (
-          <ListItem
-            key={idx}
-            className={cn(
-              "flex gap-3",
-              align === "center" ? "items-center" : "items-start",
-              itemClassName,
-              item.className,
-            )}
-            color={itemColor}
-          >
-            {item.iconNode ? (
-              <span className={cn("shrink-0", iconClassName)} aria-hidden>
-                {item.iconNode}
-              </span>
-            ) : item.iconSrc ? (
-              <Image
-                src={item.iconSrc}
-                alt={item.iconAlt ?? ""}
-                width={iconSize}
-                height={iconSize}
-                className={cn("shrink-0", iconClassName)}
-                fit="contain"
-              />
-            ) : null}
-            <span className="leading-relaxed">{item.text}</span>
-          </ListItem>
-        ))}
+        {items.map((item, idx) => {
+          // Si es inpar al aderecha si es para izquierda
+          return (
+            <ListItem
+              key={idx}
+              className={cn(
+                "flex gap-3 w-full",
+                align === "center" ? "items-center" : "items-start",
+                itemClassName,
+                item.className,
+              )}
+              color={itemColor}
+            >
+              {item.iconNode ? (
+                <span className={cn("shrink-0", iconClassName)} aria-hidden>
+                  {item.iconNode}
+                </span>
+              ) : item.iconSrc ? (
+                <Image
+                  src={item.iconSrc}
+                  alt={item.iconAlt ?? ""}
+                  width={iconSize}
+                  height={iconSize}
+                  className={cn("shrink-0", iconClassName)}
+                  fit="contain"
+                />
+              ) : null}
+              <span className="leading-relaxed">{item.text}</span>
+            </ListItem>
+          );
+        })}
       </List>
     );
   }

@@ -1,12 +1,15 @@
 import {
   Button,
-  FeatureList,
   HeadlineSectionTemplate,
+  Image,
   IntroSectionTemplate,
   LeadSectionTemplate,
+  List,
+  ListItem,
   ValuePropSectionTemplate,
 } from "@/components";
 import { PLAYERS_PAGE } from "@/config";
+import { cn } from "@/utils/cn";
 import type { FC } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -38,28 +41,30 @@ const PlayersPage: FC = () => {
           </section>
         }
       >
-        <FeatureList
-          items={
-            PLAYERS_PAGE.hero.list?.items.map((item, idx) => ({
-              text: (
+        <List
+          variant="none"
+          className={`rounded-lg bg-[#10B981]/20 grid gap-4 max-w-80 mx-auto md:grid-cols-2 p-6 md:p-6 md:min-w-[648px] min-h-34`}
+        >
+          {PLAYERS_PAGE.hero.list?.items.map((item, idx) => (
+            <ListItem key={idx}>
+              <div className="flex gap-3 w-full items-center">
+                {item.icon && (
+                  <Image
+                    src={item.icon}
+                    alt={item.text ?? ""}
+                    className={cn("shrink-0")}
+                    fit="contain"
+                  />
+                )}
                 <span className="text-sm sm:text-base md:text-lg text-white">
                   {t(`pages.players.hero.list.items.${idx}.text`, {
                     defaultValue: item.text,
                   })}
                 </span>
-              ),
-              iconSrc: item.icon,
-              iconAlt: t(`pages.players.hero.list.items.${idx}.text`, {
-                defaultValue: item.text,
-              }),
-            })) ?? []
-          }
-          listClassName="rounded-lg bg-[#10B981]/20 flex flex-col justify-between p-6 sm:p-6 min-h-72"
-          iconClassName="w-12 h-12 sm:w-16 sm:h-16"
-          align="center"
-          iconSize={32}
-          itemColor="white"
-        />
+              </div>
+            </ListItem>
+          )) ?? []}
+        </List>
       </IntroSectionTemplate>
       <LeadSectionTemplate
         title={t("pages.players.sections.0.title", {
