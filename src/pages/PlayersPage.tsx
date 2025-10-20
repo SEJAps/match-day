@@ -45,25 +45,27 @@ const PlayersPage: FC = () => {
           variant="none"
           className={`rounded-lg bg-[#10B981]/20 grid gap-4 max-w-80 mx-auto md:grid-cols-2 p-6 md:p-6 md:min-w-[648px] min-h-34`}
         >
-          {PLAYERS_PAGE.hero.list?.items.map((item, idx) => (
-            <ListItem key={idx}>
-              <div className="flex gap-3 w-full items-center">
-                {item.icon && (
-                  <Image
-                    src={item.icon}
-                    alt={item.text ?? ""}
-                    className={cn("shrink-0")}
-                    fit="contain"
-                  />
-                )}
-                <span className="text-sm sm:text-base md:text-lg text-white">
-                  {t(`pages.players.hero.list.items.${idx}.text`, {
-                    defaultValue: item.text,
-                  })}
-                </span>
-              </div>
-            </ListItem>
-          )) ?? []}
+          {PLAYERS_PAGE.hero.list?.items
+            .sort((a, b) => a.text.localeCompare(b.text))
+            .map((item, idx) => (
+              <ListItem key={idx}>
+                <div className="flex gap-3 w-full items-center">
+                  {item.icon && (
+                    <Image
+                      src={item.icon}
+                      alt={item.text ?? ""}
+                      className={cn("shrink-0")}
+                      fit="contain"
+                    />
+                  )}
+                  <span className="text-sm sm:text-base md:text-lg text-white">
+                    {t(`pages.players.hero.list.items.${idx}.text`, {
+                      defaultValue: item.text,
+                    })}
+                  </span>
+                </div>
+              </ListItem>
+            )) ?? []}
         </List>
       </IntroSectionTemplate>
       <LeadSectionTemplate
