@@ -296,9 +296,13 @@ export const router = createBrowserRouter([
       // Alias route for logo showcase at root level for quick access
 
       // Atomic design nested subtree
-      atomicDesignRoute,
+
       // 404 catch within layout
       { path: "*", element: <NotFoundPage /> },
     ],
+  },
+  {
+    path: "/", // Root layout with header/footer
+    children: [atomicDesignRoute],
   },
 ]);

@@ -21,7 +21,6 @@ const RootLayout: FC<RootLayoutProps> = ({
     <>
       {withTopSection && <MainHeader viewHeroLayer={viewHeroLayer} />}
       {children}
-
       <Suspense fallback={<PageSkeleton lines={6} />}>
         {viewHeroLayer && <HeroLayer />}
         <Outlet />

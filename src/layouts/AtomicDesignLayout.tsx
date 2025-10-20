@@ -21,7 +21,6 @@ const AtomicDesignLayout: FC = () => {
           Logo Showcase
         </NavLink>
       </header>
-      asdasd
       <main className="flex flex-col  overflow-x-hidden overflow-y-auto px-8 bg-neutral-900">
         <Outlet />
       </main>
