@@ -10,13 +10,13 @@ import {
 } from "@/components";
 import { PLAYERS_PAGE } from "@/config";
 import { cn } from "@/utils/cn";
-import type { FC } from "react";
+import { Fragment, type FC } from "react";
 import { useTranslation } from "react-i18next";
 
 const PlayersPage: FC = () => {
   const { t } = useTranslation();
   return (
-    <>
+    <Fragment>
       <IntroSectionTemplate
         size="4xl"
         gap="12"
@@ -42,11 +42,10 @@ const PlayersPage: FC = () => {
         }
       >
         <List
-          variant="none"
           className={`rounded-lg bg-[#10B981]/20 grid gap-4 max-w-80 mx-auto md:grid-cols-2 p-6 md:p-6 md:min-w-[648px] min-h-34`}
         >
-          {PLAYERS_PAGE.hero.list?.items
-            .sort((a, b) => a.text.localeCompare(b.text))
+          {PLAYERS_PAGE.hero
+            .list!.items.sort((a, b) => a.text.localeCompare(b.text))
             .map((item, idx) => (
               <ListItem key={idx}>
                 <div className="flex gap-3 w-full items-center">
@@ -110,7 +109,7 @@ const PlayersPage: FC = () => {
       >
         <article className="bg-white text-neutral-800">asdasdasd</article>
       </ValuePropSectionTemplate>
-    </>
+    </Fragment>
   );
 };
 
