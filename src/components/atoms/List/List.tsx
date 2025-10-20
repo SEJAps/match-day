@@ -29,7 +29,7 @@ const List: FC<ListProps> = ({
 
   return (
     <Component
-      className={cn(listVariants({ variant, spacing, padding }), className)}
+      className={`list-none list-inside ${cn(listVariants({ variant, spacing, padding }), className)} `}
       {...props}
     >
       {children}

@@ -12,6 +12,7 @@ import { PLAYERS_PAGE } from "@/config";
 import { cn } from "@/utils/cn";
 import { Fragment, type FC } from "react";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router";
 
 const PlayersPage: FC = () => {
   const { t } = useTranslation();
@@ -19,7 +20,6 @@ const PlayersPage: FC = () => {
     <Fragment>
       <IntroSectionTemplate
         size="4xl"
-        gap="12"
         title={t("pages.players.hero.title", {
           defaultValue: PLAYERS_PAGE.hero.title,
         })}
@@ -27,22 +27,28 @@ const PlayersPage: FC = () => {
           defaultValue: PLAYERS_PAGE.hero.description,
         })}
         footer={
-          <section className="w-full flex items-center justify-center gap-12">
+          <section className="w-full flex justify-center gap-12">
             <Button variant="success">
               {t("pages.players.heroCtas.0.label", {
                 defaultValue: "Regístrate",
               })}
             </Button>
-            <Button variant="view">
-              {t("pages.players.heroCtas.1.label", {
-                defaultValue: "Ver planes",
-              })}
+            <Button variant="view" className="p-0">
+              <NavLink
+                to="/prices"
+                className="inline-flex items-center justify-center w-full h-full p-4"
+              >
+                {t("pages.players.heroCtas.1.label", {
+                  defaultValue: "Ver planes",
+                })}
+              </NavLink>
             </Button>
           </section>
         }
       >
         <List
-          className={`rounded-lg bg-[#10B981]/20 grid gap-4 max-w-80 mx-auto md:grid-cols-2 p-6 md:p-6 md:min-w-[648px] min-h-34`}
+          ordered={true}
+          className={`rounded-lg bg-[#10B981]/20 grid gap-4 max-w-80 mx-auto md:grid-cols-2 p-6 md:p-6 md:min-w-[648px] min-h-34 `}
         >
           {PLAYERS_PAGE.hero
             .list!.items.sort((a, b) => a.text.localeCompare(b.text))

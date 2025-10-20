@@ -10,6 +10,11 @@
   position: relative;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 [class*="-page"] {
   display: inherit;
 }
