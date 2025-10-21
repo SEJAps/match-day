@@ -121,9 +121,9 @@ const MainFooter: FC = () => {
             <h4 className="text-sm font-semibold">
               {t("footer.followUs", { defaultValue: "Síguenos" })}
             </h4>
-            <div className="mt-3 grid grid-cols-4 gap-4">
-              <a
-                href="https://facebook.com"
+            <div className="mt-3 grid grid-cols-[repeat(4,minmax(0,.15fr)))] gap-4">
+              <Link
+                to="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -131,11 +131,12 @@ const MainFooter: FC = () => {
                 <img
                   src={iconFacebook}
                   alt="Facebook"
-                  className="h-[41px] w-[41px]"
+                  className="h-full w-full"
                 />
-              </a>
-              <a
-                href="https://twitter.com"
+              </Link>
+
+              <Link
+                to="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter/X"
@@ -143,11 +144,11 @@ const MainFooter: FC = () => {
                 <img
                   src={iconTwitter}
                   alt="Twitter/X"
-                  className="h-[41px] w-[41px]"
+                  className="h-full w-full"
                 />
-              </a>
-              <a
-                href="https://instagram.com"
+              </Link>
+              <Link
+                to="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -155,11 +156,11 @@ const MainFooter: FC = () => {
                 <img
                   src={iconInstagram}
                   alt="Instagram"
-                  className="h-[41px] w-[41px]"
+                  className="h-full w-full"
                 />
-              </a>
-              <a
-                href="https://linkedin.com"
+              </Link>
+              <Link
+                to="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -167,9 +168,9 @@ const MainFooter: FC = () => {
                 <img
                   src={iconLinkedIn}
                   alt="LinkedIn"
-                  className="h-[41px] w-[41px]"
+                  className="h-full w-full"
                 />
-              </a>
+              </Link>
             </div>
           </section>
         </div>
