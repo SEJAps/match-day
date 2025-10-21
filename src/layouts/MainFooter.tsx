@@ -9,7 +9,7 @@ const MainFooter: FC = () => {
   const { t } = useTranslation();
   return (
     <footer className="w-full bg-[#0E1423] text-white mt-auto">
-      <div className="container mx-auto px-8 py-10">
+      <div className="container mx-auto px-6 py-10">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Columna 1: Marca y descripción */}
           <div>
