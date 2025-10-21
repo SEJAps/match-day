@@ -17,6 +17,7 @@ const SocialLink: FC<{ platform: string; url: string }> = ({
   };
   return (
     <Link
+      title={platform}
       to={url}
       target="_blank"
       rel="noopener noreferrer"

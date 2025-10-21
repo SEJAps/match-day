@@ -1,7 +1,7 @@
 import type { FC } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
-import logoSm from "../assets/images/svg/logo-sm.svg";
+import logoSm from "@/assets/images/svg/logo-sm.svg";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ViewSocialNetworks from "@/components/templates/ViewSocialNetworks";
 
@@ -13,16 +13,20 @@ const MainFooter: FC = () => {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Columna 1: Marca y descripción */}
           <div>
-            <div className="flex items-center gap-3">
-              <img
-                src={logoSm}
-                alt="Match Day"
-                width={170}
-                height={41}
-                className="h-10 w-auto"
-              />
-              <span className="sr-only">MATCH DAY</span>
-            </div>
+            <section className="flex items-start my-8 md:pl-4">
+              <NavLink title="Match Day" to="/" aria-label="Match Day Logo">
+                <div className="flex items-center gap-3">
+                  <img
+                    src={logoSm}
+                    alt="Match Day"
+                    width={170}
+                    height={41}
+                    className="h-10 w-auto"
+                  />
+                  <span className="sr-only">MATCH DAY</span>
+                </div>
+              </NavLink>
+            </section>
             <p className="mt-3 text-sm text-neutral-300 max-w-md">
               {t("footer.tagline", {
                 defaultValue:
@@ -38,36 +42,40 @@ const MainFooter: FC = () => {
             </h4>
             <ul className="mt-3 space-y-2 text-neutral-300">
               <li>
-                <Link
+                <NavLink
+                  title={t("nav.home", { defaultValue: "Inicio" })}
                   to="/"
                   className="hover:text-emerald-400 transition-colors"
                 >
                   {t("nav.home", { defaultValue: "Inicio" })}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
+                  title={t("nav.services", { defaultValue: "Servicios" })}
                   to="/services"
                   className="hover:text-emerald-400 transition-colors"
                 >
                   {t("nav.services", { defaultValue: "Servicios" })}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
+                  title={t("nav.features", { defaultValue: "Características" })}
                   to="/features"
                   className="hover:text-emerald-400 transition-colors"
                 >
                   {t("nav.features", { defaultValue: "Características" })}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
+                  title={t("nav.pricing", { defaultValue: "Precios" })}
                   to="/prices"
                   className="hover:text-emerald-400 transition-colors"
                 >
                   {t("nav.pricing", { defaultValue: "Precios" })}
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </section>
@@ -80,6 +88,9 @@ const MainFooter: FC = () => {
             <ul className="mt-3 space-y-2 text-neutral-300">
               <li>
                 <Link
+                  title={t("nav.helpCenter", {
+                    defaultValue: "Centro de Ayuda",
+                  })}
                   to="/help-center"
                   className="hover:text-emerald-400 transition-colors"
                 >
@@ -88,6 +99,7 @@ const MainFooter: FC = () => {
               </li>
               <li>
                 <Link
+                  title={t("nav.faq", { defaultValue: "FAQ" })}
                   to="/contact"
                   className="hover:text-emerald-400 transition-colors"
                 >
@@ -96,6 +108,7 @@ const MainFooter: FC = () => {
               </li>
               <li>
                 <Link
+                  title={t("nav.faqLink", { defaultValue: "/help-center#faq" })}
                   to="/help-center#faq"
                   className="hover:text-emerald-400 transition-colors"
                 >
@@ -104,6 +117,7 @@ const MainFooter: FC = () => {
               </li>
               <li>
                 <Link
+                  title={t("nav.blog", { defaultValue: "Blog" })}
                   to="/blog"
                   className="hover:text-emerald-400 transition-colors"
                 >

@@ -28,6 +28,7 @@ const LanguageSwitcher: FC = () => {
         const isActive = i18n.resolvedLanguage === code;
         return (
           <button
+            title={label}
             key={code}
             type="button"
             onClick={() => changeLang(code)}

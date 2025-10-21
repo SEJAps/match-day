@@ -1,9 +1,9 @@
 import { useEffect, type FC } from "react";
 import { NavLink } from "react-router";
-import { Button } from "../components/atoms";
+import { Button } from "@/components/atoms";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import logosm from "../assets/images/svg/logo-sm.svg";
-import { LogoBrand, Modal } from "../components/molecules";
+import logoSm from "@/assets/images/svg/logo-sm.svg";
+import { LogoBrand, Modal } from "@/components/molecules";
 import { useModal } from "../hooks/useModal";
 import { useTranslation } from "react-i18next";
 
@@ -34,13 +34,18 @@ const MainHeader: FC<{
           <LogoBrand />
         </section>
         <section className="flex items-start my-8 pl-4 xl:hidden">
-          <img
-            src={logosm}
-            alt="Logo"
-            width={169}
-            height={40}
-            className="w-42 h-10 aspect-square"
-          />
+          <NavLink title="Match Day" to="/" aria-label="Match Day Logo">
+            <div className="flex items-center gap-3">
+              <img
+                src={logoSm}
+                alt="Match Day"
+                width={170}
+                height={41}
+                className="h-10 w-auto"
+              />
+              <span className="sr-only">MATCH DAY</span>
+            </div>
+          </NavLink>
         </section>
         {/* Menú de escritorio (solo pantallas grandes) */}
         <nav className="hidden flex-1 lg:flex items-center justify-center gap-4 mt-8">
