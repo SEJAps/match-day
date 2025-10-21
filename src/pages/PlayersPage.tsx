@@ -112,7 +112,7 @@ const PlayersPage: FC = () => {
         color="white"
       >
         <section className="w-full flex flex-col md:flex-row gap-4">
-          <aside className="order-1 flex-4 flex flex-col items-center justify-center py-6  ml-14">
+          <aside className="order-1 flex-4 flex flex-col items-center justify-center py-6">
             <Heading
               as="h2"
               level="h1"
