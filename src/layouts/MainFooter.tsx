@@ -13,7 +13,7 @@ const MainFooter: FC = () => {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Columna 1: Marca y descripción */}
           <div>
-            <section className="flex items-start my-8 md:pl-4">
+            <section className="flex items-start my-8 pl-0">
               <NavLink title="Match Day" to="/" aria-label="Match Day Logo">
                 <div className="flex items-center gap-3">
                   <img
