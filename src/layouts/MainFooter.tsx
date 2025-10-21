@@ -113,7 +113,7 @@ const MainFooter: FC = () => {
             </ul>
           </section>
 
-          {/* Columna 4: Redes sociales */}
+          {/* Redes sociales */}
           <ViewSocialNetworks />
         </div>
 
