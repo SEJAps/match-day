@@ -56,91 +56,91 @@ export const router = createBrowserRouter([
         path: "*",
         element: <NotFoundPage />,
       },
-      {
-        path: "/",
-        element: <SingleLayout bgHeader="bg-neutral-800" />,
-        children: [
-          {
-            path: "services",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <ServicesPage />
-              </Suspense>
-            ),
-          },
-          {
-            path: "blog",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <BlogPage />
-              </Suspense>
-            ),
-          },
-          {
-            path: "help-center",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <HelpCenterPage />
-              </Suspense>
-            ),
-          },
-          // We keep original '/caracteristiques' path but also add '/features' canonical route
-          {
-            path: "caracteristiques",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <FeaturesPage />
-              </Suspense>
-            ),
-          },
-          {
-            path: "features",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <FeaturesPage />
-              </Suspense>
-            ),
-          },
-          {
-            path: "prices",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <PricesPage />
-              </Suspense>
-            ),
-          },
-
-          {
-            path: "privacy-policy",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <PrivacyPolicyPage />
-              </Suspense>
-            ),
-          },
-          {
-            path: "terms-of-service",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <TermsOfServicePage />
-              </Suspense>
-            ),
-          },
-          {
-            path: "cookies",
-            element: (
-              <Suspense fallback={<LogoShowcaseSkeleton />}>
-                <CookiesPage />
-              </Suspense>
-            ),
-          },
-        ],
-      },
       // Alias route for logo showcase at root level for quick access
 
       // Atomic design nested subtree
 
       // 404 catch within layout
+    ],
+  },
+  {
+    path: "/",
+    element: <SingleLayout bgHeader="bg-neutral-800" />,
+    children: [
+      {
+        path: "services",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <ServicesPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "blog",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <BlogPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "help-center",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <HelpCenterPage />
+          </Suspense>
+        ),
+      },
+      // We keep original '/caracteristiques' path but also add '/features' canonical route
+      {
+        path: "caracteristiques",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <FeaturesPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "features",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <FeaturesPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "prices",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <PricesPage />
+          </Suspense>
+        ),
+      },
+
+      {
+        path: "privacy-policy",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <PrivacyPolicyPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "terms-of-service",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <TermsOfServicePage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "cookies",
+        element: (
+          <Suspense fallback={<LogoShowcaseSkeleton />}>
+            <CookiesPage />
+          </Suspense>
+        ),
+      },
     ],
   },
   {
