@@ -9,7 +9,8 @@ import { useTranslation } from "react-i18next";
 
 const MainHeader: FC<{
   viewHeroLayer?: boolean;
-}> = ({ viewHeroLayer = true }) => {
+  bg?: string;
+}> = ({ viewHeroLayer = true, bg }) => {
   const { isOpen, open, close } = useModal(false);
   // Cerrar automáticamente el menú móvil cuando el viewport sea >= lg (1024px)
   useEffect(() => {
@@ -26,7 +27,7 @@ const MainHeader: FC<{
   const { t } = useTranslation();
   return (
     <header
-      className={`${!viewHeroLayer ? "bg-neutral-800 md:h-[15svh]" : ""}`}
+      className={`${!viewHeroLayer && "bg-neutral-800 md:h-[15svh] "} ${bg && `${bg} h-[12svh] sm:h-[13svh] lg:h-[18svh]`}`}
     >
       <section className="container flex items-start justify-between mx-auto z-100 w-full">
         <section className="hidden sm:hidden md:hidden lg:hidden xl:flex xl:items-center xl:my-6 xl:ml-8 ">
