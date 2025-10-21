@@ -23,7 +23,7 @@ const LanguageSwitcher: FC = () => {
   };
 
   return (
-    <div className="inline-flex items-center gap-1 rounded-md bg-white/5 p-1 border border-white/10">
+    <div className="inline-flex items-center gap-1 rounded-md bg-white/5 p-1 border border-[#00BC7D]/50">
       {LANGS.map(({ code, label }) => {
         const isActive = i18n.resolvedLanguage === code;
         return (
@@ -36,7 +36,7 @@ const LanguageSwitcher: FC = () => {
             className={`px-2.5 py-1 text-xs font-medium rounded ${
               isActive
                 ? "bg-emerald-500 text-white"
-                : "text-neutral-200 hover:bg-white/10"
+                : "text-neutral-500 hover:bg-white/50 hover:text-neutral-200"
             }`}
           >
             {label}

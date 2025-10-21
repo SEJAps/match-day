@@ -209,16 +209,16 @@ const MainHeader: FC<{
               </NavLink>
             </ul>
           </nav>
-          <div className="pt-2 flex items-center gap-3">
+          <Button
+            variant="primary"
+            size="default"
+            className="w-full bg-[#9BB5B0]"
+            onClick={close}
+          >
+            {t("common.signIn", { defaultValue: "Acceder" })}
+          </Button>
+          <div className=" flex items-center justify-center gap-3 absolute top-5 right-18 p-1 rounded-md">
             <LanguageSwitcher />
-            <Button
-              variant="primary"
-              size="default"
-              className="w-full bg-[#9BB5B0]"
-              onClick={close}
-            >
-              {t("common.signIn", { defaultValue: "Acceder" })}
-            </Button>
           </div>
         </div>
       </Modal>
