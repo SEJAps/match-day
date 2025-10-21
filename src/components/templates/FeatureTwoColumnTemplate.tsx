@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { Heading, FeatureList } from "@/components";
-import { Image } from "@/components/atoms";
+import { Image, Text } from "@/components/atoms";
 import type { FeatureItem } from "@/components/organisms/FeatureList";
 
 export interface FeatureTwoColumnTemplateProps {
@@ -30,18 +30,25 @@ const FeatureTwoColumnTemplate: FC<FeatureTwoColumnTemplateProps> = ({
   return (
     <aside className={`flex flex-col md:flex-row  ${className}`}>
       <section className="flex-1 flex flex-col gap-6 p-6 ">
-        <Heading as="h2" level="h3" weight="semibold">
+        <Heading
+          as="h2"
+          level="h3"
+          weight="semibold"
+          className="text-[#00BC7D]"
+        >
           {heading}
         </Heading>
-        {description && <p className="text-xl">{description}</p>}
+        {description && (
+          <Text size="lg" className="text-neutral-700">
+            {description}
+          </Text>
+        )}
         <FeatureList
           items={features}
           spacing={featureListProps?.spacing ?? "base"}
           padding={featureListProps?.padding ?? "none"}
           align={featureListProps?.align ?? "center"}
-          listClassName={
-            featureListProps?.listClassName ?? "px-8 sm:pl-20 text-lg"
-          }
+          listClassName={featureListProps?.listClassName}
           iconSize={featureListProps?.iconSize ?? 24}
           iconClassName={featureListProps?.iconClassName}
         />

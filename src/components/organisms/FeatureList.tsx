@@ -57,7 +57,7 @@ const FeatureList: FC<FeatureListProps> = ({
         variant="none"
         spacing={spacing}
         padding={padding}
-        className={`flex flex-col max-w-80 mx-auto p-6 md:p-6 md:min-w-[648px] min-h-34 ${listClassName}`}
+        className={`flex flex-col  mx-auto md:min-w-[648px] ${listClassName}`}
       >
         {items.map((item, idx) => {
           // Si es inpar al aderecha si es para izquierda

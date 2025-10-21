@@ -129,7 +129,6 @@ const MatchDay: FC = () => {
             }),
           }))}
           featureListProps={{
-            listClassName: "text-lg",
             iconSize: 32,
           }}
           media={{

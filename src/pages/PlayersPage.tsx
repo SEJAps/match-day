@@ -131,10 +131,10 @@ const PlayersPage: FC = () => {
                       `pages.players.sections.professionalProfile.items.${idx}`,
                       {
                         defaultValue: item,
-                      }
+                      },
                     )}
                   </li>
-                )
+                ),
               )}
             </ul>
           </aside>

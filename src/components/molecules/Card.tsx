@@ -125,7 +125,7 @@ const Card: FC<CardProps> = ({
 
         <Text
           className={cn(
-            "m-4 leading-snug",
+            "m-4 leading-snug text-neutral-600",
             // En móvil, truncar a 2 líneas; en sm+ mostrar completo
             "line-clamp-2 sm:line-clamp-none",
           )}
