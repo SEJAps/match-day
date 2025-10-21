@@ -1,13 +1,29 @@
 import type { HeroSection, HeroBg } from "@/config/types";
 import HERO_BG_LAYER_SRC from "@/assets/images/png/hero-bg-layer.png";
 import HERO_BG_MAIN_SRC from "@/assets/images/png/hero-bg-main.png";
+import FRAME_427 from "@/assets/images/png/frame-427318449.png";
+import DESTACA_PERFIL from "@/assets/images/png/destaca-perfil.png";
 import profilePalyer from "@/assets/images/svg/profile-player.svg";
 import eye from "@/assets/images/svg/eye.svg";
 import spaceShip from "@/assets/images/svg/space-ship.svg";
 import soccerBall from "@/assets/images/svg/soccer-ball.svg";
 
+type SectionsConfig = {
+  title: string;
+  items: string[];
+  photo: string;
+};
+type Sections = {
+  marketplace: SectionsConfig;
+  professionalProfile: SectionsConfig;
+  personalStatistics: SectionsConfig;
+  subscriptionPlans: {
+    title: string;
+  };
+};
 export interface PlayersPageConfig {
   hero: HeroSection;
+  sections: Sections;
   heroBgImages: HeroBg[];
   heroCtas?: { label: string; variant: "success" | "outline" }[];
 }
@@ -24,6 +40,38 @@ export const PLAYERS_PAGE: PlayersPageConfig = {
         { icon: eye, text: "Hazte visible para clubes" },
         { icon: spaceShip, text: "Empieza a destacar hoy" },
       ],
+    },
+  },
+  sections: {
+    marketplace: {
+      title: "Conéctate con equipos a través del marketplace de fichajes.",
+      items: [
+        "Descubre qué equipos están buscando jugadores como tú.",
+        "Postúlate a oportunidades reales o deja que los equipos te encuentren.",
+        "Tú decides cuándo dar el salto y a dónde.",
+      ],
+      photo: FRAME_427,
+    },
+    professionalProfile: {
+      title: "Destaca con tu perfil profesional incluyendo datos y vídeos.",
+      items: [
+        "Diseña un perfil completo a tu gusto.",
+        "Sube clips de tus mejores jugadas, añade tus estadísticas destacadas y completa tu historial deportivo.",
+        "Es tu carta de presentación para llamar la atención de equipos y ojeadores.",
+      ],
+      photo: DESTACA_PERFIL,
+    },
+    personalStatistics: {
+      title: "Accede a tus estadísticas personales de cada partido.",
+      items: [
+        "Lleva un registro detallado de tu rendimiento: minutos jugados, goles, asistencias, recuperaciones, pases, y mucho más.",
+        "Conoce tus puntos fuertes y detecta dónde puedes mejorar.",
+        "Toda tu evolución, organizada y accesible en un clic.",
+      ],
+      photo: DESTACA_PERFIL,
+    },
+    subscriptionPlans: {
+      title: "Planes de subscripción.",
     },
   },
   heroBgImages: [

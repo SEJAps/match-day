@@ -1,35 +1,42 @@
 import type { FC, ReactNode } from "react";
-import { useTranslation } from "react-i18next";
-import { Heading, Text } from "../atoms";
+import { Heading, headingVariants, Text, textVariants } from "../atoms";
+import type { VariantProps } from "class-variance-authority";
 
-interface HeadlineSectionTemplateProps {
-  title: string;
-  description: string;
+interface HeadlineSectionTemplateProps
+  extends VariantProps<typeof headingVariants> {
+  title?: string;
+  description?: string;
   children: ReactNode;
+  bg?: string;
+  textColor?: VariantProps<typeof textVariants>["color"];
 }
-
 const HeadlineSectionTemplate: FC<HeadlineSectionTemplateProps> = ({
   title,
   description,
   children,
+  bg = "bg-white",
+  color,
+  textColor = "default",
 }) => {
-  const { t } = useTranslation();
   return (
-    <article className="bg-white py-20 text-neutral-800">
-      <section className="max-w-6xl mx-auto sm:mb-12 py-8">
-        <Heading as="h2" level="h1" align="center" color="success">
-          {t("common.servicesForEveryNeed.title", {
-            defaultValue: title,
-          })}
-        </Heading>
-        <Text align="center" size="lg">
-          {t("common.servicesForEveryNeed.description", {
-            defaultValue: description,
-          })}
-        </Text>
-      </section>
-      <section className="max-w-6xl mx-auto grid sm:grid-cols-3 gap-8 px-6">
-        {children}
+    <article className={`${bg} w-full py-12`}>
+      <section className="max-w-6xl mx-auto">
+        {title && (
+          <aside className="flex flex-col gap-8 px-4 py-6">
+            {title && (
+              <Heading as="h2" level="h1" align="center" color={color}>
+                {title}
+              </Heading>
+            )}
+
+            {description && (
+              <Text align="center" size="lg" color={textColor}>
+                {description}
+              </Text>
+            )}
+          </aside>
+        )}
+        <article className={`py-6 sm:py-12`}>{children}</article>
       </section>
     </article>
   );

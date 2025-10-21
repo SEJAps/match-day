@@ -2,8 +2,8 @@ import type { FC, ReactNode } from "react";
 import { Heading, Text } from "../atoms";
 
 interface ValuePropSectionTemplateProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   children: ReactNode;
 }
 

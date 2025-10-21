@@ -216,14 +216,32 @@
         }
       },
       "sections": {
-        "0": {
-          "title": "Accede a tus estadísticas personales de cada partido."
+        "marketplace": {
+          "title": "Conéctate con equipos a través del marketplace de fichajes.",
+          "items": {
+            "0": "Explora oportunidades reales de fichaje y postúlate directamente desde la plataforma.",
+            "1": "Los equipos pueden encontrarte fácilmente gracias a tu perfil y estadísticas actualizadas.",
+            "2": "Tú decides cuándo dar el salto y a dónde."
+          }
         },
-        "1": {
-          "title": "Destaca con tu perfil profesional incluyendo datos y vídeos."
+        "professionalProfile": {
+          "title": "Destaca con tu perfil profesional incluyendo datos y vídeos.",
+          "items": {
+            "0": "Diseña un perfil completo a tu gusto.",
+            "1": "Sube clips de tus mejores jugadas, añade tus estadísticas destacadas y completa tu historial deportivo.",
+            "2": "Es tu carta de presentación para llamar la atención de equipos y ojeadores."
+          }
         },
-        "2": {
-          "title": "Conéctate con equipos a través del marketplace de fichajes."
+        "personalStatistics": {
+          "title": "Accede a tus estadísticas personales de cada partido.",
+          "items": {
+            "0": "Lleva un registro detallado de tu rendimiento: minutos jugados, goles, asistencias, recuperaciones, pases, y mucho más.",
+            "1": "Conoce tus puntos fuertes y detecta dónde puedes mejorar.",
+            "2": "Toda tu evolución, organizada y accesible en un clic."
+          }
+        },
+        "subscriptionPlans": {
+          "title": "Planes de subscripción"
         }
       }
     },

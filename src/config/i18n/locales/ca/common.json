@@ -216,14 +216,32 @@
         }
       },
       "sections": {
-        "0": {
-          "title": "Accedeix a les teves estadístiques personals de cada partit."
+        "marketplace": {
+          "title": "Connecta amb equips a través del marketplace de fitxatges.",
+          "items": {
+            "0": "Explora oportunitats reals de fitxatge i postula't directament des de la plataforma.",
+            "1": "Els equips poden trobar-te fàcilment gràcies al teu perfil i estadístiques actualitzades.",
+            "2": "Tu decideixes quan fer el salt i a on."
+          }
         },
-        "1": {
-          "title": "Destaca amb el teu perfil professional incloent dades i vídeos."
+        "professionalProfile": {
+          "title": "Destaca amb el teu perfil professional incloent dades i vídeos.",
+          "items": {
+            "0": "Dissenya un perfil complet al teu gust.",
+            "1": "Puja clips de les teves millors jugades, afegeix les teves estadístiques destacades i completa el teu historial esportiu.",
+            "2": "És la teva carta de presentació per cridar l'atenció d'equips i ojeadors."
+          }
         },
-        "2": {
-          "title": "Connecta amb equips a través del marketplace de fitxatges."
+        "personalStatistics": {
+          "title": "Accedeix a les teves estadístiques personals de cada partit.",
+          "items": {
+            "0": "Porta un registre detallat del teu rendiment: minuts jugats, gols, assistències, recuperacions, passades, i molt més.",
+            "1": "Coneix els teus punts forts i detecta on pots millorar.",
+            "2": "Tota la teva evolució, organitzada i accessible en un clic."
+          }
+        },
+        "subscriptionPlans": {
+          "title": "Explora plans de subscripció."
         }
       }
     },

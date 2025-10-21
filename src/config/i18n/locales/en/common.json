@@ -216,14 +216,32 @@
         }
       },
       "sections": {
-        "0": {
-          "title": "Access your personal stats from each match."
+        "marketplace": {
+          "title": "Connect with teams through the transfer marketplace.",
+          "items": {
+            "0": "Explore real transfer opportunities and apply directly from the platform.",
+            "1": "Teams can easily find you thanks to your profile and updated statistics.",
+            "2": "You decide when and where to make the jump."
+          }
         },
-        "1": {
-          "title": "Stand out with a professional profile including data and videos."
+        "professionalProfile": {
+          "title": "Stand out with a professional profile including data and videos.",
+          "items": {
+            "0": "Design a complete profile to your liking.",
+            "1": "Upload clips of your best plays, add your standout statistics, and complete your sports history.",
+            "2": "It's your calling card to attract the attention of teams and scouts."
+          }
         },
-        "2": {
-          "title": "Connect with teams through the transfer marketplace."
+        "personalStatistics": {
+          "title": "Access your personal statistics for each match.",
+          "items": {
+            "0": "Keep a detailed record of your performance: minutes played, goals, assists, recoveries, passes, and much more.",
+            "1": "Know your strengths and identify areas for improvement.",
+            "2": "All your evolution, organized and accessible with one click."
+          }
+        },
+        "subscriptionPlans": {
+          "title": "Explore subscription plans."
         }
       }
     },
