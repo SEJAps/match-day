@@ -2,11 +2,8 @@ import type { FC } from "react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import logoSm from "../assets/images/svg/logo-sm.svg";
-import iconFacebook from "../assets/images/svg/social/facebook.svg";
-import iconInstagram from "../assets/images/svg/social/instagram.svg";
-import iconLinkedIn from "../assets/images/svg/social/linkedin.svg";
-import iconTwitter from "../assets/images/svg/social/twitter-o-x.svg";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ViewSocialNetworks from "@/components/templates/ViewSocialNetworks";
 
 const MainFooter: FC = () => {
   const { t } = useTranslation();
@@ -117,62 +114,7 @@ const MainFooter: FC = () => {
           </section>
 
           {/* Columna 4: Redes sociales */}
-          <section>
-            <h4 className="text-sm font-semibold">
-              {t("footer.followUs", { defaultValue: "Síguenos" })}
-            </h4>
-            <div className="mt-3 grid grid-cols-[repeat(4,minmax(0,.15fr)))] gap-4">
-              <Link
-                to="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <img
-                  src={iconFacebook}
-                  alt="Facebook"
-                  className="h-full w-full"
-                />
-              </Link>
-
-              <Link
-                to="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter/X"
-              >
-                <img
-                  src={iconTwitter}
-                  alt="Twitter/X"
-                  className="h-full w-full"
-                />
-              </Link>
-              <Link
-                to="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <img
-                  src={iconInstagram}
-                  alt="Instagram"
-                  className="h-full w-full"
-                />
-              </Link>
-              <Link
-                to="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <img
-                  src={iconLinkedIn}
-                  alt="LinkedIn"
-                  className="h-full w-full"
-                />
-              </Link>
-            </div>
-          </section>
+          <ViewSocialNetworks />
         </div>
 
         {/* Separador y legal */}
