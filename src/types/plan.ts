@@ -6,9 +6,7 @@ export type PlanTier = {
   cta?: { label: string; variant?: "success" | "view" };
 };
 
-import type { ReactNode } from "react";
-
 export type PlanFeatureRow = {
   label: string;
-  values: Record<string, ReactNode>; // key por tier.id
+  values: Record<string, string>; // key por tier.id
 };

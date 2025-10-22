@@ -1,9 +1,7 @@
-import { Button, Image } from "@/components";
+import { Button } from "@/components";
 import type { FC } from "react";
 import { cn } from "@/utils/cn";
 import PlanCard from "@/components/molecules/PlanCard";
-import INCLUDED_ICON from "@/assets/images/svg/included.svg";
-import NOT_INCLUDED_ICON from "@/assets/images/svg/not-included.svg";
 
 import type { PlanTier, PlanFeatureRow } from "@/types/plan";
 
@@ -65,36 +63,11 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                 )}
               >
                 <td className="p-4">{row.label}</td>
-                {tiers.map((tier) => {
-                  const raw = row.values[tier.id];
-                  const content =
-                    typeof raw === "string" ? (
-                      raw === "v" ? (
-                        <Image
-                          src={INCLUDED_ICON}
-                          alt="Incluido"
-                          className="inline-block w-5 h-5"
-                          fit="contain"
-                        />
-                      ) : raw === "x" ? (
-                        <Image
-                          src={NOT_INCLUDED_ICON}
-                          alt="No incluido"
-                          className="inline-block w-5 h-5"
-                          fit="contain"
-                        />
-                      ) : (
-                        raw
-                      )
-                    ) : (
-                      raw
-                    );
-                  return (
-                    <td key={tier.id} className="p-4 text-center">
-                      {content ?? "—"}
-                    </td>
-                  );
-                })}
+                {tiers.map((tier) => (
+                  <td key={tier.id} className="p-4 text-center">
+                    {row.values[tier.id] ?? "—"}
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
@@ -114,32 +87,10 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
               variant: tier.cta?.variant ?? "success",
               fullWidth: true,
             }}
-            features={features.map((row) => {
-              const raw = row.values[tier.id];
-              const value =
-                typeof raw === "string" ? (
-                  raw === "v" ? (
-                    <Image
-                      src={INCLUDED_ICON}
-                      alt="Incluido"
-                      className="inline-block w-5 h-5"
-                      fit="contain"
-                    />
-                  ) : raw === "x" ? (
-                    <Image
-                      src={NOT_INCLUDED_ICON}
-                      alt="No incluido"
-                      className="inline-block w-5 h-5"
-                      fit="contain"
-                    />
-                  ) : (
-                    raw
-                  )
-                ) : (
-                  raw
-                );
-              return { label: row.label, value: value ?? "—" };
-            })}
+            features={features.map((row) => ({
+              label: row.label,
+              value: row.values[tier.id] ?? "—",
+            }))}
           />
         ))}
       </div>
