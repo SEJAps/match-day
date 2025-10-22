@@ -8,6 +8,7 @@
 // Content Components
 export { default as Card } from "./Card";
 export { default as ServiceCard } from "./ServiceCard";
+export { default as PlanCard } from "./PlanCard";
 
 // Brand Components
 export { default as LogoBrand } from "./LogoBrand";
@@ -20,3 +21,4 @@ export type { CardProps } from "./Card";
 export type { ServiceCardProps } from "./ServiceCard";
 export type { LogoBrandProps, ColorScheme } from "./LogoBrand";
 export type { ModalProps } from "./Modal";
+export type { PlanCardProps, PlanCardFeature } from "./PlanCard";

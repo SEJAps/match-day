@@ -12,3 +12,4 @@ export { default as ServicesSection } from "./ServicesSection";
 export { default as ContactSection } from "./ContactSection";
 export { default as Picture } from "./Picture";
 export { default as FeatureList } from "./FeatureList";
+export { default as PlanComparisonTable } from "./PlanComparisonTable";
