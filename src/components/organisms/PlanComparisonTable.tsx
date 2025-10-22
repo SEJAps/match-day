@@ -53,38 +53,62 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
         <table className="w-full min-w-[720px] border-collapse text-white">
           <thead>
             <tr className="bg-transparent">
-              <th className="text-left p-4 border-b border-gray-300/60 align-bottom">
-                {t("pages.players.sections.subscriptionPlans.tableHeader", {
-                  defaultValue: "Característica",
-                })}
+              <th className="text-left p-4 align-bottom">
+                <span className="sr-only">
+                  {t("pages.players.sections.subscriptionPlans.tableHeader", {
+                    defaultValue: "Característica",
+                  })}
+                </span>
               </th>
               {tiers.map((tier) => (
-                <th key={tier.id} className="p-4 border-b border-gray-300/60">
-                  <div className="flex flex-col items-start gap-2 max-w-xs">
-                    <strong>
+                <th key={tier.id} className="p-4">
+                  <div className="flex flex-col items-start text-left gap-2 max-w-[14rem] mx-auto">
+                    <strong className="text-lg md:text-xl lg:text-2xl self-center text-center w-full">
                       {t(
                         `pages.players.sections.subscriptionPlans.tiers.${tier.id}.title`,
                         { defaultValue: tier.title }
                       )}
                     </strong>
-                    <small>
+                    <small className="text-base md:text-lg self-center text-center w-full">
                       {t(
                         `pages.players.sections.subscriptionPlans.tiers.${tier.id}.price`,
                         { defaultValue: tier.price }
                       )}
                     </small>
-                    {tier.description ? (
-                      <small
-                        className={cn("text-left opacity-80", clampClasses)}
-                      >
-                        {t(
-                          `pages.players.sections.subscriptionPlans.tiers.${tier.id}.description`,
-                          { defaultValue: tier.description }
-                        )}
-                      </small>
-                    ) : null}
+                    {tier.description
+                      ? (() => {
+                          const descriptionText = t(
+                            `pages.players.sections.subscriptionPlans.tiers.${tier.id}.description`,
+                            { defaultValue: tier.description }
+                          );
+                          const tooltipText =
+                            tier.id === "pro"
+                              ? t(
+                                  `pages.players.sections.subscriptionPlans.tiers.${tier.id}.tooltip`,
+                                  {
+                                    defaultValue:
+                                      "Pensado para jugadores ambiciosos que quieren destacar.",
+                                  }
+                                )
+                              : descriptionText;
+                          return (
+                            <small
+                              title={tooltipText}
+                              className={cn(
+                                "opacity-80 text-sm md:text-base",
+                                clampClasses
+                              )}
+                            >
+                              {descriptionText}
+                            </small>
+                          );
+                        })()
+                      : null}
                     {tier.cta ? (
-                      <Button variant={tier.cta.variant ?? "success"}>
+                      <Button
+                        className="w-full"
+                        variant={tier.cta.variant ?? "success"}
+                      >
                         <small>
                           {t(
                             `pages.players.sections.subscriptionPlans.tiers.${tier.id}.ctaLabel`,
@@ -104,7 +128,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                 return (
                   <tr key={`g-${idx}`}>
                     <td
-                      className="p-3 pt-6 text-xs uppercase tracking-wide text-white/70"
+                      className="p-3 pt-6 pb-2 text-sm md:text-lg font-semibold uppercase tracking-wide text-white/80 border-b border-gray-300/60"
                       colSpan={1 + tiers.length}
                     >
                       {t(

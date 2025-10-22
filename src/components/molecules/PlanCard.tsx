@@ -33,12 +33,25 @@ const PlanCard: FC<PlanCardProps> = ({
       )}
     >
       <header className="flex flex-col items-start gap-1 mb-3">
-        <Heading as="h3" level="h4" className="text-lg font-semibold">
+        <Heading
+          as="h3"
+          level="h4"
+          color="white"
+          className="text-2xl font-semibold"
+        >
           {title}
         </Heading>
-        <Text className="text-sm opacity-80">{price}</Text>
+        <Text color="white" className="text-lg opacity-80">
+          {price}
+        </Text>
         {description ? (
-          <Text className="text-sm opacity-80">{description}</Text>
+          <div
+            title={typeof description === "string" ? description : undefined}
+          >
+            <Text color="white" className="text-sm opacity-80">
+              {description}
+            </Text>
+          </div>
         ) : null}
       </header>
       {features?.length ? (
@@ -53,10 +66,12 @@ const PlanCard: FC<PlanCardProps> = ({
             ) : (
               <li
                 key={i}
-                className="py-3 flex items-start justify-between gap-4"
+                className="py-3 grid grid-cols-[1fr_auto] items-center gap-4"
               >
-                <span className="text-sm">{f.label}</span>
-                <span className="text-sm font-semibold">{f.value}</span>
+                <span className="text-sm break-words">{f.label}</span>
+                <span className="text-sm font-semibold justify-self-end">
+                  {f.value}
+                </span>
               </li>
             )
           )}
