@@ -63,20 +63,25 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
               {tiers.map((tier) => (
                 <th key={tier.id} className="p-4">
                   <div className="flex flex-col items-start text-left gap-2 max-w-[14rem] mx-auto">
-                    <strong>
+                    <strong className="text-lg md:text-xl lg:text-2xl">
                       {t(
                         `pages.players.sections.subscriptionPlans.tiers.${tier.id}.title`,
                         { defaultValue: tier.title }
                       )}
                     </strong>
-                    <small>
+                    <small className="text-base md:text-lg">
                       {t(
                         `pages.players.sections.subscriptionPlans.tiers.${tier.id}.price`,
                         { defaultValue: tier.price }
                       )}
                     </small>
                     {tier.description ? (
-                      <small className={cn("opacity-80", clampClasses)}>
+                      <small
+                        className={cn(
+                          "opacity-80 text-sm md:text-base",
+                          clampClasses
+                        )}
+                      >
                         {t(
                           `pages.players.sections.subscriptionPlans.tiers.${tier.id}.description`,
                           { defaultValue: tier.description }
@@ -107,7 +112,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                 return (
                   <tr key={`g-${idx}`}>
                     <td
-                      className="p-3 pt-6 pb-2 text-base font-semibold uppercase tracking-wide text-white/80 border-b border-gray-300/60"
+                      className="p-3 pt-6 pb-2 text-sm md:text-lg font-semibold uppercase tracking-wide text-white/80 border-b border-gray-300/60"
                       colSpan={1 + tiers.length}
                     >
                       {t(
