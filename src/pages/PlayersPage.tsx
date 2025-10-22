@@ -7,6 +7,7 @@ import {
   LeadSectionTemplate,
   List,
   ListItem,
+  PlanComparisonTable,
 } from "@/components";
 import { PLAYERS_PAGE } from "@/config";
 import { cn } from "@/utils/cn";
@@ -18,6 +19,7 @@ const PlayersPage: FC = () => {
   const { t } = useTranslation();
   return (
     <Fragment>
+      {/* Hero Section */}
       <IntroSectionTemplate
         size="7xl"
         title={t("pages.players.hero.title", {
@@ -73,6 +75,7 @@ const PlayersPage: FC = () => {
             )) ?? []}
         </List>
       </IntroSectionTemplate>
+      {/* Marketplace */}
       <LeadSectionTemplate>
         <section className="w-full flex flex-col justify-between md:flex-row gap-4">
           <aside className="flex-4 flex flex-col items-center justify-center py-6">
@@ -105,6 +108,7 @@ const PlayersPage: FC = () => {
           </article>
         </section>
       </LeadSectionTemplate>
+      {/* Professional profile */}
       <HeadlineSectionTemplate
         bg="bg-[#00BC7D]"
         textColor="white"
@@ -146,168 +150,17 @@ const PlayersPage: FC = () => {
           </article>
         </section>
       </HeadlineSectionTemplate>
+      {/* Explore subscription plans */}
       <article className="py-20">
         <Heading as="h2" level="h1" align="center" className="mb-12 text-white">
           {t("pages.players.sections.subscriptionPlans.title", {
             defaultValue: "Planes de subscripción.",
           })}
         </Heading>
-        <div className="max-w-7xl mx-auto px-4">
-          {/* Tabla: visible en tablet/desktop */}
-          <div className="overflow-x-auto hidden md:block">
-            <table className="w-full min-w-[720px] border-collapse text-white">
-              <thead>
-                <tr className="bg-transparent">
-                  <th className="text-left p-4 border-b border-gray-300/60 align-bottom">
-                    Perfil
-                  </th>
-                  <th className="p-4 border-b border-gray-300/60">
-                    <div className="flex flex-col items-start gap-2 max-w-xs">
-                      <strong>Básico</strong>
-                      <small>0€/año</small>
-                      <small className="text-left opacity-80 md:[display:-webkit-box] md:[-webkit-line-clamp:2] md:[-webkit-box-orient:vertical] md:overflow-hidden">
-                        Para jugadores que quieren iniciarse en la plataforma.
-                      </small>
-                      <Button variant="view">
-                        <small>Empezar</small>
-                      </Button>
-                    </div>
-                  </th>
-                  <th className="p-4 border-b border-gray-300/60">
-                    <div className="flex flex-col items-start gap-2 max-w-xs">
-                      <strong>Pro</strong>
-                      <small>40€/año</small>
-                      <small className="text-left opacity-80 md:[display:-webkit-box] md:[-webkit-line-clamp:2] md:[-webkit-box-orient:vertical] md:overflow-hidden">
-                        Para jugadores que quieren iniciarse en la plataforma.
-                      </small>
-                      <Button variant="success">
-                        <small>Empezar</small>
-                      </Button>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-300/40">
-                  <td className="p-4">
-                    Creación de perfil (foto, posición, trayectoria...)
-                  </td>
-                  <td className="p-4 text-center">x</td>
-                  <td className="p-4 text-center">v</td>
-                </tr>
-                <tr className="border-b border-gray-300/40">
-                  <td className="p-4">
-                    Registro de estadísticas personales básicas (goles, minutos,
-                    partidos)
-                  </td>
-                  <td className="p-4 text-center">10</td>
-                  <td className="p-4 text-center">25</td>
-                </tr>
-                <tr className="border-b border-gray-300/40">
-                  <td className="p-4">
-                    Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)
-                  </td>
-                  <td className="p-4 text-center">Light</td>
-                  <td className="p-4 text-center">v</td>
-                </tr>
-                <tr>
-                  <td className="p-4">
-                    Carga de fotos y vídeos de mejores jugadas en el perfil
-                  </td>
-                  <td className="p-4 text-center">10</td>
-                  <td className="p-4 text-center">25</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          {/* Vista móvil: tarjetas apiladas */}
-          <div className="md:hidden grid gap-6">
-            {/* Básico */}
-            <article className="rounded-lg border border-gray-300/40 bg-transparent p-4 text-white">
-              <header className="flex flex-col items-start gap-1 mb-3">
-                <h3 className="text-lg font-semibold">Básico</h3>
-                <p className="text-sm opacity-80">0€/año</p>
-                <p className="text-sm opacity-80">
-                  Para jugadores que quieren iniciarse en la plataforma.
-                </p>
-              </header>
-              <ul className="divide-y divide-gray-300/30">
-                <li className="py-3 flex items-start justify-between gap-4">
-                  <span className="text-sm">
-                    Creación de perfil (foto, posición, trayectoria...)
-                  </span>
-                  <span className="text-sm font-semibold">x</span>
-                </li>
-                <li className="py-3 flex items-start justify-between gap-4">
-                  <span className="text-sm">
-                    Registro de estadísticas personales básicas (goles, minutos,
-                    partidos)
-                  </span>
-                  <span className="text-sm font-semibold">10</span>
-                </li>
-                <li className="py-3 flex items-start justify-between gap-4">
-                  <span className="text-sm">
-                    Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)
-                  </span>
-                  <span className="text-sm font-semibold">Light</span>
-                </li>
-                <li className="py-3 flex items-start justify-between gap-4">
-                  <span className="text-sm">
-                    Carga de fotos y vídeos de mejores jugadas en el perfil
-                  </span>
-                  <span className="text-sm font-semibold">10</span>
-                </li>
-              </ul>
-              <footer className="mt-4">
-                <Button variant="view" className="w-full">
-                  <small>Empezar</small>
-                </Button>
-              </footer>
-            </article>
-            {/* Pro */}
-            <article className="rounded-lg border border-gray-300/40 bg-transparent p-4 text-white">
-              <header className="flex flex-col items-start gap-1 mb-3">
-                <h3 className="text-lg font-semibold">Pro</h3>
-                <p className="text-sm opacity-80">40€/año</p>
-                <p className="text-sm opacity-80">
-                  Para jugadores que quieren iniciarse en la plataforma.
-                </p>
-              </header>
-              <ul className="divide-y divide-gray-300/30">
-                <li className="py-3 flex items-start justify-between gap-4">
-                  <span className="text-sm">
-                    Creación de perfil (foto, posición, trayectoria...)
-                  </span>
-                  <span className="text-sm font-semibold">v</span>
-                </li>
-                <li className="py-3 flex items-start justify-between gap-4">
-                  <span className="text-sm">
-                    Registro de estadísticas personales básicas (goles, minutos,
-                    partidos)
-                  </span>
-                  <span className="text-sm font-semibold">25</span>
-                </li>
-                <li className="py-3 flex items-start justify-between gap-4">
-                  <span className="text-sm">
-                    Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)
-                  </span>
-                  <span className="text-sm font-semibold">v</span>
-                </li>
-                <li className="py-3 flex items-start justify-between gap-4">
-                  <span className="text-sm">
-                    Carga de fotos y vídeos de mejores jugadas en el perfil
-                  </span>
-                  <span className="text-sm font-semibold">25</span>
-                </li>
-              </ul>
-              <footer className="mt-4">
-                <Button variant="success" className="w-full">
-                  <small>Empezar</small>
-                </Button>
-              </footer>
-            </article>
-          </div>
-        </div>
+        <PlanComparisonTable
+          tiers={PLAYERS_PAGE.sections.subscriptionPlans.tiers}
+          features={PLAYERS_PAGE.sections.subscriptionPlans.features}
+        />
       </article>
     </Fragment>
   );

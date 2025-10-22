@@ -22,7 +22,7 @@ export * from "./templates";
 
 // Re-exports for convenience
 export { Button, Heading, Text, List, ListItem, Logo } from "./atoms";
-export { Card, LogoBrand, ServiceCard } from "./molecules";
+export { Card, LogoBrand, ServiceCard, PlanCard } from "./molecules";
 export {
   ToastExample,
   ButtonShowcase,
@@ -31,4 +31,5 @@ export {
   ContactSection,
   Picture,
   FeatureList,
+  PlanComparisonTable,
 } from "./organisms";

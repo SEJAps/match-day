@@ -1,4 +1,5 @@
 import type { HeroSection, HeroBg } from "@/config/types";
+import type { PlanTier, PlanFeatureRow } from "@/types/plan";
 import HERO_BG_LAYER_SRC from "@/assets/images/png/hero-bg-layer.png";
 import HERO_BG_MAIN_SRC from "@/assets/images/png/hero-bg-main.png";
 import FRAME_427 from "@/assets/images/png/frame-427318449.png";
@@ -19,6 +20,8 @@ type Sections = {
   personalStatistics: SectionsConfig;
   subscriptionPlans: {
     title: string;
+    tiers: PlanTier[];
+    features: PlanFeatureRow[];
   };
 };
 export interface PlayersPageConfig {
@@ -72,6 +75,50 @@ export const PLAYERS_PAGE: PlayersPageConfig = {
     },
     subscriptionPlans: {
       title: "Planes de subscripción.",
+      tiers: [
+        {
+          id: "basic",
+          title: "Básico",
+          price: "0€/año",
+          description: "Para jugadores que quieren iniciarse en la plataforma.",
+          cta: { label: "Empezar", variant: "view" },
+        },
+        {
+          id: "pro",
+          title: "Pro",
+          price: "40€/año",
+          description: "Para jugadores que quieren iniciarse en la plataforma.",
+          cta: { label: "Empezar", variant: "success" },
+        },
+      ],
+      features: [
+        {
+          label: "Creación de perfil (foto, posición, trayectoria...)",
+          values: { basic: "x", pro: "v" },
+        },
+        {
+          label:
+            "Registro de estadísticas personales básicas (goles, minutos, partidos)",
+          values: { basic: "10", pro: "25" },
+        },
+        {
+          label:
+            "Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)",
+          values: { basic: "Light", pro: "v" },
+        },
+        {
+          label: "Carga de fotos y vídeos de mejores jugadas en el perfil",
+          values: { basic: "10", pro: "25" },
+        },
+        {
+          label: "Filtros de visibilidad del perfil",
+          values: { basic: "—", pro: "Sí" },
+        },
+        {
+          label: "Soporte prioritario",
+          values: { basic: "—", pro: "Sí" },
+        },
+      ],
     },
   },
   heroBgImages: [
