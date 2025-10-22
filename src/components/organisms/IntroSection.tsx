@@ -12,7 +12,7 @@ type IntroSectionProps = {
   rows?: boolean;
   color?: VariantProps<typeof textVariants>["color"];
   gap?: "4" | "6" | "8" | "12" | "16";
-  size?: "auto" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "container";
+  size?: "auto" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "7xl" | "container";
 };
 
 const IntroSection = ({
@@ -23,7 +23,7 @@ const IntroSection = ({
   cols = true,
   rows = false,
   gap = "8",
-  size = "auto",
+  size = "container",
   color,
 }: IntroSectionProps) => {
   return (

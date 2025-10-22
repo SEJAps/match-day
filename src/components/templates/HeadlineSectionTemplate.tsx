@@ -19,10 +19,10 @@ const HeadlineSectionTemplate: FC<HeadlineSectionTemplateProps> = ({
   textColor = "default",
 }) => {
   return (
-    <article className={`${bg} w-full p-6`}>
-      <section className="max-w-6xl mx-auto">
+    <article className={`${bg} w-full p-12`}>
+      <section className="max-w-7xl mx-auto">
         {title && (
-          <aside className="flex flex-col gap-8 px-4 ">
+          <aside className="flex flex-col gap-8 px-4">
             {title && (
               <Heading as="h2" level="h1" align="center" color={color}>
                 {title}

@@ -14,7 +14,7 @@ interface IntroSectionTemplateProps {
   alignItems?: "center" | "start" | "end" | "baseline" | "stretch";
   justifyContent?: "center" | "start" | "end" | "between" | "around" | "evenly";
   gap?: "4" | "6" | "8" | "12" | "16";
-  size?: "auto" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "container";
+  size?: "auto" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "7xl" | "container";
 }
 
 const IntroSectionTemplate: FC<IntroSectionTemplateProps> = ({
@@ -32,13 +32,12 @@ const IntroSectionTemplate: FC<IntroSectionTemplateProps> = ({
 }) => {
   return (
     <article
-      className={`flex ${cols && "flex-col"} ${rows && "flex-row"} items-${alignItems} justify-${justifyContent} gap-${gap}`}
+      className={`flex ${cols && "flex-col"} ${rows && "flex-row"} items-${alignItems} justify-${justifyContent} gap-${gap} max-w-${size} mx-auto w-full px-4`}
     >
       <IntroSection
         title={title}
         description={description}
         footer={footer}
-        size={size}
         gap={gap}
         color={color}
       >

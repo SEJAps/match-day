@@ -105,6 +105,7 @@ const MatchDay: FC = () => {
           className={`aspect-video object-cover sm:w-96 rounded-xl mx-auto`}
         />
       </IntroSectionTemplate>
+
       {/* LeadSection */}
       <LeadSectionTemplate
         title={t("pages.matchday.intro.heading", {

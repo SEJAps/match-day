@@ -7,7 +7,6 @@ import {
   LeadSectionTemplate,
   List,
   ListItem,
-  ValuePropSectionTemplate,
 } from "@/components";
 import { PLAYERS_PAGE } from "@/config";
 import { cn } from "@/utils/cn";
@@ -20,7 +19,7 @@ const PlayersPage: FC = () => {
   return (
     <Fragment>
       <IntroSectionTemplate
-        size="4xl"
+        size="7xl"
         title={t("pages.players.hero.title", {
           defaultValue: PLAYERS_PAGE.hero.title,
         })}
@@ -147,29 +146,91 @@ const PlayersPage: FC = () => {
           </article>
         </section>
       </HeadlineSectionTemplate>
-      <ValuePropSectionTemplate>
-        <article className="bg-white text-neutral-800">
-          <Heading as="h2" level="h1" align="center" className="mb-6">
-            {t("pages.players.sections.subscriptionPlans.title", {
-              defaultValue: "Planes de subscripción.",
-            })}
-          </Heading>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-            reiciendis ad dolorum doloribus doloremque obcaecati deleniti
-            corporis totam perspiciatis ab at quam dolorem odit, veritatis
-            cumque laboriosam ea quae tempore numquam eius in? Maiores dolorem
-            minima quisquam voluptatibus reprehenderit culpa ex veniam error qui
-            laborum optio asperiores possimus odit, saepe nisi distinctio alias
-            sequi ducimus cupiditate iure quis eligendi vel libero cum. Dolorum
-            facilis, numquam quisquam vero eaque reprehenderit amet sint cum
-            accusantium quam architecto nisi, adipisci accusamus, odit sunt
-            cupiditate voluptates? Repellendus aut accusamus hic fuga sit
-            dolorum eum, saepe nihil vitae alias iste ipsa perferendis pariatur
-            aliquid nulla.
-          </p>
-        </article>
-      </ValuePropSectionTemplate>
+      <article className="py-20">
+        <Heading as="h2" level="h1" align="center" className="mb-12 text-white">
+          {t("pages.players.sections.subscriptionPlans.title", {
+            defaultValue: "Planes de subscripción.",
+          })}
+        </Heading>
+        <section className="grid grid-cols-3 max-w-7xl mx-auto ">
+          <article className="flex flex-col">
+            <div className="flex flex-col justify-end pb-4 text-white border-b border-gray-400 h-36">
+              <strong>Perfil</strong>
+            </div>
+            <div className="flex flex-col">
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center">
+                Creación de perfil (foto, posición, trayectoria...)
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center">
+                Registro de estadísticas personales básicas (goles, minutos,
+                partidos)
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center">
+                Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center">
+                Carga de fotos y vídeos de mejores jugadas en el perfil
+              </small>
+            </div>
+          </article>
+          <article className="flex flex-col">
+            <aside>
+              <div className="flex flex-col items-center gap-2 pb-4 text-white  border-b border-gray-400 h-36">
+                <strong>Básico</strong>
+                <small>0€</small>
+                <small>
+                  Para jugadores que quieren iniciarse en la plataforma.
+                </small>
+                <Button variant="success">
+                  <small>Empezar</small>
+                </Button>
+              </div>
+            </aside>
+            <div className="flex flex-col">
+              <small className="border-b border-gray-400 pl-6  min-h-12 inline-flex items-center justify-center">
+                x
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center justify-center">
+                10
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center justify-center">
+                Light
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center justify-center">
+                10
+              </small>
+            </div>
+          </article>
+          <article className="flex flex-col">
+            <aside>
+              <div className="flex flex-col gap-2 items-center  text-white  border-b border-gray-400 h-36">
+                <strong>Pro</strong>
+                <small>40€</small>
+                <small>
+                  Para jugadores que quieren iniciarse en la plataforma.
+                </small>
+                <Button variant="success">
+                  <small>Empezar</small>
+                </Button>
+              </div>
+            </aside>
+            <div className="flex flex-col text-center">
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center justify-center">
+                v
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center justify-center">
+                25
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center justify-center">
+                v
+              </small>
+              <small className="border-b border-gray-400 pl-6 min-h-12 inline-flex items-center justify-center">
+                25
+              </small>
+            </div>
+          </article>
+        </section>
+      </article>
     </Fragment>
   );
 };

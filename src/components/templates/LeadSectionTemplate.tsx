@@ -19,10 +19,10 @@ const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
   textColor = "default",
 }) => {
   return (
-    <article className={`${bg} w-full py-6`}>
-      <section className="max-w-6xl mx-auto">
+    <article className={`${bg}`}>
+      <section className="max-w-7xl mx-auto py-12">
         {title && (
-          <aside className="flex flex-col gap-8 px-4 py-6">
+          <aside className="flex flex-col gap-8 px-4">
             {title && (
               <Heading as="h2" level="h1" align="center" color={color}>
                 {title}
