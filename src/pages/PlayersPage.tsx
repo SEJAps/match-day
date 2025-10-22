@@ -19,6 +19,7 @@ const PlayersPage: FC = () => {
   const { t } = useTranslation();
   return (
     <Fragment>
+      {/* Hero Section */}
       <IntroSectionTemplate
         size="7xl"
         title={t("pages.players.hero.title", {
@@ -74,6 +75,7 @@ const PlayersPage: FC = () => {
             )) ?? []}
         </List>
       </IntroSectionTemplate>
+      {/* Marketplace */}
       <LeadSectionTemplate>
         <section className="w-full flex flex-col justify-between md:flex-row gap-4">
           <aside className="flex-4 flex flex-col items-center justify-center py-6">
@@ -106,6 +108,7 @@ const PlayersPage: FC = () => {
           </article>
         </section>
       </LeadSectionTemplate>
+      {/* Professional profile */}
       <HeadlineSectionTemplate
         bg="bg-[#00BC7D]"
         textColor="white"
@@ -147,62 +150,17 @@ const PlayersPage: FC = () => {
           </article>
         </section>
       </HeadlineSectionTemplate>
+      {/* Explore subscription plans */}
       <article className="py-20">
         <Heading as="h2" level="h1" align="center" className="mb-12 text-white">
           {t("pages.players.sections.subscriptionPlans.title", {
             defaultValue: "Planes de subscripción.",
           })}
         </Heading>
-        {(() => {
-          const tiers = [
-            {
-              id: "basic",
-              title: "Básico",
-              price: "0€/año",
-              description:
-                "Para jugadores que quieren iniciarse en la plataforma.",
-              cta: { label: "Empezar", variant: "view" as const },
-            },
-            {
-              id: "pro",
-              title: "Pro",
-              price: "40€/año",
-              description:
-                "Para jugadores que quieren iniciarse en la plataforma.",
-              cta: { label: "Empezar", variant: "success" as const },
-            },
-          ];
-          const features = [
-            {
-              label: "Creación de perfil (foto, posición, trayectoria...)",
-              values: { basic: "x", pro: "v" },
-            },
-            {
-              label:
-                "Registro de estadísticas personales básicas (goles, minutos, partidos)",
-              values: { basic: "10", pro: "25" },
-            },
-            {
-              label:
-                "Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)",
-              values: { basic: "Light", pro: "v" },
-            },
-            {
-              label: "Carga de fotos y vídeos de mejores jugadas en el perfil",
-              values: { basic: "10", pro: "25" },
-            },
-            // Filas adicionales sugeridas
-            {
-              label: "Filtros de visibilidad del perfil",
-              values: { basic: "—", pro: "Sí" },
-            },
-            {
-              label: "Soporte prioritario",
-              values: { basic: "—", pro: "Sí" },
-            },
-          ];
-          return <PlanComparisonTable tiers={tiers} features={features} />;
-        })()}
+        <PlanComparisonTable
+          tiers={PLAYERS_PAGE.sections.subscriptionPlans.tiers}
+          features={PLAYERS_PAGE.sections.subscriptionPlans.features}
+        />
       </article>
     </Fragment>
   );

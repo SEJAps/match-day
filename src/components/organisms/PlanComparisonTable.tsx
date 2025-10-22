@@ -3,18 +3,7 @@ import type { FC } from "react";
 import { cn } from "@/utils/cn";
 import PlanCard from "@/components/molecules/PlanCard";
 
-export type PlanTier = {
-  id: string;
-  title: string;
-  price: string;
-  description?: string;
-  cta?: { label: string; variant?: "success" | "view" };
-};
-
-export type PlanFeatureRow = {
-  label: string;
-  values: Record<string, string>;
-};
+import type { PlanTier, PlanFeatureRow } from "@/types/plan";
 
 export type PlanComparisonTableProps = {
   tiers: PlanTier[];
