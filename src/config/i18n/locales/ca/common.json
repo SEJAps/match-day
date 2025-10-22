@@ -241,7 +241,69 @@
           }
         },
         "subscriptionPlans": {
-          "title": "Explora plans de subscripció."
+          "title": "Explora plans de subscripció.",
+          "tableHeader": "Característica",
+          "tiers": {
+            "basic": {
+              "title": "Bàsic",
+              "price": "0€/any",
+              "description": "Per a jugadors que volen iniciar-se a la plataforma.",
+              "ctaLabel": "Començar"
+            },
+            "pro": {
+              "title": "Pro",
+              "price": "40€/any",
+              "description": "Per a jugadors que volen impulsar la seva carrera.",
+              "ctaLabel": "Començar"
+            }
+          },
+          "features": {
+            "0": {
+              "label": "Perfil"
+            },
+            "1": {
+              "label": "Creació de perfil (foto, posició, trajectòria...)"
+            },
+            "2": {
+              "label": "Registre d'estadístiques personals bàsiques (gols, minuts, partits)"
+            },
+            "3": {
+              "label": "Estadístiques avançades (passades, duels, recuperacions, etc.)"
+            },
+            "4": {
+              "label": "Pujada de fotos i vídeos destacats al perfil"
+            },
+            "5": {
+              "label": "Oportunitats i visibilitat"
+            },
+            "6": {
+              "label": "Accés al marketplace de fitxatges"
+            },
+            "7": {
+              "label": "Presentar-se a ofertes al marketplace"
+            },
+            "8": {
+              "label": "Ser trobat per equips (visibilitat prioritària)"
+            },
+            "9": {
+              "label": "Recomanacions personalitzades d'equips"
+            },
+            "10": {
+              "label": "Opció de perfil privat"
+            },
+            "11": {
+              "label": "Contacte directe amb clubs i entrenadors interessats"
+            },
+            "12": {
+              "label": "Eines"
+            },
+            "13": {
+              "label": "Descàrrega d'informes en PDF/Excel (gràfiques d'evolució per partit i temporada)"
+            },
+            "14": {
+              "label": "Suport prioritari"
+            }
+          }
         }
       }
     },

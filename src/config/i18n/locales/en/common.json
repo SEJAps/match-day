@@ -241,7 +241,69 @@
           }
         },
         "subscriptionPlans": {
-          "title": "Explore subscription plans."
+          "title": "Explore subscription plans.",
+          "tableHeader": "Feature",
+          "tiers": {
+            "basic": {
+              "title": "Basic",
+              "price": "0€/year",
+              "description": "For players starting with the platform.",
+              "ctaLabel": "Get started"
+            },
+            "pro": {
+              "title": "Pro",
+              "price": "40€/year",
+              "description": "For players who want to boost their career.",
+              "ctaLabel": "Get started"
+            }
+          },
+          "features": {
+            "0": {
+              "label": "Profile"
+            },
+            "1": {
+              "label": "Profile creation (photo, position, career...)"
+            },
+            "2": {
+              "label": "Basic personal stats (goals, minutes, matches)"
+            },
+            "3": {
+              "label": "Advanced statistics (passes, duels, recoveries, etc.)"
+            },
+            "4": {
+              "label": "Upload photos and highlight videos to your profile"
+            },
+            "5": {
+              "label": "Opportunities and visibility"
+            },
+            "6": {
+              "label": "Access to the transfer marketplace"
+            },
+            "7": {
+              "label": "Apply to offers in the marketplace"
+            },
+            "8": {
+              "label": "Be discovered by teams (priority visibility)"
+            },
+            "9": {
+              "label": "Personalized team recommendations"
+            },
+            "10": {
+              "label": "Private profile option"
+            },
+            "11": {
+              "label": "Direct contact with clubs and interested coaches"
+            },
+            "12": {
+              "label": "Tools"
+            },
+            "13": {
+              "label": "Export reports to PDF/Excel (performance charts per match and season)"
+            },
+            "14": {
+              "label": "Priority support"
+            }
+          }
         }
       }
     },

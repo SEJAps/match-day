@@ -5,6 +5,7 @@ import { cn } from "@/utils/cn";
 export type PlanCardFeature = {
   label: string;
   value: ReactNode;
+  group?: boolean;
 };
 
 export type PlanCardProps = {
@@ -42,12 +43,23 @@ const PlanCard: FC<PlanCardProps> = ({
       </header>
       {features?.length ? (
         <ul className="divide-y divide-gray-300/30">
-          {features.map((f, i) => (
-            <li key={i} className="py-3 flex items-start justify-between gap-4">
-              <span className="text-sm">{f.label}</span>
-              <span className="text-sm font-semibold">{f.value}</span>
-            </li>
-          ))}
+          {features.map((f, i) =>
+            f.group ? (
+              <li key={i} className="pt-4 pb-2">
+                <span className="text-xs uppercase tracking-wide text-white/70">
+                  {f.label}
+                </span>
+              </li>
+            ) : (
+              <li
+                key={i}
+                className="py-3 flex items-start justify-between gap-4"
+              >
+                <span className="text-sm">{f.label}</span>
+                <span className="text-sm font-semibold">{f.value}</span>
+              </li>
+            )
+          )}
         </ul>
       ) : null}
       {cta ? (

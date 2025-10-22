@@ -9,4 +9,5 @@ export type PlanTier = {
 export type PlanFeatureRow = {
   label: string;
   values: Record<string, string>; // key por tier.id
+  group?: boolean; // si es encabezado de sección
 };

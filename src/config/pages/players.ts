@@ -92,6 +92,7 @@ export const PLAYERS_PAGE: PlayersPageConfig = {
         },
       ],
       features: [
+        { label: "Perfil", values: {}, group: true },
         {
           label: "Creación de perfil (foto, posición, trayectoria...)",
           values: { basic: "x", pro: "v" },
@@ -110,13 +111,41 @@ export const PLAYERS_PAGE: PlayersPageConfig = {
           label: "Carga de fotos y vídeos de mejores jugadas en el perfil",
           values: { basic: "10", pro: "25" },
         },
+        { label: "Oportunidades y visibilidad", values: {}, group: true },
         {
-          label: "Filtros de visibilidad del perfil",
-          values: { basic: "—", pro: "Sí" },
+          label: "Acceso al marketplace de fichajes",
+          values: { basic: "x", pro: "v" },
+        },
+        {
+          label: "Postularte a ofertas en el marketplace",
+          values: { basic: "10", pro: "25" },
+        },
+        {
+          label: "Ser encontrado por equipos (visibilidad prioritaria)",
+          values: { basic: "Light", pro: "v" },
+        },
+        {
+          label: "Recomendaciones personalizadas de equipos",
+          values: { basic: "10", pro: "25" },
+        },
+        {
+          label: "Opción de perfil privado",
+          values: { basic: "Light", pro: "v" },
+        },
+        {
+          label:
+            "Contacto directo con clubes y entrenadores interesados",
+          values: { basic: "10", pro: "25" },
+        },
+        { label: "Herramientas", values: {}, group: true },
+        {
+          label:
+            "Descarga de informes en PDF/Excel para mostrar rendimiento (gráficas de evolución por partido y temporada)",
+          values: { basic: "x", pro: "v" },
         },
         {
           label: "Soporte prioritario",
-          values: { basic: "—", pro: "Sí" },
+          values: { basic: "10", pro: "25" },
         },
       ],
     },
