@@ -241,7 +241,69 @@
           }
         },
         "subscriptionPlans": {
-          "title": "Planes de subscripción"
+          "title": "Planes de subscripción",
+          "tableHeader": "Característica",
+          "tiers": {
+            "basic": {
+              "title": "Básico",
+              "price": "0€/año",
+              "description": "Para jugadores que quieren iniciarse en la plataforma.",
+              "ctaLabel": "Empezar"
+            },
+            "pro": {
+              "title": "Pro",
+              "price": "40€/año",
+              "description": "Para jugadores que quieren iniciarse en la plataforma.",
+              "ctaLabel": "Empezar"
+            }
+          },
+          "features": {
+            "0": {
+              "label": "Perfil"
+            },
+            "1": {
+              "label": "Creación de perfil (foto, posición, trayectoria...)"
+            },
+            "2": {
+              "label": "Registro de estadísticas personales básicas (goles, minutos, partidos)"
+            },
+            "3": {
+              "label": "Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)"
+            },
+            "4": {
+              "label": "Carga de fotos y vídeos de mejores jugadas en el perfil"
+            },
+            "5": {
+              "label": "Oportunidades y visibilidad"
+            },
+            "6": {
+              "label": "Acceso al marketplace de fichajes"
+            },
+            "7": {
+              "label": "Postularte a ofertas en el marketplace"
+            },
+            "8": {
+              "label": "Ser encontrado por equipos (visibilidad prioritaria)"
+            },
+            "9": {
+              "label": "Recomendaciones personalizadas de equipos"
+            },
+            "10": {
+              "label": "Opción de perfil privado"
+            },
+            "11": {
+              "label": "Contacto directo con clubes y entrenadores interesados"
+            },
+            "12": {
+              "label": "Herramientas"
+            },
+            "13": {
+              "label": "Descarga de informes en PDF/Excel para mostrar rendimiento (gráficas de evolución por partido y temporada)"
+            },
+            "14": {
+              "label": "Soporte prioritario"
+            }
+          }
         }
       }
     },
