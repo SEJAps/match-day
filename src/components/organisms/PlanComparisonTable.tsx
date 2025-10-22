@@ -63,13 +63,13 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
               {tiers.map((tier) => (
                 <th key={tier.id} className="p-4">
                   <div className="flex flex-col items-start text-left gap-2 max-w-[14rem] mx-auto">
-                    <strong className="text-lg md:text-xl lg:text-2xl">
+                    <strong className="text-lg md:text-xl lg:text-2xl self-center text-center w-full">
                       {t(
                         `pages.players.sections.subscriptionPlans.tiers.${tier.id}.title`,
                         { defaultValue: tier.title }
                       )}
                     </strong>
-                    <small className="text-base md:text-lg">
+                    <small className="text-base md:text-lg self-center text-center w-full">
                       {t(
                         `pages.players.sections.subscriptionPlans.tiers.${tier.id}.price`,
                         { defaultValue: tier.price }

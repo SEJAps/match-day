@@ -37,11 +37,11 @@ const PlanCard: FC<PlanCardProps> = ({
           as="h3"
           level="h4"
           color="white"
-          className="text-lg font-semibold"
+          className="text-2xl font-semibold"
         >
           {title}
         </Heading>
-        <Text color="white" className="text-sm opacity-80">
+        <Text color="white" className="text-lg opacity-80">
           {price}
         </Text>
         {description ? (
