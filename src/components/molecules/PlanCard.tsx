@@ -45,9 +45,13 @@ const PlanCard: FC<PlanCardProps> = ({
           {price}
         </Text>
         {description ? (
-          <Text color="white" className="text-sm opacity-80">
-            {description}
-          </Text>
+          <div
+            title={typeof description === "string" ? description : undefined}
+          >
+            <Text color="white" className="text-sm opacity-80">
+              {description}
+            </Text>
+          </div>
         ) : null}
       </header>
       {features?.length ? (

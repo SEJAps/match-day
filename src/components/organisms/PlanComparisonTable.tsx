@@ -75,19 +75,35 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                         { defaultValue: tier.price }
                       )}
                     </small>
-                    {tier.description ? (
-                      <small
-                        className={cn(
-                          "opacity-80 text-sm md:text-base",
-                          clampClasses
-                        )}
-                      >
-                        {t(
-                          `pages.players.sections.subscriptionPlans.tiers.${tier.id}.description`,
-                          { defaultValue: tier.description }
-                        )}
-                      </small>
-                    ) : null}
+                    {tier.description
+                      ? (() => {
+                          const descriptionText = t(
+                            `pages.players.sections.subscriptionPlans.tiers.${tier.id}.description`,
+                            { defaultValue: tier.description }
+                          );
+                          const tooltipText =
+                            tier.id === "pro"
+                              ? t(
+                                  `pages.players.sections.subscriptionPlans.tiers.${tier.id}.tooltip`,
+                                  {
+                                    defaultValue:
+                                      "Pensado para jugadores ambiciosos que quieren destacar.",
+                                  }
+                                )
+                              : descriptionText;
+                          return (
+                            <small
+                              title={tooltipText}
+                              className={cn(
+                                "opacity-80 text-sm md:text-base",
+                                clampClasses
+                              )}
+                            >
+                              {descriptionText}
+                            </small>
+                          );
+                        })()
+                      : null}
                     {tier.cta ? (
                       <Button
                         className="w-full"
