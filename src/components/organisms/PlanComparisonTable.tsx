@@ -31,7 +31,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
         <img
           src={includedIcon}
           alt="Incluido"
-          className="inline-block w-4 h-4 align-middle"
+          className="inline-block w-8 h-8 align-middle"
           loading="lazy"
         />
       );
@@ -40,7 +40,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
         <img
           src={notIncludedIcon}
           alt="No incluido"
-          className="inline-block w-4 h-4 align-middle"
+          className="inline-block w-8 h-8 align-middle"
           loading="lazy"
         />
       );
