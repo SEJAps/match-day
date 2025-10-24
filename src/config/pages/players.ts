@@ -103,8 +103,7 @@ export const PLAYERS_PAGE: PlayersPageConfig = {
           values: { basic: "10", pro: "25" },
         },
         {
-          label:
-            "Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)",
+          label: "Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)",
           values: { basic: "Light", pro: "v" },
         },
         {
@@ -133,8 +132,7 @@ export const PLAYERS_PAGE: PlayersPageConfig = {
           values: { basic: "Light", pro: "v" },
         },
         {
-          label:
-            "Contacto directo con clubes y entrenadores interesados",
+          label: "Contacto directo con clubes y entrenadores interesados",
           values: { basic: "10", pro: "25" },
         },
         { label: "Herramientas", values: {}, group: true },

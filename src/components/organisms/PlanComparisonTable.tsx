@@ -66,20 +66,20 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                     <strong className="text-lg md:text-xl lg:text-2xl self-center text-center w-full">
                       {t(
                         `pages.players.sections.subscriptionPlans.tiers.${tier.id}.title`,
-                        { defaultValue: tier.title }
+                        { defaultValue: tier.title },
                       )}
                     </strong>
                     <small className="text-base md:text-lg self-center text-center w-full">
                       {t(
                         `pages.players.sections.subscriptionPlans.tiers.${tier.id}.price`,
-                        { defaultValue: tier.price }
+                        { defaultValue: tier.price },
                       )}
                     </small>
                     {tier.description
                       ? (() => {
                           const descriptionText = t(
                             `pages.players.sections.subscriptionPlans.tiers.${tier.id}.description`,
-                            { defaultValue: tier.description }
+                            { defaultValue: tier.description },
                           );
                           const tooltipText =
                             tier.id === "pro"
@@ -88,7 +88,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                                   {
                                     defaultValue:
                                       "Pensado para jugadores ambiciosos que quieren destacar.",
-                                  }
+                                  },
                                 )
                               : descriptionText;
                           return (
@@ -96,7 +96,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                               title={tooltipText}
                               className={cn(
                                 "opacity-80 text-sm md:text-base",
-                                clampClasses
+                                clampClasses,
                               )}
                             >
                               {descriptionText}
@@ -112,7 +112,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                         <small>
                           {t(
                             `pages.players.sections.subscriptionPlans.tiers.${tier.id}.ctaLabel`,
-                            { defaultValue: tier.cta.label }
+                            { defaultValue: tier.cta.label },
                           )}
                         </small>
                       </Button>
@@ -133,7 +133,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                     >
                       {t(
                         `pages.players.sections.subscriptionPlans.features.${idx}.label`,
-                        { defaultValue: row.label }
+                        { defaultValue: row.label },
                       )}
                     </td>
                   </tr>
@@ -146,13 +146,13 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                     "border-b",
                     idx === features.length - 1
                       ? "border-transparent"
-                      : "border-gray-300/40"
+                      : "border-gray-300/40",
                   )}
                 >
                   <td className="p-4">
                     {t(
                       `pages.players.sections.subscriptionPlans.features.${idx}.label`,
-                      { defaultValue: row.label }
+                      { defaultValue: row.label },
                     )}
                   </td>
                   {tiers.map((tier) => (
@@ -185,7 +185,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                 ? {
                     label: t(
                       `pages.players.sections.subscriptionPlans.features.${idx}.label`,
-                      { defaultValue: row.label }
+                      { defaultValue: row.label },
                     ),
                     value: "",
                     group: true,
@@ -193,10 +193,10 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
                 : {
                     label: t(
                       `pages.players.sections.subscriptionPlans.features.${idx}.label`,
-                      { defaultValue: row.label }
+                      { defaultValue: row.label },
                     ),
                     value: renderValue(row.values[tier.id] ?? "—"),
-                  }
+                  },
             )}
           />
         ))}

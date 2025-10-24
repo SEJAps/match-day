@@ -15,7 +15,7 @@ const ServicesSection: FC<ServicesSectionProps> = ({
   title,
   subtitle,
   sectionClassName,
-  bg = "bg-[#0F6E5D]",
+  bg = "bg-accent",
 }) => {
   const { t } = useTranslation();
   const titleText =

@@ -24,37 +24,36 @@ const PricesPage: FC = () => {
       ></IntroSectionTemplate>
 
       <LeadSectionTemplate
-        bg="bg-[#0F6E5D]"
         title={t("pages.prices.intro.title", { defaultValue: intro.title })}
         description={t("pages.prices.intro.description", {
           defaultValue: intro.description,
         })}
-        color="white"
-        textColor="white"
+        color="success"
+        textColor="dark"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 px-4">
           {tiers.map((tier, idx) => (
             <article
               key={tier.name}
-              className={`rounded border ${tier.mostPopular ? "border-[#07B748]" : "border-neutral-700/60"} bg-neutral-800/80 p-4`}
+              className={`rounded border ${tier.mostPopular ? "border-secondary" : "border-dark/40"} bg-white/80 p-4`}
             >
-              <Heading as="h3" level="h4" className="pl-0">
+              <Heading as="h3" level="h4" className="pl-0 text-success">
                 {t(`pages.prices.tiers.${idx}.name`, {
                   defaultValue: tier.name,
                 })}
               </Heading>
 
-              <Text size="lg" className="mb-4" color="light">
+              <Text size="lg" className="mb-4" color="dark">
                 {t(`pages.prices.tiers.${idx}.description`, {
                   defaultValue: tier.description,
                 })}
               </Text>
 
               <div className="mb-4">
-                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-wide bg-neutral-700/60 text-neutral-200 px-2 py-1 rounded border border-neutral-600">
+                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-wide bg-dark/60 text-neutral-200 px-2 py-1 rounded border border-neutral-600">
                   {t("common.comingSoon", { defaultValue: "Próximamente" })}
                   {tier.mostPopular && (
-                    <span className="bg-[#07B748] hover:bg-[#07B748]/80 text-white px-2 py-0.5 rounded text-[10px]">
+                    <span className="bg-success/50 hover:bg-success text-white px-2 py-0.5 rounded text-[10px]">
                       {t("pages.prices.tiers.mostPopular", {
                         defaultValue: "Más popular",
                       })}
@@ -62,9 +61,9 @@ const PricesPage: FC = () => {
                   )}
                 </span>
               </div>
-              <ul className="text-sm text-neutral-300 list-disc list-inside space-y-2 mb-4">
+              <ul className="text-sm  list-disc list-inside space-y-2 mb-4">
                 {tier.features.map((f, i) => (
-                  <li key={f}>
+                  <li key={f} className="text-dark">
                     {t(`pages.prices.tiers.${idx}.features.${i}`, {
                       defaultValue: f,
                     })}
@@ -75,7 +74,7 @@ const PricesPage: FC = () => {
                 <>
                   <Button
                     variant={`${tier.mostPopular ? "success" : "outline"}`}
-                    className="w-full px-4 py-2 rounded"
+                    className={`w-full px-4 py-2 rounded ${tier.mostPopular ? "text-light " : "text-dark hover:text-black"} `}
                   >
                     {t(`pages.prices.tiers.${idx}.ctaLabel`, {
                       defaultValue: tier.ctaLabel,

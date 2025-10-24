@@ -27,7 +27,7 @@ const MainHeader: FC<{
   const { t } = useTranslation();
   return (
     <header
-      className={`${!viewHeroLayer && "bg-neutral-800 md:h-[15svh] "} ${bg && `${bg} h-[12svh] sm:h-[13svh] lg:h-[18svh]`}`}
+      className={`${!viewHeroLayer && "bg-dark md:h-[15svh] "} ${bg && `${bg} h-[12svh] sm:h-[13svh] lg:h-[18svh]`}`}
     >
       <section className="container flex items-start justify-between mx-auto z-100 w-full">
         <section className="hidden sm:hidden md:hidden lg:hidden xl:flex xl:items-center xl:my-6 xl:ml-8 ">
@@ -112,7 +112,7 @@ const MainHeader: FC<{
             >
               <path
                 d="M4 6h16M4 12h16M4 18h16"
-                stroke="currentColor"
+                stroke="var(--color-light)"
                 strokeWidth="2"
                 strokeLinecap="round"
               />
@@ -142,7 +142,7 @@ const MainHeader: FC<{
       >
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-lg font-semibold">
+            <span className="text-lg font-semibold text-dark">
               {t("components.header.menuTitle", { defaultValue: "Menú" })}
             </span>
             <Button
@@ -151,7 +151,7 @@ const MainHeader: FC<{
               })}
               variant="ghost"
               size="sm"
-              className="text-black"
+              className="text-dark"
               onClick={close}
             >
               <svg
@@ -163,56 +163,34 @@ const MainHeader: FC<{
               >
                 <path
                   d="M6 6l12 12M18 6L6 18"
-                  stroke="currentColor"
-                  strokeWidth="2"
+                  stroke="var(--color-danger)"
+                  strokeWidth="4"
                   strokeLinecap="round"
                 />
               </svg>
             </Button>
           </div>
-          <nav>
-            <ul className="flex flex-col gap-4">
-              <NavLink
-                to="/"
-                onClick={close}
-                className="text-emerald-600 text-lg"
-              >
-                {t("nav.home", { defaultValue: "Home" })}
-              </NavLink>
-              <NavLink
-                to="/players"
-                onClick={close}
-                className="text-neutral-700 text-lg"
-              >
-                {t("nav.players", { defaultValue: "Jugadores" })}
-              </NavLink>
-              <NavLink
-                to="/teams"
-                onClick={close}
-                className="text-neutral-700 text-lg"
-              >
-                {t("nav.teams", { defaultValue: "Equipos" })}
-              </NavLink>
-              <NavLink
-                to="/clubs"
-                onClick={close}
-                className="text-neutral-700 text-lg"
-              >
-                {t("nav.clubs", { defaultValue: "Clubs" })}
-              </NavLink>
-              <NavLink
-                to="/contact"
-                onClick={close}
-                className="text-neutral-700 text-lg"
-              >
-                {t("nav.contact", { defaultValue: "Contacto" })}
-              </NavLink>
-            </ul>
+          <nav className="flex flex-col gap-4 text-success">
+            <NavLink to="/" onClick={close}>
+              {t("nav.home", { defaultValue: "Home" })}
+            </NavLink>
+            <NavLink to="/players" onClick={close}>
+              {t("nav.players", { defaultValue: "Jugadores" })}
+            </NavLink>
+            <NavLink to="/teams" onClick={close}>
+              {t("nav.teams", { defaultValue: "Equipos" })}
+            </NavLink>
+            <NavLink to="/clubs" onClick={close}>
+              {t("nav.clubs", { defaultValue: "Clubs" })}
+            </NavLink>
+            <NavLink to="/contact" onClick={close}>
+              {t("nav.contact", { defaultValue: "Contacto" })}
+            </NavLink>
           </nav>
           <Button
             variant="primary"
             size="default"
-            className="w-full bg-[#9BB5B0]"
+            className="w-full bg-success"
             onClick={close}
           >
             {t("common.signIn", { defaultValue: "Acceder" })}

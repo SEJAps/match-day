@@ -29,14 +29,14 @@ const FeaturesPage: FC = () => {
             {groups.map((g, idx) => (
               <div
                 key={g.title}
-                className="bg-[#00BC0050] border-2 border-gray-500/60 rounded p-6"
+                className="border-2 border-primary rounded p-6"
               >
                 <h2 className="text-xl font-semibold mb-3 text-neutral-900">
                   {t(`pages.features.groups.${idx}.title`, {
                     defaultValue: g.title,
                   })}
                 </h2>
-                <ul className="list-disc list-inside text-neutral-700 space-y-1">
+                <ul className="list-disc list-inside text-dark space-y-1">
                   {g.items.map((item, i) => (
                     <li key={item}>
                       {t(`pages.features.groups.${idx}.items.${i}`, {

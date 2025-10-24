@@ -29,7 +29,7 @@ const PlanCard: FC<PlanCardProps> = ({
     <article
       className={cn(
         "rounded-lg border border-gray-300/40 bg-transparent p-4 text-white",
-        className
+        className,
       )}
     >
       <header className="flex flex-col items-start gap-1 mb-3">
@@ -73,7 +73,7 @@ const PlanCard: FC<PlanCardProps> = ({
                   {f.value}
                 </span>
               </li>
-            )
+            ),
           )}
         </ul>
       ) : null}

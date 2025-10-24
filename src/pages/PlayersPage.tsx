@@ -50,7 +50,7 @@ const PlayersPage: FC = () => {
       >
         <List
           ordered={true}
-          className={`rounded-lg bg-[#10B981]/20 grid gap-4 max-w-80 mx-auto md:grid-cols-2 p-6 md:p-6 md:min-w-[648px] min-h-34 `}
+          className={`rounded-lg bg-secondary/50 grid gap-4 max-w-80 mx-auto md:grid-cols-2 p-6 md:p-6 md:min-w-[648px] min-h-34 `}
         >
           {PLAYERS_PAGE.hero
             .list!.items.sort((a, b) => a.text.localeCompare(b.text))
@@ -82,14 +82,14 @@ const PlayersPage: FC = () => {
             <Heading
               as="h2"
               level="h1"
-              className="text-[#00BC7D] text-center md:text-left"
+              className="text-success text-center md:text-left"
             >
               {t("pages.players.sections.marketplace.title", {
                 defaultValue:
                   "Conéctate con equipos a través del marketplace de fichajes.",
               })}
             </Heading>
-            <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full text-black">
+            <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full text-dark">
               {PLAYERS_PAGE.sections.marketplace?.items.map((item, idx) => (
                 <li key={idx}>
                   {t(`pages.players.sections.marketplace.items.${idx}`, {
@@ -109,11 +109,7 @@ const PlayersPage: FC = () => {
         </section>
       </LeadSectionTemplate>
       {/* Professional profile */}
-      <HeadlineSectionTemplate
-        bg="bg-[#00BC7D]"
-        textColor="white"
-        color="white"
-      >
+      <HeadlineSectionTemplate bg="bg-success" textColor="white" color="white">
         <section className="w-full flex flex-col md:flex-row gap-4">
           <aside className="order-1 flex-4 flex flex-col items-center justify-center py-6">
             <Heading
@@ -134,10 +130,10 @@ const PlayersPage: FC = () => {
                       `pages.players.sections.professionalProfile.items.${idx}`,
                       {
                         defaultValue: item,
-                      }
+                      },
                     )}
                   </li>
-                )
+                ),
               )}
             </ul>
           </aside>

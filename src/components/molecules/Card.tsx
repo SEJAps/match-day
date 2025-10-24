@@ -59,7 +59,7 @@ const Card: FC<CardProps> = ({
         style={{
           background: bg || "white",
         }}
-        className="hidden sm:flex flex-col shadow-xs shadow-black/20  hover:shadow-black/20 rounded-2xl"
+        className={`hidden sm:flex flex-col shadow-xs shadow-black/20  hover:shadow-black/20 rounded-2xl`}
       >
         <header className="flex flex-col items-center sm:items-start gap-4 mb-2 pt-14">
           <div className="flex items-center sm:ml-8">{icon}</div>

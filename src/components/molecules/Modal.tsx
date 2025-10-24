@@ -158,7 +158,7 @@ const Modal: FC<ModalProps> = ({
           "outline-none",
           sizeClasses,
           panelLayout,
-          "bg-[var(--primary-color,#111)] text-white",
+          "bg-dark text-white",
           "shadow-xl",
           placement === "right"
             ? "modal-panel-animate-right"

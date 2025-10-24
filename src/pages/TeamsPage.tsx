@@ -38,7 +38,7 @@ const TeamsPage: FC = () => {
           </section>
         }
       >
-        <Text className="bg-[#10B981]/10 max-w-90 sm:max-w-[512px] mx-auto p-6 text-white rounded-2xl">
+        <Text className="bg-secondary/50 max-w-90 sm:max-w-[512px] mx-auto p-6 text-white rounded-2xl">
           {t("pages.teams.hero.description", {
             defaultValue: TEAMS_PAGE.hero.description,
           })}

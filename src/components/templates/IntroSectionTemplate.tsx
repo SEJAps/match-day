@@ -10,6 +10,7 @@ interface IntroSectionTemplateProps {
   footer?: ReactNode;
   cols?: boolean;
   rows?: boolean;
+  bg?: string;
   color?: VariantProps<typeof textVariants>["color"];
   alignItems?: "center" | "start" | "end" | "baseline" | "stretch";
   justifyContent?: "center" | "start" | "end" | "between" | "around" | "evenly";
@@ -28,11 +29,12 @@ const IntroSectionTemplate: FC<IntroSectionTemplateProps> = ({
   alignItems = "center",
   justifyContent = "center",
   color = "white",
+  bg = "bg-transparent",
   size,
 }) => {
   return (
     <article
-      className={`flex ${cols && "flex-col"} ${rows && "flex-row"} items-${alignItems} justify-${justifyContent} gap-${gap} max-w-${size} mx-auto w-full px-4`}
+      className={`${bg} flex ${cols && "flex-col"} ${rows && "flex-row"} items-${alignItems} justify-${justifyContent} gap-${gap} max-w-${size} mx-auto w-full px-4 `}
     >
       <IntroSection
         title={title}

@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
 import { Heading } from "@/components";
 
@@ -47,11 +47,11 @@ const LegalPageLayout: FC<LegalPageLayoutProps> = ({
   return (
     <section className="max-w-6xl mx-auto px-6 flex flex-col">
       {/* Breadcrumbs */}
-      <nav aria-label="breadcrumbs" className="mb-6 text-sm text-neutral-400">
+      <nav aria-label="breadcrumbs" className="mb-6 text-sm text-dark">
         {crumb.map((c, i) => (
           <span key={i}>
             {c.href ? (
-              <Link to={c.href} className="hover:text-emerald-400">
+              <Link to={c.href} className="text-dark hover:text-secondary">
                 {c.label}
               </Link>
             ) : (
@@ -68,7 +68,7 @@ const LegalPageLayout: FC<LegalPageLayoutProps> = ({
           <Heading>{title}</Heading>
 
           {updatedAt && (
-            <p className="text-neutral-400 mt-2">
+            <p className="text-dark mt-2">
               {t("legal.lastUpdated", {
                 defaultValue: "Última actualización:",
               })}{" "}
@@ -82,19 +82,16 @@ const LegalPageLayout: FC<LegalPageLayoutProps> = ({
           {/* TOC */}
           <aside className="hidden lg:block">
             <div className="sticky top-24">
-              <h2 className="text-sm font-semibold text-neutral-300 mb-3">
+              <h2 className="text-sm font-semibold text-success mb-3">
                 {asideTitle ||
                   t("legal.contents", { defaultValue: "Contenido" })}
               </h2>
-              <ul className="space-y-1 text-sm">
+              <ul className="space-y-1">
                 {itemsWithId.map((s) => (
-                  <li key={s.id}>
-                    <a
-                      className="text-neutral-400 hover:text-emerald-400"
-                      href={`#${s.id}`}
-                    >
+                  <li key={s.id} className=" text-dark hover:text-secondary">
+                    <NavLink key={s.id} className="text-sm" to={`#${s.id}`}>
                       {s.heading}
-                    </a>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
@@ -107,10 +104,12 @@ const LegalPageLayout: FC<LegalPageLayoutProps> = ({
               <article
                 id={s.id}
                 key={s.id}
-                className="bg-neutral-900/50 border border-white/10 rounded-lg p-6 scroll-mt-24"
+                className="border border-success/50 rounded-lg p-6 scroll-mt-24"
               >
-                <h2 className="text-2xl font-semibold mb-3">{s.heading}</h2>
-                <div className="prose prose-invert max-w-none">
+                <h2 className="text-2xl font-semibold mb-3 text-success">
+                  {s.heading}
+                </h2>
+                <div className="prose prose-invert max-w-none text-dark">
                   {s.content.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}

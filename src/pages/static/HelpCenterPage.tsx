@@ -33,14 +33,14 @@ const HelpCenterPage: FC = () => {
           {categories.map((cat, idx) => (
             <div
               key={cat.title}
-              className="bg-neutral-800/40 border border-neutral-700/60 rounded p-4 sm:min-w-96"
+              className="bg-success/50 border border-background rounded p-4 sm:min-w-96"
             >
               <h2 className="text-xl font-semibold mb-3">
                 {t(`pages.helpCenter.categories.${idx}.title`, {
                   defaultValue: cat.title,
                 })}
               </h2>
-              <ul className="space-y-2 text-neutral-300">
+              <ul className="space-y-2 text-background">
                 {cat.articles.map((a, i) => (
                   <li key={a.href}>
                     <a href={a.href} className="text-teal-400 hover:underline">
@@ -68,20 +68,17 @@ const HelpCenterPage: FC = () => {
             {categories.map((cat, idx) => (
               <div
                 key={cat.title}
-                className="border border-neutral-700/60 rounded p-4"
+                className="border border-success rounded p-4"
               >
-                <h2 className="text-xl font-semibold mb-3">
+                <h2 className="text-xl font-semibold mb-3 text-success">
                   {t(`pages.helpCenter.categories.${idx}.title`, {
                     defaultValue: cat.title,
                   })}
                 </h2>
-                <ul className="space-y-2 text-neutral-300">
+                <ul className="space-y-2 text-dark">
                   {cat.articles.map((a, i) => (
                     <li key={a.href}>
-                      <a
-                        href={a.href}
-                        className="text-teal-400 hover:underline"
-                      >
+                      <a href={a.href} className="text-dark hover:underline">
                         {t(
                           `pages.helpCenter.categories.${idx}.articles.${i}.title`,
                           {
@@ -103,16 +100,13 @@ const HelpCenterPage: FC = () => {
               </h2>
               <div className="space-y-4">
                 {faqs.map((f, idx) => (
-                  <details
-                    key={idx}
-                    className="border border-neutral-700/60 rounded p-4"
-                  >
-                    <summary className="cursor-pointer font-medium">
+                  <details key={idx} className="border border-dark rounded p-4">
+                    <summary className="cursor-pointer font-medium text-success">
                       {t(`pages.helpCenter.faqs.items.${idx}.question`, {
                         defaultValue: f.question,
                       })}
                     </summary>
-                    <p className="text-neutral-600 mt-2">
+                    <p className="text-dark mt-2">
                       {t(`pages.helpCenter.faqs.items.${idx}.answer`, {
                         defaultValue: f.answer,
                       })}

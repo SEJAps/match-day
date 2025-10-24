@@ -17,7 +17,7 @@ const PrivacyPolicyPage: FC = () => {
           defaultValue:
             "Consulta nuestra política de privacidad para entender cómo recopilamos, usamos y protegemos tu información personal en nuestra plataforma.",
         })}
-      ></IntroSectionTemplate>
+      />
       <LeadSectionTemplate>
         <LegalPageLayout
           updatedAt={updatedAt}

@@ -143,7 +143,7 @@ const ContactSection: FC<ContactSectionProps> = ({
                   id="consent"
                   name="consent"
                   type="checkbox"
-                  className="mt-1 h-4 w-4 rounded border-neutral-300 text-emerald-600 focus:ring-emerald-500"
+                  className="mt-1 h-4 w-4 rounded border-neutral-300 text-bg-secondary focus:ring-secondary-500"
                 />
                 <label htmlFor="consent" className="text-sm text-neutral-600">
                   Acepto recibir comunicaciones comerciales
@@ -167,7 +167,7 @@ const ContactSection: FC<ContactSectionProps> = ({
 
           {/* Columna derecha: tarjeta de información + mapa */}
           <div className="order-2 flex flex-col gap-6">
-            <article className="rounded-2xl bg-[#00BC7D]  p-6 shadow-sm">
+            <article className="rounded-2xl bg-secondary  p-6 shadow-sm">
               <Heading as="h3" level="h3" className="p-0 pb-2" color="white">
                 Información de Contacto
               </Heading>

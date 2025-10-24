@@ -18,7 +18,7 @@ const NotFoundPage: FC = () => {
         <section className="container mx-auto px-6 text-center">
           <Link
             to={ctaHref}
-            className="inline-block bg-teal-600 hover:bg-teal-500 transition-colors px-6 py-3 rounded font-medium"
+            className="inline-block bg-success/50 hover:bg-success/90 transition-colors px-6 py-3 rounded font-medium"
           >
             {t("components.notFound.cta", { defaultValue: ctaLabel })}
           </Link>

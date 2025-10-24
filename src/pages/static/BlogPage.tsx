@@ -16,6 +16,7 @@ const BlogPage: FC = () => {
       <IntroSectionTemplate
         size="4xl"
         gap="4"
+        color="white"
         title={t("pages.blog.intro.title", { defaultValue: intro.title })}
         description={t("pages.blog.intro.description", {
           defaultValue: intro.description,
@@ -26,9 +27,11 @@ const BlogPage: FC = () => {
         description={t("pages.blog.intro.description", {
           defaultValue: intro.description,
         })}
+        color="success"
+        textColor="dark"
       >
-        <section className="max-w-6xl mx-auto px-6 flex flex-col gap-8 py-6">
-          <Heading as="h3" level="h3" className="text-2xl mb-4">
+        <section className="max-w-6xl mx-auto flex flex-col ">
+          <Heading as="h3" level="h3" className="text-2xl mb-4 text-success">
             {t(`pages.blog.featured.title`)}
           </Heading>
           {featuredPosts.map((post) => (
@@ -37,7 +40,7 @@ const BlogPage: FC = () => {
               className="flex justify-between gap-4 border p-4 rounded-lg"
             >
               <section>
-                <Heading as="h3" level="h6">
+                <Heading as="h3" level="h6" className=" text-dark">
                   {t(`pages.blog.featured.items.${post.href}.title`, {
                     defaultValue: post.title,
                   })}
@@ -63,7 +66,11 @@ const BlogPage: FC = () => {
           ))}
           {categories && (
             <div className="mt-12">
-              <Heading as="h3" level="h3" className="text-2xl mb-4">
+              <Heading
+                as="h3"
+                level="h3"
+                className="text-2xl mb-4 text-success"
+              >
                 {t("pages.blog.categories.title", {
                   defaultValue: "Categories",
                 })}
@@ -74,7 +81,7 @@ const BlogPage: FC = () => {
                     key={category}
                     className="nth-[1]:bg-blue-100 nth-[2]:bg-orange-100 nth-[3]:bg-yellow-100 nth-[4]:bg-green-100 text-neutral-800 px-2 py-1 rounded-lg shadow-sm shadow-neutral-400/50 hover:shadow-neutral-400/10"
                   >
-                    <small className="font-semibold text-xs text-neutral-600">
+                    <small className="font-semibold text-xs text-dark">
                       {t(`pages.${category}`, {
                         defaultValue: category,
                       })}

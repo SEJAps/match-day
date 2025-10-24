@@ -23,9 +23,9 @@ const ServicesPage: FC = () => {
         description={t("pages.services.lead.description", {
           defaultValue: intro.description,
         })}
-        color="white"
-        textColor="white"
-        bg="bg-transparent"
+        color="success"
+        textColor="dark"
+        bg="bg-white"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 px-6">
           {SERVICES_PAGE_CARDS.map((c, idx) => (
