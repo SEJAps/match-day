@@ -321,12 +321,51 @@
           "label": "See Plans"
         }
       },
-      "title": "Teams",
-      "description": "Teams page: Find information about different teams, their players, stats and upcoming matches. Stay up to date with the latest news from your favorite teams.",
-      "features": {
-        "0": "Training planning",
-        "1": "Performance analysis",
-        "2": "Call-ups and calendar"
+      "sections": {
+        "0": {
+          "title": "Plan like a pro",
+          "description": "Designs training sessions and set pieces.",
+          "items": {
+            "0": "Designs training sessions and saves your own exercises with easy-to-use tactical tools.",
+            "1": "Creates and visualizes set piece diagrams for corners, free kicks, or throw-ins with our tactical board.",
+            "2": "Saves time, improves organization, and elevates the level of each session."
+          }
+        },
+        "1": {
+          "title": "Lineups in one click",
+          "description": "Quickly and visually prepare your ideal eleven.",
+          "items": {
+            "0": "Drag, drop, and save formations for each match.",
+            "1": "Adapt your tactics according to the opponent and manage your setup with ease."
+          }
+        },
+        "2": {
+          "title": "Call up and control playing time",
+          "description": "Records minutes played and complete call-ups.",
+          "items": {
+            "0": "Easily control who has been called up, who has played, and how many minutes each player accumulates.",
+            "1": "Keeps a record that helps you rotate, prevent injuries, comply with participation regulations, and give equitable opportunities to your squad.",
+            "2": "All your technical control, now centralized and automated."
+          }
+        },
+        "3": {
+          "title": "Collect statistics from every match and player",
+          "description": "Access our intuitive and easy-to-use button panel.",
+          "items": {
+            "0": "Records goals, assists, cards, shots, duels won, recoveries, crosses, etc.",
+            "1": "Evaluates individual and collective performance to identify areas for improvement.",
+            "2": "Makes more objective, data-driven decisions."
+          }
+        },
+        "4": {
+          "title": "Strengthen and build your squad in the marketplace",
+          "description": "Find players according to your needs.",
+          "items": {
+            "0": "Access our transfer market and search for players by position, age, level, or location.",
+            "1": "Post your own offers for players to apply to your team.",
+            "2": "No intermediaries, with useful filters and complete profiles."
+          }
+        }
       }
     },
     "clubs": {

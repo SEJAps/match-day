@@ -321,12 +321,51 @@
           "label": "Ver Planes"
         }
       },
-      "title": "Equipos",
-      "description": "Página de Equipos: Aquí puedes encontrar información sobre los diferentes equipos, sus jugadores, estadísticas y próximos partidos. Mantente al día con las últimas novedades de tus equipos favoritos.",
-      "features": {
-        "0": "Planificación de entrenamientos",
-        "1": "Análisis de rendimiento",
-        "2": "Convocatorias y calendario"
+      "sections": {
+        "0": {
+          "title": "Planifica como un profesional",
+          "description": "Diseña entrenamientos y acciones a balón parado.",
+          "items": {
+            "0": "Diseña sesiones de entrenamiento y guarda tus propios ejercicios con herramientas tácticas fáciles de usar.",
+            "1": "Crea y visualiza esquemas de acciones a balón parado para corners, faltas o saques de banda con nuestra pizarra táctica.",
+            "2": "Ahorra tiempo, mejora la organización y sube el nivel de cada sesión."
+          }
+        },
+        "1": {
+          "title": "Alineaciones en un clic",
+          "description": "Prepara tu once ideal de forma rápida y visual.",
+          "items": {
+            "0": "Arrastra, suelta y guarda formaciones para cada partido.",
+            "1": "Adapta tu táctica según el rival y gestiona tu esquema con facilidad."
+          }
+        },
+        "2": {
+          "title": "Convoca y controla el tiempo de juego",
+          "description": "Registra minutos jugados y convocatorias completas.",
+          "items": {
+            "0": "Controla de forma sencilla quién ha sido convocado, quién ha jugado y cuántos minutos acumula cada jugador.",
+            "1": "Lleva un registro que te ayuda a rotar, prevenir lesiones, cumplir con normativas de participación y dar oportunidades equitativas a tu plantilla.",
+            "2": "Todo tu control técnico, ahora centralizado y automatizado."
+          }
+        },
+        "3": {
+          "title": "Recoge estadísticas de cada partido y jugador",
+          "description": "Accede a nuestra botonera intuitiva y fácil de usar.",
+          "items": {
+            "0": "Registra goles, asistencias, tarjetas, tiros, duelos ganados, recuperaciones, centros, etc.",
+            "1": "Evalúa el rendimiento individual y colectivo para detectar áreas de mejora.",
+            "2": "Toma decisiones más objetivas, basadas en datos."
+          }
+        },
+        "4": {
+          "title": "Refuerza y confecciona tu plantilla en el marketplace",
+          "description": "Encuentra jugadores según tu necesidad.",
+          "items": {
+            "0": "Accede a nuestro mercado de fichajes y busca jugadores por posición, edad, nivel o ubicación.",
+            "1": "Publica tus propias ofertas para que los jugadores se postulen a tu equipo.",
+            "2": "Sin intermediarios, con filtros útiles y perfiles completos."
+          }
+        }
       }
     },
     "clubs": {

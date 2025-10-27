@@ -321,12 +321,51 @@
           "label": "Veure Plans"
         }
       },
-      "title": "Equips",
-      "description": "Pàgina d'Equips: informació sobre diferents equips, els seus jugadors, estadístiques i propers partits. Mantén-te al dia amb les últimes novetats dels teus equips preferits.",
-      "features": {
-        "0": "Planificació d'entrenaments",
-        "1": "Anàlisi de rendiment",
-        "2": "Convocatòries i calendari"
+      "sections": {
+        "0": {
+          "title": "Planifica com un professional",
+          "description": "Dissenya entrenaments i accions a pilota aturada.",
+          "items": {
+            "0": "Dissenya sessions d'entrenament i guarda els teus propis exercicis amb eines tàctiques fàcils d'utilitzar.",
+            "1": "Crea i visualitza esquemes d'accions a pilota aturada per a córners, faltes o saques de banda amb la nostra pissarra tàctica.",
+            "2": "Estalvia temps, millora l'organització i puja el nivell de cada sessió."
+          }
+        },
+        "1": {
+          "title": "Alineacions en un clic",
+          "description": "Prepara el teu onze ideal de forma ràpida i visual.",
+          "items": {
+            "0": "Arrossega, deixa anar i guarda formacions per a cada partit.",
+            "1": "Adapta la teva tàctica segons el rival i gestiona el teu esquema amb facilitat."
+          }
+        },
+        "2": {
+          "title": "Convoca i controla el temps de joc",
+          "description": "Registra minuts jugats i convocatòries completes.",
+          "items": {
+            "0": "Controla de forma senzilla qui ha estat convocat, qui ha jugat i quants minuts acumula cada jugador.",
+            "1": "Porta un registre que t'ajuda a rotar, prevenir lesions, complir amb normatives de participació i donar oportunitats equitatives a la teva plantilla.",
+            "2": "Tot el teu control tècnic, ara centralitzat i automatitzat."
+          }
+        },
+        "3": {
+          "title": "Recull estadístiques de cada partit i jugador",
+          "description": "Accedeix a la nostra botonera intuïtiva i fàcil d'utilitzar.",
+          "items": {
+            "0": "Registra gols, assistències, targetes, tirs, duels guanyats, recuperacions, centres, etc.",
+            "1": "Evalua el rendiment individual i col·lectiu per detectar àrees de millora.",
+            "2": "Toma decisions més objectives, basades en dades."
+          }
+        },
+        "4": {
+          "title": "Reforça i confecciona la teva plantilla al marketplace",
+          "description": "Troba jugadors segons la teva necessitat.",
+          "items": {
+            "0": "Accedeix al nostre mercat de fitxatges i busca jugadors per posició, edat, nivell o ubicació.",
+            "1": "Publica les teves pròpies ofertes perquè els jugadors es postulin al teu equip.",
+            "2": "Sense intermediaris, amb filtres útils i perfils complets."
+          }
+        }
       }
     },
     "clubs": {

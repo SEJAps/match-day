@@ -1,5 +1,6 @@
 import {
   Button,
+  FeatureList,
   Heading,
   Image,
   IntroSectionTemplate,
@@ -19,6 +20,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
 import conectTeams from "@/assets/images/png/conecta-equipos.png";
 
+import listItemImage from "@/assets/images/svg/list-item-image.svg";
 const PlayersPage: FC = () => {
   const { t } = useTranslation();
   return (
@@ -89,20 +91,33 @@ const PlayersPage: FC = () => {
                     {t("pages.players.sections.personalStatistics.title")}
                   </Heading>
                   <article>
-                    <ul className="list-disc list-inside space-y-4 text-dark">
-                      {PLAYERS_PAGE.sections.personalStatistics?.items.map(
-                        (item, idx) => (
-                          <li key={idx}>
-                            {t(
-                              `pages.players.sections.personalStatistics.items.${idx}`,
-                              {
-                                defaultValue: item,
-                              }
-                            )}
-                          </li>
-                        )
-                      )}
-                    </ul>
+                    <FeatureList
+                      align="center"
+                      iconSize={20}
+                      items={[
+                        {
+                          text: t(
+                            "pages.players.sections.personalStatistics.items.0",
+                          ),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                        {
+                          text: t(
+                            "pages.players.sections.personalStatistics.items.1",
+                          ),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                        {
+                          text: t(
+                            "pages.players.sections.personalStatistics.items.2",
+                          ),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                      ]}
+                    />
                   </article>
                 </div>
               </Column>
@@ -141,16 +156,33 @@ const PlayersPage: FC = () => {
                     {t("pages.players.sections.professionalProfile.title")}
                   </Heading>
                   <article>
-                    <ul className="list-disc list-inside space-y-5 text-white">
-                      <li>
-                        Descubre qué equipos están buscando jugadores como tú.
-                      </li>
-                      <li>
-                        Postúlate a oportunidades reales o deja que los equipos
-                        te encuentren.
-                      </li>
-                      <li>Tú decides cuándo dar el salto y a dónde.</li>
-                    </ul>
+                    <FeatureList
+                      align="center"
+                      iconSize={20}
+                      items={[
+                        {
+                          text: t(
+                            "pages.players.sections.professionalProfile.items.0",
+                          ),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                        {
+                          text: t(
+                            "pages.players.sections.professionalProfile.items.1",
+                          ),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                        {
+                          text: t(
+                            "pages.players.sections.professionalProfile.items.2",
+                          ),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                      ]}
+                    />
                   </article>
                 </div>
               </Column>
@@ -168,20 +200,27 @@ const PlayersPage: FC = () => {
                     {t("pages.players.sections.marketplace.title")}
                   </Heading>
                   <article>
-                    <ul className="list-disc list-inside space-y-5 text-dark">
-                      {PLAYERS_PAGE.sections.marketplace?.items.map(
-                        (item, idx) => (
-                          <li key={idx}>
-                            {t(
-                              `pages.players.sections.personalStatistics.items.${idx}`,
-                              {
-                                defaultValue: item,
-                              }
-                            )}
-                          </li>
-                        )
-                      )}
-                    </ul>
+                    <FeatureList
+                      align="center"
+                      iconSize={20}
+                      items={[
+                        {
+                          text: t("pages.players.sections.marketplace.items.0"),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                        {
+                          text: t("pages.players.sections.marketplace.items.1"),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                        {
+                          text: t("pages.players.sections.marketplace.items.2"),
+                          iconSrc: listItemImage,
+                          iconAlt: "Añadir alt",
+                        },
+                      ]}
+                    />
                   </article>
                 </div>
               </Column>
