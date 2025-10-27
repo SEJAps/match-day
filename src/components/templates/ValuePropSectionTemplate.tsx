@@ -13,16 +13,19 @@ const ValuePropSectionTemplate: FC<ValuePropSectionTemplateProps> = ({
   children,
 }) => {
   return (
-    <article className="flex flex-col items-center justify-center gap-y-6 py-20">
-      <section className="max-w-4xl flex flex-col gap-12 mx-auto">
+    <article className="container flex flex-col gap-12 mx-auto py-20">
+      {title && title.length > 0 && (
         <Heading as="h1" level="h1" align="center" color="white">
           {title}
         </Heading>
+      )}
+      {description && description.length > 0 && (
         <Text align="center" size="xl" color="white" className="px-4">
           {description}
         </Text>
-        {children}
-      </section>
+      )}
+
+      <section>{children}</section>
     </article>
   );
 };

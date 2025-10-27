@@ -8,12 +8,14 @@ import {
   List,
   ListItem,
   PlanComparisonTable,
+  ValuePropSectionTemplate,
 } from "@/components";
 import { PLAYERS_PAGE } from "@/config";
 import { cn } from "@/utils/cn";
 import { Fragment, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
+import conectTeams from "@/assets/images/png/conecta-equipos.png";
 
 const PlayersPage: FC = () => {
   const { t } = useTranslation();
@@ -146,18 +148,60 @@ const PlayersPage: FC = () => {
           </article>
         </section>
       </HeadlineSectionTemplate>
-      {/* Explore subscription plans */}
-      <article className="py-20">
-        <Heading as="h2" level="h1" align="center" className="mb-12 text-white">
-          {t("pages.players.sections.subscriptionPlans.title", {
-            defaultValue: "Planes de subscripción.",
-          })}
-        </Heading>
+      <HeadlineSectionTemplate bg="bg-white" textColor="white" color="white">
+        <section className="flex flex-col gap-6">
+          <article className="flex-1 grid grid-cols-6 gap-y-40 ">
+            <section className="col-start-1 col-end-5 flex flex-col gap-4">
+              <header>
+                <Heading as="h2" level="h1">
+                  Conéctate con equipos a través del marketplace de fichajes.
+                </Heading>
+              </header>
+              <article>
+                <List className="list-disc list-inside space-y-2">
+                  <ListItem className="text-xl">
+                    Descubre qué equipos están buscando jugadores como tú.
+                  </ListItem>
+                  <ListItem className="text-xl">
+                    Postúlate a oportunidades reales o deja que los equipos te
+                    encuentren.
+                  </ListItem>
+                  <ListItem className="text-xl">
+                    Tú decides cuándo dar el salto y a dónde.
+                  </ListItem>
+                </List>
+              </article>
+            </section>
+            <section className="flex w-full h-full col-start-5 col-end-7 relative">
+              <img
+                src={conectTeams}
+                width={512}
+                height={512}
+                alt=""
+                className="absolute -left-22 top-32 w-full h-full scale-150 object-cover"
+              />
+            </section>
+            <aside className="max-w-xl mx-auto col-start-1 col-end-7 flex items-center justify-center">
+              <Heading as="h3" level="h2" align="center">
+                <strong className="text-success">
+                  ¿Estás listo para tu Match Day?
+                </strong>
+              </Heading>
+            </aside>
+          </article>
+        </section>
+      </HeadlineSectionTemplate>
+      <ValuePropSectionTemplate
+        title={t("pages.players.sections.subscriptionPlans.title", {
+          defaultValue: "Planes de subscripción.",
+        })}
+      >
+        {/* Explore subscription plans */}
         <PlanComparisonTable
           tiers={PLAYERS_PAGE.sections.subscriptionPlans.tiers}
           features={PLAYERS_PAGE.sections.subscriptionPlans.features}
         />
-      </article>
+      </ValuePropSectionTemplate>
     </Fragment>
   );
 };
