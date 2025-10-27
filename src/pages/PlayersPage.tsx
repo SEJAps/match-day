@@ -86,24 +86,21 @@ const PlayersPage: FC = () => {
               <Column bgColor="flex-9">
                 <div className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
                   <Heading as="h2" level="h3" color="success">
-                    {t("pages.players.sections.marketplace.title", {
-                      defaultValue:
-                        "Conéctate con equipos a través del marketplace de fichajes.",
-                    })}
+                    {t("pages.players.sections.personalStatistics.title")}
                   </Heading>
                   <article>
                     <ul className="list-disc list-inside space-y-4 text-dark">
-                      {PLAYERS_PAGE.sections.marketplace?.items.map(
+                      {PLAYERS_PAGE.sections.personalStatistics?.items.map(
                         (item, idx) => (
                           <li key={idx}>
                             {t(
-                              `pages.players.sections.marketplace.items.${idx}`,
+                              `pages.players.sections.personalStatistics.items.${idx}`,
                               {
                                 defaultValue: item,
-                              },
+                              }
                             )}
                           </li>
-                        ),
+                        )
                       )}
                     </ul>
                   </article>
@@ -141,10 +138,7 @@ const PlayersPage: FC = () => {
               <Column className="flex-9">
                 <div className="lg:pl-20 flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6">
                   <Heading as="h2" level="h3" color="white">
-                    {t("pages.players.sections.professionalProfile.title", {
-                      defaultValue:
-                        "Destaca con tu perfil profesional incluyendo datos y vídeos.",
-                    })}
+                    {t("pages.players.sections.professionalProfile.title")}
                   </Heading>
                   <article>
                     <ul className="list-disc list-inside space-y-5 text-white">
@@ -171,20 +165,22 @@ const PlayersPage: FC = () => {
               <Column className="flex-6">
                 <div className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
                   <Heading as="h2" level="h3" color="success">
-                    Accede a tus estadísticas personales de cada partido.
+                    {t("pages.players.sections.marketplace.title")}
                   </Heading>
                   <article>
                     <ul className="list-disc list-inside space-y-5 text-dark">
-                      <li>
-                        Lleva un registro detallado de tu rendimiento: minutos
-                        jugados, goles, asistencias, recuperaciones, pases, y
-                        mucho más.
-                      </li>
-                      <li>
-                        Conoce tus puntos fuertes y detecta dónde puedes
-                        mejorar.
-                      </li>
-                      <li>Tú decides cuándo dar el salto y a dónde.</li>
+                      {PLAYERS_PAGE.sections.marketplace?.items.map(
+                        (item, idx) => (
+                          <li key={idx}>
+                            {t(
+                              `pages.players.sections.personalStatistics.items.${idx}`,
+                              {
+                                defaultValue: item,
+                              }
+                            )}
+                          </li>
+                        )
+                      )}
                     </ul>
                   </article>
                 </div>
@@ -207,9 +203,7 @@ const PlayersPage: FC = () => {
               <Column bgColor="flex-1">
                 <div className="flex flex-col">
                   <Heading as="h2" level="h3" color="white" align={"center"}>
-                    {t("pages.players.sections.subscriptionPlans.title", {
-                      defaultValue: "Planes de subscripción.",
-                    })}
+                    {t("pages.players.sections.subscriptionPlans.title")}
                   </Heading>
                   <article className="py-10 lg:py-20">
                     {/* Explore subscription plans */}
