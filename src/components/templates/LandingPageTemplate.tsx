@@ -15,7 +15,7 @@ const LandingPageTemplate: FC<LandingPageTemplateProps> = ({
   className = "bg-white text-black",
 }) => {
   return (
-    <section className={className}>
+    <section className={`container mx-auto ${className}`}>
       <LandingHeroTemplate {...hero} />
       {children}
     </section>

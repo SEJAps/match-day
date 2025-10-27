@@ -20,7 +20,7 @@ const LeadSectionTemplate: FC<LeadSectionTemplateProps> = ({
 }) => {
   return (
     <article className={`${bg}`}>
-      <section className="max-w-7xl mx-auto py-12">
+      <section className="container mx-auto py-12">
         {title && (
           <aside className="flex flex-col gap-8 px-4">
             {title && (

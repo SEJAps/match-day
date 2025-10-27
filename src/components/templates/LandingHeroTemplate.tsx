@@ -35,7 +35,11 @@ const LandingHeroTemplate: FC<LandingHeroTemplateProps> = ({
   contentClassName,
 }) => {
   return (
-    <section className={"w-full " + heightClassName + " " + (className ?? "")}>
+    <section
+      className={
+        "container mx-auto" + heightClassName + " " + (className ?? "")
+      }
+    >
       <Picture
         absolute
         images={images}

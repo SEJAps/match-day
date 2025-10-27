@@ -79,78 +79,101 @@ const PlayersPage: FC = () => {
       </IntroSectionTemplate>
       {/* Marketplace */}
       <LeadSectionTemplate>
-        <section className="w-full flex flex-col justify-between md:flex-row gap-4">
-          <aside className="flex-4 flex flex-col items-center justify-center py-6">
-            <Heading
-              as="h2"
-              level="h1"
-              className="text-success text-center md:text-left"
-            >
-              {t("pages.players.sections.marketplace.title", {
-                defaultValue:
-                  "Conéctate con equipos a través del marketplace de fichajes.",
-              })}
-            </Heading>
-            <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full text-dark">
-              {PLAYERS_PAGE.sections.marketplace?.items.map((item, idx) => (
-                <li key={idx}>
-                  {t(`pages.players.sections.marketplace.items.${idx}`, {
-                    defaultValue: item,
+        <section className="flex flex-col gap-6">
+          <article className="flex-1 grid grid-cols-6 gap-40 ">
+            <section className="col-start-1 col-end-5 flex flex-col gap-4">
+              <header>
+                <Heading
+                  as="h2"
+                  level="h1"
+                  className="text-success text-center md:text-left"
+                >
+                  {t("pages.players.sections.marketplace.title", {
+                    defaultValue:
+                      "Conéctate con equipos a través del marketplace de fichajes.",
                   })}
-                </li>
-              ))}
-            </ul>
-          </aside>
-          <article className="flex-1 flex items-center justify-center p-4">
-            <img
-              src={PLAYERS_PAGE.sections.marketplace?.photo}
-              alt="marketplace image"
-              className="aspect-auto w-96 h-56 object-contain"
-            />
+                </Heading>
+              </header>
+              <article className="order-1 flex-4 flex flex-col items-center justify-center">
+                <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full">
+                  <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full text-dark">
+                    {PLAYERS_PAGE.sections.marketplace?.items.map(
+                      (item, idx) => (
+                        <li key={idx}>
+                          {t(
+                            `pages.players.sections.marketplace.items.${idx}`,
+                            {
+                              defaultValue: item,
+                            },
+                          )}
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </ul>
+              </article>
+            </section>
+            <section className="flex w-full h-full col-start-5 col-end-7 relative">
+              <img
+                src={PLAYERS_PAGE.sections.marketplace?.photo}
+                alt="marketplace image"
+                className="aspect-auto w-full h-full object-cover"
+              />
+            </section>
           </article>
         </section>
       </LeadSectionTemplate>
       {/* Professional profile */}
-      <HeadlineSectionTemplate bg="bg-success" textColor="white" color="white">
-        <section className="w-full flex flex-col md:flex-row gap-4">
-          <aside className="order-1 flex-4 flex flex-col items-center justify-center py-6">
-            <Heading
-              as="h2"
-              level="h1"
-              className="text-center md:text-left text-white"
-            >
-              {t("pages.players.sections.professionalProfile.title", {
-                defaultValue:
-                  "Destaca con tu perfil profesional incluyendo datos y vídeos.",
-              })}
-            </Heading>
-            <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full">
-              {PLAYERS_PAGE.sections.professionalProfile?.items.map(
-                (item, idx) => (
-                  <li key={idx}>
-                    {t(
-                      `pages.players.sections.professionalProfile.items.${idx}`,
-                      {
-                        defaultValue: item,
-                      },
-                    )}
-                  </li>
-                ),
-              )}
-            </ul>
-          </aside>
-          <article className="order-0 flex-1 flex items-center justify-center p-4">
-            <img
-              src={PLAYERS_PAGE.sections.professionalProfile?.photo}
-              alt="professional profile image"
-              className="aspect-auto w-96 h-56 object-contain"
-            />
+      <HeadlineSectionTemplate
+        bg="bg-transparent"
+        textColor="white"
+        color="white"
+      >
+        <section className="flex flex-col gap-6">
+          <article className="flex-1 grid grid-cols-6 gap-40 ">
+            <section className="flex col-start-1 col-end-3">
+              <img
+                src={PLAYERS_PAGE.sections.professionalProfile?.photo}
+                alt="professional profile image"
+                className="aspect-auto w-full h-full object-cover"
+              />
+            </section>
+            <section className="col-start-3 col-end-7 flex flex-col gap-4">
+              <header>
+                <Heading
+                  as="h2"
+                  level="h1"
+                  className="text-center md:text-left text-white"
+                >
+                  {t("pages.players.sections.professionalProfile.title", {
+                    defaultValue:
+                      "Destaca con tu perfil profesional incluyendo datos y vídeos.",
+                  })}
+                </Heading>
+              </header>
+              <article className="order-1 flex-4 flex flex-col items-center justify-center">
+                <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full">
+                  {PLAYERS_PAGE.sections.professionalProfile?.items.map(
+                    (item, idx) => (
+                      <li key={idx}>
+                        {t(
+                          `pages.players.sections.professionalProfile.items.${idx}`,
+                          {
+                            defaultValue: item,
+                          },
+                        )}
+                      </li>
+                    ),
+                  )}
+                </ul>
+              </article>
+            </section>
           </article>
         </section>
       </HeadlineSectionTemplate>
       <HeadlineSectionTemplate bg="bg-white" textColor="white" color="white">
         <section className="flex flex-col gap-6">
-          <article className="flex-1 grid grid-cols-6 gap-y-40 ">
+          <article className="flex-1 grid grid-cols-6 gap-y-6 ">
             <section className="col-start-1 col-end-5 flex flex-col gap-4">
               <header>
                 <Heading as="h2" level="h1">
@@ -178,7 +201,7 @@ const PlayersPage: FC = () => {
                 width={512}
                 height={512}
                 alt=""
-                className="absolute -left-22 top-32 w-full h-full scale-150 object-cover"
+                className=" aspect-auto w-full h-full scale-150 object-cover"
               />
             </section>
             <aside className="max-w-xl mx-auto col-start-1 col-end-7 flex items-center justify-center">

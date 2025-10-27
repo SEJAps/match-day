@@ -47,7 +47,7 @@ const PlanComparisonTable: FC<PlanComparisonTableProps> = ({
     return value;
   };
   return (
-    <div className={cn("max-w-7xl mx-auto px-4", className)}>
+    <div className={cn("px-4", className)}>
       {/* Tabla desktop */}
       <div className="overflow-x-auto hidden md:block">
         <table className="w-full min-w-[720px] border-collapse text-white">
