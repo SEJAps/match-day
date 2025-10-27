@@ -14,16 +14,30 @@ interface HeadingProps extends VariantProps<typeof headingVariants> {
   children: ReactNode;
   as?: ElementType;
   className?: string;
+  color?:
+    | "dark"
+    | "default"
+    | "muted"
+    | "light"
+    | "white"
+    | "primary"
+    | "secondary"
+    | "danger"
+    | "warning"
+    | "info"
+    | "success"
+    | null
+    | undefined;
 }
 
 const Heading: FC<HeadingProps> = ({
   children,
-  as: Component = "h2",
+  as: Component = "h1",
   level,
   weight,
   align,
   color,
-  className = "px-4",
+  className,
   ...props
 }) => {
   return (

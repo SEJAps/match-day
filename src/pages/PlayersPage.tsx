@@ -1,15 +1,17 @@
 import {
   Button,
   Heading,
-  HeadlineSectionTemplate,
   Image,
   IntroSectionTemplate,
-  LeadSectionTemplate,
   List,
   ListItem,
   PlanComparisonTable,
-  ValuePropSectionTemplate,
 } from "@/components";
+import { Container } from "@/components/atoms/Container";
+import { Column } from "@/components/molecules/Column";
+import { Row } from "@/components/molecules/Row";
+import { ColumnContent } from "@/components/organisms/ColumnContent";
+import { RowsContent } from "@/components/organisms/RowsContent";
 import { PLAYERS_PAGE } from "@/config";
 import { cn } from "@/utils/cn";
 import { Fragment, type FC } from "react";
@@ -77,154 +79,153 @@ const PlayersPage: FC = () => {
             )) ?? []}
         </List>
       </IntroSectionTemplate>
-      {/* Marketplace */}
-      <LeadSectionTemplate>
-        <section className="flex flex-col gap-6">
-          <article className="flex-1 grid grid-cols-6 gap-40 ">
-            <section className="col-start-1 col-end-5 flex flex-col gap-4">
-              <header>
-                <Heading
-                  as="h2"
-                  level="h1"
-                  className="text-success text-center md:text-left"
-                >
-                  {t("pages.players.sections.marketplace.title", {
-                    defaultValue:
-                      "Conéctate con equipos a través del marketplace de fichajes.",
-                  })}
-                </Heading>
-              </header>
-              <article className="order-1 flex-4 flex flex-col items-center justify-center">
-                <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full">
-                  <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full text-dark">
-                    {PLAYERS_PAGE.sections.marketplace?.items.map(
-                      (item, idx) => (
-                        <li key={idx}>
-                          {t(
-                            `pages.players.sections.marketplace.items.${idx}`,
-                            {
-                              defaultValue: item,
-                            },
-                          )}
-                        </li>
-                      ),
-                    )}
-                  </ul>
-                </ul>
-              </article>
-            </section>
-            <section className="flex w-full h-full col-start-5 col-end-7 relative">
-              <img
-                src={PLAYERS_PAGE.sections.marketplace?.photo}
-                alt="marketplace image"
-                className="aspect-auto w-full h-full object-cover"
-              />
-            </section>
-          </article>
-        </section>
-      </LeadSectionTemplate>
-      {/* Professional profile */}
-      <HeadlineSectionTemplate
-        bg="bg-transparent"
-        textColor="white"
-        color="white"
-      >
-        <section className="flex flex-col gap-6">
-          <article className="flex-1 grid grid-cols-6 gap-40 ">
-            <section className="flex col-start-1 col-end-3">
-              <img
-                src={PLAYERS_PAGE.sections.professionalProfile?.photo}
-                alt="professional profile image"
-                className="aspect-auto w-full h-full object-cover"
-              />
-            </section>
-            <section className="col-start-3 col-end-7 flex flex-col gap-4">
-              <header>
-                <Heading
-                  as="h2"
-                  level="h1"
-                  className="text-center md:text-left text-white"
-                >
-                  {t("pages.players.sections.professionalProfile.title", {
-                    defaultValue:
-                      "Destaca con tu perfil profesional incluyendo datos y vídeos.",
-                  })}
-                </Heading>
-              </header>
-              <article className="order-1 flex-4 flex flex-col items-center justify-center">
-                <ul className="list-disc list-inside space-y-4 p-8 md:p-4 w-full">
-                  {PLAYERS_PAGE.sections.professionalProfile?.items.map(
-                    (item, idx) => (
-                      <li key={idx}>
-                        {t(
-                          `pages.players.sections.professionalProfile.items.${idx}`,
-                          {
-                            defaultValue: item,
-                          },
-                        )}
+      <Container fullWidth bgColor="bg-white">
+        <RowsContent>
+          <Row>
+            <ColumnContent className="py-10 lg:py-20 gap-6">
+              <Column bgColor="flex-9">
+                <div className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
+                  <Heading as="h2" level="h3" color="success">
+                    {t("pages.players.sections.marketplace.title", {
+                      defaultValue:
+                        "Conéctate con equipos a través del marketplace de fichajes.",
+                    })}
+                  </Heading>
+                  <article>
+                    <ul className="list-disc list-inside space-y-4 text-dark">
+                      {PLAYERS_PAGE.sections.marketplace?.items.map(
+                        (item, idx) => (
+                          <li key={idx}>
+                            {t(
+                              `pages.players.sections.marketplace.items.${idx}`,
+                              {
+                                defaultValue: item,
+                              },
+                            )}
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                  </article>
+                </div>
+              </Column>
+              <Column className="flex-3 items-center">
+                <img
+                  width={133}
+                  height={117}
+                  src={PLAYERS_PAGE.sections.marketplace?.photo}
+                  alt="marketplace image"
+                  className="aspect-auto object-cover w-72 h-72 lg:w-full lg:h-full"
+                />
+              </Column>
+            </ColumnContent>
+          </Row>
+        </RowsContent>
+      </Container>
+      <Container fullWidth>
+        <RowsContent>
+          <Row>
+            <ColumnContent className="gap-6 py-10 lg:py-20">
+              <Column
+                className="flex-3 md:order-0 px-6 lg:px-0 items-center"
+                order="1"
+              >
+                <img
+                  width={133}
+                  height={117}
+                  src={PLAYERS_PAGE.sections.professionalProfile?.photo}
+                  alt="professional profile image"
+                  className="aspect-auto lg:object-cover w-64 h-60 lg:w-full lg:h-full"
+                />
+              </Column>
+              <Column className="flex-9">
+                <div className="lg:pl-20 flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6">
+                  <Heading as="h2" level="h3" color="white">
+                    {t("pages.players.sections.professionalProfile.title", {
+                      defaultValue:
+                        "Destaca con tu perfil profesional incluyendo datos y vídeos.",
+                    })}
+                  </Heading>
+                  <article>
+                    <ul className="list-disc list-inside space-y-5 text-white">
+                      <li>
+                        Descubre qué equipos están buscando jugadores como tú.
                       </li>
-                    ),
-                  )}
-                </ul>
-              </article>
-            </section>
-          </article>
-        </section>
-      </HeadlineSectionTemplate>
-      <HeadlineSectionTemplate bg="bg-white" textColor="white" color="white">
-        <section className="flex flex-col gap-6">
-          <article className="flex-1 grid grid-cols-6 gap-y-6 ">
-            <section className="col-start-1 col-end-5 flex flex-col gap-4">
-              <header>
-                <Heading as="h2" level="h1">
-                  Conéctate con equipos a través del marketplace de fichajes.
-                </Heading>
-              </header>
-              <article>
-                <List className="list-disc list-inside space-y-2">
-                  <ListItem className="text-xl">
-                    Descubre qué equipos están buscando jugadores como tú.
-                  </ListItem>
-                  <ListItem className="text-xl">
-                    Postúlate a oportunidades reales o deja que los equipos te
-                    encuentren.
-                  </ListItem>
-                  <ListItem className="text-xl">
-                    Tú decides cuándo dar el salto y a dónde.
-                  </ListItem>
-                </List>
-              </article>
-            </section>
-            <section className="flex w-full h-full col-start-5 col-end-7 relative">
-              <img
-                src={conectTeams}
-                width={512}
-                height={512}
-                alt=""
-                className=" aspect-auto w-full h-full scale-150 object-cover"
-              />
-            </section>
-            <aside className="max-w-xl mx-auto col-start-1 col-end-7 flex items-center justify-center">
-              <Heading as="h3" level="h2" align="center">
-                <strong className="text-success">
-                  ¿Estás listo para tu Match Day?
-                </strong>
-              </Heading>
-            </aside>
-          </article>
-        </section>
-      </HeadlineSectionTemplate>
-      <ValuePropSectionTemplate
-        title={t("pages.players.sections.subscriptionPlans.title", {
-          defaultValue: "Planes de subscripción.",
-        })}
-      >
-        {/* Explore subscription plans */}
-        <PlanComparisonTable
-          tiers={PLAYERS_PAGE.sections.subscriptionPlans.tiers}
-          features={PLAYERS_PAGE.sections.subscriptionPlans.features}
-        />
-      </ValuePropSectionTemplate>
+                      <li>
+                        Postúlate a oportunidades reales o deja que los equipos
+                        te encuentren.
+                      </li>
+                      <li>Tú decides cuándo dar el salto y a dónde.</li>
+                    </ul>
+                  </article>
+                </div>
+              </Column>
+            </ColumnContent>
+          </Row>
+        </RowsContent>
+      </Container>
+      <Container fullWidth bgColor="bg-white">
+        <RowsContent>
+          <Row>
+            <ColumnContent className="py-10 lg:py-20">
+              <Column className="flex-6">
+                <div className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
+                  <Heading as="h2" level="h3" color="success">
+                    Accede a tus estadísticas personales de cada partido.
+                  </Heading>
+                  <article>
+                    <ul className="list-disc list-inside space-y-5 text-dark">
+                      <li>
+                        Lleva un registro detallado de tu rendimiento: minutos
+                        jugados, goles, asistencias, recuperaciones, pases, y
+                        mucho más.
+                      </li>
+                      <li>
+                        Conoce tus puntos fuertes y detecta dónde puedes
+                        mejorar.
+                      </li>
+                      <li>Tú decides cuándo dar el salto y a dónde.</li>
+                    </ul>
+                  </article>
+                </div>
+              </Column>
+              <Column className="flex-5">
+                <img
+                  src={conectTeams}
+                  alt=""
+                  className="aspect-auto object-cover w-80 h-60 relative top-10 left-3 lg:top-auto lg:left-auto lg:w-full lg:h-full"
+                />
+              </Column>
+            </ColumnContent>
+          </Row>
+        </RowsContent>
+      </Container>
+      <Container fullWidth>
+        <RowsContent>
+          <Row>
+            <ColumnContent className="py-10 lg:py-20">
+              <Column bgColor="flex-1">
+                <div className="flex flex-col">
+                  <Heading as="h2" level="h3" color="white" align={"center"}>
+                    {t("pages.players.sections.subscriptionPlans.title", {
+                      defaultValue: "Planes de subscripción.",
+                    })}
+                  </Heading>
+                  <article className="py-10 lg:py-20">
+                    {/* Explore subscription plans */}
+                    <PlanComparisonTable
+                      tiers={PLAYERS_PAGE.sections.subscriptionPlans.tiers}
+                      features={
+                        PLAYERS_PAGE.sections.subscriptionPlans.features
+                      }
+                    />
+                  </article>
+                </div>
+              </Column>
+            </ColumnContent>
+          </Row>
+        </RowsContent>
+      </Container>
     </Fragment>
   );
 };
