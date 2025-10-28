@@ -28,27 +28,19 @@ const PlayersPage: FC = () => {
       {/* Hero Section */}
       <IntroSectionTemplate
         size="7xl"
-        title={t("pages.players.hero.title", {
-          defaultValue: PLAYERS_PAGE.hero.title,
-        })}
-        description={t("pages.players.hero.description", {
-          defaultValue: PLAYERS_PAGE.hero.description,
-        })}
+        title={t("pages:players.hero.title")}
+        description={t("pages:players.hero.description")}
         footer={
           <section className="w-full flex justify-center gap-12">
             <Button variant="success">
-              {t("pages.players.heroCtas.0.label", {
-                defaultValue: "Regístrate",
-              })}
+              {t("pages:players.heroCtas.0.label")}
             </Button>
             <Button variant="view" className="p-0">
               <NavLink
                 to="/prices"
                 className="inline-flex items-center justify-center w-full h-full p-4"
               >
-                {t("pages.players.heroCtas.1.label", {
-                  defaultValue: "Ver planes",
-                })}
+                {t("pages:players.heroCtas.1.label")}
               </NavLink>
             </Button>
           </section>
@@ -72,9 +64,7 @@ const PlayersPage: FC = () => {
                     />
                   )}
                   <span className="text-sm sm:text-base md:text-lg text-white">
-                    {t(`pages.players.hero.list.items.${idx}.text`, {
-                      defaultValue: item.text,
-                    })}
+                    {t(`pages:players.hero.list.items.${idx}.text`)}
                   </span>
                 </div>
               </ListItem>
@@ -88,7 +78,7 @@ const PlayersPage: FC = () => {
               <Column bgColor="flex-9">
                 <div className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
                   <Heading as="h2" level="h3" color="success">
-                    {t("pages.players.sections.personalStatistics.title")}
+                    {t("pages:players.sections.personalStatistics.title")}
                   </Heading>
                   <article>
                     <FeatureList
@@ -97,21 +87,21 @@ const PlayersPage: FC = () => {
                       items={[
                         {
                           text: t(
-                            "pages.players.sections.personalStatistics.items.0",
+                            "pages:players.sections.personalStatistics.items.0",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
                         {
                           text: t(
-                            "pages.players.sections.personalStatistics.items.1",
+                            "pages:players.sections.personalStatistics.items.1",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
                         {
                           text: t(
-                            "pages.players.sections.personalStatistics.items.2",
+                            "pages:players.sections.personalStatistics.items.2",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
@@ -153,7 +143,7 @@ const PlayersPage: FC = () => {
               <Column className="flex-9">
                 <div className="lg:pl-20 flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6">
                   <Heading as="h2" level="h3" color="white">
-                    {t("pages.players.sections.professionalProfile.title")}
+                    {t("pages:players.sections.professionalProfile.title")}
                   </Heading>
                   <article>
                     <FeatureList
@@ -163,7 +153,7 @@ const PlayersPage: FC = () => {
                       items={[
                         {
                           text: t(
-                            "pages.players.sections.professionalProfile.items.0",
+                            "pages:players.sections.professionalProfile.items.0",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
@@ -198,7 +188,7 @@ const PlayersPage: FC = () => {
               <Column className="flex-6">
                 <div className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
                   <Heading as="h2" level="h3" color="success">
-                    {t("pages.players.sections.marketplace.title")}
+                    {t("pages:players.sections.marketplace.title")}
                   </Heading>
                   <article>
                     <FeatureList
@@ -206,17 +196,17 @@ const PlayersPage: FC = () => {
                       iconSize={20}
                       items={[
                         {
-                          text: t("pages.players.sections.marketplace.items.0"),
+                          text: t("pages:players.sections.marketplace.items.0"),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
                         {
-                          text: t("pages.players.sections.marketplace.items.1"),
+                          text: t("pages:players.sections.marketplace.items.1"),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
                         {
-                          text: t("pages.players.sections.marketplace.items.2"),
+                          text: t("pages:players.sections.marketplace.items.2"),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
@@ -243,7 +233,7 @@ const PlayersPage: FC = () => {
               <Column bgColor="flex-1">
                 <div className="flex flex-col">
                   <Heading as="h2" level="h3" color="white" align={"center"}>
-                    {t("pages.players.sections.subscriptionPlans.title")}
+                    {t("pages:players.sections.subscriptionPlans.title")}
                   </Heading>
                   <article className="py-10 lg:py-20">
                     {/* Explore subscription plans */}

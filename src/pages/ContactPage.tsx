@@ -27,9 +27,7 @@ const ContactPage: FC = () => {
     if (!data.consent) {
       showError(
         <Text size="sm" color="white">
-          {t("pages.contact.notifications.consentRequired", {
-            defaultValue: "Debes aceptar el consentimiento para continuar.",
-          })}
+          {t("pages:contact.notifications.consentRequired")}
         </Text>,
       );
       return;
@@ -37,9 +35,7 @@ const ContactPage: FC = () => {
     if (data.name.length < 3) {
       showError(
         <Text size="sm" color="white">
-          {t("pages.contact.notifications.nameTooShort", {
-            defaultValue: "El nombre debe tener al menos 3 caracteres.",
-          })}
+          {t("pages:contact.notifications.nameTooShort")}
         </Text>,
       );
       return;
@@ -47,10 +43,7 @@ const ContactPage: FC = () => {
 
     showSuccess(
       <Text size="sm" color="white">
-        {t("pages.contact.notifications.submissionSuccess", {
-          defaultValue: `¡Gracias por contactarnos, ${data.name}
-          ! Hemos recibido tu mensaje y te responderemos pronto.`,
-        })}
+        {t("pages:contact.notifications.submissionSuccess")}
       </Text>,
       {
         duration: 4000,
@@ -61,12 +54,8 @@ const ContactPage: FC = () => {
     <>
       <IntroSectionTemplate
         size="4xl"
-        title={t("pages.contact.hero.title", {
-          defaultValue: CONTACT_PAGE.hero.title,
-        })}
-        description={t("pages.contact.hero.subtitle", {
-          defaultValue: CONTACT_PAGE.hero.subtitle,
-        })}
+        title={t("pages:contact.hero.title")}
+        description={t("pages:contact.hero.subtitle")}
         footer={
           <section className="w-full flex items-center justify-center gap-12">
             <Button
@@ -77,9 +66,7 @@ const ContactPage: FC = () => {
                   el.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
             >
-              {t("pages.contact.heroCtas.0.label", {
-                defaultValue: "Escribir ahora",
-              })}
+              {t("pages:contact.heroCtas.0.label")}
             </Button>
           </section>
         }
@@ -87,9 +74,7 @@ const ContactPage: FC = () => {
         <article className="bg-[#10B981]/10 max-w-80 sm:max-w-[512px] mx-auto py-12 px-6 rounded-lg flex flex-col gap-4">
           {CONTACT_PAGE.contact.description && (
             <Text className="text-white" size={"xl"} align="center">
-              {t("pages.contact.contact.description", {
-                defaultValue: CONTACT_PAGE.contact.description,
-              })}
+              {t("pages:contact.contact.description")}
             </Text>
           )}
           <section className="mt-2 px-6">
@@ -99,12 +84,10 @@ const ContactPage: FC = () => {
               align="start"
               itemColor="white"
               items={
-                CONTACT_PAGE.contact.highlights?.map((text, i) => ({
+                CONTACT_PAGE.contact.highlights?.map((_text, i) => ({
                   text: (
                     <span className="text-sm sm:text-base md:text-lg text-white">
-                      {t(`pages.contact.contact.highlights.${i}`, {
-                        defaultValue: text,
-                      })}
+                      {t(`pages:contact.contact.highlights.${i}`)}
                     </span>
                   ),
                 })) ?? []
@@ -115,28 +98,16 @@ const ContactPage: FC = () => {
       </IntroSectionTemplate>
       <ContactSection
         id="contact-form"
-        title={t("pages.contact.contact.title", {
-          defaultValue: CONTACT_PAGE.contact.title,
-        })}
-        subtitle={t("pages.contact.contact.subtitle", {
-          defaultValue: CONTACT_PAGE.contact.subtitle,
-        })}
-        description={t("pages.contact.contact.description", {
-          defaultValue: CONTACT_PAGE.contact.description,
-        })}
-        highlights={CONTACT_PAGE.contact.highlights?.map((h, i) =>
-          t(`pages.contact.contact.highlights.${i}`, { defaultValue: h }),
+        title={t("pages:contact.contact.title")}
+        subtitle={t("pages:contact.contact.subtitle")}
+        description={t("pages:contact.contact.description")}
+        highlights={CONTACT_PAGE.contact.highlights?.map((_h, i) =>
+          t(`pages:contact.contact.highlights.${i}`),
         )}
         info={{
-          address: t("pages.contact.contact.info.address", {
-            defaultValue: CONTACT_PAGE.contact.info.address,
-          }),
-          phone: t("pages.contact.contact.info.phone", {
-            defaultValue: CONTACT_PAGE.contact.info.phone,
-          }),
-          email: t("pages.contact.contact.info.email", {
-            defaultValue: CONTACT_PAGE.contact.info.email,
-          }),
+          address: t("pages:contact.contact.info.address"),
+          phone: t("pages:contact.contact.info.phone"),
+          email: t("pages:contact.contact.info.email"),
         }}
         mapImageUrl={CONTACT_PAGE.contact.mapImageUrl}
         onSubmit={handleOnSubmit}

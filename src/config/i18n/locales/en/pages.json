@@ -1,0 +1,548 @@
+{
+  "matchday": {
+    "hero": {
+      "title": "Where match day is won",
+      "description": "The complete platform for stats, team management and transfer market in football.",
+      "imageAlt": "Artwork",
+      "heroCtas": {
+        "0": {
+          "label": "Start now"
+        },
+        "1": {
+          "label": "See demo"
+        }
+      }
+    },
+    "intro": {
+      "heading": "All-in-one platform for players, teams and clubs",
+      "paragraph": "From match stats to your next signing, Match Day gives you full control to analyze, train and manage your team or your career."
+    },
+    "features": {
+      "heading": "Everything you need before, during and after match day",
+      "description": "Simple, fast and all in one platform.",
+      "items": {
+        "0": {
+          "text": "Real-time statistics"
+        },
+        "1": {
+          "text": "Integrated transfer market"
+        },
+        "2": {
+          "text": "Complete team management"
+        }
+      },
+      "mediaAlt": "Platform"
+    },
+    "servicesForEveryNeed": {
+      "title": "Services for every need",
+      "description": "Specialized tools for players, teams and clubs",
+      "cards": {
+        "0": {
+          "title": "Players",
+          "text": "Access your individual stats, build a professional profile and get on the radar of other teams through the marketplace. The right tool to stand out and find new opportunities.",
+          "items": {
+            "0": "Complete player profile",
+            "1": "Personal statistics",
+            "2": "Access to transfer market",
+            "3": "Performance tracking"
+          },
+          "textBtn": "For Players"
+        },
+        "1": {
+          "title": "Teams",
+          "text": "Organize trainings, create lineups, record match stats and manage call-ups with a single tool. Everything your staff needs, from the bench to the transfer market.",
+          "items": {
+            "0": "Squad management and statistics",
+            "1": "Training creation and organization",
+            "2": "Player search in the market",
+            "3": "Performance analysis"
+          },
+          "textBtn": "For Teams"
+        },
+        "2": {
+          "title": "Clubs",
+          "text": "Manage all your teams from a single panel. Organize squads, analyze performance, strengthen your sports structure and reinforce each category with the transfer market.",
+          "items": {
+            "0": "Multi-team management",
+            "1": "Executive dashboard",
+            "2": "Advanced transfer market",
+            "3": "Custom reports"
+          },
+          "textBtn": "For Clubs"
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact us",
+      "subtitle": "Ready to revolutionize your football experience?",
+      "description": "We’re here to help. Tell us about your case and we’ll get back to you within 24 hours.",
+      "highlights": {
+        "0": "Support in Spanish and English",
+        "1": "Average response time: 24h",
+        "2": "Technical and sales team"
+      },
+      "info": {
+        "address": "Example Street 123, Madrid, Spain",
+        "phone": "+34 123 456 789",
+        "email": "hello@matchday.com"
+      }
+    }
+  },
+  "players": {
+    "hero": {
+      "title": "Want to be seen?",
+      "description": "Make every match count.",
+      "list": {
+        "title": "Boost your career starting today.",
+        "items": {
+          "0": {
+            "text": "Create your profile for free"
+          },
+          "1": {
+            "text": "Upload your stats"
+          },
+          "2": {
+            "text": "Get visible to clubs"
+          },
+          "3": {
+            "text": "Start standing out today"
+          }
+        }
+      }
+    },
+    "heroCtas": {
+      "0": {
+        "label": "Sign up"
+      },
+      "1": {
+        "label": "See plans"
+      }
+    },
+    "sections": {
+      "marketplace": {
+        "title": "Connect with teams through the transfer marketplace.",
+        "items": {
+          "0": "Explore real transfer opportunities and apply directly from the platform.",
+          "1": "Teams can easily find you thanks to your profile and updated statistics.",
+          "2": "You decide when and where to make the jump."
+        }
+      },
+      "professionalProfile": {
+        "title": "Stand out with a professional profile including data and videos.",
+        "items": {
+          "0": "Design a complete profile to your liking.",
+          "1": "Upload clips of your best plays, add your standout statistics, and complete your sports history.",
+          "2": "It's your calling card to attract the attention of teams and scouts."
+        }
+      },
+      "personalStatistics": {
+        "title": "Access your personal statistics for each match.",
+        "items": {
+          "0": "Keep a detailed record of your performance: minutes played, goals, assists, recoveries, passes, and much more.",
+          "1": "Know your strengths and identify areas for improvement.",
+          "2": "All your evolution, organized and accessible with one click."
+        }
+      },
+      "subscriptionPlans": {
+        "title": "Explore subscription plans.",
+        "tableHeader": "Feature",
+        "tiers": {
+          "basic": {
+            "title": "Basic",
+            "price": "0€/year",
+            "description": "For players starting with the platform.",
+            "ctaLabel": "Get started"
+          },
+          "pro": {
+            "title": "Pro",
+            "price": "40€/year",
+            "description": "For players who want to boost their career.",
+            "ctaLabel": "Get started"
+          }
+        },
+        "features": {
+          "0": {
+            "label": "Profile"
+          },
+          "1": {
+            "label": "Profile creation (photo, position, career...)"
+          },
+          "2": {
+            "label": "Basic personal stats (goals, minutes, matches)"
+          },
+          "3": {
+            "label": "Advanced statistics (passes, duels, recoveries, etc.)"
+          },
+          "4": {
+            "label": "Upload photos and highlight videos to your profile"
+          },
+          "5": {
+            "label": "Opportunities and visibility"
+          },
+          "6": {
+            "label": "Access to the transfer marketplace"
+          },
+          "7": {
+            "label": "Apply to offers in the marketplace"
+          },
+          "8": {
+            "label": "Be discovered by teams (priority visibility)"
+          },
+          "9": {
+            "label": "Personalized team recommendations"
+          },
+          "10": {
+            "label": "Private profile option"
+          },
+          "11": {
+            "label": "Direct contact with clubs and interested coaches"
+          },
+          "12": {
+            "label": "Tools"
+          },
+          "13": {
+            "label": "Export reports to PDF/Excel (performance charts per match and season)"
+          },
+          "14": {
+            "label": "Priority support"
+          }
+        }
+      }
+    }
+  },
+  "teams": {
+    "hero": {
+      "subtitle": "The match starts long before the whistle blows.",
+      "title": "Train better. Organize more. Perform like a professional team.",
+      "description": "Match Day helps you prepare every detail quickly and efficiently. Optimize your time and unlock your full potential as a coach to get the best performance from your team. Because when match day arrives, nothing can be left to chance."
+    },
+    "heroCtas": {
+      "0": {
+        "label": "Register"
+      },
+      "1": {
+        "label": "See Plans"
+      }
+    },
+    "sections": {
+      "0": {
+        "title": "Plan like a pro",
+        "description": "Designs training sessions and set pieces.",
+        "items": {
+          "0": "Designs training sessions and saves your own exercises with easy-to-use tactical tools.",
+          "1": "Creates and visualizes set piece diagrams for corners, free kicks, or throw-ins with our tactical board.",
+          "2": "Saves time, improves organization, and elevates the level of each session."
+        }
+      },
+      "1": {
+        "title": "Lineups in one click",
+        "description": "Quickly and visually prepare your ideal eleven.",
+        "items": {
+          "0": "Drag, drop, and save formations for each match.",
+          "1": "Adapt your tactics according to the opponent and manage your setup with ease."
+        }
+      },
+      "2": {
+        "title": "Call up and control playing time",
+        "description": "Records minutes played and complete call-ups.",
+        "items": {
+          "0": "Easily control who has been called up, who has played, and how many minutes each player accumulates.",
+          "1": "Keeps a record that helps you rotate, prevent injuries, comply with participation regulations, and give equitable opportunities to your squad.",
+          "2": "All your technical control, now centralized and automated."
+        }
+      },
+      "3": {
+        "title": "Collect statistics from every match and player",
+        "description": "Access our intuitive and easy-to-use button panel.",
+        "items": {
+          "0": "Records goals, assists, cards, shots, duels won, recoveries, crosses, etc.",
+          "1": "Evaluates individual and collective performance to identify areas for improvement.",
+          "2": "Makes more objective, data-driven decisions."
+        }
+      },
+      "4": {
+        "title": "Strengthen and build your squad in the marketplace",
+        "description": "Find players according to your needs.",
+        "items": {
+          "0": "Access our transfer market and search for players by position, age, level, or location.",
+          "1": "Post your own offers for players to apply to your team.",
+          "2": "No intermediaries, with useful filters and complete profiles."
+        }
+      }
+    }
+  },
+  "clubs": {
+    "hero": {
+      "title": "Find talent and power up your club",
+      "subtitle": "More control. More coordination. More results.",
+      "description": "Centralize the management of teams, coaches, and players with Match Day. Professionalize your sports structure from the grassroots to the first team.",
+      "list": {
+        "title": "Activate your sporting direction",
+        "items": {
+          "0": "Job posting",
+          "1": "Advanced talent search",
+          "2": "Academy management"
+        }
+      }
+    },
+    "heroCtas": {
+      "0": {
+        "label": "Register"
+      },
+      "1": {
+        "label": "See plans"
+      }
+    },
+    "title": "Clubs",
+    "description": "Clubs page: manage squads, explore the market and strengthen your sports structure.",
+    "features": {
+      "0": "Job posting",
+      "1": "Advanced talent search",
+      "2": "Academy management"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Let’s talk",
+      "subtitle": "Tell us how we can help you",
+      "description": "We’re here to help. Tell us about your case and we’ll get back to you within 24 hours."
+    },
+    "heroCtas": {
+      "0": {
+        "label": "Write now"
+      }
+    },
+    "contact": {
+      "title": "Contact us",
+      "subtitle": "Ready to revolutionize your football experience?",
+      "description": "We’re here to help. Tell us about your case and we’ll get back to you within 24 hours.",
+      "highlights": {
+        "0": "Support in Spanish and English",
+        "1": "Average response time: 24h",
+        "2": "Technical and sales team"
+      },
+      "info": {
+        "address": "Example Street 123, Madrid, Spain",
+        "phone": "+34 123 456 789",
+        "email": "hello@matchday.com"
+      }
+    },
+    "toast": {
+      "success": "Message sent. We’ll get back to you soon ✉️",
+      "error": "The message could not be sent. Please try again later"
+    }
+  },
+  "features": {
+    "intro": {
+      "title": "What makes us different",
+      "description": "Key capabilities that elevate performance."
+    },
+    "groups": {
+      "0": {
+        "title": "Scouting and analysis",
+        "items": {
+          "0": "Customizable KPIs by role",
+          "1": "Play and event tagging",
+          "2": "Season comparisons"
+        }
+      },
+      "1": {
+        "title": "Team and club",
+        "items": {
+          "0": "Squad and injury management",
+          "1": "Wearables integration",
+          "2": "Board-ready reports"
+        }
+      }
+    }
+  },
+  "helpCenter": {
+    "intro": {
+      "title": "Help Center",
+      "description": "Find quick answers and step-by-step guides."
+    },
+    "categories": {
+      "0": {
+        "title": "Getting started",
+        "articles": {
+          "0": {
+            "title": "Create your first team"
+          },
+          "1": {
+            "title": "Invite your staff"
+          }
+        }
+      },
+      "1": {
+        "title": "Analytics and metrics",
+        "articles": {
+          "0": {
+            "title": "Essential KPIs"
+          },
+          "1": {
+            "title": "Export reports"
+          }
+        }
+      }
+    },
+    "faqs": {
+      "title": "FAQs",
+      "items": {
+        "0": {
+          "question": "Can I use MatchDay offline?",
+          "answer": "You can record events offline and sync when you’re back online."
+        },
+        "1": {
+          "question": "How do I share a report?",
+          "answer": "From the reports section, press 'Share' and choose your preferred channel."
+        }
+      }
+    }
+  },
+  "blog": {
+    "intro": {
+      "title": "MatchDay Blog",
+      "description": "Stories, updates and analysis of modern football.",
+      "paragraphs": {
+        "0": "Welcome to our blog. We share ideas and learnings about how technology drives the game."
+      }
+    },
+    "categories": {
+      "title": "Categories:",
+      "labels": {
+        "analysis": "Analysis",
+        "data": "Data",
+        "tactics": "Tactics",
+        "news": "News"
+      }
+    },
+    "featured": {
+      "title": "Featured",
+      "items": {
+        "/blog/medir-rendimiento-jugador": {
+          "title": "How to measure the real performance of a player",
+          "excerpt": "A practical approach with KPIs that actually matter."
+        },
+        "/blog/datos-a-decisiones": {
+          "title": "From data to decisions on the bench",
+          "excerpt": "Real use cases in semi-professional teams."
+        },
+        "/blog/videoanalisis-tactico": {
+          "title": "Video analysis: from summary to tactics",
+          "excerpt": "What to look for and how to tag to extract value."
+        }
+      }
+    }
+  },
+  "services": {
+    "intro": {
+      "title": "What do we offer?",
+      "description": "Features designed for the modern football world",
+      "note": "Explore more details in the Features section."
+    },
+    "servicesForEveryNeed": {
+      "title": "Services for every need",
+      "description": "Specialized tools for players, teams and clubs",
+      "cards": {
+        "0": {
+          "title": "Players",
+          "text": "Access your individual stats, build a professional profile and get on the radar of other teams through the marketplace. The right tool to stand out and find new opportunities.",
+          "items": {
+            "0": "Complete player profile",
+            "1": "Personal statistics",
+            "2": "Access to transfer market",
+            "3": "Performance tracking"
+          },
+          "textBtn": "For Players"
+        },
+        "1": {
+          "title": "Teams",
+          "text": "Organize trainings, create lineups, record match stats and manage call-ups with a single tool. Everything your staff needs, from the bench to the transfer market.",
+          "items": {
+            "0": "Squad management and statistics",
+            "1": "Training creation and organization",
+            "2": "Player search in the market",
+            "3": "Performance analysis"
+          },
+          "textBtn": "For Teams"
+        },
+        "2": {
+          "title": "Clubs",
+          "text": "Manage all your teams from a single panel. Organize squads, analyze performance, strengthen your sports structure and reinforce each category with the transfer market.",
+          "items": {
+            "0": "Multi-team management",
+            "1": "Executive dashboard",
+            "2": "Advanced transfer market",
+            "3": "Custom reports"
+          },
+          "textBtn": "For Clubs"
+        }
+      }
+    },
+    "cards": {
+      "0": {
+        "title": "Advanced Statistics",
+        "text": "Access detailed player and team metrics with real-time analytics and custom reports.",
+        "ctaLabel": "Learn more"
+      },
+      "1": {
+        "title": "Performance Analysis",
+        "text": "Evaluate player performance with accurate data and effective visualizations.",
+        "ctaLabel": "See examples"
+      },
+      "2": {
+        "title": "Custom Reports",
+        "text": "Create tailored reports for your specific needs and make informed decisions.",
+        "ctaLabel": "Request demo"
+      }
+    }
+  },
+  "prices": {
+    "intro": {
+      "title": "Plans and pricing",
+      "description": "Choose the plan that best fits your club."
+    },
+    "tiers": {
+      "mostPopular": "Most popular",
+      "0": {
+        "name": "Starter",
+        "description": "To start trying the platform",
+        "features": {
+          "0": "1 team",
+          "1": "Up to 10 players",
+          "2": "Basic reports"
+        },
+        "ctaLabel": "Create account"
+      },
+      "1": {
+        "name": "Pro",
+        "description": "For growing clubs",
+        "features": {
+          "0": "Up to 5 teams",
+          "1": "Unlimited players",
+          "2": "Advanced analytics"
+        },
+        "ctaLabel": "Try 14 days",
+        "mostPopular": true
+      },
+      "2": {
+        "name": "Elite",
+        "description": "For organizations and academies",
+        "features": {
+          "0": "Unlimited teams",
+          "1": "Integrations and API",
+          "2": "Priority support"
+        },
+        "ctaLabel": "Contact sales"
+      }
+    },
+    "notes": {
+      "0": "Prices in EUR, taxes not included.",
+      "1": "Annual discounts available upon request."
+    }
+  },
+  "analysis": "Analysis",
+  "data": "Data",
+  "tactics": "Tactics",
+  "news": "News"
+}

@@ -1,0 +1,540 @@
+{
+  "matchday": {
+    "hero": {
+      "title": "Donde se gana el día de partido",
+      "description": "La plataforma completa para estadísticas, gestión de equipos y mercado de fichajes en el fútbol.",
+      "imageAlt": "Artwork",
+      "heroCtas": {
+        "0": {
+          "label": "Empezar Ahora"
+        },
+        "1": {
+          "label": "Ver Demo"
+        }
+      }
+    },
+    "intro": {
+      "heading": "Plataforma todo en uno para jugadores, equipos y clubes",
+      "paragraph": "Desde las estadísticas del partido hasta el próximo fichaje, Match Day es tu control total para analizar, entrenar y gestionar tu equipo o tu carrera."
+    },
+    "features": {
+      "heading": "Todo lo que necesitas, antes, durante y después del día de partido",
+      "description": "Fácil, rápido y todo desde una misma plataforma.",
+      "items": {
+        "0": {
+          "text": "Estadísticas en tiempo real"
+        },
+        "1": {
+          "text": "Mercado de fichajes integrado"
+        },
+        "2": {
+          "text": "Gestión completa de equipos"
+        }
+      },
+      "mediaAlt": "Plataforma"
+    },
+    "servicesForEveryNeed": {
+      "title": "Servicios para cada necesidad",
+      "description": "Herramientas especializadas para jugadores, equipos y clubes",
+      "cards": {
+        "0": {
+          "title": "Jugadores",
+          "text": "Accede a tus estadísticas individuales, crea un perfil profesional y entra en el radar de otros equipos a través del marketplace. La herramienta ideal para destacar y encontrar nuevas oportunidades.",
+          "items": {
+            "0": "Perfil de jugador completo",
+            "1": "Estadísticas personales",
+            "2": "Acceso al mercado de fichajes",
+            "3": "Seguimiento de rendimiento"
+          },
+          "textBtn": "Para Jugadores"
+        },
+        "1": {
+          "title": "Equipos",
+          "text": "Organiza entrenamientos, crea alineaciones, registra estadísticas de partidos y gestiona convocatorias con una sola herramienta. Todo lo que tu cuerpo técnico necesita, desde el banquillo hasta el mercado de fichajes.",
+          "items": {
+            "0": "Gestión y estadísticas de plantilla",
+            "1": "Creación y organización de entrenamientos",
+            "2": "Búsqueda de jugadores en el mercado",
+            "3": "Análisis de rendimiento"
+          },
+          "textBtn": "Para Equipos"
+        },
+        "2": {
+          "title": "Clubs",
+          "text": "Gestiona todos tus equipos desde un solo panel. Organiza plantillas, analiza el rendimiento, potencia la estructura deportiva y refuerza cada categoría con el marketplace de fichajes.",
+          "items": {
+            "0": "Gestión multi-equipo",
+            "1": "Dashboard ejecutivo",
+            "2": "Mercado de fichajes avanzado",
+            "3": "Reportes personalizados"
+          },
+          "textBtn": "Para Clubes"
+        }
+      }
+    },
+    "contact": {
+      "title": "Contacta con nosotros",
+      "subtitle": "¿Listo para revolucionar tu experiencia futbolística?",
+      "description": "Estamos aquí para ayudarte. Cuéntanos tu caso y te responderemos en menos de 24 horas.",
+      "highlights": {
+        "0": "Soporte en español e inglés",
+        "1": "Respuesta media en 24h",
+        "2": "Equipo técnico y comercial"
+      },
+      "info": {
+        "address": "Calle Ejemplo 123, Madrid, España",
+        "phone": "+34 123 456 789",
+        "email": "hola@matchday.com"
+      }
+    }
+  },
+  "players": {
+    "hero": {
+      "title": "¿Quieres que te vean?",
+      "description": "Haz que cada partido cuente.",
+      "list": {
+        "title": "Impulsa tu carrera desde hoy.",
+        "items": {
+          "0": {
+            "text": "Crea tu perfil gratis"
+          },
+          "1": {
+            "text": "Sube tus estadísticas"
+          },
+          "2": {
+            "text": "Hazte visible para clubes"
+          },
+          "3": {
+            "text": "Empieza a destacar hoy"
+          }
+        }
+      }
+    },
+    "heroCtas": {
+      "0": {
+        "label": "Regístrate"
+      },
+      "1": {
+        "label": "Ver planes"
+      }
+    },
+    "sections": {
+      "marketplace": {
+        "title": "Conéctate con equipos a través del marketplace de fichajes.",
+        "items": {
+          "0": "Explora oportunidades reales de fichaje y postúlate directamente desde la plataforma.",
+          "1": "Los equipos pueden encontrarte fácilmente gracias a tu perfil y estadísticas actualizadas.",
+          "2": "Tú decides cuándo dar el salto y a dónde."
+        }
+      },
+      "professionalProfile": {
+        "title": "Destaca con tu perfil profesional incluyendo datos y vídeos.",
+        "items": {
+          "0": "Diseña un perfil completo a tu gusto.",
+          "1": "Sube clips de tus mejores jugadas, añade tus estadísticas destacadas y completa tu historial deportivo.",
+          "2": "Es tu carta de presentación para llamar la atención de equipos y ojeadores."
+        }
+      },
+      "personalStatistics": {
+        "title": "Accede a tus estadísticas personales de cada partido.",
+        "items": {
+          "0": "Lleva un registro detallado de tu rendimiento: minutos jugados, goles, asistencias, recuperaciones, pases, y mucho más.",
+          "1": "Conoce tus puntos fuertes y detecta dónde puedes mejorar.",
+          "2": "Toda tu evolución, organizada y accesible en un clic."
+        }
+      },
+      "subscriptionPlans": {
+        "title": "Planes de subscripción",
+        "tableHeader": "Característica",
+        "tiers": {
+          "basic": {
+            "title": "Básico",
+            "price": "0€/año",
+            "description": "Para jugadores que quieren iniciarse en la plataforma.",
+            "ctaLabel": "Empezar"
+          },
+          "pro": {
+            "title": "Pro",
+            "price": "40€/año",
+            "description": "Para jugadores que quieren iniciarse en la plataforma.",
+            "ctaLabel": "Empezar"
+          }
+        },
+        "features": {
+          "0": {
+            "label": "Perfil"
+          },
+          "1": {
+            "label": "Creación de perfil (foto, posición, trayectoria...)"
+          },
+          "2": {
+            "label": "Registro de estadísticas personales básicas (goles, minutos, partidos)"
+          },
+          "3": {
+            "label": "Estadísticas avanzadas (pases, duelos, recuperaciones, etc.)"
+          },
+          "4": {
+            "label": "Carga de fotos y vídeos de mejores jugadas en el perfil"
+          },
+          "5": {
+            "label": "Oportunidades y visibilidad"
+          },
+          "6": {
+            "label": "Acceso al marketplace de fichajes"
+          },
+          "7": {
+            "label": "Postularte a ofertas en el marketplace"
+          },
+          "8": {
+            "label": "Ser encontrado por equipos (visibilidad prioritaria)"
+          },
+          "9": {
+            "label": "Recomendaciones personalizadas de equipos"
+          },
+          "10": {
+            "label": "Opción de perfil privado"
+          },
+          "11": {
+            "label": "Contacto directo con clubes y entrenadores interesados"
+          },
+          "12": {
+            "label": "Herramientas"
+          },
+          "13": {
+            "label": "Descarga de informes en PDF/Excel para mostrar rendimiento (gráficas de evolución por partido y temporada)"
+          },
+          "14": {
+            "label": "Soporte prioritario"
+          }
+        }
+      }
+    }
+  },
+  "teams": {
+    "hero": {
+      "title": "Entrena mejor. Organiza más. Rinde como un equipo profesional.",
+      "subtitle": "El partido empieza mucho antes del pitido inicial.",
+      "description": "Match Day te ayuda a preparar cada detalle de manera rápida y eficaz. Optimiza tu tiempo y sácate el máximo potencial como entrenador para sacar el máximo rendimiento de tu equipo. Porque cuando llega el día de partido, nada puede quedar al azar.."
+    },
+    "heroCtas": {
+      "0": {
+        "label": "Regístrate"
+      },
+      "1": {
+        "label": "Ver Planes"
+      }
+    },
+    "sections": {
+      "0": {
+        "title": "Planifica como un profesional",
+        "description": "Diseña entrenamientos y acciones a balón parado.",
+        "items": {
+          "0": "Diseña sesiones de entrenamiento y guarda tus propios ejercicios con herramientas tácticas fáciles de usar.",
+          "1": "Crea y visualiza esquemas de acciones a balón parado para corners, faltas o saques de banda con nuestra pizarra táctica.",
+          "2": "Ahorra tiempo, mejora la organización y sube el nivel de cada sesión."
+        }
+      },
+      "1": {
+        "title": "Alineaciones en un clic",
+        "description": "Prepara tu once ideal de forma rápida y visual.",
+        "items": {
+          "0": "Arrastra, suelta y guarda formaciones para cada partido.",
+          "1": "Adapta tu táctica según el rival y gestiona tu esquema con facilidad."
+        }
+      },
+      "2": {
+        "title": "Convoca y controla el tiempo de juego",
+        "description": "Registra minutos jugados y convocatorias completas.",
+        "items": {
+          "0": "Controla de forma sencilla quién ha sido convocado, quién ha jugado y cuántos minutos acumula cada jugador.",
+          "1": "Lleva un registro que te ayuda a rotar, prevenir lesiones, cumplir con normativas de participación y dar oportunidades equitativas a tu plantilla.",
+          "2": "Todo tu control técnico, ahora centralizado y automatizado."
+        }
+      },
+      "3": {
+        "title": "Recoge estadísticas de cada partido y jugador",
+        "description": "Accede a nuestra botonera intuitiva y fácil de usar.",
+        "items": {
+          "0": "Registra goles, asistencias, tarjetas, tiros, duelos ganados, recuperaciones, centros, etc.",
+          "1": "Evalúa el rendimiento individual y colectivo para detectar áreas de mejora.",
+          "2": "Toma decisiones más objetivas, basadas en datos."
+        }
+      },
+      "4": {
+        "title": "Refuerza y confecciona tu plantilla en el marketplace",
+        "description": "Encuentra jugadores según tu necesidad.",
+        "items": {
+          "0": "Accede a nuestro mercado de fichajes y busca jugadores por posición, edad, nivel o ubicación.",
+          "1": "Publica tus propias ofertas para que los jugadores se postulen a tu equipo.",
+          "2": "Sin intermediarios, con filtros útiles y perfiles completos."
+        }
+      }
+    }
+  },
+  "clubs": {
+    "hero": {
+      "title": "Encuentra talento y potencia tu club",
+      "subtitle": "Más control. Más coordinación. Más resultados.",
+      "description": "Centraliza la gestión de equipos, entrenadores y jugadores con Match Day. Profesionaliza tu estructura deportiva desde la base hasta el primer equipo.",
+      "list": {
+        "title": "Activa tu dirección deportiva",
+        "items": {
+          "0": "Publicación de vacantes",
+          "1": "Búsqueda avanzada de talento",
+          "2": "Gestión de cantera"
+        }
+      }
+    },
+    "heroCtas": {
+      "0": {
+        "label": "Registrarse"
+      },
+      "1": {
+        "label": "Ver planes"
+      }
+    },
+    "title": "Clubs",
+    "description": "Página de Clubs: gestiona plantillas, explora mercado y potencia tu estructura deportiva.",
+    "features": {
+      "0": "Publicación de vacantes",
+      "1": "Búsqueda avanzada de talento",
+      "2": "Gestión de cantera"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Hablemos",
+      "subtitle": "¿Cuéntanos en qué podemos ayudarte?",
+      "description": "Estamos aquí para ayudarte. Cuéntanos tu caso y te responderemos en menos de 24 horas."
+    },
+    "heroCtas": {
+      "0": {
+        "label": "Escribir ahora"
+      }
+    },
+    "contact": {
+      "title": "Contacta con nosotros",
+      "subtitle": "¿Listo para revolucionar tu experiencia futbolística?",
+      "description": "Estamos aquí para ayudarte. Cuéntanos tu caso y te responderemos en menos de 24 horas.",
+      "highlights": {
+        "0": "Soporte en español e inglés",
+        "1": "Respuesta media en 24h",
+        "2": "Equipo técnico y comercial"
+      },
+      "info": {
+        "address": "Calle Ejemplo 123, Madrid, España",
+        "phone": "+34 123 456 789",
+        "email": "hola@matchday.com"
+      }
+    },
+    "toast": {
+      "success": "Mensaje enviado. Te responderemos pronto ✉️",
+      "error": "No se pudo enviar el mensaje. Inténtalo más tarde"
+    }
+  },
+  "features": {
+    "intro": {
+      "title": "Lo que nos hace diferentes",
+      "description": "Capacidades clave que elevan el rendimiento."
+    },
+    "groups": {
+      "0": {
+        "title": "Scouting y análisis",
+        "items": {
+          "0": "KPIs personalizables por rol",
+          "1": "Etiquetado de jugadas y eventos",
+          "2": "Comparativas entre temporadas"
+        }
+      },
+      "1": {
+        "title": "Equipo y club",
+        "items": {
+          "0": "Gestión de plantillas y lesiones",
+          "1": "Integración con wearables",
+          "2": "Informes listos para directiva"
+        }
+      }
+    }
+  },
+  "helpCenter": {
+    "intro": {
+      "title": "Centro de Ayuda",
+      "description": "Encuentra respuestas rápidas y guías paso a paso."
+    },
+    "categories": {
+      "0": {
+        "title": "Primeros pasos",
+        "articles": {
+          "0": {
+            "title": "Crear tu primer equipo"
+          },
+          "1": {
+            "title": "Invitar a tu staff"
+          }
+        }
+      },
+      "1": {
+        "title": "Análisis y métricas",
+        "articles": {
+          "0": {
+            "title": "KPIs esenciales"
+          },
+          "1": {
+            "title": "Exportar informes"
+          }
+        }
+      }
+    },
+    "faqs": {
+      "title": "FAQs",
+      "items": {
+        "0": {
+          "question": "¿Puedo usar MatchDay sin conexión?",
+          "answer": "Puedes registrar eventos offline y sincronizar cuando recuperes conexión."
+        },
+        "1": {
+          "question": "¿Cómo comparto un informe?",
+          "answer": "Desde la sección de informes, pulsa 'Compartir' y elige el canal preferido."
+        }
+      }
+    }
+  },
+  "blog": {
+    "intro": {
+      "title": "Blog MatchDay",
+      "description": "Historias, novedades y análisis del fútbol moderno.",
+      "paragraphs": {
+        "0": "Bienvenido a nuestro blog. Aquí compartimos ideas y aprendizajes sobre cómo la tecnología impulsa el juego."
+      }
+    },
+    "featured": {
+      "title": "Destacados",
+      "items": {
+        "/blog/medir-rendimiento-jugador": {
+          "title": "Cómo medir el rendimiento real de un jugador",
+          "excerpt": "Un enfoque práctico con KPIs que sí importan."
+        },
+        "/blog/datos-a-decisiones": {
+          "title": "De los datos a las decisiones en el banquillo",
+          "excerpt": "Casos reales de uso en equipos semi-profesionales."
+        },
+        "/blog/videoanalisis-tactico": {
+          "title": "Videoanálisis: del resumen a la táctica",
+          "excerpt": "Qué mirar y cómo etiquetar para extraer valor."
+        }
+      }
+    },
+    "categories": {
+      "title": "Categorías:"
+    }
+  },
+  "services": {
+    "intro": {
+      "title": "Nuestros Servicios",
+      "description": "Descubre la gama completa de servicios que ofrecemos para potenciar tu experiencia deportiva."
+    },
+    "servicesForEveryNeed": {
+      "title": "Servicios para cada necesidad",
+      "description": "Herramientas especializadas para jugadores, equipos y clubes",
+      "cards": {
+        "0": {
+          "title": "Jugadores",
+          "text": "Accede a tus estadísticas individuales, crea un perfil profesional y entra en el radar de otros equipos a través del marketplace. La herramienta ideal para destacar y encontrar nuevas oportunidades.",
+          "items": {
+            "0": "Perfil de jugador completo",
+            "1": "Estadísticas personales",
+            "2": "Acceso al mercado de fichajes",
+            "3": "Seguimiento de rendimiento"
+          },
+          "textBtn": "Para Jugadores"
+        },
+        "1": {
+          "title": "Equipos",
+          "text": "Organiza entrenamientos, crea alineaciones, registra estadísticas de partidos y gestiona convocatorias con una sola herramienta. Todo lo que tu cuerpo técnico necesita, desde el banquillo hasta el mercado de fichajes.",
+          "items": {
+            "0": "Gestión y estadísticas de plantilla",
+            "1": "Creación y organización de entrenamientos",
+            "2": "Búsqueda de jugadores en el mercado",
+            "3": "Análisis de rendimiento"
+          },
+          "textBtn": "Para Equipos"
+        },
+        "2": {
+          "title": "Clubs",
+          "text": "Gestiona todos tus equipos desde un solo panel. Organiza plantillas, analiza el rendimiento, potencia la estructura deportiva y refuerza cada categoría con el marketplace de fichajes.",
+          "items": {
+            "0": "Gestión multi-equipo",
+            "1": "Dashboard ejecutivo",
+            "2": "Mercado de fichajes avanzado",
+            "3": "Reportes personalizados"
+          },
+          "textBtn": "Para Clubes"
+        }
+      }
+    },
+    "cards": {
+      "0": {
+        "title": "Estadísticas Avanzadas",
+        "text": "Accede a métricas detalladas de jugadores y equipos con análisis en tiempo real y reportes personalizados.",
+        "ctaLabel": "Saber más"
+      },
+      "1": {
+        "title": "Análisis de Rendimiento",
+        "text": "Evalúa el rendimiento de los jugadores con datos precisos y visualizaciones efectivas.",
+        "ctaLabel": "Ver ejemplos"
+      },
+      "2": {
+        "title": "Informes Personalizados",
+        "text": "Crea informes a medida para tus necesidades específicas y toma decisiones informadas.",
+        "ctaLabel": "Solicitar demo"
+      }
+    }
+  },
+  "prices": {
+    "intro": {
+      "title": "Planes y precios",
+      "description": "Elige el plan que mejor se adapte a tu club."
+    },
+    "tiers": {
+      "mostPopular": "Más popular",
+      "0": {
+        "name": "Starter",
+        "description": "Para comenzar a probar la plataforma",
+        "features": {
+          "0": "1 equipo",
+          "1": "Hasta 10 jugadores",
+          "2": "Informes básicos"
+        },
+        "ctaLabel": "Crear cuenta"
+      },
+      "1": {
+        "name": "Pro",
+        "description": "Para clubs en crecimiento",
+        "features": {
+          "0": "Hasta 5 equipos",
+          "1": "Jugadores ilimitados",
+          "2": "Análisis avanzados"
+        },
+        "ctaLabel": "Probar 14 días"
+      },
+      "2": {
+        "name": "Elite",
+        "description": "Para organizaciones y academias",
+        "features": {
+          "0": "Equipos ilimitados",
+          "1": "Integraciones y API",
+          "2": "Soporte prioritario"
+        },
+        "ctaLabel": "Contactar ventas"
+      }
+    },
+    "notes": {
+      "0": "Precios en EUR, impuestos no incluidos.",
+      "1": "Descuentos anuales disponibles bajo consulta."
+    }
+  },
+  "analysis": "Análisis",
+  "data": "Datos",
+  "tactics": "Táctica",
+  "news": "Noticias"
+}

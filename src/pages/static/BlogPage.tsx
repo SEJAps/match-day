@@ -7,32 +7,29 @@ import {
   LeadSectionTemplate,
   Text,
 } from "@/components";
+import { Link } from "react-router";
 
 const BlogPage: FC = () => {
   const { t } = useTranslation();
-  const { intro, featuredPosts, categories } = BLOG_STATIC_PAGE;
+  const { featuredPosts, categories } = BLOG_STATIC_PAGE;
   return (
     <>
       <IntroSectionTemplate
         size="4xl"
         gap="4"
         color="white"
-        title={t("pages.blog.intro.title", { defaultValue: intro.title })}
-        description={t("pages.blog.intro.description", {
-          defaultValue: intro.description,
-        })}
+        title={t("pages:blog.intro.title")}
+        description={t("pages:blog.intro.description")}
       />
       <LeadSectionTemplate
-        title={t("pages.blog.intro.title", { defaultValue: intro.title })}
-        description={t("pages.blog.intro.description", {
-          defaultValue: intro.description,
-        })}
+        title={t("pages:blog.intro.title")}
+        description={t("pages:blog.intro.description")}
         color="success"
         textColor="dark"
       >
         <section className="max-w-6xl mx-auto flex flex-col ">
           <Heading as="h3" level="h3" className="text-2xl mb-4 text-success">
-            {t(`pages.blog.featured.title`)}
+            {t(`pages:blog.featured.title`)}
           </Heading>
           {featuredPosts.map((post) => (
             <article
@@ -41,26 +38,18 @@ const BlogPage: FC = () => {
             >
               <section>
                 <Heading as="h3" level="h6" className=" text-dark">
-                  {t(`pages.blog.featured.items.${post.href}.title`, {
-                    defaultValue: post.title,
-                  })}
+                  {t(`pages:blog.featured.items.${post.href}.title`)}
                 </Heading>
                 <Text className="flex items-center justify-between gap-2">
-                  {t(`pages.blog.featured.items.${post.href}.excerpt`, {
-                    defaultValue: post.excerpt,
-                  })}
+                  {t(`pages:blog.featured.items.${post.href}.excerpt`)}
                 </Text>
               </section>
               <section className="flex items-center gap-4">
-                <a href={post.href} className="text-blue-500 hover:underline">
-                  {t("common.learnMore", { defaultValue: "Learn more" })}
-                </a>
+                <Link to={post.href} className="text-success">
+                  {t("common.learnMore")}
+                </Link>
                 <br />
-                <small className="text-neutral-600">
-                  {t(`pages.blog.featured.items.${post.href}.date`, {
-                    defaultValue: post.date,
-                  })}
-                </small>
+                <small className="text-neutral-600">{post.date}</small>
               </section>
             </article>
           ))}
@@ -71,7 +60,7 @@ const BlogPage: FC = () => {
                 level="h3"
                 className="text-2xl mb-4 text-success"
               >
-                {t("pages.blog.categories.title", {
+                {t("pages:blog.categories.title", {
                   defaultValue: "Categories",
                 })}
               </Heading>
@@ -82,9 +71,7 @@ const BlogPage: FC = () => {
                     className="nth-[1]:bg-blue-100 nth-[2]:bg-orange-100 nth-[3]:bg-yellow-100 nth-[4]:bg-green-100 text-neutral-800 px-2 py-1 rounded-lg shadow-sm shadow-neutral-400/50 hover:shadow-neutral-400/10"
                   >
                     <small className="font-semibold text-xs text-dark">
-                      {t(`pages.${category}`, {
-                        defaultValue: category,
-                      })}
+                      {t(`pages:${category}`)}
                     </small>
                   </li>
                 ))}

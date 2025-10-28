@@ -7,7 +7,6 @@ import {
   Heading,
   PlanComparisonTable,
 } from "@/components";
-import { TEAMS_PAGE } from "@/config";
 import listItemImage from "@/assets/images/svg/list-item-image.svg";
 import { useTranslation } from "react-i18next";
 import { Container } from "@/components/atoms/Container";
@@ -24,31 +23,19 @@ const TeamsPage: FC = () => {
       <IntroSectionTemplate
         size="4xl"
         gap="12"
-        title={t("pages.teams.hero.title", {
-          defaultValue: TEAMS_PAGE.hero.title,
-        })}
-        description={t("pages.teams.hero.subtitle", {
-          defaultValue: TEAMS_PAGE.hero.subtitle,
-        })}
+        title={t("pages:teams.hero.title")}
+        description={t("pages:teams.hero.subtitle")}
         footer={
           <section className="w-full flex items-center justify-center gap-12">
             <Button variant="success">
-              {t("pages.teams.heroCtas.0.label", {
-                defaultValue: "Regístrate",
-              })}
+              {t("pages:teams.heroCtas.0.label")}
             </Button>
-            <Button variant="view">
-              {t("pages.teams.heroCtas.1.label", {
-                defaultValue: "Ver planes",
-              })}
-            </Button>
+            <Button variant="view">{t("pages:teams.heroCtas.1.label")}</Button>
           </section>
         }
       >
         <Text className="bg-secondary/50 max-w-90 sm:max-w-[512px] mx-auto p-6 text-white rounded-2xl">
-          {t("pages.teams.hero.description", {
-            defaultValue: TEAMS_PAGE.hero.description,
-          })}
+          {t("pages:teams.hero.description")}
         </Text>
       </IntroSectionTemplate>
       <Container fullWidth bgColor="bg-white">
@@ -59,11 +46,11 @@ const TeamsPage: FC = () => {
                 <section className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
                   <header>
                     <Heading as="h2" level="h3">
-                      {t("pages.teams.sections.0.title")}
+                      {t("pages:teams.sections.0.title")}
                     </Heading>
 
                     <Text color="dark" size="xl">
-                      {t("pages.teams.sections.0.description")}
+                      {t("pages:teams.sections.0.description")}
                     </Text>
                   </header>
                   <article>
@@ -72,17 +59,17 @@ const TeamsPage: FC = () => {
                       iconSize={20}
                       items={[
                         {
-                          text: t("pages.teams.sections.0.items.0"),
+                          text: t("pages:teams.sections.0.items.0"),
                           iconSrc: listItemImage,
                           iconAlt: "Planificación",
                         },
                         {
-                          text: t("pages.teams.sections.0.items.1"),
+                          text: t("pages:teams.sections.0.items.1"),
                           iconSrc: listItemImage,
                           iconAlt: "Rendimiento",
                         },
                         {
-                          text: t("pages.teams.sections.0.items.2"),
+                          text: t("pages:teams.sections.0.items.2"),
                           iconSrc: listItemImage,
                           iconAlt: "Convocatorias",
                         },
@@ -112,11 +99,11 @@ const TeamsPage: FC = () => {
                 <section className="lg:pl-20 flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6">
                   <header>
                     <Heading as="h2" level="h3" color="white">
-                      {t("pages.teams.sections.1.title")}
+                      {t("pages:teams.sections.1.title")}
                     </Heading>
 
                     <Text color="white" size="xl">
-                      {t("pages.teams.sections.1.description")}
+                      {t("pages:teams.sections.1.description")}
                     </Text>
                   </header>
                   <article>
@@ -126,12 +113,12 @@ const TeamsPage: FC = () => {
                       iconSize={20}
                       items={[
                         {
-                          text: t("pages.teams.sections.1.items.0"),
+                          text: t("pages:teams.sections.1.items.0"),
                           iconSrc: listItemImage,
                           iconAlt: "Planificación",
                         },
                         {
-                          text: t("pages.teams.sections.1.items.1"),
+                          text: t("pages:teams.sections.1.items.1"),
                           iconSrc: listItemImage,
                           iconAlt: "Rendimiento",
                         },
@@ -161,11 +148,11 @@ const TeamsPage: FC = () => {
                 <section className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
                   <header>
                     <Heading as="h2" level="h3">
-                      {t("pages.teams.sections.2.title")}
+                      {t("pages:teams.sections.2.title")}
                     </Heading>
 
                     <Text color="dark" size="xl">
-                      {t("pages.teams.sections.2.description")}
+                      {t("pages:teams.sections.2.description")}
                     </Text>
                   </header>
                   <article>
@@ -174,17 +161,17 @@ const TeamsPage: FC = () => {
                       iconSize={20}
                       items={[
                         {
-                          text: t("pages.teams.sections.2.items.0"),
+                          text: t("pages:teams.sections.2.items.0"),
                           iconSrc: listItemImage,
                           iconAlt: "Planificación",
                         },
                         {
-                          text: t("pages.teams.sections.2.items.1"),
+                          text: t("pages:teams.sections.2.items.1"),
                           iconSrc: listItemImage,
                           iconAlt: "Rendimiento",
                         },
                         {
-                          text: t("pages.teams.sections.2.items.2"),
+                          text: t("pages:teams.sections.2.items.2"),
                           iconSrc: listItemImage,
                           iconAlt: "Convocatorias",
                         },
@@ -214,11 +201,11 @@ const TeamsPage: FC = () => {
                 <section className="lg:pl-20 flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6">
                   <header>
                     <Heading as="h2" level="h3" color="white">
-                      {t("pages.teams.sections.3.title")}
+                      {t("pages:teams.sections.3.title")}
                     </Heading>
 
                     <Text color="white" size="xl">
-                      {t("pages.teams.sections.3.description")}
+                      {t("pages:teams.sections.3.description")}
                     </Text>
                   </header>
                   <article>
@@ -228,12 +215,12 @@ const TeamsPage: FC = () => {
                       iconSize={20}
                       items={[
                         {
-                          text: t("pages.teams.sections.3.items.0"),
+                          text: t("pages:teams.sections.3.items.0"),
                           iconSrc: listItemImage,
                           iconAlt: "Planificación",
                         },
                         {
-                          text: t("pages.teams.sections.3.items.1"),
+                          text: t("pages:teams.sections.3.items.1"),
                           iconSrc: listItemImage,
                           iconAlt: "Rendimiento",
                         },
@@ -263,11 +250,11 @@ const TeamsPage: FC = () => {
                 <section className="flex-grow flex flex-col space-y-5 lg:space-y-10 justify-center px-6 lg:px-0">
                   <header>
                     <Heading as="h2" level="h3">
-                      {t("pages.teams.sections.4.title")}
+                      {t("pages:teams.sections.4.title")}
                     </Heading>
 
                     <Text color="dark" size="xl">
-                      {t("pages.teams.sections.4.description")}
+                      {t("pages:teams.sections.4.description")}
                     </Text>
                   </header>
                   <article>
@@ -276,17 +263,17 @@ const TeamsPage: FC = () => {
                       iconSize={20}
                       items={[
                         {
-                          text: t("pages.teams.sections.4.items.0"),
+                          text: t("pages:teams.sections.4.items.0"),
                           iconSrc: listItemImage,
                           iconAlt: "Planificación",
                         },
                         {
-                          text: t("pages.teams.sections.4.items.1"),
+                          text: t("pages:teams.sections.4.items.1"),
                           iconSrc: listItemImage,
                           iconAlt: "Rendimiento",
                         },
                         {
-                          text: t("pages.teams.sections.4.items.2"),
+                          text: t("pages:teams.sections.4.items.2"),
                           iconSrc: listItemImage,
                           iconAlt: "Convocatorias",
                         },
@@ -315,7 +302,7 @@ const TeamsPage: FC = () => {
               <Column bgColor="flex-1">
                 <div className="flex flex-col">
                   <Heading as="h2" level="h3" color="white" align={"center"}>
-                    {t("pages.players.sections.subscriptionPlans.title")}
+                    {t("pages:players.sections.subscriptionPlans.title")}
                   </Heading>
                   <article className="py-10 lg:py-20">
                     {/* Explore subscription plans */}

@@ -7,6 +7,10 @@ import esCommon from "@/config/i18n/locales/es/common.json";
 import enCommon from "@/config/i18n/locales/en/common.json";
 import caCommon from "@/config/i18n/locales/ca/common.json";
 
+import esPages from "@/config/i18n/locales/es/pages.json";
+import enPages from "@/config/i18n/locales/en/pages.json";
+import caPages from "@/config/i18n/locales/ca/pages.json";
+
 export const DEFAULT_LOCALE = "ca" as const;
 
 void i18n
@@ -15,12 +19,12 @@ void i18n
   .init({
     fallbackLng: DEFAULT_LOCALE,
     supportedLngs: ["es", "en", "ca"],
-    ns: ["common"],
+    ns: ["common", "pages"],
     defaultNS: "common",
     resources: {
-      es: { common: esCommon },
-      en: { common: enCommon },
-      ca: { common: caCommon },
+      es: { common: esCommon, pages: esPages },
+      en: { common: enCommon, pages: enPages },
+      ca: { common: caCommon, pages: caPages },
     },
     detection: {
       order: ["querystring", "localStorage", "navigator", "htmlTag"],
