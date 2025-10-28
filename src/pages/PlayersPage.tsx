@@ -97,21 +97,21 @@ const PlayersPage: FC = () => {
                       items={[
                         {
                           text: t(
-                            "pages.players.sections.personalStatistics.items.0"
+                            "pages.players.sections.personalStatistics.items.0",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
                         {
                           text: t(
-                            "pages.players.sections.personalStatistics.items.1"
+                            "pages.players.sections.personalStatistics.items.1",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
                         {
                           text: t(
-                            "pages.players.sections.personalStatistics.items.2"
+                            "pages.players.sections.personalStatistics.items.2",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
@@ -142,7 +142,7 @@ const PlayersPage: FC = () => {
                 className="flex-3 md:order-0 px-6 lg:px-0 items-center"
                 order="1"
               >
-                <img
+                <Image
                   width={133}
                   height={117}
                   src={PLAYERS_PAGE.sections.professionalProfile?.photo}
@@ -163,21 +163,21 @@ const PlayersPage: FC = () => {
                       items={[
                         {
                           text: t(
-                            "pages.players.sections.professionalProfile.items.0"
+                            "pages.players.sections.professionalProfile.items.0",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
                         {
                           text: t(
-                            "pages.players.sections.professionalProfile.items.1"
+                            "pages.players.sections.professionalProfile.items.1",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",
                         },
                         {
                           text: t(
-                            "pages.players.sections.professionalProfile.items.2"
+                            "pages.players.sections.professionalProfile.items.2",
                           ),
                           iconSrc: listItemImage,
                           iconAlt: "Añadir alt",

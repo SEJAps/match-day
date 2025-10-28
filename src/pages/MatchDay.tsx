@@ -5,21 +5,22 @@ import {
   type ServiceCardForEveryNeed,
 } from "@/config/services-for-every-need";
 import {
-  Card,
   ContactSection,
-  FeatureTwoColumnTemplate,
   IntroSectionTemplate,
-  LeadSectionTemplate,
-  HeadlineSectionTemplate,
   ValuePropSectionTemplate,
   ServiceCard,
+  FeatureList,
 } from "@/components";
-import { Button, Image, Text } from "@/components/atoms";
-import {} from "@/config";
+import { Button, Heading, Image, Text } from "@/components/atoms";
 import { SERVICES_PAGE_CARDS } from "@/config";
 import { MATCHDAY_PAGE } from "@/config/pages/matchday";
 import { useTranslation } from "react-i18next";
 import useNotifications from "@/hooks/useNotifications";
+import { Container } from "@/components/atoms/Container";
+import { RowsContent } from "@/components/organisms/RowsContent";
+import { Row } from "@/components/molecules/Row";
+import { ColumnContent } from "@/components/organisms/ColumnContent";
+import { Column } from "@/components/molecules/Column";
 const MatchDay: FC = () => {
   const { t } = useTranslation();
   const [servicesForEveryNeed, setServicesForEveryNeed] = useState<
@@ -105,92 +106,147 @@ const MatchDay: FC = () => {
           className={`aspect-video object-cover sm:w-96 rounded-xl mx-auto`}
         />
       </IntroSectionTemplate>
+      <Container fullWidth bgColor="bg-white">
+        <RowsContent className="gap-6 py-10 lg:py-20">
+          <Row className="px-6">
+            <article>
+              <Heading as="h2" level="h1" color="success" align={"center"}>
+                {t("pages.matchday.intro.heading")}
+              </Heading>
+              <Text className="text-center max-w-3xl mx-auto">
+                {t("pages.matchday.intro.paragraph")}
+              </Text>
+            </article>
+          </Row>
+          <Row className="px-6">
+            <ColumnContent className="gap-6 py-10 sm:py-20">
+              <Column className="flex-9">
+                <section>
+                  <article>
+                    <header>
+                      <Heading
+                        as="h2"
+                        level="h3"
+                        weight="semibold"
+                        className="text-success"
+                      >
+                        {t("pages.matchday.features.heading")}
+                      </Heading>
+                      <Text size="lg" className="text-neutral-700">
+                        {t("pages.matchday.features.description")}
+                      </Text>
+                    </header>
 
-      {/* LeadSection */}
-      <LeadSectionTemplate
-        title={t("pages.matchday.intro.heading", {
-          defaultValue: MATCHDAY_PAGE.intro.heading,
-        })}
-        description={t("pages.matchday.intro.paragraph", {
-          defaultValue: MATCHDAY_PAGE.intro.paragraph,
-        })}
-        color="success"
-      >
-        <FeatureTwoColumnTemplate
-          heading={t("pages.matchday.features.heading", {
-            defaultValue: MATCHDAY_PAGE.featuresSection.heading,
-          })}
-          description={t("pages.matchday.features.description", {
-            defaultValue: MATCHDAY_PAGE.featuresSection.description,
-          })}
-          features={MATCHDAY_PAGE.featuresSection.features.map((f, i) => ({
-            ...f,
-            text: t(`pages.matchday.features.items.${i}.text`, {
-              defaultValue: f.text,
-            }),
-          }))}
-          featureListProps={{
-            iconSize: 32,
-          }}
-          media={{
-            src: platform,
-            alt: t("pages.matchday.features.mediaAlt", {
-              defaultValue: "Plataforma",
-            }),
-            className: "aspect-auto h-full w-full",
-          }}
-        />
-      </LeadSectionTemplate>
-      {/* HeadlineSection */}
-      <HeadlineSectionTemplate
-        title={t("common.servicesForEveryNeed.title", {
-          defaultValue: "Servicios para cada necesidad",
-        })}
-        description={t("common.servicesForEveryNeed.description", {
-          defaultValue:
-            "Herramientas especializadas para jugadores, equipos y clubes",
-        })}
-      >
-        {servicesForEveryNeed &&
-          servicesForEveryNeed.map((service, i) => (
-            <Card
-              key={service.title}
-              bg={service.bg}
-              bgBtn={service.bgBtn}
-              title={t(`common.servicesForEveryNeed.cards.${i}.title`, {
-                defaultValue: service.title,
-              })}
-              text={t(`common.servicesForEveryNeed.cards.${i}.text`, {
-                defaultValue: service.text,
-              })}
-              items={service.items.map((item, idx) =>
-                t(`common.servicesForEveryNeed.cards.${i}.items.${idx}`, {
-                  defaultValue: item,
-                }),
-              )}
-              index={i}
-              mobileFullWidth={
-                servicesForEveryNeed.length % 2 === 1 &&
-                i === servicesForEveryNeed.length - 1
-              }
-              icon={
-                <Image
-                  src={service.icon}
-                  alt={t(`common.servicesForEveryNeed.cards.${i}.title`, {
-                    defaultValue: service.title,
-                  })}
-                  className="w-24 h-24 sm:w-16 sm:h-16"
-                  width={96}
-                  height={96}
-                  fit="contain"
-                />
-              }
-              label={t(`common.servicesForEveryNeed.cards.${i}.textBtn`, {
-                defaultValue: service.textBtn,
-              })}
-            />
-          ))}
-      </HeadlineSectionTemplate>
+                    <article>
+                      <FeatureList
+                        items={MATCHDAY_PAGE.featuresSection.features}
+                      />
+                    </article>
+                  </article>
+                </section>
+              </Column>
+              <Column className="flex-3 flex justify-center items-center">
+                <section>
+                  <img width={492} height={276} src={platform} alt={platform} />
+                </section>
+              </Column>
+            </ColumnContent>
+          </Row>
+        </RowsContent>
+      </Container>
+      <Container fullWidth bgColor="bg-white">
+        <RowsContent className="gap-6 py-10 lg:py-20">
+          <Row className="px-6">
+            <article className="flex items-center flex-col space-y-6">
+              <Heading as="h2" level="h1" color="success" align="center">
+                {t("common.servicesForEveryNeed.title")}
+              </Heading>
+              <Text size="xl" className="text-neutral-700 mb-6" align="center">
+                {t("common.servicesForEveryNeed.description", {
+                  defaultValue:
+                    "Herramientas especializadas para jugadores, equipos y clubes",
+                })}
+              </Text>
+            </article>
+          </Row>
+          <Row className="px-6">
+            <section className="grid lg:grid-cols-3 gap-6 lg:gap-10">
+              {servicesForEveryNeed &&
+                servicesForEveryNeed.map((service) => (
+                  <section
+                    key={service.title}
+                    className={`${service.bg} flex flex-col justify-between gap-6 rounded-2xl shadow-sm`}
+                  >
+                    <header className="flex flex-col items-center p-6 gap-6">
+                      <Image
+                        src={service.icon}
+                        alt="Logo Card"
+                        width={152}
+                        height={152}
+                      />
+                      <h2 className="text-dark text-4xl font-bold">
+                        {service.title}
+                      </h2>
+                    </header>
+                    <article className=" flex flex-col p-6 gap-6">
+                      <p className="text-dark text-xl font-extralight ">
+                        {service.text}
+                      </p>
+                      <ul className="list-disc list-inside space-y-2 pl-6">
+                        {service.items.map((item) => (
+                          <li key={item} className="text-dark text-lg">
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                    <footer className="flex items-center p-6">
+                      <button
+                        className={`${service.customColor}  w-full ${service.bgBtn} px-6 py-3 rounded`}
+                      >
+                        {service.textBtn}
+                      </button>
+                    </footer>
+                  </section>
+                  // <Card
+                  //   key={service.title}
+                  //   bg={service.bg}
+                  //   bgBtn={service.bgBtn}
+                  //   title={t(`common.servicesForEveryNeed.cards.${i}.title`, {
+                  //     defaultValue: service.title,
+                  //   })}
+                  //   text={t(`common.servicesForEveryNeed.cards.${i}.text`, {
+                  //     defaultValue: service.text,
+                  //   })}
+                  //   items={service.items.map((item, idx) =>
+                  //     t(`common.servicesForEveryNeed.cards.${i}.items.${idx}`, {
+                  //       defaultValue: item,
+                  //     })
+                  //   )}
+                  //   index={i}
+                  //   mobileFullWidth={
+                  //     servicesForEveryNeed.length % 2 === 1 &&
+                  //     i === servicesForEveryNeed.length - 1
+                  //   }
+                  //   icon={
+                  //     <Image
+                  //       src={service.icon}
+                  //       alt={t(`common.servicesForEveryNeed.cards.${i}.title`)}
+                  //       className="w-24 h-24 sm:w-16 sm:h-16"
+                  //       width={96}
+                  //       height={96}
+                  //       fit="contain"
+                  //     />
+                  //   }
+                  //   label={t(`common.servicesForEveryNeed.cards.${i}.textBtn`, {
+                  //     defaultValue: service.textBtn,
+                  //   })}
+                  // />
+                ))}
+            </section>
+          </Row>
+        </RowsContent>
+      </Container>
       {/* ValuePropSection */}
       <ValuePropSectionTemplate
         title={t("common.ourServices.title", {

@@ -46,4 +46,8 @@
   --color-white: #ffffff;
   --color-black: #00000;
   --color-access: #9bb5b0;
+
+  --color-primary-card: #ecfdf5;
+  --color-secondary-card: #dbeafe;
+  --color-tertiary-card: #f3e8ff;
 }

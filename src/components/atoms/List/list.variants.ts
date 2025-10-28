@@ -21,6 +21,7 @@ export const listVariants = cva(
         dash: "list-none [&>li]:before:content-['-'] [&>li]:before:mr-2",
         check:
           "list-none [&>li]:before:content-['✓'] [&>li]:before:mr-2 [&>li]:before:text-green-600",
+        image: "list-inside", // marcador por imagen manejado vía style.listStyleImage
       },
       spacing: {
         none: "space-y-0",

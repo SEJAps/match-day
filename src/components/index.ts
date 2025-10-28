@@ -32,4 +32,5 @@ export {
   Picture,
   FeatureList,
   PlanComparisonTable,
+  IconList,
 } from "./organisms";

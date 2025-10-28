@@ -28,9 +28,7 @@ const FeatureTwoColumnTemplate: FC<FeatureTwoColumnTemplateProps> = ({
   className,
 }) => {
   return (
-    <aside
-      className={`flex flex-col md:flex-row container mx-auto ${className}`}
-    >
+    <aside className={`flex flex-col md:flex-row ${className}`}>
       <section className="flex-1 flex flex-col gap-6 p-6 ">
         <Heading as="h2" level="h3" weight="semibold" className="text-success">
           {heading}

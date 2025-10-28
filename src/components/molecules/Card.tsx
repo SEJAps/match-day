@@ -18,6 +18,10 @@ interface CardProps {
   label: string;
   icon?: ReactNode;
   /**
+   * Imagen a usar como marcador de la lista (en lugar de disco)
+   */
+  markerImageSrc?: string;
+  /**
    * Índice del elemento en el listado (0-based). Si es impar (index % 2 === 1),
    * la tarjeta móvil ocupará el 100% del ancho.
    */
@@ -39,6 +43,7 @@ const Card: FC<CardProps> = ({
   items,
   label,
   icon,
+  markerImageSrc,
   index,
   isOdd,
   mobileFullWidth,
@@ -73,16 +78,17 @@ const Card: FC<CardProps> = ({
           </Heading>
         </header>
 
-        <Text size="base" className="mx-8 mr-4">
+        <Text size="base" color="dark" className="mx-8 mr-4">
           {text}
         </Text>
 
         {items && items.length > 0 && (
           <List
-            variant="disc"
+            variant={markerImageSrc ? "image" : "disc"}
             spacing="sm"
             padding="lg"
             className="flex flex-col italic my-4"
+            markerSrc={markerImageSrc}
           >
             {items.map((item) => (
               <ListItem key={item} size="sm" color="italic">
