@@ -96,22 +96,7 @@ const ContactPage: FC = () => {
           </section>
         </article>
       </IntroSectionTemplate>
-      <ContactSection
-        id="contact-form"
-        title={t("pages:contact.contact.title")}
-        subtitle={t("pages:contact.contact.subtitle")}
-        description={t("pages:contact.contact.description")}
-        highlights={CONTACT_PAGE.contact.highlights?.map((_h, i) =>
-          t(`pages:contact.contact.highlights.${i}`),
-        )}
-        info={{
-          address: t("pages:contact.contact.info.address"),
-          phone: t("pages:contact.contact.info.phone"),
-          email: t("pages:contact.contact.info.email"),
-        }}
-        mapImageUrl={CONTACT_PAGE.contact.mapImageUrl}
-        onSubmit={handleOnSubmit}
-      />
+      <ContactSection id="contact-form" onSubmit={handleOnSubmit} />
     </>
   );
 };

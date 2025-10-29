@@ -32,60 +32,6 @@
         }
       },
       "mediaAlt": "Plataforma"
-    },
-    "servicesForEveryNeed": {
-      "title": "Servicios para cada necesidad",
-      "description": "Herramientas especializadas para jugadores, equipos y clubes",
-      "cards": {
-        "0": {
-          "title": "Jugadores",
-          "text": "Accede a tus estadísticas individuales, crea un perfil profesional y entra en el radar de otros equipos a través del marketplace. La herramienta ideal para destacar y encontrar nuevas oportunidades.",
-          "items": {
-            "0": "Perfil de jugador completo",
-            "1": "Estadísticas personales",
-            "2": "Acceso al mercado de fichajes",
-            "3": "Seguimiento de rendimiento"
-          },
-          "textBtn": "Para Jugadores"
-        },
-        "1": {
-          "title": "Equipos",
-          "text": "Organiza entrenamientos, crea alineaciones, registra estadísticas de partidos y gestiona convocatorias con una sola herramienta. Todo lo que tu cuerpo técnico necesita, desde el banquillo hasta el mercado de fichajes.",
-          "items": {
-            "0": "Gestión y estadísticas de plantilla",
-            "1": "Creación y organización de entrenamientos",
-            "2": "Búsqueda de jugadores en el mercado",
-            "3": "Análisis de rendimiento"
-          },
-          "textBtn": "Para Equipos"
-        },
-        "2": {
-          "title": "Clubs",
-          "text": "Gestiona todos tus equipos desde un solo panel. Organiza plantillas, analiza el rendimiento, potencia la estructura deportiva y refuerza cada categoría con el marketplace de fichajes.",
-          "items": {
-            "0": "Gestión multi-equipo",
-            "1": "Dashboard ejecutivo",
-            "2": "Mercado de fichajes avanzado",
-            "3": "Reportes personalizados"
-          },
-          "textBtn": "Para Clubes"
-        }
-      }
-    },
-    "contact": {
-      "title": "Contacta con nosotros",
-      "subtitle": "¿Listo para revolucionar tu experiencia futbolística?",
-      "description": "Estamos aquí para ayudarte. Cuéntanos tu caso y te responderemos en menos de 24 horas.",
-      "highlights": {
-        "0": "Soporte en español e inglés",
-        "1": "Respuesta media en 24h",
-        "2": "Equipo técnico y comercial"
-      },
-      "info": {
-        "address": "Calle Ejemplo 123, Madrid, España",
-        "phone": "+34 123 456 789",
-        "email": "hola@matchday.com"
-      }
     }
   },
   "players": {
@@ -312,20 +258,18 @@
         "label": "Escribir ahora"
       }
     },
-    "contact": {
-      "title": "Contacta con nosotros",
-      "subtitle": "¿Listo para revolucionar tu experiencia futbolística?",
-      "description": "Estamos aquí para ayudarte. Cuéntanos tu caso y te responderemos en menos de 24 horas.",
-      "highlights": {
-        "0": "Soporte en español e inglés",
-        "1": "Respuesta media en 24h",
-        "2": "Equipo técnico y comercial"
-      },
-      "info": {
-        "address": "Calle Ejemplo 123, Madrid, España",
-        "phone": "+34 123 456 789",
-        "email": "hola@matchday.com"
-      }
+    "title": "Contacta con nosotros",
+    "subtitle": "¿Listo para revolucionar tu experiencia futbolística?",
+    "description": "Estamos aquí para ayudarte. Cuéntanos tu caso y te responderemos en menos de 24 horas.",
+    "highlights": {
+      "0": "Soporte en español e inglés",
+      "1": "Respuesta media en 24h",
+      "2": "Equipo técnico y comercial"
+    },
+    "info": {
+      "address": "Calle Ejemplo 123, Madrid, España",
+      "phone": "+34 123 456 789",
+      "email": "hola@matchday.com"
     },
     "toast": {
       "success": "Mensaje enviado. Te responderemos pronto ✉️",

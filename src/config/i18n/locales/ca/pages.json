@@ -32,60 +32,6 @@
         }
       },
       "mediaAlt": "Plataforma"
-    },
-    "servicesForEveryNeed": {
-      "title": "Serveis per a cada necessitat",
-      "description": "Eines especialitzades per a jugadors, equips i clubs",
-      "cards": {
-        "0": {
-          "title": "Jugadors",
-          "text": "Accedeix a les teves estadístiques individuals, crea un perfil professional i entra al radar d'altres equips a través del marketplace. L'eina ideal per destacar i trobar noves oportunitats.",
-          "items": {
-            "0": "Perfil de jugador complet",
-            "1": "Estadístiques personals",
-            "2": "Accés al mercat de fitxatges",
-            "3": "Seguiment del rendiment"
-          },
-          "textBtn": "Per a Jugadors"
-        },
-        "1": {
-          "title": "Equips",
-          "text": "Organitza entrenaments, crea alineacions, registra estadístiques de partits i gestiona convocatòries amb una sola eina. Tot el que necessita el teu cos tècnic, des de la banqueta fins al mercat de fitxatges.",
-          "items": {
-            "0": "Gestió i estadístiques de plantilla",
-            "1": "Creació i organització d'entrenaments",
-            "2": "Cerca de jugadors al mercat",
-            "3": "Anàlisi de rendiment"
-          },
-          "textBtn": "Per a Equips"
-        },
-        "2": {
-          "title": "Clubs",
-          "text": "Gestiona tots els teus equips des d'un sol panell. Organitza plantilles, analitza el rendiment, potencia l'estructura esportiva i reforça cada categoria amb el mercat de fitxatges.",
-          "items": {
-            "0": "Gestió multi-equip",
-            "1": "Quadre de comandament executiu",
-            "2": "Mercat de fitxatges avançat",
-            "3": "Informes personalitzats"
-          },
-          "textBtn": "Per a Clubs"
-        }
-      }
-    },
-    "contact": {
-      "title": "Contacta amb nosaltres",
-      "subtitle": "A punt per revolucionar la teva experiència futbolística?",
-      "description": "Som aquí per ajudar-te. Explica'ns el teu cas i et respondrem en menys de 24 hores.",
-      "highlights": {
-        "0": "Suport en espanyol i anglès",
-        "1": "Resposta mitjana en 24h",
-        "2": "Equip tècnic i comercial"
-      },
-      "info": {
-        "address": "Carrer Exemple 123, Madrid, Espanya",
-        "phone": "+34 123 456 789",
-        "email": "hola@matchday.com"
-      }
     }
   },
   "players": {
@@ -312,20 +258,18 @@
         "label": "Escriure ara"
       }
     },
-    "contact": {
-      "title": "Contacta amb nosaltres",
-      "subtitle": "A punt per revolucionar la teva experiència futbolística?",
-      "description": "Som aquí per ajudar-te. Explica'ns el teu cas i et respondrem en menys de 24 hores.",
-      "highlights": {
-        "0": "Suport en espanyol i anglès",
-        "1": "Resposta mitjana en 24h",
-        "2": "Equip tècnic i comercial"
-      },
-      "info": {
-        "address": "Carrer Exemple 123, Madrid, Espanya",
-        "phone": "+34 123 456 789",
-        "email": "hola@matchday.com"
-      }
+    "title": "Contacta amb nosaltres",
+    "subtitle": "A punt per revolucionar la teva experiència futbolística?",
+    "description": "Som aquí per ajudar-te. Explica'ns el teu cas i et respondrem en menys de 24 hores.",
+    "highlights": {
+      "0": "Suport en espanyol i anglès",
+      "1": "Resposta mitjana en 24h",
+      "2": "Equip tècnic i comercial"
+    },
+    "info": {
+      "address": "Carrer Exemple 123, Madrid, Espanya",
+      "phone": "+34 123 456 789",
+      "email": "hola@matchday.com"
     },
     "toast": {
       "success": "Missatge enviat. Et respondrem aviat ✉️",

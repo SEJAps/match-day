@@ -12,7 +12,9 @@ import { atomicDesignRoute } from "./atomic-design-route";
 import RootLayout from "../layouts/RootLayout";
 import SingleLayout from "../layouts/SingleLayout";
 // Static pages (non-lazy for now; adjust later if heavy)
-const ServicesPage = lazy(() => import("../pages/static/ServicesPage"));
+const ServicesPage = lazy(
+  () => import("../pages/static/services/ServicesPage"),
+);
 const BlogPage = lazy(() => import("../pages/static/BlogPage"));
 const HelpCenterPage = lazy(() => import("../pages/static/HelpCenterPage"));
 const FeaturesPage = lazy(() => import("../pages/static/FeaturesPage"));

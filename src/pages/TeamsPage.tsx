@@ -5,7 +5,6 @@ import {
   Button,
   Text,
   Heading,
-  PlanComparisonTable,
 } from "@/components";
 import listItemImage from "@/assets/images/svg/list-item-image.svg";
 import { useTranslation } from "react-i18next";
@@ -14,7 +13,7 @@ import { RowsContent } from "@/components/organisms/RowsContent";
 import { Row } from "@/components/molecules/Row";
 import { ColumnContent } from "@/components/organisms/ColumnContent";
 import { Column } from "@/components/molecules/Column";
-import { PLAYERS_PAGE } from "@/config";
+import ExploreSubscriptionPlans from "./static/ExploreSubscriptionPlans";
 
 const TeamsPage: FC = () => {
   const { t } = useTranslation();
@@ -295,30 +294,7 @@ const TeamsPage: FC = () => {
           </Row>
         </RowsContent>
       </Container>
-      <Container fullWidth>
-        <RowsContent>
-          <Row>
-            <ColumnContent className="py-10 lg:py-20">
-              <Column bgColor="flex-1">
-                <div className="flex flex-col">
-                  <Heading as="h2" level="h3" color="white" align={"center"}>
-                    {t("pages:players.sections.subscriptionPlans.title")}
-                  </Heading>
-                  <article className="py-10 lg:py-20">
-                    {/* Explore subscription plans */}
-                    <PlanComparisonTable
-                      tiers={PLAYERS_PAGE.sections.subscriptionPlans.tiers}
-                      features={
-                        PLAYERS_PAGE.sections.subscriptionPlans.features
-                      }
-                    />
-                  </article>
-                </div>
-              </Column>
-            </ColumnContent>
-          </Row>
-        </RowsContent>
-      </Container>
+      <ExploreSubscriptionPlans />
     </Fragment>
   );
 };

@@ -32,60 +32,6 @@
         }
       },
       "mediaAlt": "Platform"
-    },
-    "servicesForEveryNeed": {
-      "title": "Services for every need",
-      "description": "Specialized tools for players, teams and clubs",
-      "cards": {
-        "0": {
-          "title": "Players",
-          "text": "Access your individual stats, build a professional profile and get on the radar of other teams through the marketplace. The right tool to stand out and find new opportunities.",
-          "items": {
-            "0": "Complete player profile",
-            "1": "Personal statistics",
-            "2": "Access to transfer market",
-            "3": "Performance tracking"
-          },
-          "textBtn": "For Players"
-        },
-        "1": {
-          "title": "Teams",
-          "text": "Organize trainings, create lineups, record match stats and manage call-ups with a single tool. Everything your staff needs, from the bench to the transfer market.",
-          "items": {
-            "0": "Squad management and statistics",
-            "1": "Training creation and organization",
-            "2": "Player search in the market",
-            "3": "Performance analysis"
-          },
-          "textBtn": "For Teams"
-        },
-        "2": {
-          "title": "Clubs",
-          "text": "Manage all your teams from a single panel. Organize squads, analyze performance, strengthen your sports structure and reinforce each category with the transfer market.",
-          "items": {
-            "0": "Multi-team management",
-            "1": "Executive dashboard",
-            "2": "Advanced transfer market",
-            "3": "Custom reports"
-          },
-          "textBtn": "For Clubs"
-        }
-      }
-    },
-    "contact": {
-      "title": "Contact us",
-      "subtitle": "Ready to revolutionize your football experience?",
-      "description": "We’re here to help. Tell us about your case and we’ll get back to you within 24 hours.",
-      "highlights": {
-        "0": "Support in Spanish and English",
-        "1": "Average response time: 24h",
-        "2": "Technical and sales team"
-      },
-      "info": {
-        "address": "Example Street 123, Madrid, Spain",
-        "phone": "+34 123 456 789",
-        "email": "hello@matchday.com"
-      }
     }
   },
   "players": {
@@ -312,20 +258,18 @@
         "label": "Write now"
       }
     },
-    "contact": {
-      "title": "Contact us",
-      "subtitle": "Ready to revolutionize your football experience?",
-      "description": "We’re here to help. Tell us about your case and we’ll get back to you within 24 hours.",
-      "highlights": {
-        "0": "Support in Spanish and English",
-        "1": "Average response time: 24h",
-        "2": "Technical and sales team"
-      },
-      "info": {
-        "address": "Example Street 123, Madrid, Spain",
-        "phone": "+34 123 456 789",
-        "email": "hello@matchday.com"
-      }
+    "title": "Contact us",
+    "subtitle": "Ready to revolutionize your football experience?",
+    "description": "We’re here to help. Tell us about your case and we’ll get back to you within 24 hours.",
+    "highlights": {
+      "0": "Support in Spanish and English",
+      "1": "Average response time: 24h",
+      "2": "Technical and sales team"
+    },
+    "info": {
+      "address": "Example Street 123, Madrid, Spain",
+      "phone": "+34 123 456 789",
+      "email": "hello@matchday.com"
     },
     "toast": {
       "success": "Message sent. We’ll get back to you soon ✉️",
