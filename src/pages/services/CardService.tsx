@@ -1,4 +1,4 @@
-import { Image } from "@/components";
+import { Heading, Image, Text } from "@/components";
 import Card from "@/components/atoms/Card";
 import { type FC, type ReactNode } from "react";
 
@@ -26,7 +26,7 @@ const CardService: FC<CardServiceProps> = ({
 }) => {
   return (
     <article
-      className={`${bg} flex flex-col justify-between gap-6 rounded-2xl shadow-sm`}
+      className={`${bg} flex flex-col justify-between gap-4 rounded-2xl shadow-sm`}
     >
       <Card
         top={
@@ -37,16 +37,23 @@ const CardService: FC<CardServiceProps> = ({
                 alt={picture.alt}
                 width={picture.width}
                 height={picture.height}
+                className="w-32 lg:w-42 aspect-auto"
               />
             )}
 
-            <h2 className="text-dark text-4xl font-bold">{title}</h2>
+            <Heading
+              as="h2"
+              level="h2"
+              className="text-3xl lg:text-4xl font-extrabold text-dark/90"
+            >
+              {title}
+            </Heading>
           </header>
         }
         bottom={<footer className="flex p-6">{footer}</footer>}
       >
-        <article className=" flex flex-col p-6 gap-6">
-          <p className="text-dark text-xl font-extralight ">{description}</p>
+        <article className="flex flex-col px-6 gap-6 text-sm lg:text-lg">
+          <Text color="dark">{description}</Text>
           {list && list}
         </article>
       </Card>

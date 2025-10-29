@@ -167,17 +167,17 @@ const MatchDay: FC = () => {
                   "pages:services.servicesForEveryNeed.cards.0.text"
                 )}
                 list={
-                  <ul className="list-disc list-inside space-y-2 pl-6">
-                    <li className="text-dark text-lg">
+                  <ul className="list-disc list-inside space-y-2 pl-4 text-dark/70">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.0.items.0")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.0.items.1")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.0.items.2")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.0.items.3")}
                     </li>
                   </ul>
@@ -203,17 +203,17 @@ const MatchDay: FC = () => {
                   "pages:services.servicesForEveryNeed.cards.1.text"
                 )}
                 list={
-                  <ul className="list-disc list-inside space-y-2 pl-6">
-                    <li className="text-dark text-lg">
+                  <ul className="list-disc list-inside space-y-2 pl-4 text-dark/70">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.1.items.0")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.1.items.1")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.1.items.2")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.1.items.3")}
                     </li>
                   </ul>
@@ -233,23 +233,23 @@ const MatchDay: FC = () => {
                   width: 152,
                   height: 152,
                 }}
-                bg="bg-secondary-card"
+                bg="bg-tertiary-card"
                 title={t("pages:services.servicesForEveryNeed.cards.2.title")}
                 description={t(
                   "pages:services.servicesForEveryNeed.cards.2.text"
                 )}
                 list={
-                  <ul className="list-disc list-inside space-y-2 pl-6">
-                    <li className="text-dark text-lg">
+                  <ul className="list-disc list-inside space-y-2 pl-4 text-dark/70">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.2.items.0")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.2.items.1")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.2.items.2")}
                     </li>
-                    <li className="text-dark text-lg">
+                    <li>
                       {t("pages:services.servicesForEveryNeed.cards.2.items.3")}
                     </li>
                   </ul>
