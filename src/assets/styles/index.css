@@ -150,3 +150,9 @@ a {
 .modal-panel-animate-center-out {
   animation: modal-panel-out-center 140ms ease-in;
 }
+
+/* Enlace activo reutilizable */
+.is-active {
+  color: var(--color-success) !important;
+  font-weight: 600;
+}

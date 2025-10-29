@@ -56,4 +56,13 @@
   --color-player: var(--color-info);
   --color-team: var(--color-success);
   --color-club: #a855f7;
+
+  --list-image-soccer: url("./soccer.svg");
+  --list-image-soccer-x16: url("./soccer-x16.svg");
+  --list-image-soccer-28: url("./soccer-x28.svg");
+  --list-image-soccer-x32: url("./soccer-x32.svg");
+  --list-image-soccer-x64: url("./soccer-x64.svg");
+  --list-image-soccer: url("./soccer.svg");
+  --list-image-soccer-ball: url("./soccer-ball.svg");
+  --list-image-logo: url("./logo.svg");
 }

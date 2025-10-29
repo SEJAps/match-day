@@ -53,7 +53,9 @@ const MainHeader: FC<{
             <NavLink
               to="/"
               className={({ isActive }) =>
-                !isActive ? "text-[#01B748] text-lg" : "text-[#01B748] text-lg"
+                isActive
+                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
+                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
               }
             >
               {t("nav.home", { defaultValue: "Home" })}
@@ -61,7 +63,9 @@ const MainHeader: FC<{
             <NavLink
               to="/players"
               className={({ isActive }) =>
-                !isActive ? "text-lg" : "text-[#10B989] text-lg"
+                isActive
+                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
+                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
               }
             >
               {t("nav.players", { defaultValue: "Jugadores" })}
@@ -69,7 +73,9 @@ const MainHeader: FC<{
             <NavLink
               to="/teams"
               className={({ isActive }) =>
-                !isActive ? "text-lg" : "text-[#10B989] text-lg"
+                isActive
+                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
+                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
               }
             >
               {t("nav.teams", { defaultValue: "Equipos" })}
@@ -77,7 +83,9 @@ const MainHeader: FC<{
             <NavLink
               to="/clubs"
               className={({ isActive }) =>
-                !isActive ? "text-lg" : "text-[#10B989] text-lg"
+                isActive
+                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
+                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
               }
             >
               {t("nav.clubs", { defaultValue: "Clubs" })}
@@ -85,7 +93,9 @@ const MainHeader: FC<{
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                !isActive ? "text-lg" : "text-[#10B989] text-lg"
+                isActive
+                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
+                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
               }
             >
               {t("nav.contact", { defaultValue: "Contacto" })}
@@ -140,18 +150,19 @@ const MainHeader: FC<{
         placement="right"
         size="full"
       >
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 relative">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-lg font-semibold text-dark">
-              {t("components.header.menuTitle", { defaultValue: "Menú" })}
-            </span>
+            <img
+              src={logoSm}
+              alt="Match Day"
+              width={170}
+              height={41}
+              className="h-10 w-auto"
+            />
             <Button
-              aria-label={t("components.header.closeMenu", {
-                defaultValue: "Cerrar menú",
-              })}
+              aria-label={t("components.header.closeMenu")}
               variant="ghost"
               size="sm"
-              className="text-dark"
               onClick={close}
             >
               <svg
@@ -170,32 +181,72 @@ const MainHeader: FC<{
               </svg>
             </Button>
           </div>
-          <nav className="flex flex-col gap-4 text-success">
-            <NavLink to="/" onClick={close}>
-              {t("nav.home", { defaultValue: "Home" })}
+          <nav className="flex flex-col gap-5 text-2xl text-dark">
+            <NavLink
+              to="/"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive
+                  ? "is-active hover:opacity-80 transition-opacity"
+                  : "hover:opacity-80 transition-opacity"
+              }
+            >
+              {t("nav.home")}
             </NavLink>
-            <NavLink to="/players" onClick={close}>
-              {t("nav.players", { defaultValue: "Jugadores" })}
+            <NavLink
+              to="/players"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive
+                  ? "is-active hover:opacity-80 transition-opacity"
+                  : "hover:opacity-80 transition-opacity"
+              }
+            >
+              {t("nav.players")}
             </NavLink>
-            <NavLink to="/teams" onClick={close}>
-              {t("nav.teams", { defaultValue: "Equipos" })}
+            <NavLink
+              to="/teams"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive
+                  ? "is-active hover:opacity-80 transition-opacity"
+                  : "hover:opacity-80 transition-opacity"
+              }
+            >
+              {t("nav.teams")}
             </NavLink>
-            <NavLink to="/clubs" onClick={close}>
-              {t("nav.clubs", { defaultValue: "Clubs" })}
+            <NavLink
+              to="/clubs"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive
+                  ? "is-active hover:opacity-80 transition-opacity"
+                  : "hover:opacity-80 transition-opacity"
+              }
+            >
+              {t("nav.clubs")}
             </NavLink>
-            <NavLink to="/contact" onClick={close}>
-              {t("nav.contact", { defaultValue: "Contacto" })}
+            <NavLink
+              to="/contact"
+              onClick={close}
+              className={({ isActive }) =>
+                isActive
+                  ? "is-active hover:opacity-80 transition-opacity"
+                  : "hover:opacity-80 transition-opacity"
+              }
+            >
+              {t("nav.contact")}
             </NavLink>
           </nav>
           <Button
             variant="primary"
-            size="default"
-            className="w-full bg-success"
+            size="xl"
+            className="w-full bg-success text-xl"
             onClick={close}
           >
             {t("common.signIn", { defaultValue: "Acceder" })}
           </Button>
-          <div className=" flex items-center justify-center gap-3 absolute top-5 right-18 p-1 rounded-md">
+          <div className=" flex items-center justify-center gap-3 absolute  right-18 p-1 rounded-md">
             <LanguageSwitcher />
           </div>
         </div>

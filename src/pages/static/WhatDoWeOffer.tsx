@@ -9,18 +9,23 @@ const WhatDoWeOffer: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Container fullWidth>
-      <RowsContent className="gap-6 py-10 lg:py-20">
+      <RowsContent className="gap-6 lg:gap-20 pt-10 lg:pt-20">
         <Row className="px-6">
-          <article>
-            <Heading as="h2" level="h1" color="white" align={"center"}>
+          <article className="flex flex-col space-y-6">
+            <Heading as="h2" level="h2" color="white" align={"center"}>
               {t("pages:services.intro.title")}
             </Heading>
-            <Text className="text-center max-w-3xl mx-auto">
+            <Text
+              size="2xl"
+              color="white"
+              align="center"
+              className="max-w-4xl mx-auto"
+            >
               {t("pages:services.intro.description")}
             </Text>
           </article>
         </Row>
-        <Row className="px-6">
+        <Row className="pb-10 lg:pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 px-6">
             {SERVICES_PAGE_CARDS.map((c, idx) => (
               <ServiceCard

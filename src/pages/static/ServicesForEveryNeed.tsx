@@ -1,9 +1,8 @@
-import { Heading, Text } from "@/components";
+import { Heading, List, ListItem, Text } from "@/components";
 import { Row } from "@/components/molecules/Row";
 import { RowsContent } from "@/components/organisms/RowsContent";
 import type { FC } from "react";
 import CardService from "./services/CardService";
-
 import teamsServices from "@/assets/images/svg/teams-services.svg";
 import playersServices from "@/assets/images/svg/players-services.svg";
 import clubsServices from "@/assets/images/svg/clubs-services.svg";
@@ -13,16 +12,18 @@ import { Container } from "@/components/atoms/Container";
 const ServicesForEveryNeeds: FC = () => {
   const { t } = useTranslation();
   return (
-    <Container fullWidth bgColor="bg-white">
+    <Container fullWidth bgColor="bg-white/98">
       <RowsContent className="gap-6 py-10 lg:py-20">
-        <Row className="px-6">
+        <Row className="p-6 lg:px-0">
           <article className="flex items-center flex-col space-y-6">
-            <Heading as="h2" level="h1" color="success" align="center">
+            <Heading as="h2" level="h2" color="success" align="center">
               {t("pages:services.servicesForEveryNeed.title")}
             </Heading>
-            <Text size="xl" className="text-neutral-700 mb-6" align="center">
-              {t("pages:services.servicesForEveryNeed.description")}
-            </Text>
+            <div className="max-w-6xl mx-auto">
+              <Text size="2xl" color="dark" align="center">
+                {t("pages:services.servicesForEveryNeed.description")}
+              </Text>
+            </div>
           </article>
         </Row>
         <Row className="px-6">
@@ -40,20 +41,20 @@ const ServicesForEveryNeeds: FC = () => {
                 "pages:services.servicesForEveryNeed.cards.0.text",
               )}
               list={
-                <ul className="list-disc list-inside space-y-2 pl-4 text-dark/70">
-                  <li>
+                <List variant="image" markerSrc={"soccer.svg"} padding="none">
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.0.items.0")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.0.items.1")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.0.items.2")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.0.items.3")}
-                  </li>
-                </ul>
+                  </ListItem>
+                </List>
               }
               footer={
                 <button
@@ -76,20 +77,20 @@ const ServicesForEveryNeeds: FC = () => {
                 "pages:services.servicesForEveryNeed.cards.1.text",
               )}
               list={
-                <ul className="list-disc list-inside space-y-2 pl-4 text-dark/70">
-                  <li>
+                <List variant="image" markerSrc={"soccer.svg"} padding="none">
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.1.items.0")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.1.items.1")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.1.items.2")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.1.items.3")}
-                  </li>
-                </ul>
+                  </ListItem>
+                </List>
               }
               footer={
                 <button
@@ -112,20 +113,20 @@ const ServicesForEveryNeeds: FC = () => {
                 "pages:services.servicesForEveryNeed.cards.2.text",
               )}
               list={
-                <ul className="list-disc list-inside space-y-2 pl-4 text-dark/70">
-                  <li>
+                <List variant="image" markerSrc={"soccer.svg"} padding="none">
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.2.items.0")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.2.items.1")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.2.items.2")}
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {t("pages:services.servicesForEveryNeed.cards.2.items.3")}
-                  </li>
-                </ul>
+                  </ListItem>
+                </List>
               }
               footer={
                 <button

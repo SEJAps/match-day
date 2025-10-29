@@ -35,7 +35,6 @@ const StandOutWithProfessionalProfile: React.FC = () => {
                 <article>
                   <FeatureList
                     align="center"
-                    iconSize={20}
                     itemColor="white"
                     items={[
                       {
@@ -47,14 +46,14 @@ const StandOutWithProfessionalProfile: React.FC = () => {
                       },
                       {
                         text: t(
-                          "pages.players.sections.professionalProfile.items.1",
+                          "pages:players.sections.professionalProfile.items.1",
                         ),
                         iconSrc: listItemImage,
                         iconAlt: "Añadir alt",
                       },
                       {
                         text: t(
-                          "pages.players.sections.professionalProfile.items.2",
+                          "pages:players.sections.professionalProfile.items.2",
                         ),
                         iconSrc: listItemImage,
                         iconAlt: "Añadir alt",

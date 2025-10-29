@@ -11,7 +11,8 @@ type MarkerVariant =
   | "square"
   | "circle"
   | "dash"
-  | "check";
+  | "check"
+  | "image";
 
 type SpacingVariant = "none" | "sm" | "base" | "lg" | "xl";
 type PaddingVariant = "none" | "sm" | "base" | "lg" | "xl";
@@ -27,6 +28,8 @@ export interface FeatureItem {
 interface FeatureListProps {
   items: FeatureItem[];
   variant?: MarkerVariant; // marcador cuando no hay iconos
+  /** URL de la imagen a usar como marcador cuando variant = "image" */
+  markerSrc?: string;
   spacing?: SpacingVariant;
   padding?: PaddingVariant;
   listClassName?: string; // clases para la lista (ul/ol)
@@ -40,11 +43,12 @@ interface FeatureListProps {
 const FeatureList: FC<FeatureListProps> = ({
   items,
   variant = "none",
+  markerSrc,
   spacing = "base",
-  padding = "base",
+  padding = "none",
   listClassName,
   itemClassName,
-  iconSize = 20,
+  iconSize,
   align = "start",
   iconClassName,
   itemColor,
@@ -57,7 +61,7 @@ const FeatureList: FC<FeatureListProps> = ({
         variant="none"
         spacing={spacing}
         padding={padding}
-        className={`flex flex-col  mx-auto md:min-w-[648px] ${listClassName}`}
+        className={`flex flex-col  mx-auto md:min-w-96 ${listClassName}`}
       >
         {items.map((item, idx) => {
           // Si es inpar al aderecha si es para izquierda
@@ -97,6 +101,7 @@ const FeatureList: FC<FeatureListProps> = ({
   return (
     <List
       variant={variant}
+      markerSrc={markerSrc}
       spacing={spacing}
       padding={padding}
       className={listClassName}

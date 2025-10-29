@@ -71,23 +71,21 @@ const ContactPage: FC = () => {
           </section>
         }
       >
-        <article className="bg-[#10B981]/10 max-w-80 sm:max-w-[512px] mx-auto py-12 px-6 rounded-lg flex flex-col gap-4">
+        <article className="italic bg-[#10B981]/10 max-w-80 sm:max-w-[512px] mx-auto py-12 px-6 rounded-lg flex flex-col gap-4">
           {CONTACT_PAGE.contact.description && (
-            <Text className="text-white" size={"xl"} align="center">
-              {t("pages:contact.contact.description")}
+            <Text size="2xl" align="center">
+              {t("pages:contact.subtitle")}
             </Text>
           )}
-          <section className="mt-2 px-6">
+          <section className="px-6 text-center">
             <FeatureList
-              listClassName="bg-transparent"
-              iconSize={24}
-              align="start"
-              itemColor="white"
+              variant="image"
+              markerSrc="soccer-x16.svg"
               items={
                 CONTACT_PAGE.contact.highlights?.map((_text, i) => ({
                   text: (
                     <span className="text-sm sm:text-base md:text-lg text-white">
-                      {t(`pages:contact.contact.highlights.${i}`)}
+                      {t(`pages:contact.highlights.${i}`)}
                     </span>
                   ),
                 })) ?? []

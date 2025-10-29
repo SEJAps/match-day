@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from "react";
 import { Heading, Text } from "@/components";
-import { Button } from "@/components/atoms";
+import { Button, List, ListItem } from "@/components/atoms";
 import { useTranslation } from "react-i18next";
 import { RowsContent } from "./RowsContent";
 import { Row } from "../molecules/Row";
@@ -43,30 +43,35 @@ const ContactSection: FC<ContactSectionProps> = ({
       <RowsContent className={`py-10 lg:py-20`}>
         <Row>
           <section id={id} className={`flex flex-col`}>
-            <header className="flex flex-col items-center gap-8 p-6">
+            <header className="flex flex-col items-center gap-4 p-6">
               <Heading as="h2" level="h1" align="center" color="success">
                 {t("pages:contact.title")}
               </Heading>
-              <Text align="center" className="text-dark">
+              <Text align="center" size="2xl" className="text-dark">
                 {t("pages:contact.subtitle")}
               </Text>
-              <Text align="center" className="text-dark mt-4">
-                {t("pages:contact.description")}
-              </Text>
-              <ul className="max-w-96">
-                <li className="flex items-center gap-2">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-success" />
-                  {t(`pages:contact.highlights.0`)}
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-success" />
-                  {t(`pages:contact.highlights.1`)}
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-success" />
-                  {t(`pages:contact.highlights.2`)}
-                </li>
-              </ul>
+              <section className="flex flex-col items-center gap-4 italic">
+                <Text align="center" size="2xl" className="text-dark">
+                  {t("pages:contact.description")}
+                </Text>
+                <article>
+                  <List
+                    variant="image"
+                    markerSrc="soccer-x16.svg"
+                    className="p-0 space-y-2"
+                  >
+                    <ListItem className="text-xl">
+                      {t(`pages:contact.highlights.0`)}
+                    </ListItem>
+                    <ListItem className="text-xl">
+                      {t(`pages:contact.highlights.1`)}
+                    </ListItem>
+                    <ListItem className="text-xl">
+                      {t(`pages:contact.highlights.2`)}
+                    </ListItem>
+                  </List>
+                </article>
+              </section>
             </header>
 
             <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6">

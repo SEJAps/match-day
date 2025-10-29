@@ -5,7 +5,7 @@ import { Row } from "@/components/molecules/Row";
 import { ColumnContent } from "@/components/organisms/ColumnContent";
 import { RowsContent } from "@/components/organisms/RowsContent";
 import { MATCHDAY_PAGE } from "@/config/pages/matchday";
-import platform from "@/assets/images/png/platform.png";
+import useAppPng from "@/assets/images/png/bg-use-app.png";
 import { useTranslation } from "react-i18next";
 
 const AllInOne: React.FC = () => {
@@ -13,47 +13,53 @@ const AllInOne: React.FC = () => {
   return (
     <Container fullWidth bgColor="bg-white">
       <RowsContent className="gap-6 py-10 lg:py-20">
-        <Row className="px-6">
+        <Row className="px-6 pt-10 lg:pt-20">
           <article>
-            <Heading as="h2" level="h1" color="success" align={"center"}>
+            <Heading as="h2" level="h2" color="success" align={"center"}>
               {t("pages:matchday.intro.heading")}
             </Heading>
-            <Text className="text-center max-w-3xl mx-auto">
-              {t("pages:matchday.intro.paragraph")}
-            </Text>
+            <div className="max-w-6xl mx-auto p-6">
+              <Text color="dark" size="2xl" align="center">
+                {t("pages:matchday.intro.paragraph")}
+              </Text>
+            </div>
           </article>
         </Row>
         <Row className="px-6">
-          <ColumnContent className="gap-6 py-10 sm:py-20">
+          <ColumnContent className="gap-6 pt-5 sm:pt-10">
             <Column className="flex-9">
-              <section>
-                <article>
-                  <header>
-                    <Heading
-                      as="h2"
-                      level="h3"
-                      weight="semibold"
-                      className="text-success"
-                    >
-                      {t("pages:matchday.features.heading")}
-                    </Heading>
-                    <Text size="lg" className="text-neutral-700">
-                      {t("pages:matchday.features.description")}
-                    </Text>
-                  </header>
+              <article className="flex flex-col gap-6 ">
+                <header>
+                  <Heading
+                    as="h3"
+                    level="h3"
+                    weight="semibold"
+                    className="text-success"
+                  >
+                    {t("pages:matchday.features.heading")}
+                  </Heading>
+                  <Text size="2xl" className="text-neutral-700">
+                    {t("pages:matchday.features.description")}
+                  </Text>
+                </header>
 
-                  <article>
-                    <FeatureList
-                      items={MATCHDAY_PAGE.featuresSection.features}
-                    />
-                  </article>
+                <article>
+                  <FeatureList
+                    itemClassName="text-xl"
+                    align="center"
+                    items={MATCHDAY_PAGE.featuresSection.features}
+                  />
                 </article>
-              </section>
+              </article>
             </Column>
             <Column className="flex-3 flex justify-center items-center">
-              <section>
-                <img width={492} height={276} src={platform} alt={platform} />
-              </section>
+              <img
+                width={492}
+                height={276}
+                src={useAppPng}
+                alt={useAppPng}
+                className="aspect-auto w-full h-64 lg:h-96 object-cover rounded-2xl shadow-xl shadow-dark/30"
+              />
             </Column>
           </ColumnContent>
         </Row>

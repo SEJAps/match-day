@@ -1,4 +1,4 @@
-import listItemImage from "@/assets/images/svg/list-item-image.svg";
+import soccerImage from "@/assets/images/svg/soccer.svg";
 import ARTWORK from "@/assets/images/png/ARTWORK.png";
 import HERO_BG_LAYER_SRC from "@/assets/images/png/hero-bg-layer.png";
 import HERO_BG_MAIN_SRC from "@/assets/images/png/hero-bg-main.png";
@@ -72,17 +72,17 @@ export const MATCHDAY_PAGE: MatchDayPageConfig = {
     features: [
       {
         text: "Estadísticas en tiempo real",
-        iconSrc: listItemImage,
+        iconSrc: soccerImage,
         iconAlt: "Icono",
       },
       {
         text: "Mercado de fichajes integrado",
-        iconSrc: listItemImage,
+        iconSrc: soccerImage,
         iconAlt: "Icono",
       },
       {
         text: "Gestión completa de equipos",
-        iconSrc: listItemImage,
+        iconSrc: soccerImage,
         iconAlt: "Icono",
       },
     ],

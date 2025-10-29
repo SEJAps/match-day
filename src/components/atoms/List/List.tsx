@@ -18,6 +18,7 @@ interface ListProps extends VariantProps<typeof listVariants> {
    * Cuando variant = "image", URL de la imagen a usar como marcador (list-style-image)
    */
   markerSrc?: string;
+  align?: "left" | "center" | "right";
   style?: CSSProperties;
 }
 
@@ -29,11 +30,19 @@ const List: FC<ListProps> = ({
   padding,
   className,
   markerSrc,
+  align,
   style,
   ...props
 }) => {
   const Component = ordered ? "ol" : "ul";
   const isImageMarker = variant === "image";
+  const alignClass = align
+    ? align === "center"
+      ? "text-center"
+      : align === "right"
+        ? "text-right"
+        : "text-left"
+    : undefined;
   // Merge styles to support list-style-image without breaking external styles
   const mergedStyle = {
     ...style,
@@ -44,7 +53,7 @@ const List: FC<ListProps> = ({
 
   return (
     <Component
-      className={`list-none list-inside ${cn(listVariants({ variant, spacing, padding }), className)} `}
+      className={`list-none list-inside ${cn(listVariants({ variant, spacing, padding }), alignClass, className)} `}
       {...props}
       style={mergedStyle}
     >
