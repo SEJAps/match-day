@@ -235,7 +235,51 @@
         }
       }
     },
-    "sections": {}
+    "sections": {
+      "0": {
+        "title": "Gestiona múltiples equips des d'un sol lloc",
+        "description": "Oblida't de tenir cada categoria aïllada.",
+        "items": {
+          "0": "Amb MatchDay pots registrar tots els teus equips i plantilles en un únic panell de control.",
+          "1": "Des de futbol base fins al primer equip, mantingues tota la teva estructura connectada, organitzada i actualitzada.",
+          "2": "Amb el panell de comunicació interna del club podràs estar en contacte amb tota l'estructura del club de manera ràpida i senzilla."
+        }
+      },
+      "1": {
+        "title": "Coordina entrenadors i comparteix contingut tècnic",
+        "description": "Fomenta la continuïtat metodològica",
+        "items": {
+          "0": "Permet que els diferents entrenadors del club accedeixin a exercicis, jugades i plans d'entrenament compartits des d'una biblioteca comuna.",
+          "1": "Estalvia temps i millora la comunicació tècnica entre tots els membres del staff."
+        }
+      },
+      "2": {
+        "title": "Controla el rendiment i evolució dels teus jugadors",
+        "description": "Fes seguiment de cada jugador, encara que canviï de categoria.",
+        "items": {
+          "0": "Visualitza la seva evolució, estadístiques i minuts acumulats al llarg del temps.",
+          "1": "Ideal per a acadèmies i clubs que aposten per la formació, la projecció interna i el seguiment prolongat del talent.",
+          "2": "Mantingues un registre de lesions per jugador, temps de baixa i evolució."
+        }
+      },
+      "3": {
+        "title": "Compara el rendiment entre equips i temporades",
+        "description": "Accedeix a la nostra botonera intuïtiva i fàcil d'utilitzar.",
+        "items": {
+          "0": "Registra gols, assistències, targetes, tirs, duels guanyats, recuperacions, centres, etc.",
+          "1": "Evalua el rendiment individual i col·lectiu per detectar àrees de millora.",
+          "2": "Toma decisions més objectives, basades en dades."
+        }
+      },
+      "4": {
+        "title": "Personalitza la plataforma amb la imatge del teu club",
+        "description": "Obtén una experiència immersiva.",
+        "items": {
+          "0": "Puja el logo i colors del club perquè tota l'experiència dels teus entrenadors i equips es realitzi amb la teva identitat visual.",
+          "1": "Ideal per a entitats i clubs que volen mantenir una marca coherent i professional."
+        }
+      }
+    }
   },
   "contact": {
     "hero": {

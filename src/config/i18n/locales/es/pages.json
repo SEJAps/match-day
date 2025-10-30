@@ -235,7 +235,51 @@
         }
       }
     },
-    "sections": {}
+    "sections": {
+      "0": {
+        "title": "Gestiona múltiples equipos desde un solo lugar",
+        "description": "Olvídate de tener cada categoría aislada.",
+        "items": {
+          "0": "Con MatchDay puedes registrar todos tus equipos y plantillas en un único panel de control.",
+          "1": "Desde fútbol base hasta el primer equipo, mantén toda tu estructura conectada, organizada y actualizada.",
+          "2": "Con el panel de comunicación interna del club podrás estar en contacto con toda la estructura del club de manera rápida y sencilla."
+        }
+      },
+      "1": {
+        "title": "Coordina entrenadores y comparte contenido técnico",
+        "description": "Fomenta la continuidad metodológica",
+        "items": {
+          "0": "Permite que los distintos entrenadores del club accedan a ejercicios, jugadas y planes de entrenamiento compartidos desde una biblioteca común.",
+          "1": "Ahorra tiempo y mejora la comunicación técnica entre todos los miembros del staff."
+        }
+      },
+      "2": {
+        "title": "Controla el rendimiento y evolución de tus jugadores",
+        "description": "Haz seguimiento de cada jugador, aunque cambie de categoría.",
+        "items": {
+          "0": "Visualiza su evolución, estadísticas y minutos acumulados a lo largo del tiempo.",
+          "1": "Ideal para academias y clubes que apuestan por la formación, la proyección interna y el seguimiento prolongado del talento.",
+          "2": "Mantén un registro de lesiones por jugador, tiempos de baja y evolución."
+        }
+      },
+      "3": {
+        "title": "Compara el rendimiento entre equipos y temporadas",
+        "description": "Accede a nuestra botonera intuitiva y fácil de usar.",
+        "items": {
+          "0": "Registra goles, asistencias, tarjetas, tiros, duelos ganados, recuperaciones, centros, etc.",
+          "1": "Evalúa el rendimiento individual y colectivo para detectar áreas de mejora.",
+          "2": "Toma decisiones más objetivas, basadas en datos."
+        }
+      },
+      "4": {
+        "title": "Personaliza la plataforma con la imagen de tu club",
+        "description": "Obtén una experiencia inmersiva.",
+        "items": {
+          "0": "Sube el logo y colores del club para que toda la experiencia de tus entrenadores y equipos se realice con tu identidad visual.",
+          "1": "Ideal para entidades y clubes que quieren mantener una marca coherente y profesional."
+        }
+      }
+    }
   },
   "contact": {
     "hero": {

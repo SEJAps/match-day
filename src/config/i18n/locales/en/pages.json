@@ -235,7 +235,51 @@
         }
       }
     },
-    "sections": {}
+    "sections": {
+      "0": {
+        "title": "Manage multiple teams from one place",
+        "description": "Forget about having each category isolated.",
+        "items": {
+          "0": "With MatchDay you can register all your teams and squads in a single control panel.",
+          "1": "From grassroots football to the first team, keep your entire structure connected, organized, and up to date.",
+          "2": "With the club's internal communication panel you can be in contact with the entire club structure quickly and easily."
+        }
+      },
+      "1": {
+        "title": "Coordinate coaches and share technical content",
+        "description": "Foster methodological continuity throughout the club.",
+        "items": {
+          "0": "Allows different coaches in the club to access shared exercises, plays, and training plans from a common library.",
+          "1": "Saves time and improves technical communication among all staff members."
+        }
+      },
+      "2": {
+        "title": "Control player performance and development",
+        "description": "Track each player, even if they change categories.",
+        "items": {
+          "0": "Visualize their evolution, statistics, and accumulated minutes over time.",
+          "1": "Ideal for academies and clubs that focus on training, internal projection, and long-term talent tracking.",
+          "2": "Keep a record of injuries by player, downtime, and development."
+        }
+      },
+      "3": {
+        "title": "Compare performance between teams and seasons",
+        "description": "Access our intuitive and easy-to-use button panel.",
+        "items": {
+          "0": "Register goals, assists, cards, shots, duels won, recoveries, crosses, etc.",
+          "1": "Evaluate individual and collective performance to identify areas for improvement.",
+          "2": "Make more objective, data-driven decisions."
+        }
+      },
+      "4": {
+        "title": "Customize the platform with your club's image",
+        "description": "Obtain an immersive experience.",
+        "items": {
+          "0": "Upload the club's logo and colors so that the entire experience of your coaches and teams is carried out with your visual identity.",
+          "1": "Ideal for entities and clubs that want to maintain a coherent and professional brand."
+        }
+      }
+    }
   },
   "contact": {
     "hero": {
