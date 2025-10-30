@@ -143,7 +143,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <SingleLayout bgHeader="bg-neutral-800" />,
+    element: <SingleLayout />,
     children: [
       {
         path: "account",

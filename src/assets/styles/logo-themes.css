@@ -1,0 +1,71 @@
+:root {
+  /* Theme one */
+  --theme-one-live-color: red;
+  --theme-one-live-text: white;
+  --theme-one-day-color: #10b981;
+  --theme-one-stroke-day-color: #10b981;
+  --theme-one-match-color: #10b981;
+  --theme-one-stroke-match-color: #10b981;
+  --theme-one-stroke-color: #10b981;
+  --theme-one-fieldLine-color: #ffffff;
+  --theme-one-stroke-width: 0.33;
+  --theme-one-arrow-color: #0f6e5d;
+  --theme-one-stroke-arrow-color: #10b981;
+  --theme-one-bars-color: #0f6e5d;
+  --theme-one-bg-logo: #0d2128;
+  --theme-fieldLine-logo: #ffffff;
+  --theme-size-stroke-width-logo: 0.33;
+}
+
+:root {
+  /* Theme Dark */
+  --theme-one-live-color: red;
+  --theme-one-live-text: white;
+  --theme-one-day-color: #10b981;
+  --theme-one-stroke-day-color: #10b981;
+  --theme-one-match-color: #10b981;
+  --theme-one-stroke-match-color: #10b981;
+  --theme-one-stroke-color: #10b981;
+  --theme-one-fieldLine-color: #ffffff;
+  --theme-one-stroke-width: 0.33;
+  --theme-one-arrow-color: #0f6e5d;
+  --theme-one-stroke-arrow-color: #10b981;
+  --theme-one-bars-color: #0f6e5d;
+  --theme-one-bg-logo: #0d2128;
+  --theme-one-fieldLine-logo: #ffffff;
+}
+
+:root {
+  /* Theme Dark */
+  --theme-dark-live-color: rgb(92, 88, 88);
+  --theme-dark-live-text: rgb(238, 237, 232);
+  --theme-dark-day-color: #2feb93;
+  --theme-dark-stroke-day-color: #000000;
+  --theme-dark-match-color: #2feb93;
+  --theme-dark-stroke-match-color: #000000;
+  --theme-dark-stroke-color: #10b981;
+  --theme-dark-fieldLine-color: rgb(92, 88, 88);
+  --theme-dark-arrow-color: #ee4d0d;
+  --theme-dark-stroke-arrow-color: #000000;
+  --theme-dark-bars-color: rgb(207, 205, 205);
+  --theme-dark-bg-logo: rgb(2, 29, 36);
+  --theme-dark-fieldLine-logo: #ffffff;
+}
+
+@theme {
+  /* Tema del logo */
+  --color-liveColor: var(--theme-one-live-color);
+  --color-live-text: var(--theme-one-live-text);
+  --color-bg-logo: var(--theme-one-bg-logo);
+  --color-arrow-logo: var(--theme-one-arrow-color);
+  --color-bars-logo: var(--theme-one-bars-color);
+  --color-day-logo: var(--theme-one-day-color);
+  --color-match-logo: var(--theme-one-match-color);
+  --color-strokeMatchColor-logo: var(--theme-one-stroke-match-color);
+  --color-strokeDayColor-logo: var(--theme-one-stroke-day-color);
+  --color-stroke-logo: var(--theme-one-stroke-color);
+  --color-stroke-arrow-logo: var(--theme-one-stroke-arrow-color);
+
+  --color-fieldLine-logo: var(--theme-one-fieldLine-logo);
+  --size-stroke-width-logo: var(--theme-one-size-stroke-width-logo);
+}
