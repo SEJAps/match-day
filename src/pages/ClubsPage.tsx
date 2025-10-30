@@ -14,6 +14,7 @@ import { ColumnContent } from "@/components/organisms/ColumnContent";
 import { Column } from "@/components/molecules/Column";
 import ExploreSubscriptionPlans from "./static/ExploreSubscriptionPlans";
 import listItemImage from "@/assets/images/svg/list-item-image.svg";
+import BtnAccess from "@/components/molecules/Access";
 
 const ClubsPage: FC = () => {
   const { t } = useTranslation();
@@ -26,9 +27,7 @@ const ClubsPage: FC = () => {
         description={t("pages:clubs.hero.subtitle")}
         footer={
           <section className="w-full flex items-center justify-center gap-12">
-            <Button variant="success">
-              {t("pages:clubs.hero.buttons.0.label")}
-            </Button>
+            <BtnAccess label={t("pages:clubs.hero.buttons.0.label")} />
             <Button variant="view">
               {t("pages:clubs.hero.buttons.1.label")}
             </Button>

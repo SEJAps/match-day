@@ -16,6 +16,7 @@ import { Fragment, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
 import conectTeams from "@/assets/images/png/conecta-equipos.png";
+import BtnAccess from "@/components/molecules/Access";
 
 const PlayersPage: FC = () => {
   const { t } = useTranslation();
@@ -32,11 +33,7 @@ const PlayersPage: FC = () => {
         })}
         footer={
           <section className="w-full flex justify-center gap-12">
-            <Button variant="success">
-              {t("pages.players.heroCtas.0.label", {
-                defaultValue: "Regístrate",
-              })}
-            </Button>
+            <BtnAccess label={t("pages.players.heroCtas.0.label")} />
             <Button variant="view" className="p-0">
               <NavLink
                 to="/prices"

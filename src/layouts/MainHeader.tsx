@@ -6,6 +6,7 @@ import logoSm from "@/assets/images/svg/logo-sm.svg";
 import { LogoBrand, Modal } from "@/components/molecules";
 import { useModal } from "../hooks/useModal";
 import { useTranslation } from "react-i18next";
+import BtnAccess from "@/components/molecules/Access";
 
 const MainHeader: FC<{
   viewHeroLayer?: boolean;
@@ -133,9 +134,7 @@ const MainHeader: FC<{
         {/* Acceso solo en escritorio, en móvil va dentro del modal */}
         <aside className="hidden lg:flex lg:items-center py-6 md:pr-6 lg:gap-3">
           <LanguageSwitcher />
-          <Button variant="success" size="default">
-            {t("common.signIn", { defaultValue: "Acceder" })}
-          </Button>
+          <BtnAccess />
         </aside>
       </section>
 

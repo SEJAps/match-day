@@ -14,6 +14,7 @@ import AccessYourPersonalStatisticsForEachMatch from "./static/AccessYourPersona
 import StandOutWithProfessionalProfile from "./static/StandOutWithProfessionalProfile";
 import ConnectWithTeamsThroughTransferMarketplace from "./static/ConnectWithTeamsThroughTransferMarketplace";
 import ExploreSubscriptionPlans from "./static/ExploreSubscriptionPlans";
+import BtnAccess from "@/components/molecules/Access";
 
 const PlayersPage: FC = () => {
   const { t } = useTranslation();
@@ -26,9 +27,7 @@ const PlayersPage: FC = () => {
         description={t("pages:players.hero.description")}
         footer={
           <section className="w-full flex justify-center gap-12">
-            <Button variant="success">
-              {t("pages:players.heroCtas.0.label")}
-            </Button>
+            <BtnAccess label={t("pages:players.heroCtas.0.label")} />
             <Button variant="view" className="p-0">
               <NavLink
                 to="/prices"

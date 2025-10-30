@@ -58,11 +58,6 @@ export const router = createBrowserRouter([
         path: "*",
         element: <NotFoundPage />,
       },
-      // Alias route for logo showcase at root level for quick access
-
-      // Atomic design nested subtree
-
-      // 404 catch within layout
     ],
   },
   {

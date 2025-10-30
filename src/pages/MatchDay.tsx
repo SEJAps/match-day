@@ -6,6 +6,7 @@ import ServicesForEveryNeeds from "./static/ServicesForEveryNeed";
 import WhatDoWeOffer from "./static/WhatDoWeOffer";
 import { ContactSection, IntroSectionTemplate } from "@/components";
 import AllInOne from "./static/AllInOne";
+import BtnAccess from "@/components/molecules/Access";
 
 const MatchDay: React.FC = () => {
   const { t } = useTranslation();
@@ -59,9 +60,7 @@ const MatchDay: React.FC = () => {
         description={t("pages:matchday.hero.description")}
         footer={
           <section className="w-full flex items-center justify-center gap-12">
-            <Button variant="success">
-              {t("pages:matchday.hero.heroCtas.0.label")}
-            </Button>
+            <BtnAccess label={t("pages:matchday.hero.heroCtas.0.label")} />
             <Button variant="view">
               {t("pages:matchday.hero.heroCtas.1.label")}
             </Button>
