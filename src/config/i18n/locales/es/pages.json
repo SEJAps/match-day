@@ -219,33 +219,23 @@
   },
   "clubs": {
     "hero": {
-      "title": "Encuentra talento y potencia tu club",
+      "title": "Todo tu Club, en un solo lugar",
       "subtitle": "Más control. Más coordinación. Más resultados.",
       "description": "Centraliza la gestión de equipos, entrenadores y jugadores con Match Day. Profesionaliza tu estructura deportiva desde la base hasta el primer equipo.",
-      "list": {
-        "title": "Activa tu dirección deportiva",
-        "items": {
-          "0": "Publicación de vacantes",
-          "1": "Búsqueda avanzada de talento",
-          "2": "Gestión de cantera"
+      "items": {
+        "0": "Sin necesidad de instalación, acceso desde móvil o web",
+        "1": "Compatible con fútbol base, amateur y competitivo"
+      },
+      "buttons": {
+        "0": {
+          "label": "Register"
+        },
+        "1": {
+          "label": "See plans"
         }
       }
     },
-    "heroCtas": {
-      "0": {
-        "label": "Registrarse"
-      },
-      "1": {
-        "label": "Ver planes"
-      }
-    },
-    "title": "Clubs",
-    "description": "Página de Clubs: gestiona plantillas, explora mercado y potencia tu estructura deportiva.",
-    "features": {
-      "0": "Publicación de vacantes",
-      "1": "Búsqueda avanzada de talento",
-      "2": "Gestión de cantera"
-    }
+    "sections": {}
   },
   "contact": {
     "hero": {

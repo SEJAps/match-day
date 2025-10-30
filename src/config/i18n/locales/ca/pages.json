@@ -219,33 +219,23 @@
   },
   "clubs": {
     "hero": {
-      "title": "Troba talent i potencia el teu club",
+      "title": "Tot el teu Club, en un sol lloc",
       "subtitle": "Més control. Més coordinació. Més resultats.",
       "description": "Centralitza la gestió d'equips, entrenadors i jugadors amb Match Day. Professionalitza la teva estructura esportiva des de la base fins al primer equip.",
-      "list": {
-        "title": "Activa la teva direcció esportiva",
-        "items": {
-          "0": "Publicació de vacants",
-          "1": "Cerca avançada de talent",
-          "2": "Gestió de pedrera"
+      "items": {
+        "0": "Sense necessitat d'instal·lació, accés des de mòbil o web.",
+        "1": "Compatible amb futbol base, amateur i competitiu"
+      },
+      "buttons": {
+        "0": {
+          "label": "Registrar-se"
+        },
+        "1": {
+          "label": "Veure Plans"
         }
       }
     },
-    "heroCtas": {
-      "0": {
-        "label": "Registrar-se"
-      },
-      "1": {
-        "label": "Veure Plans"
-      }
-    },
-    "title": "Clubs",
-    "description": "Pàgina de Clubs: gestiona plantilles, explora el mercat i potencia la teva estructura esportiva.",
-    "features": {
-      "0": "Publicació de vacants",
-      "1": "Cerca avançada de talent",
-      "2": "Gestió de pedrera"
-    }
+    "sections": {}
   },
   "contact": {
     "hero": {

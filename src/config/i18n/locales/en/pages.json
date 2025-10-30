@@ -219,33 +219,23 @@
   },
   "clubs": {
     "hero": {
-      "title": "Find talent and power up your club",
+      "title": "Your entire Club, in one place",
       "subtitle": "More control. More coordination. More results.",
       "description": "Centralize the management of teams, coaches, and players with Match Day. Professionalize your sports structure from the grassroots to the first team.",
-      "list": {
-        "title": "Activate your sporting direction",
-        "items": {
-          "0": "Job posting",
-          "1": "Advanced talent search",
-          "2": "Academy management"
+      "items": {
+        "0": "No installation required, access from mobile or web.",
+        "1": "Compatible with grassroots, amateur and competitive football."
+      },
+      "buttons": {
+        "0": {
+          "label": "Register"
+        },
+        "1": {
+          "label": "See plans"
         }
       }
     },
-    "heroCtas": {
-      "0": {
-        "label": "Register"
-      },
-      "1": {
-        "label": "See plans"
-      }
-    },
-    "title": "Clubs",
-    "description": "Clubs page: manage squads, explore the market and strengthen your sports structure.",
-    "features": {
-      "0": "Job posting",
-      "1": "Advanced talent search",
-      "2": "Academy management"
-    }
+    "sections": {}
   },
   "contact": {
     "hero": {
