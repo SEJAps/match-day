@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-auto-flow: row;
-  grid-template-rows: min(12svh) 88svh;
+  grid-template-rows: min(18svh) 82svh;
   grid-auto-rows: auto;
   position: relative;
 }

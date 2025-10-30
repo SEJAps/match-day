@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Outlet } from "react-router";
 import { Suspense, lazy } from "react";
 import { LogoShowcaseSkeleton } from "../components/feedback/Skeleton";
 import {
@@ -27,7 +27,8 @@ const TermsOfServicePage = lazy(
 );
 const CookiesPage = lazy(() => import("../pages/static/CookiesPage"));
 import NotFoundPage from "../pages/static/NotFoundPage";
-import { Button, IntroSectionTemplate } from "@/components";
+import LoginPage from "@/pages/account/LoginPage";
+import RegisterPage from "@/pages/account/RegisterPage";
 
 export const router = createBrowserRouter([
   {
@@ -145,186 +146,23 @@ export const router = createBrowserRouter([
     element: <SingleLayout bgHeader="bg-neutral-800" />,
     children: [
       {
-        index: true,
-        element: (
-          <IntroSectionTemplate
-            title="Login"
-            description="Login to your account"
-          >
-            Login
-          </IntroSectionTemplate>
-        ),
-      },
-      {
         path: "account",
-        index: true,
-        element: (
-          <IntroSectionTemplate
-            title="Login"
-            description="Login to your account"
-          >
-            <section className="flex justify-center w-full py-12 px-6">
-              <form
-                className="flex flex-col gap-4 "
-                autoComplete="on"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                }}
-              >
-                <label htmlFor="email">
-                  <small>Your email address</small>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Insert your email"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
-                  />
-                </label>
-                <label htmlFor="password">
-                  <small>Your password</small>
-
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Insert your password"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
-                  />
-                </label>
-
-                <label htmlFor="accept" className="flex items-center gap-2">
-                  <input type="checkbox" name="accept" id="accept" />
-                  <small>I accept the terms and conditions</small>
-                </label>
-
-                <footer className="flex justify-end">
-                  <Button variant="success">Register</Button>
-                </footer>
-              </form>
-            </section>
-          </IntroSectionTemplate>
-        ),
-      },
-      {
-        path: "login",
-        element: (
-          <IntroSectionTemplate
-            title="Login"
-            description="Login to your account"
-          >
-            <section className="flex justify-center w-full py-12 px-6">
-              <form
-                className="flex flex-col gap-4 "
-                autoComplete="on"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                }}
-              >
-                <label htmlFor="email">
-                  <small>Your email address</small>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Insert your email"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
-                  />
-                </label>
-                <label htmlFor="password">
-                  <small>Your password</small>
-
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Insert your password"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
-                  />
-                </label>
-
-                <label htmlFor="accept" className="flex items-center gap-2">
-                  <input type="checkbox" name="accept" id="accept" />
-                  <small>I accept the terms and conditions</small>
-                </label>
-
-                <footer className="flex justify-end">
-                  <Button variant="success">Register</Button>
-                </footer>
-              </form>
-            </section>
-          </IntroSectionTemplate>
-        ),
-      },
-      {
-        path: "register",
-        element: (
-          <IntroSectionTemplate
-            title="Create a new account"
-            description="Join us today and start your journey"
-          >
-            <section className="flex justify-center w-full py-12 px-6">
-              <form
-                className="flex flex-col gap-4 "
-                autoComplete="on"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                }}
-              >
-                <label htmlFor="username">
-                  <small>Your username</small>
-                  <input
-                    type="text"
-                    name="username"
-                    id="username"
-                    placeholder="Insert your username"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
-                  />
-                </label>
-                <label htmlFor="email">
-                  <small>Your email address</small>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Insert your email"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
-                  />
-                </label>
-                <label htmlFor="password">
-                  <small>Your password</small>
-
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Insert your password"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
-                  />
-                </label>
-                <label htmlFor="repassword">
-                  <small>Re-enter your password</small>
-                  <input
-                    type="repassword"
-                    name="repassword"
-                    id="repassword"
-                    placeholder="Re-enter your password"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
-                  />
-                </label>
-
-                <label htmlFor="accept" className="flex items-center gap-2">
-                  <input type="checkbox" name="accept" id="accept" />
-                  <small>I accept the terms and conditions</small>
-                </label>
-
-                <footer className="flex justify-end">
-                  <Button variant="success">Register</Button>
-                </footer>
-              </form>
-            </section>
-          </IntroSectionTemplate>
-        ),
+        element: <Outlet />,
+        children: [
+          {
+            index: true,
+            element: <LoginPage />,
+          },
+          {
+            path: "login",
+            index: true,
+            element: <LoginPage />,
+          },
+          {
+            path: "register",
+            element: <RegisterPage />,
+          },
+        ],
       },
     ],
   },
