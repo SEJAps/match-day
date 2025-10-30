@@ -6,7 +6,7 @@ import logoSm from "@/assets/images/svg/logo-sm.svg";
 import { LogoBrand, Modal } from "@/components/molecules";
 import { useModal } from "../hooks/useModal";
 import { useTranslation } from "react-i18next";
-import BtnAccess from "@/components/molecules/Access";
+import BtnAccess from "@/components/molecules/BtnAccess";
 
 const MainHeader: FC<{
   viewHeroLayer?: boolean;
@@ -237,14 +237,14 @@ const MainHeader: FC<{
               {t("nav.contact")}
             </NavLink>
           </nav>
-          <Button
-            variant="primary"
-            size="xl"
-            className="w-full bg-success text-xl"
+
+          <NavLink
+            to="/account/login"
             onClick={close}
+            className="w-full bg-success text-xl rounded inline-flex items-center justify-center px-4 py-2 text-slate-50 shadow-sm hover:bg-green-400/90 transition-colors"
           >
-            {t("common.signIn", { defaultValue: "Acceder" })}
-          </Button>
+            {t("common.signIn")}
+          </NavLink>
           <div className=" flex items-center justify-center gap-3 absolute  right-18 p-1 rounded-md">
             <LanguageSwitcher />
           </div>

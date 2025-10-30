@@ -6,7 +6,7 @@ import ServicesForEveryNeeds from "./static/ServicesForEveryNeed";
 import WhatDoWeOffer from "./static/WhatDoWeOffer";
 import { ContactSection, IntroSectionTemplate } from "@/components";
 import AllInOne from "./static/AllInOne";
-import BtnAccess from "@/components/molecules/Access";
+import BtnAccess from "@/components/molecules/BtnAccess";
 
 const MatchDay: React.FC = () => {
   const { t } = useTranslation();

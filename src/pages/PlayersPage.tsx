@@ -14,7 +14,7 @@ import AccessYourPersonalStatisticsForEachMatch from "./static/AccessYourPersona
 import StandOutWithProfessionalProfile from "./static/StandOutWithProfessionalProfile";
 import ConnectWithTeamsThroughTransferMarketplace from "./static/ConnectWithTeamsThroughTransferMarketplace";
 import ExploreSubscriptionPlans from "./static/ExploreSubscriptionPlans";
-import BtnAccess from "@/components/molecules/Access";
+import BtnAccess from "@/components/molecules/BtnAccess";
 
 const PlayersPage: FC = () => {
   const { t } = useTranslation();

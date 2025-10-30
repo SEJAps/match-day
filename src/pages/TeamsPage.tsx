@@ -14,7 +14,7 @@ import { Row } from "@/components/molecules/Row";
 import { ColumnContent } from "@/components/organisms/ColumnContent";
 import { Column } from "@/components/molecules/Column";
 import ExploreSubscriptionPlans from "./static/ExploreSubscriptionPlans";
-import BtnAccess from "@/components/molecules/Access";
+import BtnAccess from "@/components/molecules/BtnAccess";
 
 const TeamsPage: FC = () => {
   const { t } = useTranslation();

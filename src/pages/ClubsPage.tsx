@@ -14,7 +14,7 @@ import { ColumnContent } from "@/components/organisms/ColumnContent";
 import { Column } from "@/components/molecules/Column";
 import ExploreSubscriptionPlans from "./static/ExploreSubscriptionPlans";
 import listItemImage from "@/assets/images/svg/list-item-image.svg";
-import BtnAccess from "@/components/molecules/Access";
+import BtnAccess from "@/components/molecules/BtnAccess";
 
 const ClubsPage: FC = () => {
   const { t } = useTranslation();

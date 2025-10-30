@@ -2,17 +2,17 @@ import { Button, Heading, Text } from "@/components";
 import { Container } from "@/components/atoms/Container";
 import { Row } from "@/components/molecules/Row";
 import { RowsContent } from "@/components/organisms/RowsContent";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const RegisterPage: React.FC = () => {
   return (
-    <Container fullWidth bgColor="bg-pink-600">
+    <Container fullWidth bgColor="bg-white">
       <RowsContent>
         <Row>
-          <section className="flex flex-col justify-center w-full py-12 px-6">
+          <section className="flex flex-col py-12 px-6">
             <header className="flex flex-col not-first:mb-6">
-              <Heading>Register</Heading>
-              <Text>Create a new account</Text>
+              <Heading align={"center"}>Register</Heading>
+              <Text align={"center"}>Create a new account</Text>
             </header>
             <article className="flex justify-center w-full py-12 px-6">
               <form
@@ -74,22 +74,29 @@ const RegisterPage: React.FC = () => {
                 </footer>
               </form>
             </article>
-            <footer>
-              <Text align="center" size="sm" className="text-neutral-700">
-                Forgot your password?{" "}
-                <NavLink to="/account/login" className="text-success underline">
-                  You have an account? Login here.
-                </NavLink>
-              </Text>
-              <Text align="center" size="sm" className="text-neutral-700">
-                Don't have an account?{" "}
-                <NavLink
-                  to="/account/recover"
-                  className="text-success underline"
-                >
-                  Recover it here.
-                </NavLink>
-              </Text>
+            <footer className="flex-1 flex flex-col items-center justify-center space-y-2">
+              <section className="w-full max-w-sm mx-auto flex flex-col items-start space-y-2">
+                <article className="flex gap-2">
+                  <strong className="text-dark">Forgot your password?</strong>
+                  <Link
+                    to="/account/recover"
+                    className="text-success underline"
+                  >
+                    Recover it here.
+                  </Link>
+                </article>
+                <article className="flex gap-2">
+                  <strong className="text-dark">
+                    You already have an account?
+                  </strong>
+                  <NavLink
+                    to="/account/login"
+                    className="text-success underline"
+                  >
+                    Login here.
+                  </NavLink>
+                </article>
+              </section>
             </footer>
           </section>
         </Row>

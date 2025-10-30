@@ -16,7 +16,7 @@ import { Fragment, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
 import conectTeams from "@/assets/images/png/conecta-equipos.png";
-import BtnAccess from "@/components/molecules/Access";
+import BtnAccess from "@/components/molecules/BtnAccess";
 
 const PlayersPage: FC = () => {
   const { t } = useTranslation();
