@@ -3,7 +3,6 @@ import { Container } from "@/components/atoms/Container";
 import LogoIcon from "@/components/icons/LogoIcon";
 import { Row } from "@/components/molecules/Row";
 import { RowsContent } from "@/components/organisms/RowsContent";
-import { Link, NavLink } from "react-router";
 
 const LoginPage: React.FC = () => {
   return (
@@ -99,24 +98,6 @@ const LoginPage: React.FC = () => {
                         Si continuas con el registro, aceptas nuestros términos
                         de servicio y nuestra política de privacidad.
                       </i>
-                      <p className="max-w-96 text-dark flex justify-between gap-6 w-full">
-                        Forgot your password?{" "}
-                        <Link
-                          to="/account/recover"
-                          className="text-success underline"
-                        >
-                          Recover it here.
-                        </Link>
-                      </p>
-                      <p className="max-w-96 not-open:text-dark flex justify-between gap-6 w-full">
-                        Don't have an account?{" "}
-                        <NavLink
-                          to="/account/register"
-                          className="text-success underline"
-                        >
-                          Register here.
-                        </NavLink>
-                      </p>
                     </article>
                   </section>
                 </footer>
