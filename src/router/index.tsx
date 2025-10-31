@@ -15,20 +15,21 @@ import SingleLayout from "../layouts/SingleLayout";
 const ServicesPage = lazy(
   () => import("../pages/static/services/ServicesPage"),
 );
-const BlogPage = lazy(() => import("../pages/static/BlogPage"));
-const HelpCenterPage = lazy(() => import("../pages/static/HelpCenterPage"));
-const FeaturesPage = lazy(() => import("../pages/static/FeaturesPage"));
-const PricesPage = lazy(() => import("../pages/static/PricesPage"));
+const BlogPage = lazy(() => import("@/pages/static/BlogPage"));
+const HelpCenterPage = lazy(() => import("@/pages/static/HelpCenterPage"));
+const FeaturesPage = lazy(() => import("@/pages/static/FeaturesPage"));
+const PricesPage = lazy(() => import("@/pages/static/PricesPage"));
 const PrivacyPolicyPage = lazy(
-  () => import("../pages/static/PrivacyPolicyPage"),
+  () => import("@/pages/static/PrivacyPolicyPage"),
 );
 const TermsOfServicePage = lazy(
-  () => import("../pages/static/TermsOfServicePage"),
+  () => import("@/pages/static/TermsOfServicePage"),
 );
-const CookiesPage = lazy(() => import("../pages/static/CookiesPage"));
-import NotFoundPage from "../pages/static/NotFoundPage";
-import LoginPage from "@/pages/account/LoginPage";
-import RegisterPage from "@/pages/account/RegisterPage";
+const CookiesPage = lazy(() => import("@/pages/static/CookiesPage"));
+const NotFoundPage = lazy(() => import("@/pages/static/NotFoundPage"));
+const LoginPage = lazy(() => import("@/pages/account/LoginPage"));
+const RegisterPage = lazy(() => import("@/pages/account/RegisterPage"));
+const RecoverPage = lazy(() => import("@/pages/account/RecoverPage"));
 
 export const router = createBrowserRouter([
   {
@@ -161,6 +162,10 @@ export const router = createBrowserRouter([
           {
             path: "register",
             element: <RegisterPage />,
+          },
+          {
+            path: "recover",
+            element: <RecoverPage />,
           },
         ],
       },

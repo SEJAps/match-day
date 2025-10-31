@@ -3,7 +3,7 @@ import { Container } from "@/components/atoms/Container";
 import LogoIcon from "@/components/icons/LogoIcon";
 import { Row } from "@/components/molecules/Row";
 import { RowsContent } from "@/components/organisms/RowsContent";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 
 const LoginPage: React.FC = () => {
   return (
@@ -101,12 +101,12 @@ const LoginPage: React.FC = () => {
                       </i>
                       <p className="max-w-96 text-dark flex justify-between gap-6 w-full">
                         Forgot your password?{" "}
-                        <Link
+                        <NavLink
                           to="/account/recover"
                           className="text-success underline"
                         >
                           Recover it here.
-                        </Link>
+                        </NavLink>
                       </p>
                     </article>
                   </section>
