@@ -22,9 +22,10 @@ const SingleLayout: FC<RootLayoutProps> = ({
     <>
       {withTopSection && (
         <MainHeader
-          logoWidth={64}
-          logoHeight={64}
+          logoWidth={72}
+          logoHeight={72}
           bg={bgHeader}
+          colorMatchDaY="black"
           viewHeroLayer={false}
         />
       )}

@@ -4,8 +4,11 @@ import LogoIcon from "@/components/icons/LogoIcon";
 import { Row } from "@/components/molecules/Row";
 import { RowsContent } from "@/components/organisms/RowsContent";
 import { NavLink } from "react-router";
+import { useNotifications } from "@/hooks/useNotifications";
+import Logo from "@/components/atoms/Logo";
 
 const LoginPage: React.FC = () => {
+  const { showSuccess, showError } = useNotifications();
   return (
     <Container fullWidth bgColor="bg-white">
       <RowsContent className="py-6">
@@ -17,14 +20,14 @@ const LoginPage: React.FC = () => {
                 height={156}
                 liveColor="var(--color-liveColor)"
                 liveTextColor="var(--color-live-text)"
-                dayColor="var(--color-dark)"
-                matchColor="var(--color-dark)"
+                dayColor="black"
+                matchColor="black"
                 fieldLineColor="var(--color-fieldLine-logo)"
                 bg="var(--color-bg-logo)"
                 arrowColor="var(--color-arrow-logo)"
                 barsColor="var(--color-bars-logo)"
-                strokeMatchColor="var(--color-strokeMatchColor-logo)"
-                strokeDayColor="var(--color-strokeDayColor-logo)"
+                strokeMatchColor="black"
+                strokeDayColor="black"
                 stroke="var(--color-stroke-logo)"
                 strokeArrow="var(--color-stroke-arrow-logo)"
                 strokeWidth="var(--size-stroke-width-logo)"
@@ -43,6 +46,48 @@ const LoginPage: React.FC = () => {
                 autoComplete="on"
                 onSubmit={(e) => {
                   e.preventDefault();
+                  const form = e.currentTarget as HTMLFormElement;
+                  const data = new FormData(form);
+                  const email = String(data.get("email") ?? "").trim();
+                  const password = String(data.get("password") ?? "");
+                  const rePassword = String(data.get("rePassword") ?? "");
+                  const acceptedTerms = data.get("accept") !== null;
+
+                  if (!email) {
+                    showError("Por favor, introduce tu email.");
+                    return;
+                  }
+
+                  if (!password || !rePassword) {
+                    showError("Por favor, repite tu contraseña.");
+                    return;
+                  }
+
+                  if (password !== rePassword) {
+                    showError("Las contraseñas no coinciden.");
+                    return;
+                  }
+
+                  if (!acceptedTerms) {
+                    showError("Debes aceptar los términos y condiciones.");
+                    return;
+                  }
+
+                  // Notificación con email y breve instrucción
+                  showSuccess(
+                    <div className="flex flex-col items-center text-center">
+                      <Logo
+                        colorPreset="brandLight"
+                        size={{ x: 96, y: 78 }}
+                        className="mx-auto mb-2"
+                      />
+                      <span className="font-semibold">{email}</span>
+                      <span className="text-sm opacity-90">
+                        Sigue los siguientes pasos para completar tu registro:
+                        revisa tu correo y verifica tu cuenta.
+                      </span>
+                    </div>,
+                  );
                 }}
               >
                 <label htmlFor="email">
@@ -80,7 +125,7 @@ const LoginPage: React.FC = () => {
                 </label>
 
                 <footer className="w-full flex flex-col gap-6">
-                  <Button variant="success" className="w-full">
+                  <Button type="submit" variant="success" className="w-full">
                     Continuar
                   </Button>
                   <section className="w-full flex flex-col items-start gap-8">
@@ -99,8 +144,8 @@ const LoginPage: React.FC = () => {
                         Si continuas con el registro, aceptas nuestros términos
                         de servicio y nuestra política de privacidad.
                       </i>
-                      <p className="max-w-96 text-dark flex justify-between gap-6 w-full">
-                        Forgot your password?{" "}
+                      <p className="max-w-96 text-sm text-dark flex justify-between gap-6 w-full">
+                        Forgot your password?
                         <NavLink
                           to="/account/recover"
                           className="text-success underline"

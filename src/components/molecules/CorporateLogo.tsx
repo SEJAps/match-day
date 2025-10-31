@@ -5,9 +5,10 @@ import LogoIcon from "../icons/LogoIcon";
 type Props = {
   width?: number | string;
   height?: number | string;
+  textColor?: string;
 };
 
-const CorporateLogo: React.FC<Props> = ({ width, height }) => {
+const CorporateLogo: React.FC<Props> = ({ width, height, textColor }) => {
   return (
     <>
       <section className="hidden sm:hidden md:hidden lg:hidden xl:flex xl:items-center xl:my-6 xl:ml-8 text-success gap-12">
@@ -16,14 +17,14 @@ const CorporateLogo: React.FC<Props> = ({ width, height }) => {
           height={height || 128}
           liveColor="var(--color-liveColor)"
           liveTextColor="var(--color-live-text)"
-          dayColor="var(--color-day-logo)"
-          matchColor="var(--color-match-logo)"
+          dayColor={`${textColor || "var(--color-day-logo)"}`}
+          matchColor={`${textColor || "var(--color-match-logo)"}`}
           fieldLineColor="var(--color-fieldLine-logo)"
           bg="var(--color-bg-logo)"
           arrowColor="var(--color-arrow-logo)"
           barsColor="var(--color-bars-logo)"
-          strokeMatchColor="var(--color-strokeMatchColor-logo)"
-          strokeDayColor="var(--color-strokeDayColor-logo)"
+          strokeMatchColor={`${textColor || "var(--color-strokeMatchColor-logo)"}`}
+          strokeDayColor={`${textColor || "var(--color-strokeDayColor-logo)"}`}
           stroke="var(--color-stroke-logo)"
           strokeArrow="var(--color-stroke-arrow-logo)"
           strokeWidth="var(--size-stroke-width-logo)"

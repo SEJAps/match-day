@@ -14,7 +14,10 @@ macthDayApp.render(
   <StrictMode>
     <RouterProvider router={router} />
     <Toaster
-      position="top-right"
+      position="top-center"
+      containerStyle={{
+        top: 32,
+      }}
       toastOptions={{
         duration: 4000,
         style: {

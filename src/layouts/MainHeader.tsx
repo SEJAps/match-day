@@ -16,7 +16,8 @@ const MainHeader: FC<{
   bg?: string;
   logoWidth?: number | string;
   logoHeight?: number | string;
-}> = ({ viewHeroLayer = true, bg, logoWidth, logoHeight }) => {
+  colorMatchDaY?: string;
+}> = ({ viewHeroLayer = true, bg, logoWidth, logoHeight, colorMatchDaY }) => {
   const { isOpen, open, close } = useModal(false);
   // Cerrar automáticamente el menú móvil cuando el viewport sea >= lg (1024px)
   useEffect(() => {
@@ -33,10 +34,14 @@ const MainHeader: FC<{
   const { t } = useTranslation();
   return (
     <header
-      className={`${!viewHeroLayer && "bg-[#7DB0A7] flex"} ${bg && `${bg}`}`}
+      className={`${!viewHeroLayer && "bg-secondary flex"} ${bg && `${bg}`}`}
     >
       <section className="grid grid-cols-3 mx-auto z-100 w-full">
-        <CorporateLogo width={logoWidth} height={logoHeight} />
+        <CorporateLogo
+          width={logoWidth}
+          height={logoHeight}
+          textColor={colorMatchDaY}
+        />
         <MenuDesktop handleWhenSelectedPage={close} />
         {/* Botón hamburguesa para móvil y tablet */}
         <div className="flex items-center col-span-2 justify-end lg:hidden">

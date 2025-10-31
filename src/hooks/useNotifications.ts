@@ -1,31 +1,37 @@
-import type { ReactNode } from "react";
+import type { JSX } from "react";
 import toast, { type ToastOptions } from "react-hot-toast";
 
 export const useNotifications = () => {
-  const showSuccess = (message: string | ReactNode, options?: ToastOptions) => {
-    return toast.success(message as string, {
+  const showSuccess = (
+    message: string | JSX.Element,
+    options?: ToastOptions,
+  ) => {
+    return toast.success(message, {
       duration: 3000,
       ...options,
     });
   };
 
-  const showError = (message: string | ReactNode, options?: ToastOptions) => {
-    return toast.error(message as string, {
+  const showError = (message: string | JSX.Element, options?: ToastOptions) => {
+    return toast.error(message, {
       duration: 5000,
       ...options,
     });
   };
 
-  const showInfo = (message: string | ReactNode, options?: ToastOptions) => {
-    return toast(message as string, {
+  const showInfo = (message: string | JSX.Element, options?: ToastOptions) => {
+    return toast(message, {
       icon: "ℹ️",
       duration: 4000,
       ...options,
     });
   };
 
-  const showWarning = (message: string | ReactNode, options?: ToastOptions) => {
-    return toast(message as string, {
+  const showWarning = (
+    message: string | JSX.Element,
+    options?: ToastOptions,
+  ) => {
+    return toast(message, {
       icon: "⚠️",
       duration: 4000,
       style: {
@@ -49,7 +55,7 @@ export const useNotifications = () => {
   };
 
   // Notificaciones específicas para Match Day
-  const showMatchUpdate = (message: string) => {
+  const showMatchUpdate = (message: string | JSX.Element) => {
     return toast.success(message, {
       icon: "⚽",
       duration: 4000,
@@ -60,7 +66,7 @@ export const useNotifications = () => {
     });
   };
 
-  const showPlayerNotification = (message: string) => {
+  const showPlayerNotification = (message: string | JSX.Element) => {
     return toast(message, {
       icon: "👤",
       duration: 3000,
@@ -71,7 +77,7 @@ export const useNotifications = () => {
     });
   };
 
-  const showTeamNotification = (message: string) => {
+  const showTeamNotification = (message: string | JSX.Element) => {
     return toast(message, {
       icon: "🏆",
       duration: 3000,
