@@ -29,7 +29,7 @@ const ClubsPage: FC = () => {
           <section className="w-full flex items-center justify-center gap-12">
             <BtnAccess label={t("pages:clubs.hero.buttons.0.label")} />
             <Button variant="view">
-              {t("pages:clubs.hero.buttons.1.label")}
+              {t("pages:clubs.hero.buttons.1.label")}asdads
             </Button>
           </section>
         }
