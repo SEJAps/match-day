@@ -5,7 +5,7 @@ import heroBgLayer from "@/assets/images/png/hero-bg-layer.png";
 
 const HeroLayer: React.FC = () => {
   return (
-    <article className="absolute inset-0 -z-1 w-screen h-dvh overflow-clip">
+    <article className="fixed inset-0 -z-1 w-screen h-dvh overflow-clip">
       <img
         src={heroBgLayer}
         className="absolute w-full h-full object-cover"

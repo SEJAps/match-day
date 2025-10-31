@@ -34,7 +34,7 @@ const IntroSectionTemplate: FC<IntroSectionTemplateProps> = ({
 }) => {
   return (
     <article
-      className={`${bg} flex ${cols && "flex-col"} ${rows && "flex-row"} items-${alignItems} justify-${justifyContent} gap-${gap} max-w-${size} mx-auto w-full px-4 `}
+      className={`${bg} min-h-[88dvh] flex ${cols && "flex-col"} ${rows && "flex-row"} items-${alignItems} justify-${justifyContent} gap-${gap} max-w-${size} mx-auto w-full px-4 `}
     >
       <IntroSection
         title={title}

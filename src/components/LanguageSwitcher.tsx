@@ -6,8 +6,10 @@ const LANGS = [
   { code: "en", label: "EN" },
   { code: "ca", label: "CA" },
 ];
-
-const LanguageSwitcher: FC = () => {
+type Props = {
+  handleWhenSelectedPage?: () => void;
+};
+const LanguageSwitcher: FC<Props> = (props) => {
   const { i18n } = useTranslation();
 
   const changeLang = async (lng: string) => {
@@ -17,6 +19,9 @@ const LanguageSwitcher: FC = () => {
       localStorage.setItem("i18nextLng", lng);
       // Actualizar lang del html para accesibilidad
       document?.documentElement?.setAttribute("lang", lng);
+      if (typeof props.handleWhenSelectedPage === "function") {
+        props.handleWhenSelectedPage();
+      }
     } catch {
       // noop
     }

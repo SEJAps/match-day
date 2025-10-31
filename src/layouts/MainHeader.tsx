@@ -7,12 +7,16 @@ import { Modal } from "@/components/molecules";
 import { useModal } from "../hooks/useModal";
 import { useTranslation } from "react-i18next";
 import BtnAccess from "@/components/molecules/BtnAccess";
-import LogoIcon from "@/components/icons/LogoIcon";
+import CorporateLogo from "@/components/molecules/CorporateLogo";
+import MenuDesktop from "@/components/molecules/MenuDesktop";
+import MenuMobile from "@/components/molecules/MenuMobile";
 
 const MainHeader: FC<{
   viewHeroLayer?: boolean;
   bg?: string;
-}> = ({ viewHeroLayer = true, bg }) => {
+  logoWidth?: number | string;
+  logoHeight?: number | string;
+}> = ({ viewHeroLayer = true, bg, logoWidth, logoHeight }) => {
   const { isOpen, open, close } = useModal(false);
   // Cerrar automáticamente el menú móvil cuando el viewport sea >= lg (1024px)
   useEffect(() => {
@@ -29,114 +33,11 @@ const MainHeader: FC<{
   const { t } = useTranslation();
   return (
     <header
-      className={`${!viewHeroLayer && "bg-dark md:h-[15svh] "} ${bg && `${bg} h-[12svh] sm:h-[13svh] lg:h-[18svh]`}`}
+      className={`${!viewHeroLayer && "bg-[#7DB0A7] flex"} ${bg && `${bg}`}`}
     >
       <section className="container flex items-start justify-between mx-auto z-100 w-full">
-        <section className="hidden sm:hidden md:hidden lg:hidden xl:flex xl:items-center xl:my-6 xl:ml-8 text-success gap-12">
-          <LogoIcon
-            width={128}
-            height={128}
-            liveColor="var(--color-liveColor)"
-            liveTextColor="var(--color-live-text)"
-            dayColor="var(--color-day-logo)"
-            matchColor="var(--color-match-logo)"
-            fieldLineColor="var(--color-fieldLine-logo)"
-            bg="var(--color-bg-logo)"
-            arrowColor="var(--color-arrow-logo)"
-            barsColor="var(--color-bars-logo)"
-            strokeMatchColor="var(--color-strokeMatchColor-logo)"
-            strokeDayColor="var(--color-strokeDayColor-logo)"
-            stroke="var(--color-stroke-logo)"
-            strokeArrow="var(--color-stroke-arrow-logo)"
-            strokeWidth="var(--size-stroke-width-logo)"
-          />
-          {/* <LogoIcon
-            width={128}
-            height={128}
-            liveColor="var(--theme-dark-live-color)"
-            liveTextColor="var(--theme-dark-live-text)"
-            dayColor="var(--theme-dark-day-color)"
-            matchColor="var(--theme-dark-match-color)"
-            fieldLineColor="var(--theme-dark-fieldLine-color)"
-            bg="var(--theme-dark-bg-logo)"
-            arrowColor="var(--theme-dark-arrow-color)"
-            barsColor="var(--theme-dark-bars-color)"
-            strokeMatchColor="var(--theme-dark-stroke-match-color)"
-            strokeDayColor="var(--theme-dark-stroke-day-color)"
-            stroke="var(--theme-dark-stroke-color)"
-            strokeArrow="var(--theme-dark-stroke-arrow-color)"
-            strokeWidth="var(--size-stroke-width-logo)"
-          /> */}
-        </section>
-        <section className="flex items-start my-8 pl-4 xl:hidden">
-          <NavLink title="Match Day" to="/" aria-label="Match Day Logo">
-            <div className="flex items-center gap-3">
-              <img
-                src={logoSm}
-                alt="Match Day"
-                width={170}
-                height={41}
-                className="h-10 w-auto"
-              />
-              <span className="sr-only">MATCH DAY</span>
-            </div>
-          </NavLink>
-        </section>
-        {/* Menú de escritorio (solo pantallas grandes) */}
-        <nav className="hidden flex-1 lg:flex items-center justify-center gap-4 mt-8">
-          <ul className="flex gap-8 ">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
-                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.home", { defaultValue: "Home" })}
-            </NavLink>
-            <NavLink
-              to="/players"
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
-                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.players", { defaultValue: "Jugadores" })}
-            </NavLink>
-            <NavLink
-              to="/teams"
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
-                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.teams", { defaultValue: "Equipos" })}
-            </NavLink>
-            <NavLink
-              to="/clubs"
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
-                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.clubs", { defaultValue: "Clubs" })}
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active text-xl font-semibold hover:opacity-80 transition-opacity"
-                  : "text-xl font-semibold hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.contact", { defaultValue: "Contacto" })}
-            </NavLink>
-          </ul>
-        </nav>
+        <CorporateLogo width={logoWidth} height={logoHeight} />
+        <MenuDesktop handleWhenSelectedPage={close} />
         {/* Botón hamburguesa para móvil y tablet */}
         <div className="flex lg:hidden items-center mt-8">
           <Button
@@ -166,7 +67,7 @@ const MainHeader: FC<{
         </div>
 
         {/* Acceso solo en escritorio, en móvil va dentro del modal */}
-        <aside className="hidden lg:flex lg:items-center py-6 md:pr-6 lg:gap-3">
+        <aside className="hidden lg:flex lg:items-center py-6 md:pr-6 lg:gap-3 h-full">
           <LanguageSwitcher />
           <BtnAccess />
         </aside>
@@ -214,64 +115,7 @@ const MainHeader: FC<{
               </svg>
             </Button>
           </div>
-          <nav className="flex flex-col gap-5 text-2xl text-dark">
-            <NavLink
-              to="/"
-              onClick={close}
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active hover:opacity-80 transition-opacity"
-                  : "hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.home")}
-            </NavLink>
-            <NavLink
-              to="/players"
-              onClick={close}
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active hover:opacity-80 transition-opacity"
-                  : "hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.players")}
-            </NavLink>
-            <NavLink
-              to="/teams"
-              onClick={close}
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active hover:opacity-80 transition-opacity"
-                  : "hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.teams")}
-            </NavLink>
-            <NavLink
-              to="/clubs"
-              onClick={close}
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active hover:opacity-80 transition-opacity"
-                  : "hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.clubs")}
-            </NavLink>
-            <NavLink
-              to="/contact"
-              onClick={close}
-              className={({ isActive }) =>
-                isActive
-                  ? "is-active hover:opacity-80 transition-opacity"
-                  : "hover:opacity-80 transition-opacity"
-              }
-            >
-              {t("nav.contact")}
-            </NavLink>
-          </nav>
-
+          <MenuMobile whenSelectedPage={close} />
           <NavLink
             to="/account/login"
             onClick={close}
@@ -280,7 +124,7 @@ const MainHeader: FC<{
             {t("common.signIn")}
           </NavLink>
           <div className=" flex items-center justify-center gap-3 absolute  right-18 p-1 rounded-md">
-            <LanguageSwitcher />
+            <LanguageSwitcher handleWhenSelectedPage={close} />
           </div>
         </div>
       </Modal>

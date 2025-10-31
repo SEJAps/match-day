@@ -20,7 +20,14 @@ const SingleLayout: FC<RootLayoutProps> = ({
 }) => {
   return (
     <>
-      {withTopSection && <MainHeader bg={bgHeader} />}
+      {withTopSection && (
+        <MainHeader
+          logoWidth={64}
+          logoHeight={64}
+          bg={bgHeader}
+          viewHeroLayer={false}
+        />
+      )}
       {children}
       <Suspense fallback={<PageSkeleton lines={6} />}>
         <Outlet />

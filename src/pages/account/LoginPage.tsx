@@ -1,5 +1,6 @@
-import { Button, Heading, Text } from "@/components";
+import { Button, Text } from "@/components";
 import { Container } from "@/components/atoms/Container";
+import LogoIcon from "@/components/icons/LogoIcon";
 import { Row } from "@/components/molecules/Row";
 import { RowsContent } from "@/components/organisms/RowsContent";
 import { Link, NavLink } from "react-router";
@@ -7,16 +8,38 @@ import { Link, NavLink } from "react-router";
 const LoginPage: React.FC = () => {
   return (
     <Container fullWidth bgColor="bg-white">
-      <RowsContent>
+      <RowsContent className="py-6">
         <Row>
-          <section className="flex flex-col py-12 px-6">
-            <header className="flex flex-col not-first:mb-6">
-              <Heading align={"center"}>Login</Heading>
-              <Text align={"center"}>Login to your account</Text>
-            </header>
-            <article className="flex justify-center w-full py-12 px-6">
+          <section className="flex flex-col  px-6">
+            <aside className="flex flex-col items-center justify-center">
+              <LogoIcon
+                width={256}
+                height={256}
+                liveColor="var(--color-liveColor)"
+                liveTextColor="var(--color-live-text)"
+                dayColor="var(--color-dark)"
+                matchColor="var(--color-dark)"
+                fieldLineColor="var(--color-fieldLine-logo)"
+                bg="var(--color-bg-logo)"
+                arrowColor="var(--color-arrow-logo)"
+                barsColor="var(--color-bars-logo)"
+                strokeMatchColor="var(--color-strokeMatchColor-logo)"
+                strokeDayColor="var(--color-strokeDayColor-logo)"
+                stroke="var(--color-stroke-logo)"
+                strokeArrow="var(--color-stroke-arrow-logo)"
+                strokeWidth="var(--size-stroke-width-logo)"
+              />
+              <Text align={"center"} color={"dark"} size={"2xl"}>
+                Crear una cuenta de usuario nueva
+              </Text>
+            </aside>
+
+            <article className="flex flex-col items-center justify-center w-full px-6">
+              <span className="text-dark text-xl text-center">
+                Introduce tu email para inscribirte en la aplicación
+              </span>
               <form
-                className="flex flex-col gap-4 "
+                className="flex flex-col gap-4 max-w-md"
                 autoComplete="on"
                 onSubmit={(e) => {
                   e.preventDefault();
