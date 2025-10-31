@@ -11,10 +11,10 @@ const LoginPage: React.FC = () => {
       <RowsContent className="py-6">
         <Row>
           <section className="flex flex-col  px-6">
-            <aside className="flex flex-col items-center justify-center">
+            <aside className="flex flex-col items-center justify-center gap-6">
               <LogoIcon
-                width={256}
-                height={256}
+                width={156}
+                height={156}
                 liveColor="var(--color-liveColor)"
                 liveTextColor="var(--color-live-text)"
                 dayColor="var(--color-dark)"
@@ -34,71 +34,94 @@ const LoginPage: React.FC = () => {
               </Text>
             </aside>
 
-            <article className="flex flex-col items-center justify-center w-full px-6">
-              <span className="text-dark text-xl text-center">
+            <article className="flex flex-col items-center justify-center w-full px-6 gap-6">
+              <span className="text-dark text-lg text-center">
                 Introduce tu email para inscribirte en la aplicación
               </span>
               <form
-                className="flex flex-col gap-4 max-w-md"
+                className="flex flex-col gap-4 w-full lg:max-w-md py-6"
                 autoComplete="on"
                 onSubmit={(e) => {
                   e.preventDefault();
                 }}
               >
                 <label htmlFor="email">
-                  <small>Your email address</small>
                   <input
                     type="email"
                     name="email"
                     id="email"
                     placeholder="Insert your email"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
+                    className="w-full text-dark px-4 py-2 border border-dark/20 rounded"
                   />
                 </label>
                 <label htmlFor="password">
-                  <small>Your password</small>
-
                   <input
                     type="password"
                     name="password"
                     id="password"
                     placeholder="Insert your password"
-                    className="w-full bg-amber-100 text-neutral-600 px-4 py-2 rounded"
+                    className="w-full text-dark px-4 py-2 border border-dark/20 rounded"
                   />
                 </label>
-
+                <label htmlFor="password">
+                  <input
+                    type="password"
+                    name="rePassword"
+                    id="rePassword"
+                    placeholder="Repeat your password"
+                    className="w-full text-dark px-4 py-2 border border-dark/20 rounded"
+                  />
+                </label>
                 <label htmlFor="accept" className="flex items-center gap-2">
                   <input type="checkbox" name="accept" id="accept" />
-                  <small>I accept the terms and conditions</small>
+                  <small className="text-dark/70">
+                    I accept the terms and conditions
+                  </small>
                 </label>
 
-                <footer className="flex justify-end">
-                  <Button variant="success">Register</Button>
+                <footer className="w-full flex flex-col gap-6">
+                  <Button variant="success" className="w-full">
+                    Continuar
+                  </Button>
+                  <section className="w-full flex flex-col items-start gap-8">
+                    <article className="flex flex-col w-full rounded gap-2">
+                      <Button variant="info">Sign In With Facebook</Button>
+                      <Button variant="outline" className="text-dark">
+                        Sign In With Google
+                      </Button>
+                      <Button variant="default">Sign In With Apple</Button>
+                    </article>
+                    <article className="flex flex-col items-center w-full gap-4">
+                      <small className="text-center text-lg text-dark/70">
+                        No olvides validar el email
+                      </small>
+                      <i className="text-center text-xs text-dark/60">
+                        Si continuas con el registro, aceptas nuestros términos
+                        de servicio y nuestra política de privacidad.
+                      </i>
+                      <p className="max-w-96 text-dark flex justify-between gap-6 w-full">
+                        Forgot your password?{" "}
+                        <Link
+                          to="/account/recover"
+                          className="text-success underline"
+                        >
+                          Recover it here.
+                        </Link>
+                      </p>
+                      <p className="max-w-96 not-open:text-dark flex justify-between gap-6 w-full">
+                        Don't have an account?{" "}
+                        <NavLink
+                          to="/account/register"
+                          className="text-success underline"
+                        >
+                          Register here.
+                        </NavLink>
+                      </p>
+                    </article>
+                  </section>
                 </footer>
               </form>
             </article>
-            <footer className="flex-1 flex flex-col items-center justify-center space-y-2">
-              <section className="w-full max-w-sm mx-auto flex flex-col items-start space-y-2">
-                <article className="flex gap-2">
-                  <strong className="text-dark">Forgot your password?</strong>
-                  <Link
-                    to="/account/recover"
-                    className="text-success underline"
-                  >
-                    Recover it here.
-                  </Link>
-                </article>
-                <article className="flex gap-2">
-                  <strong className="text-dark">Don't have an account? </strong>
-                  <NavLink
-                    to="/account/register"
-                    className="text-success underline"
-                  >
-                    Register here.
-                  </NavLink>
-                </article>
-              </section>
-            </footer>
           </section>
         </Row>
       </RowsContent>
