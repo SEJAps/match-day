@@ -5,7 +5,7 @@ type Props = {
 };
 const MenuDesktop: React.FC<Props> = (props) => {
   return (
-    <nav className="hidden md:flex items-center justify-center gap-4 h-full lg:min-h-18">
+    <nav className="hidden md:flex md:items-center md:justify-center md:gap-4 md:h-full lg:min-h-18">
       <Menu whenSelectedPage={props.handleWhenSelectedPage} />
     </nav>
   );

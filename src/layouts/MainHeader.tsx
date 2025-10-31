@@ -35,11 +35,11 @@ const MainHeader: FC<{
     <header
       className={`${!viewHeroLayer && "bg-[#7DB0A7] flex"} ${bg && `${bg}`}`}
     >
-      <section className="container flex items-start justify-between mx-auto z-100 w-full">
+      <section className="grid grid-cols-3 mx-auto z-100 w-full">
         <CorporateLogo width={logoWidth} height={logoHeight} />
         <MenuDesktop handleWhenSelectedPage={close} />
         {/* Botón hamburguesa para móvil y tablet */}
-        <div className="flex lg:hidden items-center mt-8">
+        <div className="flex items-center col-span-2 justify-end lg:hidden">
           <Button
             aria-label={t("components.header.openMenu", {
               defaultValue: "Abrir menú",
@@ -67,7 +67,7 @@ const MainHeader: FC<{
         </div>
 
         {/* Acceso solo en escritorio, en móvil va dentro del modal */}
-        <aside className="hidden lg:flex lg:items-center py-6 md:pr-6 lg:gap-3 h-full">
+        <aside className="hidden lg:flex lg:items-center lg:justify-end py-6 md:pr-6 lg:gap-3 h-full">
           <LanguageSwitcher />
           <BtnAccess />
         </aside>
