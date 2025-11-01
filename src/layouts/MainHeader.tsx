@@ -10,14 +10,22 @@ import BtnAccess from "@/components/molecules/BtnAccess";
 import CorporateLogo from "@/components/molecules/CorporateLogo";
 import MenuDesktop from "@/components/molecules/MenuDesktop";
 import MenuMobile from "@/components/molecules/MenuMobile";
+import MenuBarsIcon from "@/components/icons/MenuBarsIcon";
+import { useAuth } from "@/features/auth/useAuth";
+import BtnLogout from "@/components/molecules/BtnLogOut";
 
-const MainHeader: FC<{
+type Props = {
   viewHeroLayer?: boolean;
   bg?: string;
   logoWidth?: number | string;
   logoHeight?: number | string;
   colorMatchDaY?: string;
-}> = ({ viewHeroLayer = true, bg, logoWidth, logoHeight, colorMatchDaY }) => {
+};
+
+const MainHeader: FC<Props> = (props) => {
+  const { user } = useAuth();
+  const { viewHeroLayer, bg, logoWidth, logoHeight, colorMatchDaY } = props;
+
   const { isOpen, open, close } = useModal(false);
   // Cerrar automáticamente el menú móvil cuando el viewport sea >= lg (1024px)
   useEffect(() => {
@@ -34,7 +42,7 @@ const MainHeader: FC<{
   const { t } = useTranslation();
   return (
     <header
-      className={`${!viewHeroLayer && "bg-secondary flex"} ${bg && `${bg}`}`}
+      className={`${!viewHeroLayer && "bg-secondary flex"} ${bg && `${bg}`} z-50`}
     >
       <section className="grid grid-cols-3 mx-auto z-100 w-full">
         <CorporateLogo
@@ -44,37 +52,14 @@ const MainHeader: FC<{
         />
         <MenuDesktop handleWhenSelectedPage={close} />
         {/* Botón hamburguesa para móvil y tablet */}
-        <div className="flex items-center col-span-2 justify-end lg:hidden">
-          <Button
-            aria-label={t("components.header.openMenu", {
-              defaultValue: "Abrir menú",
-            })}
-            variant="ghost"
-            size="default"
-            className="text-white"
-            onClick={open}
-          >
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 6h16M4 12h16M4 18h16"
-                stroke="var(--color-light)"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </Button>
+        <div className="flex items-center col-span-2 justify-end lg:hidden px-4">
+          <MenuBarsIcon onClick={open} />
         </div>
 
         {/* Acceso solo en escritorio, en móvil va dentro del modal */}
         <aside className="hidden lg:flex lg:items-center lg:justify-end py-6 md:pr-6 lg:gap-3 h-full">
           <LanguageSwitcher />
-          <BtnAccess />
+          {user ? <BtnLogout /> : <BtnAccess />}
         </aside>
       </section>
 

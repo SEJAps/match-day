@@ -4,18 +4,20 @@ import LogoIcon from "@/components/icons/LogoIcon";
 import { Row } from "@/components/molecules/Row";
 import { RowsContent } from "@/components/organisms/RowsContent";
 import { NavLink } from "react-router";
-
-import { useLoginPage } from "./useLoginPage";
+import RegistrationMethods from "@/components/molecules/RegistrationMethods";
+import { useAccountPage } from "./useAccountPage";
+import SoccerFieldIcon from "@/components/icons/SoccerFieldIcon";
 
 const LoginPage: React.FC = () => {
-  const { handleSubmit, handleClickGoogleSignIn } = useLoginPage();
+  const { handleSubmit } = useAccountPage();
 
   return (
     <Container fullWidth bgColor="bg-white">
-      <RowsContent className="py-6">
+      <RowsContent className="py-6 relative">
         <Row>
-          <section className="flex flex-col  px-6">
-            <aside className="flex flex-col items-center justify-center gap-6">
+          <section className="flex flex-col px-6">
+            <SoccerFieldIcon className="absolute -top-26 right-6  scale-145 lg:top-8 lg:-left-18 lg:scale-175" />
+            <aside className="flex flex-col items-center justify-center gap-6 z-10">
               <LogoIcon
                 width={156}
                 height={156}
@@ -34,13 +36,13 @@ const LoginPage: React.FC = () => {
                 strokeWidth="var(--size-stroke-width-logo)"
               />
               <Text align={"center"} color={"dark"} size={"2xl"}>
-                Crear una cuenta de usuario nueva
+                Accede a tu cuenta de usuario
               </Text>
             </aside>
 
-            <article className="flex flex-col items-center justify-center w-full px-6 gap-6">
+            <article className="flex flex-col items-center justify-center w-full px-6 gap-6 z-10">
               <span className="text-dark text-lg text-center">
-                Introduce tu email para inscribirte en la aplicación
+                Introduce tu email para iniciar sesión en la aplicación
               </span>
               <form
                 className="flex flex-col gap-4 w-full lg:max-w-md py-6"
@@ -65,53 +67,30 @@ const LoginPage: React.FC = () => {
                     className="w-full text-dark px-4 py-2 border border-dark/20 rounded"
                   />
                 </label>
-                <label htmlFor="password">
-                  <input
-                    type="password"
-                    name="rePassword"
-                    id="rePassword"
-                    placeholder="Repeat your password"
-                    className="w-full text-dark px-4 py-2 border border-dark/20 rounded"
-                  />
-                </label>
-                <label htmlFor="accept" className="flex items-center gap-2">
-                  <input type="checkbox" name="accept" id="accept" />
-                  <small className="text-dark/70">
-                    I accept the terms and conditions
-                  </small>
-                </label>
 
                 <footer className="w-full flex flex-col gap-6">
                   <Button type="submit" variant="success" className="w-full">
                     Continuar
                   </Button>
                   <section className="w-full flex flex-col items-start gap-8">
-                    <article className="flex flex-col w-full rounded gap-2">
-                      <Button variant="info">Sign In With Facebook</Button>
-                      <Button
-                        variant="outline"
-                        className="text-dark"
-                        onClick={handleClickGoogleSignIn}
-                      >
-                        Sign In With Google
-                      </Button>
-                      <Button variant="default">Sign In With Apple</Button>
-                    </article>
+                    <RegistrationMethods />
                     <article className="flex flex-col items-center w-full gap-4">
-                      <small className="text-center text-lg text-dark/70">
-                        No olvides validar el email
-                      </small>
-                      <i className="text-center text-xs text-dark/60">
-                        Si continuas con el registro, aceptas nuestros términos
-                        de servicio y nuestra política de privacidad.
-                      </i>
                       <p className="max-w-96 text-sm text-dark flex justify-between gap-6 w-full">
-                        Forgot your password?
+                        No tienes una cuenta?
+                        <NavLink
+                          to="/account/register"
+                          className="text-success underline"
+                        >
+                          Regístrate aquí.
+                        </NavLink>
+                      </p>
+                      <p className="max-w-96 text-sm text-dark flex justify-between gap-6 w-full">
+                        Olvide mi contraseña.
                         <NavLink
                           to="/account/recover"
                           className="text-success underline"
                         >
-                          Recover it here.
+                          Haz clic aquí.
                         </NavLink>
                       </p>
                     </article>

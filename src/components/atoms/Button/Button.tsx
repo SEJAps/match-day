@@ -94,6 +94,7 @@ const Button: FC<ButtonProps> = ({
   // Fallback: renderizar como botón nativo
   return (
     <button
+      type="button"
       className={cn(buttonVariants({ variant, size, className }))}
       disabled={isDisabled}
       {...props}

@@ -1,5 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import {
+  getAuth,
+  setPersistence,
+  browserLocalPersistence,
+} from "firebase/auth";
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -18,4 +23,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const appFirebase = initializeApp(firebaseConfig);
+export const auth = getAuth(appFirebase);
 // const analytics = getAnalytics(app);
+
+// Persistencia de sesión (local). Puedes usar session o none si prefieres.
+setPersistence(auth, browserLocalPersistence).catch(console.error);
